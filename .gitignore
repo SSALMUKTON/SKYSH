@@ -43,3 +43,11 @@ next-env.d.ts
 
 # prisma
 /prisma/migrations/dev.db*
+
+# --- Python 데이터 파이프라인 (pipelines/) ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+.kis_token.json
+# 주의: data/ 는 의도적으로 추적함(수집 데이터 업로드) — ignore 하지 않음

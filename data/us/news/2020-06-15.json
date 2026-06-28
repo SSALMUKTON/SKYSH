@@ -1,0 +1,641 @@
+[
+  {
+    "id": 16255870,
+    "headline": "What Data From Yelp And OpenTable Tells Us About The State Of Restaurants",
+    "summary": "Data from the restaurant reservation platform OpenTable and Yelp Inc (NYSE: YELP) offers a first-hand account of the state of the restaurant industry.",
+    "symbols": [
+      "BKNG",
+      "YELP"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/general/restaurants/20/06/16255870/what-data-from-yelp-and-opentable-tells-us-about-the-state-of-restaurants",
+    "created_at": "2020-06-15T21:37:56Z"
+  },
+  {
+    "id": 16258320,
+    "headline": "T-mobile's President of Technology Neville Says Engineers Working to Resolve Voice and Data Issue Affecting Customers Around U.S.",
+    "summary": "",
+    "symbols": [
+      "TMUS"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16258320/t-mobiles-president-of-technology-neville-says-engineers-working-to-resolve-voice-and-data-issue-aff",
+    "created_at": "2020-06-15T21:29:48Z"
+  },
+  {
+    "id": 16255627,
+    "headline": "A Snapshot Of The COVID-19 Data Sharing Ecosystem",
+    "summary": "While health care entities continue harvesting valuable COVID-19 data on patients, third-party companies are eagerly awaiting the day when they can claim useful electronic health records for themselves.",
+    "symbols": [
+      "GOOGL",
+      "JNJ",
+      "PFE"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/general/biotech/20/06/16255627/a-snapshot-of-the-covid-19-data-sharing-ecosystem",
+    "created_at": "2020-06-15T20:30:53Z"
+  },
+  {
+    "id": 16257740,
+    "headline": "FDA Says Co-Administration OF Gilead's Remdesivir + Chloroquine Phosphate Is Not Recommended",
+    "summary": "",
+    "symbols": [
+      "GILD"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16257740/fda-says-co-administration-of-gileads-remdesivir-chloroquine-phosphate-is-not-recommended",
+    "created_at": "2020-06-15T20:24:42Z"
+  },
+  {
+    "id": 16257357,
+    "headline": "Walmart Acquires Specific Assets Of Carezone",
+    "summary": "",
+    "symbols": [
+      "WMT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/m-a/20/06/16257357/walmart-acquires-specific-assets-of-carezone",
+    "created_at": "2020-06-15T20:05:01Z"
+  },
+  {
+    "id": 16257214,
+    "headline": "'Tesla Chair's Re-Election Opposed by Adviser Over Share Pledging' -Bloomberg",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16257214/tesla-chairs-re-election-opposed-by-adviser-over-share-pledging-bloomberg",
+    "created_at": "2020-06-15T19:54:24Z"
+  },
+  {
+    "id": 16256846,
+    "headline": "Analyst: Nikola Is 'Prime Target For A Short Squeeze'",
+    "summary": "Electric truck maker Nikola Corporation (NASDAQ: NKLA) has gained nearly 70% since going public via a reverse merger on June 4. The stock’s performance in the last two weeks is certainly impressive, but a spike in borrow rates suggests the big move may just be getting started.",
+    "symbols": [
+      "NKLA",
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/analyst-color/20/06/16256846/analyst-nikola-is-prime-target-for-a-short-squeeze",
+    "created_at": "2020-06-15T19:35:10Z"
+  },
+  {
+    "id": 16256723,
+    "headline": "Why Tesla's Stock Is Trading Higher Today",
+    "summary": "Tesla Inc (NASDAQ: TSLA) shares are trading higher on Monday after a new report showed the company&#39;s China car registrations in May increased 150%",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16256723/why-teslas-stock-is-trading-higher-today",
+    "created_at": "2020-06-15T19:07:20Z"
+  },
+  {
+    "id": 16253386,
+    "headline": "Why KeyBanc Is Betting On Intel's Comeback",
+    "summary": "Intel Corporation (NASDAQ: INTC), which has ceded market share to  rivals  including Advanced Micro Devices, Inc.",
+    "symbols": [
+      "AMD",
+      "INTC",
+      "NVDA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/analyst-color/20/06/16253386/why-keybanc-is-betting-on-intels-comeback",
+    "created_at": "2020-06-15T19:02:38Z"
+  },
+  {
+    "id": 16256633,
+    "headline": "Tesla Shares Quiet Following Comment From Regulator In Austin, Texas Says County Is Considering Tesla Incentives Deal",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16256633/tesla-shares-quiet-following-comment-from-regulator-in-austin-texas-says-county-is-considering-tesla",
+    "created_at": "2020-06-15T18:51:58Z"
+  },
+  {
+    "id": 16253453,
+    "headline": "Shopify Is Positioned For 'Permanent Structural Industry Change' After Coronavirus: Piper Sandler",
+    "summary": "Shopify Inc (NYSE: SHOP) is among the best-positioned beneficiaries of the potential acceleration in e-commerce due to the coronavirus pandemic, according to Piper Sandler.",
+    "symbols": [
+      "SHOP"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/analyst-color/20/06/16253453/shopify-is-positioned-for-permanent-structural-industry-change-after-coronavirus-pi",
+    "created_at": "2020-06-15T17:34:48Z"
+  },
+  {
+    "id": 16255939,
+    "headline": "'Tesla leak shows Model 3 with 100 kWh battery pack, would have over 400-mile range' -Electrek",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16255939/tesla-leak-shows-model-3-with-100-kwh-battery-pack-would-have-over-400-mile-range-electrek",
+    "created_at": "2020-06-15T17:29:03Z"
+  },
+  {
+    "id": 16255211,
+    "headline": "Apple Extends Zero Interest Apple Card Financing For Macs, iPods, More",
+    "summary": "Apple Inc. (NASDAQ: AAPL) is giving cash-strapped consumers a reason to buy its products.",
+    "symbols": [
+      "AAPL",
+      "AMZN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16255211/apple-extends-zero-interest-apple-card-financing-for-macs-ipods-more",
+    "created_at": "2020-06-15T17:22:24Z"
+  },
+  {
+    "id": 16254890,
+    "headline": "Is Big Tech Too Big To Fail?",
+    "summary": "When we speak of market capitalization, Apple Inc. (NASDAQ: AAPL), Microsoft Corporation (NASDAQ: MSFT), Amazon.com, Inc. (NASDAQ: ",
+    "symbols": [
+      "AAPL",
+      "AMZN",
+      "FB",
+      "GE",
+      "GOOG",
+      "IBM",
+      "MSFT",
+      "SNAP",
+      "TCEHY",
+      "TWTR",
+      "XOM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/economics/20/06/16254890/is-big-tech-too-big-to-fail",
+    "created_at": "2020-06-15T16:49:12Z"
+  },
+  {
+    "id": 16255348,
+    "headline": "Tesla Shares Quiet Following Electrek Tweet 'Tesla is officially approved as electric utility in the UK — but why?'",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16255348/tesla-shares-quiet-following-electrek-tweet-tesla-is-officially-approved-as-electric-utility-in-the",
+    "created_at": "2020-06-15T16:29:38Z"
+  },
+  {
+    "id": 16254654,
+    "headline": "Price Over Earnings Overview: Synopsys",
+    "summary": " \n\n",
+    "symbols": [
+      "SNPS"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/intraday-update/20/06/16254654/price-over-earnings-overview-synopsys",
+    "created_at": "2020-06-15T15:26:26Z"
+  },
+  {
+    "id": 16254498,
+    "headline": "Amazon CEO Bezos Says Is Willing To Testify Before Congress",
+    "summary": "",
+    "symbols": [
+      "AMZN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16254498/amazon-ceo-bezos-says-is-willing-to-testify-before-congress",
+    "created_at": "2020-06-15T15:09:48Z"
+  },
+  {
+    "id": 16254456,
+    "headline": "Cadence Design Systems Reports Collaboration With Microsoft, TSMC To Reduce Semiconductor Design Timing Signoff Schedules With Cloud, No Terms Disclosed",
+    "summary": "",
+    "symbols": [
+      "CDNS",
+      "MSFT",
+      "TSM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16254456/cadence-design-systems-reports-collaboration-with-microsoft-tsmc-to-reduce-semiconductor-design-timi",
+    "created_at": "2020-06-15T15:05:44Z"
+  },
+  {
+    "id": 16254393,
+    "headline": "Synopsys Reports Collaboration With TSMC, Microsoft For Timing Signoff Flow In Cloud, No Terms Disclosed",
+    "summary": "",
+    "symbols": [
+      "MSFT",
+      "SNPS",
+      "TSM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16254393/synopsys-reports-collaboration-with-tsmc-microsoft-for-timing-signoff-flow-in-cloud-no-terms-disclos",
+    "created_at": "2020-06-15T15:01:06Z"
+  },
+  {
+    "id": 16253680,
+    "headline": "AMD Shares Spike Over $53 On Large Volume Spike; Hearing Jim Cramer Mentioned Stock/Co. Positively On CNBC",
+    "summary": "",
+    "symbols": [
+      "AMD"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16253680/amd-shares-spike-over-53-on-large-volume-spike-hearing-jim-cramer-mentioned-stockco-positively-on-cn",
+    "created_at": "2020-06-15T14:00:38Z"
+  },
+  {
+    "id": 16253579,
+    "headline": "Benzinga's Top Upgrades, Downgrades For June 15, 2020",
+    "summary": "Upgrades\n\n\n",
+    "symbols": [
+      "AAP",
+      "ABC",
+      "APA",
+      "ATRA",
+      "EIX",
+      "EPAM",
+      "FORM",
+      "GKOS",
+      "INTC",
+      "IP",
+      "KALV",
+      "KIM",
+      "MAC",
+      "MDLZ",
+      "MKSI",
+      "PKG",
+      "PSA",
+      "RH",
+      "RIG",
+      "SBUX",
+      "SHOP",
+      "SIX",
+      "SLQT",
+      "SRE",
+      "STAA",
+      "SYNA",
+      "TBPH",
+      "TWLO",
+      "VTR",
+      "WERN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/markets/penny-stocks/20/06/16253579/benzingas-top-upgrades-downgrades-for-june-15-2020",
+    "created_at": "2020-06-15T13:57:31Z"
+  },
+  {
+    "id": 16253486,
+    "headline": "Big Day For Genius Brands As Schwarzenegger Invests, Kartoon Channel Launches",
+    "summary": "Genius Brands International Inc (NASDAQ: GNUS) has been one of the hottest stocks in the market over the past three months, gaining more than 2,000%. Monday will be the biggest day of the year for the children’s entertainment company, and expectations are extremely high.",
+    "symbols": [
+      "AAPL",
+      "AMZN",
+      "BABA",
+      "CMCSA",
+      "GNUS"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16253486/big-day-for-genius-brands-as-schwarzenegger-invests-kartoon-channel-launches",
+    "created_at": "2020-06-15T13:52:24Z"
+  },
+  {
+    "id": 16253010,
+    "headline": "Walmart, Shopify Partner Up To Expand The Retail Giant's Online Business",
+    "summary": "Walmart Inc (NYSE: WMT) and Shopify Inc (NYSE: SHOP) have announced a partnership to launch a channel allowing Shopify merchants to sell products on Walmart.com.",
+    "symbols": [
+      "SHOP",
+      "WMT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16253010/walmart-shopify-partner-up-to-expand-the-retail-giants-online-business",
+    "created_at": "2020-06-15T13:41:01Z"
+  },
+  {
+    "id": 16253205,
+    "headline": "Int'l. Energy Agency Says Public Electric Vehicle Charging Points Up 60%",
+    "summary": "",
+    "symbols": [
+      "BLNK",
+      "NIO",
+      "NKLA",
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16253205/intl-energy-agency-says-public-electric-vehicle-charging-points-up-60",
+    "created_at": "2020-06-15T13:23:18Z"
+  },
+  {
+    "id": 16253155,
+    "headline": "'Electric car charge points soar to 7.3 million chargers, 60% growth in public chargers' -Electrek Report",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16253155/electric-car-charge-points-soar-to-7-3-million-chargers-60-growth-in-public-chargers-electrek-report",
+    "created_at": "2020-06-15T13:18:09Z"
+  },
+  {
+    "id": 16252976,
+    "headline": "Credit Suisse Reinstates Outperform on Broadcom, Announces $400 Price Target",
+    "summary": "",
+    "symbols": [
+      "AVGO"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16252976/credit-suisse-reinstates-outperform-on-broadcom-announces-400-price-target",
+    "created_at": "2020-06-15T13:03:37Z"
+  },
+  {
+    "id": 16252956,
+    "headline": "Honeywell Forms Business Unit Dedicated To Unmanned Aerial Systems, Urban Air Mobility",
+    "summary": "",
+    "symbols": [
+      "HON"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16252956/honeywell-forms-business-unit-dedicated-to-unmanned-aerial-systems-urban-air-mobility",
+    "created_at": "2020-06-15T13:02:03Z"
+  },
+  {
+    "id": 16248172,
+    "headline": "'Connecting The Dots': Former Cisco CEO John Chambers Details Lessons In Leadership, Life",
+    "summary": "\n“Disruption offers tremendous opportunity.” - John Chambers, founder and CEO, JC2 Ventures\n\n\nIn February, financial markets experienced a historic liquidation alongside news of an emerging health care pandemic.",
+    "symbols": [
+      "AAPL",
+      "CSCO",
+      "GOOGL",
+      "IBM",
+      "MSFT",
+      "ZM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/general/movers-shakers/20/06/16248172/connecting-the-dots-former-cisco-ceo-john-chambers-details-lessons-in-leadership-life",
+    "created_at": "2020-06-15T13:00:18Z"
+  },
+  {
+    "id": 16252628,
+    "headline": "Baird Maintains Outperform on Autodesk, Raises Price Target to $272",
+    "summary": "",
+    "symbols": [
+      "ADSK"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16252628/baird-maintains-outperform-on-autodesk-raises-price-target-to-272",
+    "created_at": "2020-06-15T12:40:12Z"
+  },
+  {
+    "id": 16252574,
+    "headline": "10 Biggest Price Target Changes For Monday",
+    "summary": "\n\tCitigroup raised  Adobe Inc  (NASDAQ: ADBE) price target from $293 to $413. Adobe shares closed at $406.54 on Friday.\n",
+    "symbols": [
+      "ADBE",
+      "CRSP",
+      "FORM",
+      "LULU",
+      "MCK",
+      "NOVA",
+      "SHOP",
+      "SO",
+      "TWLO",
+      "VICR"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/price-target/20/06/16252574/10-biggest-price-target-changes-for-monday",
+    "created_at": "2020-06-15T12:34:54Z"
+  },
+  {
+    "id": 16252443,
+    "headline": "Berenberg Upgrades Mondelez International to Buy, Raises Price Target to $61",
+    "summary": "",
+    "symbols": [
+      "MDLZ"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16252443/berenberg-upgrades-mondelez-international-to-buy-raises-price-target-to-61",
+    "created_at": "2020-06-15T12:29:17Z"
+  },
+  {
+    "id": 16252246,
+    "headline": "Citigroup Maintains Buy on Starbucks, Lowers Price Target to $87",
+    "summary": "",
+    "symbols": [
+      "SBUX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16252246/citigroup-maintains-buy-on-starbucks-lowers-price-target-to-87",
+    "created_at": "2020-06-15T12:09:10Z"
+  },
+  {
+    "id": 16250326,
+    "headline": "Catterton, TPG Invest $848M In Facebook-Backed Jio Platforms, Bringing Company's Funding To $13.7B In 2 Months",
+    "summary": "Connecticut-based private equity firm L Catterton and Australian telecom giant TPG Telecom Ltd (OTC: TSLX) have become the latest investors in Indian behemoth Reliance Industries Ltd.&#39;s subsidiary Jio Platforms.",
+    "symbols": [
+      "AMZN",
+      "FB",
+      "KKR",
+      "TSLX",
+      "WMT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16250326/catterton-tpg-invest-848m-in-facebook-backed-jio-platforms-bringing-companys-funding-to-13-7b-in-2-m",
+    "created_at": "2020-06-15T12:08:30Z"
+  },
+  {
+    "id": 16251772,
+    "headline": "Citigroup Maintains Neutral on Adobe, Raises Price Target to $413",
+    "summary": "",
+    "symbols": [
+      "ADBE"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16251772/citigroup-maintains-neutral-on-adobe-raises-price-target-to-413",
+    "created_at": "2020-06-15T11:36:46Z"
+  },
+  {
+    "id": 16251636,
+    "headline": "UPDATE: Walmart Expands Its eCommerce Marketplace To More Small Businesses",
+    "summary": "",
+    "symbols": [
+      "SHOP",
+      "TSX:SHOP",
+      "WMT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16251636/update-walmart-expands-its-ecommerce-marketplace-to-more-small-businesses",
+    "created_at": "2020-06-15T11:21:49Z"
+  },
+  {
+    "id": 16251629,
+    "headline": "Watching Hydrogen/Fuel Cell Stocks Amid Headline Chinese Premier Says Sees External Environment 'Still Grim, Complex' In China's H2 Region",
+    "summary": "",
+    "symbols": [
+      "AJRD",
+      "BLDP",
+      "FCEL",
+      "IDEX",
+      "LIN",
+      "NKLA",
+      "PLUG"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16251629/watching-hydrogenfuel-cell-stocks-amid-headline-chinese-premier-says-sees-external-environment-still",
+    "created_at": "2020-06-15T11:20:17Z"
+  },
+  {
+    "id": 16251591,
+    "headline": "Honeywell Reports KIPIC Selected Co.'s Forge Cybersecurity Software, Assurance 360 Services, No Terms Disclosed",
+    "summary": "",
+    "symbols": [
+      "HON"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16251591/honeywell-reports-kipic-selected-co-s-forge-cybersecurity-software-assurance-360-services-no-terms-d",
+    "created_at": "2020-06-15T11:12:21Z"
+  },
+  {
+    "id": 16251181,
+    "headline": "Atlantic Equities Initiates Coverage On Starbucks with Overweight Rating, Announces Price Target of $95",
+    "summary": "",
+    "symbols": [
+      "SBUX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16251181/atlantic-equities-initiates-coverage-on-starbucks-with-overweight-rating-announces-price-target-of-9",
+    "created_at": "2020-06-15T10:33:00Z"
+  },
+  {
+    "id": 16250416,
+    "headline": "AT&T Reportedly Considers Selling Warner Gaming Division In A Deal That Could Fetch $4B",
+    "summary": "AT&amp;T Inc. (NYSE: T) is in discussions with multiple companies to sell its subsidiary Warner Bros. Interactive Entertainment, according to a CNBC report Friday.",
+    "symbols": [
+      "ATVI",
+      "EA",
+      "T",
+      "TTWO"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16250416/at-t-reportedly-considers-selling-warner-gaming-division-in-a-deal-that-could-fetch-4b",
+    "created_at": "2020-06-15T10:23:57Z"
+  },
+  {
+    "id": 16251071,
+    "headline": "Walmart Suspended Sale of all Salmon Products in Stores Across China after Xinfadi Outbreak",
+    "summary": "",
+    "symbols": [
+      "FXI",
+      "WMT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16251071/walmart-suspended-sale-of-all-salmon-products-in-stores-across-china-after-xinfadi-outbreak",
+    "created_at": "2020-06-15T10:14:40Z"
+  },
+  {
+    "id": 16251068,
+    "headline": "UPDATE: Shopify's App Store Lists Details Of Walmart Integration",
+    "summary": "",
+    "symbols": [
+      "SHOP",
+      "TSX:SHOP",
+      "WMT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16251068/update-shopifys-app-store-lists-details-of-walmart-integration",
+    "created_at": "2020-06-15T10:13:57Z"
+  },
+  {
+    "id": 16251059,
+    "headline": "A Peek Into The Markets: US Stock Futures Plunge Following Last Week's Selloff",
+    "summary": "Pre-open movers\n\nU.S. stock futures traded lower in early pre-market trade, after closing sharply lower for the previous week. The NY Empire State manufacturing index for June will be released at 8:30 a.m. ET. Federal Reserve Bank of Dallas President Robert Kaplan is set to speak at 11:00 a.m. ET.",
+    "symbols": [
+      "ACN",
+      "AZN",
+      "INTC",
+      "T"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16251059/a-peek-into-the-markets-us-stock-futures-plunge-following-last-weeks-selloff",
+    "created_at": "2020-06-15T10:11:01Z"
+  },
+  {
+    "id": 16251031,
+    "headline": "Shopify Shares Up 2.6% In Pre-Market Trade; Seeing Report Co. Has Partner With Walmart",
+    "summary": "",
+    "symbols": [
+      "SHOP",
+      "TSX:SHOP",
+      "WMT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16251031/shopify-shares-up-2-6-in-pre-market-trade-seeing-report-co-has-partner-with-walmart",
+    "created_at": "2020-06-15T10:04:53Z"
+  },
+  {
+    "id": 16250856,
+    "headline": "Supply Chain Confused by AMD, Intel, Nvidia Next-gen Chip Launch Schedules",
+    "summary": "",
+    "symbols": [
+      "AMD",
+      "INTC",
+      "NVDA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16250856/supply-chain-confused-by-amd-intel-nvidia-next-gen-chip-launch-schedules",
+    "created_at": "2020-06-15T09:25:58Z"
+  },
+  {
+    "id": 16250847,
+    "headline": "Tesla's China Car Registrations +150% MoM in May",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16250847/teslas-china-car-registrations-150-mom-in-may",
+    "created_at": "2020-06-15T09:22:01Z"
+  },
+  {
+    "id": 16250755,
+    "headline": "Piper Sandler Upgrades Shopify to Overweight, Raises Price Target to $843",
+    "summary": "",
+    "symbols": [
+      "SHOP"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16250755/piper-sandler-upgrades-shopify-to-overweight-raises-price-target-to-843",
+    "created_at": "2020-06-15T08:49:15Z"
+  },
+  {
+    "id": 16250745,
+    "headline": "KeyBanc Upgrades Intel to Overweight, Announces $82 Price Target",
+    "summary": "",
+    "symbols": [
+      "INTC"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16250745/keybanc-upgrades-intel-to-overweight-announces-82-price-target",
+    "created_at": "2020-06-15T08:42:13Z"
+  },
+  {
+    "id": 16250336,
+    "headline": "Buffett's Company Accused Of Planting Bricks At Protest Sites By Online Conspiracy Theorists",
+    "summary": "Acme Bricks, owned by Warren Buffett’s Berkshire Hataway Inc., (NYSE: BRK-A) (NYSE: BRK-B) is accused of being in a ",
+    "symbols": [
+      "BRK-A",
+      "BRK-B",
+      "FOX",
+      "MSFT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16250336/buffetts-company-accused-of-planting-bricks-at-protest-sites-by-online-conspiracy-theorists",
+    "created_at": "2020-06-15T06:01:29Z"
+  },
+  {
+    "id": 16250307,
+    "headline": "Tesla Adds Wireless Charging, USB-C Ports To US-Made Model 3 Cars: Report",
+    "summary": "Tesla Inc. is adding a wireless phone charger and USB-C ports to its Model 3 electric vehicles in the United States, Electrek reported Saturday.",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/06/16250307/tesla-adds-wireless-charging-usb-c-ports-to-us-made-model-3-cars-report",
+    "created_at": "2020-06-15T04:25:34Z"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 44552341,
+    "headline": "FBI Targets Tesla Protests, Rivian's Micromobility Spin-Off, And Waymo's Parking Fines: This Week In Mobility",
+    "summary": "The weekly round-up covers major developments in the EV space, including the FBI launching a task force over Tesla protest violence, Rivian spinning off its micromobility unit, Waymo facing hefty parking fines, and Ford exploring manual EV shifts—while experts debunk claims of coordinated attacks on Tesla.",
+    "symbols": [
+      "F",
+      "RIVN",
+      "TSLA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/tech/25/03/44552341/fbi-targets-tesla-protests-rivians-micromobility-spin-off-and-waymos-parking-fines-this-week-in-mobility",
+    "created_at": "2025-03-30T14:00:43Z"
+  },
+  {
+    "id": 44552212,
+    "headline": "CoreWeave IPO, Elon Musk'x xAI Acquires X, Microsoft's Wake-Up Call, China's Huawei Makes Advances, And More: This Week In AI",
+    "summary": "Exciting news and developments in the tech world this week, including CoreWeave&#39;s IPO and Elon Musk&#39;s $33B acquisition. Catch up on the top stories!",
+    "symbols": [
+      "CRWV",
+      "GOOG",
+      "GOOGL",
+      "MSFT",
+      "NVDA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/25/03/44552212/coreweave-ipo-elon-muskx-xai-acquires-x-microsofts-wake-up-call-chinas-huawei-makes-advances-and-more-this-week-in-ai",
+    "created_at": "2025-03-30T13:00:47Z"
+  },
+  {
+    "id": 44551776,
+    "headline": "Apple Shakes Up Leadership, Introduces New Features, And Faces A Siri Crisis: This Week In Appleverse",
+    "summary": "The past week has been eventful for Apple, with significant leadership changes, new product features, and challenges on multiple fronts.",
+    "symbols": [
+      "AAPL",
+      "TSM"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/25/03/44551776/apple-shakes-up-leadership-introduces-new-features-and-faces-a-siri-crisis-this-week-in-appleverse",
+    "created_at": "2025-03-30T11:00:43Z"
+  }
+]

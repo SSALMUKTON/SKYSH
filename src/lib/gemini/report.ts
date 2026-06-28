@@ -1,27 +1,29 @@
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import type { Market, ReportKind, RuleType } from "@prisma/client";
+import { buildReportPrompt, VALID_RULE_TYPES } from "./prompts";
 
 /** Gemini 가 제안하는 새 조항. 자유텍스트 금지 — 룰 타입 + params 조정만 (spec.md). */
 export interface SuggestedClause {
   ruleType: RuleType;
   suggestedParams: Record<string, unknown>;
-  displayText: string; // 제안 문구
-  rationale: string; // 제안 근거
+  displayText: string;
+  rationale: string;
 }
 
 export interface GeneratedReport {
-  kind: ReportKind; // DEATH | SURVIVAL
-  body: string; // 렌더용 서술 본문
-  causes: string[]; // 주요 사망/생존 원인
-  violatedClauses: string[]; // 위반(또는 지킨) 조항 id
+  kind: ReportKind;
+  body: string;
+  causes: string[];
+  violatedClauses: string[];
   suggestions: SuggestedClause[];
-  rawAiResponse?: string; // 파싱 실패 대비 원본 보관
+  rawAiResponse?: string;
 }
 
-/** 보고서 생성을 위한 거래 요약 입력. P3 가 필요 시 확장. */
+/** 보고서 생성을 위한 거래 요약 입력. */
 export interface TradeSummary {
   market: Market;
   symbol: string;
-  pnlPct: number; // 손익률(%). 양수=생존, 음수=사망
+  pnlPct: number;
   holdDurationMin: number;
   orders: Array<{
     side: string;
@@ -35,18 +37,63 @@ export interface TradeSummary {
   activeClauses: Array<{ id: string; ruleType: RuleType; displayText: string }>;
 }
 
-/**
- * 거래 1건을 받아 Gemini 로 사망진단서/생존보고서를 생성한다. [owner: P3]
- *
- * 구현 가이드(P3):
- *   - pnlPct 부호로 DEATH/SURVIVAL 분기.
- *   - GEMINI_API_KEY(GEMINI_MODEL)로 호출 → JSON 구조화 출력 강제 → 파싱.
- *   - 파싱 실패 시 rawAiResponse 보관 + fallback.
- *   - suggestions 는 기존 ruleType + params 조정만 (자유텍스트 금지).
- */
-export async function generateReport(
-  trade: TradeSummary,
-): Promise<GeneratedReport> {
-  void trade;
-  throw new Error("not implemented — P3 (generateReport)");
+
+function fallbackReport(trade: TradeSummary, raw?: string): GeneratedReport {
+  const kind: ReportKind = trade.pnlPct < 0 ? "DEATH" : "SURVIVAL";
+  return {
+    kind,
+    body:
+      kind === "DEATH"
+        ? `${trade.symbol} 거래에서 ${trade.pnlPct.toFixed(2)}% 손실이 발생했습니다.`
+        : `${trade.symbol} 거래에서 ${trade.pnlPct.toFixed(2)}% 수익을 달성했습니다.`,
+    causes: kind === "DEATH" ? ["거래 원인 분석 실패"] : ["수익 원인 분석 실패"],
+    violatedClauses: [],
+    suggestions: [],
+    rawAiResponse: raw,
+  };
+}
+
+function parseResponse(raw: string, trade: TradeSummary): GeneratedReport {
+  // JSON 코드블록 제거
+  const cleaned = raw.replace(/^```json\s*/i, "").replace(/\s*```$/, "").trim();
+  const parsed = JSON.parse(cleaned);
+
+  const kind: ReportKind = trade.pnlPct < 0 ? "DEATH" : "SURVIVAL";
+
+  const suggestions: SuggestedClause[] = (parsed.suggestions ?? [])
+    .filter((s: { ruleType: unknown }) => VALID_RULE_TYPES.includes(s.ruleType as RuleType))
+    .map((s: SuggestedClause) => ({
+      ruleType: s.ruleType,
+      suggestedParams: s.suggestedParams ?? {},
+      displayText: s.displayText ?? "",
+      rationale: s.rationale ?? "",
+    }));
+
+  return {
+    kind,
+    body: parsed.body ?? "",
+    causes: Array.isArray(parsed.causes) ? parsed.causes : [],
+    violatedClauses: Array.isArray(parsed.violatedClauses) ? parsed.violatedClauses : [],
+    suggestions,
+    rawAiResponse: raw,
+  };
+}
+
+export async function generateReport(trade: TradeSummary): Promise<GeneratedReport> {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) return fallbackReport(trade, "GEMINI_API_KEY not set");
+
+  const genAI = new GoogleGenerativeAI(apiKey);
+  const model = genAI.getGenerativeModel({
+    model: process.env.GEMINI_MODEL ?? "gemini-1.5-flash",
+  });
+
+  let raw = "";
+  try {
+    const result = await model.generateContent(buildReportPrompt(trade));
+    raw = result.response.text();
+    return parseResponse(raw, trade);
+  } catch {
+    return fallbackReport(trade, raw || "Gemini call failed");
+  }
 }

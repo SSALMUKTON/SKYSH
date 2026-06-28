@@ -1,24 +1,33 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
+import { RuleType } from "@prisma/client";
+import { getDemoUser } from "@/lib/user";
 
-/**
- * /api/clauses — 유언 조항 CRUD. [owner: P4]
- *
- *   GET  : 사용자의 Clause 목록 (active 필터)
- *   POST : 조항 생성 — ruleType, params, displayText
- *
- * 구현 가이드: prisma.clause.* . 수정/삭제·제안 승인은
- *   /api/clauses/[id] (PATCH/DELETE), /api/clauses/suggestions/[id] 라우트 추가.
- */
+// GET /api/clauses — 활성 조항 목록
 export async function GET() {
-  return NextResponse.json(
-    { error: "not implemented", owner: "P4", todo: "Clause 목록 조회" },
-    { status: 501 },
-  );
+  const user = await getDemoUser();
+  const clauses = await prisma.clause.findMany({
+    where: { userId: user.id, active: true },
+    orderBy: { createdAt: "asc" },
+  });
+  return NextResponse.json(clauses);
 }
 
-export async function POST() {
-  return NextResponse.json(
-    { error: "not implemented", owner: "P4", todo: "Clause 생성" },
-    { status: 501 },
-  );
+// POST /api/clauses — 조항 생성
+export async function POST(req: NextRequest) {
+  const body = await req.json();
+  const { ruleType, params, displayText } = body;
+
+  if (!ruleType || !displayText) {
+    return NextResponse.json({ error: "ruleType, displayText 필수" }, { status: 400 });
+  }
+  if (!Object.values(RuleType).includes(ruleType)) {
+    return NextResponse.json({ error: "유효하지 않은 ruleType" }, { status: 400 });
+  }
+
+  const user = await getDemoUser();
+  const clause = await prisma.clause.create({
+    data: { userId: user.id, ruleType, params: params ?? {}, displayText },
+  });
+  return NextResponse.json(clause, { status: 201 });
 }

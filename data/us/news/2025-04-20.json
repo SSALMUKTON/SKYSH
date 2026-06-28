@@ -1,0 +1,138 @@
+[
+  {
+    "id": 44891097,
+    "headline": "Zuckerberg, Dimon Sold Shares Ahead Of Stock Rout Triggered By Trump Tariff Talk",
+    "summary": "Insiders including Meta Platforms Inc. (NASDAQ: META)&#39;s Mark Zuckerberg, Oracle Corp. (NYSE: ORCL)&#39;s Safra Catz, and JPMorgan Chase &amp; Co. (NYSE: JPM)&#39;s Jamie Dimon offloaded shares worth billions prior to President Donald Trump&#39;s tariff declarations",
+    "symbols": [
+      "JPM",
+      "META",
+      "ORCL"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/markets/25/04/44891097/zuckerberg-dimon-sold-shares-ahead-of-stock-rout-triggered-by-trump-tariff-talk",
+    "created_at": "2025-04-20T20:01:49Z"
+  },
+  {
+    "id": 44890674,
+    "headline": "Jeff Bezos Once Tried to Buy Netflix, Co-Founder Says: 'We Said No and Then Worked Our A-- Off for 20 Years'",
+    "summary": "During the formative years of Netflix, co-founders Marc Randolph and Reed Hastings made a bold decision to decline an acquisition proposal from Jeff Bezos, the founder of Amazon.",
+    "symbols": [
+      "AMZN",
+      "NFLX"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/markets/25/04/44890674/jeff-bezos-once-tried-to-buy-netflix-co-founder-says-we-said-no-and-then-worked-our-a-off-for-20-years",
+    "created_at": "2025-04-20T16:31:11Z"
+  },
+  {
+    "id": 44890578,
+    "headline": "Nvidia's Jensen Huang Meets Shanghai Mayor Amid Fresh US Chip Curbs",
+    "summary": "Nvidia CEO Jensen Huang deepens China ties amid U.S. chip export curbs and rising AI competition.",
+    "symbols": [
+      "NVDA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/markets/equities/25/04/44890578/nvidias-jensen-huang-meets-shanghai-mayor-amid-fresh-us-chip-curbs",
+    "created_at": "2025-04-20T15:31:48Z"
+  },
+  {
+    "id": 44890509,
+    "headline": "These Large Cap Tech And Healthcare Stocks Had A Poor Run In Easter Week (Apr 14-Apr 18): Are These In Your Portfolio?",
+    "summary": "Large-cap stocks had poor performance last week, including UnitedHealth Group, Global Payments, Applovin, Humana, DaVita, Meta Platforms, Yum China, CoreWeave, Burlington Stores, Super Micro Computer, and GlobalFoundries.",
+    "symbols": [
+      "APP",
+      "BURL",
+      "CRWV",
+      "DVA",
+      "GFS",
+      "GPN",
+      "HUM",
+      "META",
+      "NVDA",
+      "RDDT",
+      "SMCI",
+      "UNH",
+      "YUMC"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/large-cap/25/04/44890509/these-large-cap-tech-and-healthcare-stocks-had-a-poor-run-in-easter-week-apr-14-apr-18-are-these-in-your-portfolio",
+    "created_at": "2025-04-20T14:46:20Z"
+  },
+  {
+    "id": 44890333,
+    "headline": "Tesla's FSD Deployment, Kodiak Robotics' SPAC Merger, And Rivian's New Deal: This Week In Mobility",
+    "summary": "This week in tech and auto news: Tesla deploys its Full Self-Driving tech at Giga Texas, Kodiak Robotics announces a SPAC merger to go public, Rivian delivers vehicles to HelloFresh, and Tesla faces rising insurance costs.",
+    "symbols": [
+      "AACT",
+      "AMZN",
+      "HLFFF",
+      "RIVN",
+      "TSLA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/media/25/04/44890333/teslas-fsd-deployment-kodiak-robotics-spac-merger-and-rivians-new-deal-this-week-in-mobility",
+    "created_at": "2025-04-20T13:48:19Z"
+  },
+  {
+    "id": 44890324,
+    "headline": "In The Holiday Shortened Easter Week, These Large-Cap Stock Were Top Performers (Apr 14-Apr 18): Are These In Your Portfolio?",
+    "summary": "Top performers last week: ServiceTitan, Summit Therapeutics, YPF, Eli Lilly, MicroStrategy, America Movil, Ericsson, Insmed, Diamondback, Neurocrine Biosciences.",
+    "symbols": [
+      "AMX",
+      "ERIC",
+      "FANG",
+      "INSM",
+      "LLY",
+      "MSTR",
+      "NBIX",
+      "SMMT",
+      "TTAN",
+      "YPF"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/large-cap/25/04/44890324/in-the-holiday-shortened-easter-week-these-large-cap-stock-were-top-performers-apr-14-apr-18-are-these-in-your-portfolio",
+    "created_at": "2025-04-20T13:46:27Z"
+  },
+  {
+    "id": 44890247,
+    "headline": "OpenAI's Codex CLI, Intel's Reshuffle, And Nvidia's $500B Commitment: This Week In Artificial Intelligence",
+    "summary": "OpenAI launched a new coding agent, Intel&#39;s CEO initiated a leadership shakeup, and Nvidia faced a $17 billion hit in the AI arms race.",
+    "symbols": [
+      "AMD",
+      "INTC",
+      "MSFT",
+      "NVDA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/tech/25/04/44890247/openais-codex-cli-intels-reshuffle-and-nvidias-500b-commitment-this-week-in-artificial-intelligence",
+    "created_at": "2025-04-20T13:01:52Z"
+  },
+  {
+    "id": 44890127,
+    "headline": "Bitcoin's Sideways Dance, OM Token Crash, Saylor's Bitcoin Tease, And Cathie Wood's Crypto Shuffle: This Week In Crypto",
+    "summary": "The past week was a rollercoaster ride for the cryptocurrency market.",
+    "symbols": [
+      "BTC",
+      "BTCUSD",
+      "DOGEUSD",
+      "ETHUSD",
+      "HOOD",
+      "MSTR",
+      "XRPUSD"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/markets/cryptocurrency/25/04/44890127/bitcoins-sideways-dance-om-token-crash-saylors-bitcoin-tease-and-cathie-woods-crypto-shuffle-this-week-in-crypto",
+    "created_at": "2025-04-20T12:02:11Z"
+  },
+  {
+    "id": 44890054,
+    "headline": "Apple's Week Of Tariffs, iPhone Stockpile, Stock Slides, And More: This Week In Appleverse",
+    "summary": "From tariff exemptions to stock nosedives and innovative tech rumors, Apple has been in the spotlight.",
+    "symbols": [
+      "AAPL"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/tech/25/04/44890054/apples-week-of-tariffs-iphone-stockpile-stock-slides-and-more-this-week-in-appleverse",
+    "created_at": "2025-04-20T11:02:02Z"
+  }
+]
