@@ -1,0 +1,9 @@
+# 모든 OS에서 동일한 줄바꿈(LF)을 사용해 diff churn 방지
+* text=auto eol=lf
+
+# 바이너리 자산
+*.png binary
+*.ico binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
