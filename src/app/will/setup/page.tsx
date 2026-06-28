@@ -111,6 +111,8 @@ export default function WillSetupPage() {
 
   async function save() {
     setSaving(true);
+    const existing = await fetch("/api/clauses").then((r) => r.json());
+    await Promise.all(existing.map((c: { id: string }) => fetch(`/api/clauses/${c.id}`, { method: "DELETE" })));
     await Promise.all([
       ...finalQuizClauses.map((q) =>
         fetch("/api/clauses", {
