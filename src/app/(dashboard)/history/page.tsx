@@ -1,7 +1,8 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
-import { Plus, Trash2, FileText, X } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Plus, Trash2, FileText, X, Loader2 } from "lucide-react";
 import { MARKET_META, formatPrice, formatPct, PROFIT, LOSS } from "@/lib/format";
 
 type Market = "KR" | "US" | "COIN";
@@ -24,9 +25,11 @@ function holdLabel(min: number | null): string {
 }
 
 export default function HistoryPage() {
+  const router = useRouter();
   const [trades, setTrades] = useState<Trade[]>([]);
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
+  const [generatingId, setGeneratingId] = useState<string | null>(null);
 
   const refresh = useCallback(async () => {
     setLoading(true);
@@ -53,6 +56,25 @@ export default function HistoryPage() {
     await fetch(`/api/trades?id=${id}`, { method: "DELETE" });
     refresh();
   };
+
+  async function openReport(t: Trade) {
+    if (t.report) {
+      router.push(`/reports?id=${t.report.id}`);
+      return;
+    }
+    setGeneratingId(t.id);
+    const r = await fetch("/api/reports", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ tradeId: t.id }),
+    });
+    setGeneratingId(null);
+    if (r.ok) {
+      const report = await r.json();
+      refresh();
+      router.push(`/reports?id=${report.id}`);
+    }
+  }
 
   return (
     <div className="p-8">
@@ -81,7 +103,15 @@ export default function HistoryPage() {
           </div>
         ) : (
           <div className="space-y-2.5">
-            {trades.map((t) => <TradeRow key={t.id} t={t} onDelete={() => remove(t.id)} />)}
+            {trades.map((t) => (
+              <TradeRow
+                key={t.id}
+                t={t}
+                onDelete={() => remove(t.id)}
+                onReport={() => openReport(t)}
+                generating={generatingId === t.id}
+              />
+            ))}
           </div>
         )}
       </div>
@@ -89,7 +119,7 @@ export default function HistoryPage() {
   );
 }
 
-function TradeRow({ t, onDelete }: { t: Trade; onDelete: () => void }) {
+function TradeRow({ t, onDelete, onReport, generating }: { t: Trade; onDelete: () => void; onReport: () => void; generating: boolean }) {
   const closed = t.status === "CLOSED";
   const win = (t.pnlPct ?? 0) >= 0;
   const color = closed ? (win ? PROFIT : LOSS) : "#6E6A75";
@@ -124,10 +154,14 @@ function TradeRow({ t, onDelete }: { t: Trade; onDelete: () => void }) {
             <span className="text-xs text-muted-foreground">미실현</span>
           )}
           {closed && (
-            <Link href="/reports"
-              className="inline-flex items-center gap-1 text-xs font-bold text-foreground border border-border px-2.5 py-1.5 hover:bg-muted transition-colors">
-              <FileText size={12} />{t.report ? "보고서" : "보고서 발급"}
-            </Link>
+            <button
+              onClick={onReport}
+              disabled={generating}
+              className="inline-flex items-center gap-1 text-xs font-bold text-foreground border border-border px-2.5 py-1.5 hover:bg-muted transition-colors disabled:opacity-50"
+            >
+              {generating ? <Loader2 size={12} className="animate-spin" /> : <FileText size={12} />}
+              {t.report ? "보고서" : "보고서 발급"}
+            </button>
           )}
           <button onClick={onDelete} className="text-muted-foreground hover:text-[#B83535] transition-colors p-1.5" title="삭제">
             <Trash2 size={14} />
