@@ -3,7 +3,8 @@ import { Shield, RefreshCw, ChevronRight } from "lucide-react";
 
 export default function SettingsPage() {
   return (
-    <div className="p-10 max-w-2xl">
+    <div className="p-10">
+      <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-black text-foreground mb-1">설정</h1>
       <p className="text-sm text-muted-foreground mb-10">계좌 연동 및 유언장 관리</p>
 
@@ -64,6 +65,7 @@ export default function SettingsPage() {
         <p className="text-xs text-[#7A5F0E] leading-relaxed">
           실제 주문 전에는 반드시 유언장 검사를 거칩니다. 故래소는 귀하의 투자 결정에 개입하지 않으며, 과거 거래 패턴을 분석해 경고만 제공합니다.
         </p>
+      </div>
       </div>
     </div>
   );
