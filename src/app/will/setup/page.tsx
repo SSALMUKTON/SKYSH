@@ -92,6 +92,11 @@ export default function WillSetupPage() {
     }
   }
 
+  const BACKTEST_SUPPORTED: string[] = [
+    "CHASE_SURGE", "PREMARKET_GAP", "NO_STOP_LOSS",
+    "REVENGE_TRADE", "MARKET_ORDER_IMPULSE", "AVERAGING_DOWN",
+  ];
+
   async function convert() {
     if (!inputText.trim()) return;
     setConverting(true);
@@ -101,6 +106,10 @@ export default function WillSetupPage() {
       body: JSON.stringify({ text: inputText.trim() }),
     });
     const data = await res.json();
+    if (data.error) { setConverting(false); return; }
+    if (!BACKTEST_SUPPORTED.includes(data.ruleType)) {
+      data.ruleType = "NO_STOP_LOSS"; // 미지원 룰은 가장 가까운 룰로 대체
+    }
     setCustomClauses((prev) => [...prev, { ...data, fromText: inputText.trim() }]);
     setInputText("");
     setConverting(false);
