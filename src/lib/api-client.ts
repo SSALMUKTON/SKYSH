@@ -10,6 +10,7 @@
 import type { Market, ReportKind } from "@prisma/client";
 import type { Quote } from "@/lib/broker/types";
 import type { OrderDraft, PrecheckResult, Violation } from "@/lib/rules/types";
+import { CHART_DATA } from "@/lib/mock-data";
 
 export interface ExecuteResult {
   orderId: string;
@@ -135,6 +136,33 @@ export async function getQuote(
     return { data: { ...raw, asOf: new Date(raw.asOf) } as Quote, mocked: false };
   } catch {
     return { data: { ...MOCK_QUOTE, symbol, market }, mocked: true };
+  }
+}
+
+/** 차트용 일봉 포인트 (recharts dataKey: t/p). */
+export interface Candle {
+  t: string; // 날짜
+  p: number; // 종가
+}
+
+/** 일봉 시계열 조회(차트용). 실패 시 CHART_DATA mock. */
+export async function getSeries(
+  market: Market,
+  symbol: string,
+  limit = 120,
+): Promise<ApiResult<Candle[]>> {
+  try {
+    const res = await fetch(
+      `/api/market/series?market=${market}&symbol=${encodeURIComponent(symbol)}&limit=${limit}`,
+      { headers: authHeaders() },
+    );
+    if (!res.ok) throw new Error(`series ${res.status}`);
+    const raw = await res.json();
+    const candles = (raw.candles ?? []) as Array<{ date: string; close: number }>;
+    if (candles.length === 0) throw new Error("empty series");
+    return { data: candles.map((c) => ({ t: c.date, p: c.close })), mocked: false };
+  } catch {
+    return { data: CHART_DATA as Candle[], mocked: true };
   }
 }
 

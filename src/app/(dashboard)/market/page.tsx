@@ -221,8 +221,8 @@ function SymbolDetail({ market, item }: { market: Market; item: UniverseItem }) 
           )}
           <p className="text-[10px] text-muted-foreground text-right mt-1">최근 {chartData.length}거래일 일봉 (종가)</p>
         </div>
-        {/* 주문 화면으로 */}
-        <Link href="/order"
+        {/* 주문 화면으로 — 선택 종목/시장/이름 전달 */}
+        <Link href={`/order?market=${market}&symbol=${encodeURIComponent(item.symbol)}&name=${encodeURIComponent(item.name)}`}
           className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-foreground hover:underline underline-offset-2">
           <TrendingUp size={12} /> 이 종목 주문하러 가기 →
         </Link>
