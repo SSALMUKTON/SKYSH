@@ -9,6 +9,7 @@
   python -m pipelines.run kr all --index kospi200
   python -m pipelines.run crypto all --quote KRW
   python -m pipelines.run all                   # 3개 자산군 전체(키 필요)
+  python -m pipelines.run all prices            # 3개 자산군 가격만(키 불필요)
 
 dataset 목록:
   us     : prices | news | fred | sec | all
@@ -87,7 +88,8 @@ def _run_crypto(ds: str, a: argparse.Namespace) -> None:
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="pipelines.run", description="SKYSH 데이터 수집")
     p.add_argument("asset", choices=["us", "kr", "crypto", "all"])
-    p.add_argument("dataset", nargs="?", default="all", help="자산군별 dataset 또는 all")
+    p.add_argument("dataset", nargs="?", default="all",
+                   help="자산군별 dataset 또는 all. `all prices`면 3군 가격만 수집")
     p.add_argument("--start", default=None, help="시작일 YYYY-MM-DD")
     p.add_argument("--end", default=None, help="종료일 YYYY-MM-DD")
     p.add_argument("--tickers", nargs="*", default=None, help="(us) 종목 한정")
@@ -102,9 +104,11 @@ def main(argv: list[str] | None = None) -> int:
     a = p.parse_args(argv)
 
     if a.asset == "all":
-        for fn, ds in ((_run_us, "all"), (_run_kr, "all"), (_run_crypto, "all")):
+        # dataset 인자를 그대로 전달 → `all prices`면 3군 가격만, 기본(all)이면 전체.
+        # prices 분기가 없는 자산군은 해당 dataset에서 자연히 skip된다.
+        for fn in (_run_us, _run_kr, _run_crypto):
             try:
-                fn(ds, a)
+                fn(a.dataset, a)
             except Exception as e:
                 print(f"[run] {fn.__name__} 실패: {type(e).__name__}: {e}", file=sys.stderr)
         return 0
