@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import type { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
+import { listUniverse } from "@/lib/data/universe";
 import { getDemoUser } from "@/lib/user";
 import { computeHoldMin, computePnlPct, isMarket, triggerReport } from "@/lib/trades";
 
@@ -29,7 +30,15 @@ export async function GET(req: NextRequest) {
     orderBy: { createdAt: "desc" },
     include: { orders: { orderBy: { createdAt: "asc" } }, report: true },
   });
-  return NextResponse.json({ trades });
+  const universes = await Promise.all(["KR", "US", "COIN"].map((m) => listUniverse(m as "KR" | "US" | "COIN")));
+  const namesByMarket = new Map(
+    ["KR", "US", "COIN"].map((m, i) => [m, new Map(universes[i].map((it) => [it.symbol, it.name]))]),
+  );
+  const withDisplayNames = trades.map((trade) => {
+    const company = namesByMarket.get(trade.market)?.get(trade.symbol);
+    return company && company !== trade.symbol ? { ...trade, company } : trade;
+  });
+  return NextResponse.json({ trades: withDisplayNames });
 }
 
 const manualTradeSchema = z

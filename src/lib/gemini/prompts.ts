@@ -95,6 +95,10 @@ ruleType은 반드시 다음 중 하나 (각 패턴 설명 참고):
 export function buildReportPrompt(trade: TradeSummary): string {
   const kind = trade.pnlPct < 0 ? "DEATH" : "SURVIVAL";
   const buyOrder = trade.orders.find((o) => o.side === "BUY");
+  const displayName = trade.displayName ?? trade.symbol;
+  const symbolInfo = displayName === trade.symbol
+    ? `${trade.symbol} (${trade.market})`
+    : `${displayName} (${trade.symbol}, ${trade.market})`;
   const clauseList = trade.activeClauses
     .map((c) => `- [${c.id}] ${c.ruleType}: "${c.displayText}"`)
     .join("\n");
@@ -102,7 +106,7 @@ export function buildReportPrompt(trade: TradeSummary): string {
   return `당신은 투자 거래 복기 전문가입니다. 아래 거래 데이터를 분석해서 JSON을 반환하세요.
 
 거래 정보:
-- 종목: ${trade.symbol} (${trade.market})
+- 종목: ${symbolInfo}
 - 손익률: ${trade.pnlPct > 0 ? "+" : ""}${trade.pnlPct.toFixed(2)}%
 - 보유 시간: ${trade.holdDurationMin}분
 - 주문 유형: ${buyOrder?.orderType ?? "MARKET"}

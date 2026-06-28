@@ -1,9 +1,38 @@
 import { NextRequest, NextResponse } from "next/server";
 import type { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
+import { listUniverse } from "@/lib/data/universe";
 import { getDemoUser } from "@/lib/user";
 import { generateReport } from "@/lib/gemini/report";
 import type { TradeSummary } from "@/lib/gemini/report";
+import type { Market } from "@prisma/client";
+
+const MARKETS: Market[] = ["KR", "US", "COIN"];
+
+async function displayNameFor(market: Market, symbol: string) {
+  const universe = await listUniverse(market);
+  const name = universe.find((item) => item.symbol === symbol)?.name;
+  return name && name !== symbol ? name : undefined;
+}
+
+async function attachDisplayNames<T extends { trade: { market: Market; symbol: string } }>(
+  rows: T[],
+) {
+  const universes = await Promise.all(MARKETS.map((market) => listUniverse(market)));
+  const namesByMarket = new Map(
+    MARKETS.map((market, i) => [
+      market,
+      new Map(universes[i].map((item) => [item.symbol, item.name])),
+    ]),
+  );
+
+  return rows.map((row) => {
+    const name = namesByMarket.get(row.trade.market)?.get(row.trade.symbol);
+    return name && name !== row.trade.symbol
+      ? { ...row, trade: { ...row.trade, company: name } }
+      : row;
+  });
+}
 
 // GET /api/reports — 사용자 보고서 목록
 export async function GET() {
@@ -17,7 +46,7 @@ export async function GET() {
       },
     },
   });
-  return NextResponse.json({ reports });
+  return NextResponse.json({ reports: await attachDisplayNames(reports) });
 }
 
 // POST /api/reports — 보고서 생성 (이미 있으면 기존 반환)
@@ -53,6 +82,7 @@ export async function POST(req: NextRequest) {
   const summary: TradeSummary = {
     market: trade.market,
     symbol: trade.symbol,
+    displayName: await displayNameFor(trade.market, trade.symbol),
     pnlPct: trade.pnlPct ?? 0,
     holdDurationMin: trade.holdDurationMin ?? 0,
     orders: trade.orders.map((o) => ({

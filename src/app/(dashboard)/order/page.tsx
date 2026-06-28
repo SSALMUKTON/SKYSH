@@ -32,6 +32,7 @@ function OrderForm() {
   const market = asMarket(sp.get("market"));
   const symbol = sp.get("symbol") ?? "TSLA";
   const name = sp.get("name") ?? "";
+  const displayName = name || symbol;
 
   const [step, setStep] = useState<Step>("form");
   const [showModal, setShowModal] = useState(false);
@@ -159,7 +160,7 @@ function OrderForm() {
           <div className="bg-card border border-border p-5 text-left mb-4">
             <p className="text-[9px] font-bold text-muted-foreground mb-4 tracking-[0.2em] uppercase">주문 상세</p>
             {[
-              { label: "종목", value: name ? `${symbol} (${name})` : symbol },
+              { label: "종목", value: name ? `${name} (${symbol})` : symbol },
               { label: "주문 유형", value: `${priceType} ${side}` },
               { label: "수량", value: `${draft.quantity}주` },
               { label: "예상 주문 금액", value: formatPrice(market, draft.quantity * quote.price) },
@@ -225,8 +226,8 @@ function OrderForm() {
         <div className="flex items-start justify-between mb-6">
           <div>
             <div className="flex items-center gap-3 mb-1.5">
-              <h2 className="text-2xl font-bold text-foreground">{symbol}</h2>
-              {name && <span className="text-sm text-muted-foreground">{name}</span>}
+              <h2 className="text-2xl font-bold text-foreground">{displayName}</h2>
+              {name && <span className="text-sm text-muted-foreground">{symbol}</span>}
               {quote?.isPremarket && (
                 <span className="text-[10px] bg-[#FAEAEA] text-[#B83535] px-2 py-0.5 font-black tracking-wider">프리마켓</span>
               )}
