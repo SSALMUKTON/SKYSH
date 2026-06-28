@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mortis — Trading</title>
+  <title>故래소 — Trading</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -372,7 +372,7 @@
       font-variant-numeric: tabular-nums;
     }
 
-    /* ── Mortis Intercept Modal ── */
+    /* ── 故래소 Intercept Modal ── */
     .overlay {
       position: fixed; inset: 0;
       background: rgba(26,29,35,.5);
@@ -564,7 +564,7 @@
 
 <!-- ── Global Nav ── -->
 <div class="global-nav">
-  <div class="logo">Mortis <sub>by 故래소</sub></div>
+  <div class="logo">故래소 <sub>by 故래소</sub></div>
   <div class="nav-links">
     <div class="nav-link active">거래</div>
     <div class="nav-link">포트폴리오</div>
@@ -870,7 +870,7 @@
         <div class="sum-row"><span class="sum-key">수수료 (0.05%)</span><span class="sum-val">—</span></div>
       </div>
 
-      <button class="btn-buy" id="orderBtn" onclick="showMortis()">매수</button>
+      <button class="btn-buy" id="orderBtn" onclick="show故래소()">매수</button>
     </div>
 
     <!-- Mini Orderbook -->
@@ -911,12 +911,12 @@
   </div>
 </div>
 
-<!-- ── Mortis 매수 인터셉트 ── -->
+<!-- ── 故래소 매수 인터셉트 ── -->
 <div class="overlay hidden" id="mortisOverlay">
   <div class="modal">
     <div class="modal-header">
       <div class="modal-title">⚖️ 유언장을 어기려 하십니까?</div>
-      <button class="modal-close" onclick="hideMortis()">✕</button>
+      <button class="modal-close" onclick="hide故래소()">✕</button>
     </div>
     <div class="will-warn">
       <div class="will-warn-title">유언장 위반 감지 — 2건</div>
@@ -949,8 +949,8 @@
       </div>
     </div>
     <div class="modal-footer">
-      <button class="btn-confirm" onclick="hideMortis()">기록 저장 후 매수</button>
-      <button class="btn-ignore" onclick="hideMortis()">유언장 무시</button>
+      <button class="btn-confirm" onclick="hide故래소()">기록 저장 후 매수</button>
+      <button class="btn-ignore" onclick="hide故래소()">유언장 무시</button>
     </div>
   </div>
 </div>
@@ -1103,14 +1103,14 @@
     document.getElementById('tabSell').classList.toggle('active', type==='sell');
     const btn = document.getElementById('orderBtn');
     if (type === 'buy') {
-      btn.textContent = '매수'; btn.className = 'btn-buy'; btn.onclick = showMortis;
+      btn.textContent = '매수'; btn.className = 'btn-buy'; btn.onclick = show故래소;
     } else {
       btn.textContent = '매도'; btn.className = 'btn-sell'; btn.onclick = showAutopsy;
     }
   }
 
-  function showMortis()  { document.getElementById('mortisOverlay').classList.remove('hidden'); }
-  function hideMortis()  { document.getElementById('mortisOverlay').classList.add('hidden'); }
+  function show故래소()  { document.getElementById('mortisOverlay').classList.remove('hidden'); }
+  function hide故래소()  { document.getElementById('mortisOverlay').classList.add('hidden'); }
   function showAutopsy() { document.getElementById('autopsyOverlay').classList.remove('hidden'); }
   function hideAutopsy() { document.getElementById('autopsyOverlay').classList.add('hidden'); }
 
