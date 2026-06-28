@@ -1,16 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { RuleType } from "@prisma/client";
-
-const DEMO_USER_EMAIL = "demo@goraeso.dev";
-
-async function getDemoUser() {
-  return prisma.user.upsert({
-    where: { email: DEMO_USER_EMAIL },
-    update: {},
-    create: { email: DEMO_USER_EMAIL, name: "데모 투자자" },
-  });
-}
+import { getDemoUser } from "@/lib/user";
 
 // GET /api/clauses — 활성 조항 목록
 export async function GET() {
