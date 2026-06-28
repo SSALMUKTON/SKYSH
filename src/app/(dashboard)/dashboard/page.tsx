@@ -74,7 +74,7 @@ export default function DashboardPage() {
               <p className="text-xs text-foreground leading-relaxed mb-4">
                 TSLA가 전일 대비 <strong>+8.4%</strong> 상승 중입니다. 프리마켓 갭상 직후 매수는 유언장 제2조를 위반할 수 있습니다.
               </p>
-              <Link href="/order" className="text-xs font-black text-[#B83535] hover:underline underline-offset-2 tracking-wide">
+              <Link href="/order?market=US&symbol=TSLA" className="text-xs font-black text-[#B83535] hover:underline underline-offset-2 tracking-wide">
                 주문 화면에서 확인 →
               </Link>
             </div>
