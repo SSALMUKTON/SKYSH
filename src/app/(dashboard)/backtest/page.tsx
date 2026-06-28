@@ -47,18 +47,29 @@ const RULE_LABELS: Record<string, string> = {
 const MARKET_LABELS: Record<string, string> = { us: "미국", kr: "국내", crypto: "코인" };
 const HORIZONS = [20, 60, 120];
 
+const PERIOD_OPTIONS = ["전체", "2020-2021 상승장", "2022 하락장", "2023-2024 반등장"];
+
 export default function BacktestPage() {
   const [results, setResults] = useState<BacktestResult[]>([]);
+  const [availablePeriods, setAvailablePeriods] = useState<string[]>([]);
   const [clauses, setClauses] = useState<Clause[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [selectedClause, setSelectedClause] = useState<Clause | null>(null);
   const [selectedMarket, setSelectedMarket] = useState<string>("us");
   const [selectedHorizon, setSelectedHorizon] = useState<number>(60);
+  const [selectedPeriod, setSelectedPeriod] = useState<string>("전체");
+  const [loadingPeriod, setLoadingPeriod] = useState(false);
 
   useEffect(() => {
-    fetch("/api/backtest")
+    // 사용 가능한 기간 목록
+    fetch("/api/backtest?period=list")
       .then((r) => r.json())
-      .then((d) => { if (d.error) setError(d.error); else setResults(d.results); });
+      .then((d) => setAvailablePeriods(d.periods ?? []));
+
+    fetch(`/api/backtest?period=${encodeURIComponent("전체")}`)
+      .then((r) => r.json())
+      .then((d) => { if (!d.error) setResults(d.results); });
+
     fetch("/api/clauses")
       .then((r) => r.json())
       .then((cs: Clause[]) => {
@@ -66,6 +77,19 @@ export default function BacktestPage() {
         if (cs.length > 0) setSelectedClause(cs[0]);
       });
   }, []);
+
+  function changePeriod(period: string) {
+    setSelectedPeriod(period);
+    setLoadingPeriod(true);
+    setError(null);
+    fetch(`/api/backtest?period=${encodeURIComponent(period)}`)
+      .then((r) => r.json())
+      .then((d) => {
+        if (d.error) setError(d.error);
+        else setResults(d.results);
+      })
+      .finally(() => setLoadingPeriod(false));
+  }
 
   // 선택된 조항 + 시장의 백테스트 결과
   const result = results.find(
@@ -89,11 +113,40 @@ export default function BacktestPage() {
     <div className="p-8">
       <div className="max-w-4xl mx-auto">
         {/* 헤더 */}
-        <div className="mb-8">
+        <div className="mb-6">
           <h1 className="text-2xl font-black text-foreground mb-1">유언장 백테스트</h1>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground mb-4">
             조항을 선택하면 해당 패턴의 과거 수익률 데이터를 보여줍니다.
           </p>
+          {/* 기간 선택 */}
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">기간</span>
+            <div className="flex border border-border">
+              {PERIOD_OPTIONS.map((p) => {
+                const available = availablePeriods.includes(p);
+                const active = selectedPeriod === p;
+                return (
+                  <button
+                    key={p}
+                    onClick={() => available && changePeriod(p)}
+                    disabled={!available}
+                    className={`px-3 py-1.5 text-xs font-bold transition-all border-r border-border last:border-r-0 ${
+                      active
+                        ? "bg-foreground text-background"
+                        : available
+                        ? "text-muted-foreground hover:bg-muted"
+                        : "text-muted-foreground/30 cursor-not-allowed"
+                    }`}
+                    title={!available ? "python -m pipelines.backtest --period \"" + p + "\" 실행 필요" : undefined}
+                  >
+                    {p}
+                    {!available && <span className="ml-1 text-[9px]">미실행</span>}
+                  </button>
+                );
+              })}
+            </div>
+            {loadingPeriod && <span className="text-xs text-muted-foreground">로딩 중...</span>}
+          </div>
         </div>
 
         <div className="grid grid-cols-[220px_1fr] gap-6">
