@@ -12,7 +12,7 @@ export default function WillSetupPage() {
 
   function toggle(i: number) {
     const next = new Set(selected);
-    next.has(i) ? next.delete(i) : next.add(i);
+    if (next.has(i)) { next.delete(i); } else { next.add(i); }
     setSelected(next);
   }
 
