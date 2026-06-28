@@ -377,10 +377,10 @@ export default function SetupPage() {
               {converting ? (
                 <>
                   <Loader2 size={14} className="animate-spin" />
-                  {progress}%
+                  저장 중 {progress}%
                 </>
               ) : (
-                "확정하기 →"
+                "저장하기"
               )}
             </button>
           </div>
