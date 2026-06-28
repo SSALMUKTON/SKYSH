@@ -1,6 +1,5 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Plus, Trash2, FileText, X, Loader2 } from "lucide-react";
 import { MARKET_META, formatPrice, formatPct, PROFIT, LOSS } from "@/lib/format";
@@ -11,7 +10,7 @@ const MARKETS: Market[] = ["KR", "US", "COIN"];
 interface Order { side: string; orderType: string; quantity: string; price: string | null }
 interface Report { id: string; kind: "DEATH" | "SURVIVAL" }
 interface Trade {
-  id: string; market: Market; symbol: string; status: "OPEN" | "CLOSED";
+  id: string; market: Market; symbol: string; company?: string; status: "OPEN" | "CLOSED";
   entryPrice: string | null; entryQty: string | null; entryAt: string | null;
   exitPrice: string | null; exitQty: string | null; exitAt: string | null;
   pnlPct: number | null; holdDurationMin: number | null;
@@ -123,16 +122,19 @@ function TradeRow({ t, onDelete, onReport, generating }: { t: Trade; onDelete: (
   const closed = t.status === "CLOSED";
   const win = (t.pnlPct ?? 0) >= 0;
   const color = closed ? (win ? PROFIT : LOSS) : "#6E6A75";
+  const displayName = t.company || t.symbol;
+  const tileText = displayName.length > 4 ? displayName.slice(0, 4) : displayName;
   return (
     <div className="bg-card border border-border p-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3 min-w-0">
           <div className="w-10 h-10 bg-muted flex items-center justify-center font-black text-[11px] text-foreground shrink-0">
-            {t.symbol.replace("KRW-", "").slice(0, 4)}
+            {tileText}
           </div>
           <div className="min-w-0">
             <div className="flex items-center gap-2">
-              <span className="font-bold text-foreground">{t.symbol}</span>
+              <span className="font-bold text-foreground">{displayName}</span>
+              {t.company && <span className="text-xs text-muted-foreground font-mono">{t.symbol}</span>}
               <span className="text-[9px] bg-muted text-muted-foreground px-1.5 py-0.5 font-bold uppercase tracking-wider">{MARKET_META[t.market].label}</span>
               <span className={`text-[9px] font-black px-1.5 py-0.5 tracking-wider ${
                 closed ? "bg-muted text-muted-foreground" : "bg-[#EBF7F3] text-[#2A7A55]"

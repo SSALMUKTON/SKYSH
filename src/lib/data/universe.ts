@@ -1,7 +1,7 @@
 import { readFile, readdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import type { Market } from "@prisma/client";
-import { pricesDir, universeFile } from "./paths";
+import { marketDir, pricesDir, universeFile } from "./paths";
 
 /**
  * 자산군별 종목 목록(유니버스). [owner: P1]
@@ -29,6 +29,16 @@ async function loadNames(market: Market): Promise<Map<string, string>> {
     // [{ code, name }]
     for (const it of raw as { code: string; name: string }[]) {
       names.set(it.code, it.name);
+    }
+    const dartFile = `${marketDir("KR")}/universe/dart_corpcodes.json`;
+    if (existsSync(dartFile)) {
+      const dartRaw = JSON.parse(await readFile(dartFile, "utf-8")) as Record<
+        string,
+        { corp_name?: string }
+      >;
+      for (const [code, item] of Object.entries(dartRaw)) {
+        if (item.corp_name) names.set(code, item.corp_name);
+      }
     }
   } else if (market === "COIN") {
     // [{ market, korean_name, english_name }]

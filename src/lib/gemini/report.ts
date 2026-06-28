@@ -23,6 +23,7 @@ export interface GeneratedReport {
 export interface TradeSummary {
   market: Market;
   symbol: string;
+  displayName?: string;
   pnlPct: number;
   holdDurationMin: number;
   orders: Array<{
@@ -40,12 +41,13 @@ export interface TradeSummary {
 
 function fallbackReport(trade: TradeSummary, raw?: string): GeneratedReport {
   const kind: ReportKind = trade.pnlPct < 0 ? "DEATH" : "SURVIVAL";
+  const displayName = trade.displayName ?? trade.symbol;
   return {
     kind,
     body:
       kind === "DEATH"
-        ? `${trade.symbol} 거래에서 ${trade.pnlPct.toFixed(2)}% 손실이 발생했습니다.`
-        : `${trade.symbol} 거래에서 ${trade.pnlPct.toFixed(2)}% 수익을 달성했습니다.`,
+        ? `${displayName} 거래에서 ${trade.pnlPct.toFixed(2)}% 손실이 발생했습니다.`
+        : `${displayName} 거래에서 ${trade.pnlPct.toFixed(2)}% 수익을 달성했습니다.`,
     causes: kind === "DEATH" ? ["거래 원인 분석 실패"] : ["수익 원인 분석 실패"],
     violatedClauses: [],
     suggestions: [],

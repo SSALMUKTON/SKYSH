@@ -3,8 +3,30 @@ import { AlertTriangle, CheckCircle, BookOpen, FileText } from "lucide-react";
 import { OrnamentalDivider, CertStamp, CertSeal } from "@/components/cert-ui";
 import { SuggestionActions } from "./suggestion-actions";
 import { prisma } from "@/lib/prisma";
+import { listUniverse } from "@/lib/data/universe";
 import { getDemoUser } from "@/lib/user";
 import { formatPct } from "@/lib/format";
+import type { Market } from "@prisma/client";
+
+const MARKETS: Market[] = ["KR", "US", "COIN"];
+
+async function buildDisplayNameLookup() {
+  const universes = await Promise.all(MARKETS.map((market) => listUniverse(market)));
+  return new Map(
+    MARKETS.map((market, i) => [
+      market,
+      new Map(universes[i].map((item) => [item.symbol, item.name])),
+    ]),
+  );
+}
+
+function getTradeDisplayName(
+  namesByMarket: Awaited<ReturnType<typeof buildDisplayNameLookup>>,
+  trade: { market: Market; symbol: string },
+) {
+  const name = namesByMarket.get(trade.market)?.get(trade.symbol);
+  return name && name !== trade.symbol ? name : trade.symbol;
+}
 
 function holdLabel(min: number | null): string {
   if (min == null) return "—";
@@ -50,6 +72,9 @@ export default async function ReportsPage({
       );
     }
 
+    const namesByMarket = await buildDisplayNameLookup();
+    const displayName = getTradeDisplayName(namesByMarket, report.trade);
+    const hasDisplayName = displayName !== report.trade.symbol;
     const violatedIds = Array.isArray(report.violatedClauses)
       ? (report.violatedClauses as string[])
       : [];
@@ -99,9 +124,12 @@ export default async function ReportsPage({
               </p>
               <h2 className="text-white text-xl font-black">
                 {isDeath
-                  ? `故 ${report.trade.symbol} 거래 사망진단서`
-                  : `${report.trade.symbol} 거래 생존보고서`}
+                  ? `故 ${displayName} 거래 사망진단서`
+                  : `${displayName} 거래 생존보고서`}
               </h2>
+              {hasDisplayName && (
+                <p className="text-white/50 text-xs mt-1 font-mono">{report.trade.symbol}</p>
+              )}
               <p className="text-white/40 text-xs mt-1.5">
                 {createdDate} 발행 · 故래소 거래 분석 시스템
               </p>
@@ -253,6 +281,7 @@ export default async function ReportsPage({
       },
     },
   });
+  const namesByMarket = await buildDisplayNameLookup();
 
   return (
     <div className="p-8">
@@ -298,13 +327,22 @@ export default async function ReportsPage({
               <tbody>
                 {reports.map((r) => {
                   const isDeath = r.kind === "DEATH";
+                  const displayName = getTradeDisplayName(namesByMarket, r.trade);
+                  const hasDisplayName = displayName !== r.trade.symbol;
                   return (
                     <tr
                       key={r.id}
                       className="border-b border-border/40 last:border-0 hover:bg-muted/30 transition-colors"
                     >
                       <td className="px-4 py-3 text-sm font-bold text-foreground">
-                        {r.trade.symbol}
+                        <div className="flex items-center gap-2">
+                          <span>{displayName}</span>
+                          {hasDisplayName && (
+                            <span className="text-xs text-muted-foreground font-mono font-normal">
+                              {r.trade.symbol}
+                            </span>
+                          )}
+                        </div>
                       </td>
                       <td className="px-4 py-3">
                         <span

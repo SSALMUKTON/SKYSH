@@ -96,12 +96,13 @@ export default function TradesPage() {
               {closed.map((t) => {
                 const loss = (t.pnlPct ?? 0) < 0;
                 const color = loss ? "#B83535" : "#3D9E72";
+                const displayName = t.company || t.symbol;
                 return (
                   <div key={t.id} className="bg-card overflow-hidden" style={{ border: `1px solid ${color}30` }}>
                     <div className="px-5 py-4" style={{ background: color }}>
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-white font-bold">{t.symbol}</span>
-                        <span className="text-white/60 text-xs">{t.company}</span>
+                        <span className="text-white font-bold">{displayName}</span>
+                        {t.company && <span className="text-white/60 text-xs">{t.symbol}</span>}
                       </div>
                       <div className="flex items-end gap-2">
                         <span className="text-white text-3xl font-black">{t.pnlPct! >= 0 ? "+" : ""}{t.pnlPct}%</span>
@@ -158,14 +159,19 @@ export default function TradesPage() {
             const evalAmt = t.currentPrice ? t.currentPrice * t.entryQty : t.entryPrice * t.entryQty;
             const evalPnl = (t.currentPrice ?? t.entryPrice) * t.entryQty - t.entryPrice * t.entryQty;
             const hasStop = t.stopPrice != null;
+            const displayName = t.company || t.symbol;
+            const tileText = displayName.length > 4 ? displayName.slice(0, 4) : displayName;
             return (
               <div key={t.id} className="mb-6">
                 <div className="bg-card border border-border p-6 mb-4">
                   <div className="flex items-start justify-between mb-5">
                     <div className="flex items-center gap-3">
-                      <div className="w-11 h-11 bg-muted flex items-center justify-center font-black text-sm text-foreground">{t.symbol}</div>
+                      <div className="w-11 h-11 bg-muted flex items-center justify-center font-black text-sm text-foreground">{tileText}</div>
                       <div>
-                        <h3 className="font-bold text-foreground">{t.company ?? t.symbol}</h3>
+                        <div className="flex items-center gap-2">
+                          <h3 className="font-bold text-foreground">{displayName}</h3>
+                          {t.company && <span className="text-xs text-muted-foreground font-mono">{t.symbol}</span>}
+                        </div>
                         <p className="text-xs text-muted-foreground">{t.market} · {fmtDateTime(t.entryAt)} 매수 체결</p>
                       </div>
                     </div>
