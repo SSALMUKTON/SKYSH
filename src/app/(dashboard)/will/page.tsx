@@ -30,6 +30,7 @@ export default function WillPage() {
   const [showAddForm, setShowAddForm] = useState(false);
   const [inputText, setInputText] = useState("");
   const [converting, setConverting] = useState(false);
+  const [saving, setSaving] = useState(false);
   const [preview, setPreview] = useState<{ ruleType: string; displayText: string } | null>(null);
   const [convertError, setConvertError] = useState<string | null>(null);
 
@@ -60,12 +61,14 @@ export default function WillPage() {
 
   async function addClause() {
     if (!preview) return;
+    setSaving(true);
     const res = await fetch("/api/clauses", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ruleType: preview.ruleType, params: {}, displayText: preview.displayText }),
     });
     const created = await res.json();
+    setSaving(false);
     setClauses((prev) => [...prev, created]);
     setInputText("");
     setPreview(null);
@@ -151,8 +154,13 @@ export default function WillPage() {
                 취소
               </button>
               {preview && (
-                <button onClick={addClause} className="px-3 py-1.5 text-xs font-bold bg-foreground text-background hover:opacity-90">
-                  추가
+                <button
+                  onClick={addClause}
+                  disabled={saving}
+                  className="flex items-center gap-1.5 px-4 py-2 text-xs font-bold bg-foreground text-background hover:opacity-90 disabled:opacity-40 transition-opacity"
+                >
+                  {saving ? <Loader2 size={12} className="animate-spin" /> : null}
+                  {saving ? "저장 중" : "저장하기"}
                 </button>
               )}
             </div>
