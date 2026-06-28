@@ -1,21 +1,14 @@
 import type { RuleType } from "@prisma/client";
 import type { TradeSummary } from "./report";
 
+// 백테스트 지원 룰만 (일봉 데이터로 감지 불가한 ALL_IN 등 제외)
 export const VALID_RULE_TYPES: RuleType[] = [
-  // 인트로용
   "CHASE_SURGE",
   "NO_STOP_LOSS",
-  "ALL_IN",
   "REVENGE_TRADE",
   "MARKET_ORDER_IMPULSE",
-  // 옵티마이징용
   "PREMARKET_GAP",
-  "REPEATED_VIEWING",
-  "PROFIT_TAKING",
-  "OVERTRADING",
-  "NEWS_IMPULSE",
   "AVERAGING_DOWN",
-  "POSITION_SIZING",
 ];
 
 // ────────────────────────────────────────────────────────────
