@@ -1,0 +1,150 @@
+// SKYSH 데이터 모델
+// 핵심: WillClause 가 "자연어 문구(displayText)"와 "실행 룰(ruleType+params)"을
+//       둘 다 들고 있고, Trade 가 매수~매도를 하나로 묶는 단위라는 점.
+//
+// 담당:
+//   - 스키마 전체 owner: P1 (broker) — 변경 시 팀에 공유
+//   - WillClause 룰/시드: P4 (규칙엔진)
+//   - TradeReport 산출물: P3 (Gemini)
+//
+// 마이그레이션:  npm run db:migrate   (또는 빠른 동기화: npm run db:push)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ─── Enums ──────────────────────────────────────────────────
+
+enum Side {
+  BUY
+  SELL
+}
+
+enum PriceType {
+  LIMIT // 지정가
+  MARKET // 시장가
+}
+
+enum TradeStatus {
+  OPEN // 보유 중
+  CLOSED // 청산 완료 → 보고서 트리거
+}
+
+enum WillClauseStatus {
+  ACTIVE // 적용 중
+  ARCHIVED // 보관(비활성)
+}
+
+// 유언 조항의 룰 종류. MVP 는 이 중 2개를 P4 가 우선 구현.
+enum RuleType {
+  STOP_LOSS // 손절 한계 (params: { pct })
+  TAKE_PROFIT // 익절 목표 (params: { pct })
+  MAX_POSITION_PCT // 종목당 최대 비중 (params: { pct })
+  NO_AVERAGING_DOWN // 물타기 금지
+  COOLDOWN_AFTER_LOSS // 손실 후 재진입 대기 (params: { hours })
+  MAX_DAILY_TRADES // 일일 최대 거래 수 (params: { count })
+}
+
+enum ReportKind {
+  DEATH // 사망 보고서 (손실로 청산)
+  SURVIVAL // 생존 보고서 (수익으로 청산)
+}
+
+// ─── Models ─────────────────────────────────────────────────
+
+// 사용자. MVP 에서는 자체 보관하며, 추후 Supabase auth.users.id 와 매핑 가능.
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  brokerAccount BrokerAccount?
+  willClauses   WillClause[]
+  trades        Trade[]
+}
+
+// 증권사 계좌 + KIS access token 캐시(24h) 보관소.  [owner: P1]
+model BrokerAccount {
+  id             String    @id @default(uuid())
+  userId         String    @unique
+  user           User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  provider       String    @default("kis")
+  accountNo      String
+  kisTokenCache  String? // KIS access token 캐시
+  tokenExpiresAt DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// 투자 유언 조항: 룰 + 자연어 문구 공존.  [owner: P4]
+model WillClause {
+  id            String           @id @default(uuid())
+  userId        String
+  user          User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  ruleType      RuleType
+  params        Json // 룰 파라미터 (예: { "pct": 7 })
+  displayText   String // 낭독용 자연어 문구
+  status        WillClauseStatus @default(ACTIVE)
+  sourceTradeId String? // 이 조항을 제안한 거래(보고서 산출). null 이면 사용자가 직접 작성.
+  sourceTrade   Trade?           @relation("ClauseSource", fields: [sourceTradeId], references: [id])
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+
+  @@index([userId])
+}
+
+// 거래 단위: 매수~매도를 하나로 묶음.  [owner: P1]
+model Trade {
+  id        String      @id @default(uuid())
+  userId    String
+  user      User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  symbol    String // 종목코드 (예: "005930")
+  status    TradeStatus @default(OPEN)
+  thesis    String? // 진입 근거
+  entryAt   DateTime?
+  exitAt    DateTime?
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  orders         Order[]
+  report         TradeReport?
+  derivedClauses WillClause[] @relation("ClauseSource")
+
+  @@index([userId])
+}
+
+// 개별 주문. 강행 사유(overrideReason)도 여기 기록.  [owner: P1]
+model Order {
+  id             String    @id @default(uuid())
+  tradeId        String
+  trade          Trade     @relation(fields: [tradeId], references: [id], onDelete: Cascade)
+  side           Side
+  priceType      PriceType @default(LIMIT)
+  qty            Int
+  price          Decimal?  @db.Decimal(18, 2) // 지정가일 때만
+  kisOrderId     String? // KIS 주문/체결 번호
+  overrideReason String? // precheck 경고를 강행했을 때의 사유
+  createdAt      DateTime  @default(now())
+
+  @@index([tradeId])
+}
+
+// 거래 종료 시 Gemini 가 생성하는 사망/생존 보고서.  [owner: P3]
+model TradeReport {
+  id               String     @id @default(uuid())
+  tradeId          String     @unique
+  trade            Trade      @relation(fields: [tradeId], references: [id], onDelete: Cascade)
+  kind             ReportKind
+  body             String // 서술형 보고서 본문
+  insights         Json? // 구조화된 인사이트
+  suggestedClauses Json? // 제안된 새 조항 목록
+  createdAt        DateTime   @default(now())
+}
