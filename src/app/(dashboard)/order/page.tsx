@@ -249,11 +249,13 @@ function TradeWorkspace({ market, item }: { market: Market; item: UniverseItem }
       const draft = buildDraft();
       const { data, mocked } = await precheck(draft, quote);
       setMocked(mocked);
-      if (data.ok) {
+      // 손절가 미입력(NO_STOP_LOSS)은 경고만 — 주문을 막지 않는다(인라인 경고로 안내).
+      const blocking = data.violations.filter((v) => v.ruleType !== "NO_STOP_LOSS");
+      if (blocking.length === 0) {
         setViolations([]);
         await doExecute(draft);
       } else {
-        setViolations(data.violations);
+        setViolations(blocking);
         setShowModal(true);
       }
     } finally {
