@@ -45,7 +45,7 @@ export default function LandingPage() {
               href="/connect"
               className="bg-foreground text-background px-8 py-3.5 font-bold text-sm hover:opacity-90 transition-opacity inline-flex items-center gap-2"
             >
-              증권 계좌 연동하기
+              지갑 연동하기
               <ChevronRight size={15} />
             </Link>
 
