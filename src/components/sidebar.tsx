@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, TrendingUp, FileText, Settings, Scroll, LineChart, History } from "lucide-react";
+import { Home, TrendingUp, FileText, Settings, Scroll, LineChart, History, FlaskConical } from "lucide-react";
 
 const NAV_ITEMS = [
   { icon: Home, label: "홈", href: "/dashboard" },
@@ -10,6 +10,7 @@ const NAV_ITEMS = [
   { icon: History, label: "거래 기록", href: "/history" },
   { icon: Scroll, label: "나의 유언장", href: "/will" },
   { icon: FileText, label: "거래 보고서", href: "/reports" },
+  { icon: FlaskConical, label: "백테스트", href: "/backtest" },
   { icon: Settings, label: "설정", href: "/settings" },
 ];
 
