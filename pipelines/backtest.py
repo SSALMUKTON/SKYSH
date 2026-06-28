@@ -15,7 +15,7 @@ import pandas as pd
 
 ROOT = Path(__file__).parent.parent
 DATA = ROOT / "data"
-HORIZONS = [5, 10, 20]  # 위반 후 N일 수익률 측정
+HORIZONS = [20, 60, 120]  # 위반 후 N일 수익률 측정
 
 
 # ── 헬퍼 ──────────────────────────────────────────────────────────────────────

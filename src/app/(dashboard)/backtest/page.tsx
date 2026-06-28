@@ -35,6 +35,12 @@ interface BacktestData {
   horizons: number[];
 }
 
+interface Clause {
+  id: string;
+  ruleType: string;
+  displayText: string;
+}
+
 const RULE_LABELS: Record<string, string> = {
   CHASE_SURGE: "급등 추격 매수",
   PREMARKET_GAP: "프리마켓 갭업 매수",
@@ -50,24 +56,31 @@ const MARKET_LABELS: Record<string, string> = {
   crypto: "코인",
 };
 
-const HORIZONS = [5, 10, 20];
+const HORIZONS = [20, 60, 120];
 
 export default function BacktestPage() {
   const [data, setData] = useState<BacktestData | null>(null);
+  const [clauses, setClauses] = useState<Clause[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [selectedMarket, setSelectedMarket] = useState<string>("us");
-  const [selectedHorizon, setSelectedHorizon] = useState<number>(10);
+  const [selectedHorizon, setSelectedHorizon] = useState<number>(60);
 
   useEffect(() => {
     fetch("/api/backtest")
       .then((r) => r.json())
-      .then((d) => {
-        if (d.error) setError(d.error);
-        else setData(d);
-      });
+      .then((d) => { if (d.error) setError(d.error); else setData(d); });
+    fetch("/api/clauses")
+      .then((r) => r.json())
+      .then(setClauses);
   }, []);
 
-  const filtered = data?.results.filter((r) => r.market === selectedMarket) ?? [];
+  const myRuleTypes = new Set(clauses.map((c) => c.ruleType));
+  const hasWill = clauses.length > 0;
+
+  // 내 유언장에 있는 룰만, 없으면 전체
+  const filtered = (data?.results ?? [])
+    .filter((r) => r.market === selectedMarket)
+    .filter((r) => !hasWill || myRuleTypes.has(r.rule));
 
   if (error) {
     return (
@@ -92,8 +105,23 @@ export default function BacktestPage() {
         <div className="mb-8">
           <h1 className="text-2xl font-black text-foreground mb-1">유언장 백테스트</h1>
           <p className="text-sm text-muted-foreground">
-            조항별 위반 패턴이 실제로 얼마나 손해를 유발하는지 과거 데이터로 검증합니다.
+            {hasWill
+              ? `내 유언장 ${clauses.length}개 조항 기반 — 위반 패턴이 실제로 얼마나 손해를 유발하는지 검증합니다.`
+              : "조항별 위반 패턴이 실제로 얼마나 손해를 유발하는지 과거 데이터로 검증합니다."}
           </p>
+          {hasWill && (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {clauses.map((c) => (
+                <span key={c.id} className={`text-[10px] font-bold px-2 py-1 border ${
+                  myRuleTypes.has(c.ruleType) && data?.results.some((r) => r.rule === c.ruleType)
+                    ? "border-[#C9A227]/50 bg-[#FDF8EC] text-[#7A5F0E]"
+                    : "border-border bg-muted text-muted-foreground"
+                }`}>
+                  {c.displayText}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* 필터 */}
@@ -136,11 +164,12 @@ export default function BacktestPage() {
             const stats = result.returns[String(selectedHorizon)];
             const isNoStopLoss = result.rule === "NO_STOP_LOSS";
             const positive = !isNoStopLoss && stats?.mean > 0;
+            const myClause = clauses.find((c) => c.ruleType === result.rule);
 
             return (
-              <div key={`${result.market}-${result.rule}`} className="border border-border bg-card">
+              <div key={`${result.market}-${result.rule}`} className="border border-[#C9A227]/40 bg-card">
                 {/* 타이틀 바 */}
-                <div className="flex items-center justify-between px-5 py-3 border-b border-border/60 bg-muted/30">
+                <div className="flex items-center justify-between px-5 py-3 border-b border-[#C9A227]/20 bg-[#FDF8EC]">
                   <div className="flex items-center gap-2">
                     <AlertTriangle size={13} className="text-[#C9A227]" />
                     <span className="text-sm font-black text-foreground">
@@ -154,6 +183,12 @@ export default function BacktestPage() {
                     총 <strong className="text-foreground">{result.total_signals.toLocaleString()}</strong>건 감지
                   </span>
                 </div>
+
+                {myClause && (
+                  <div className="px-5 py-2.5 border-b border-[#C9A227]/20 bg-[#FDFAF6]">
+                    <p className="text-xs text-[#7A5F0E] italic">"{myClause.displayText}"</p>
+                  </div>
+                )}
 
                 <div className="px-5 py-4">
                   {isNoStopLoss && result.mdd ? (
