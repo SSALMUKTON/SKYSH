@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import {
-  AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip, CartesianGrid,
+  AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip, CartesianGrid, Brush,
 } from "recharts";
 import { Search, TrendingUp, Newspaper, FileBarChart, ExternalLink } from "lucide-react";
 import {
@@ -126,6 +126,30 @@ export default function MarketPage() {
   );
 }
 
+// 기간 프리셋(개월). null = 전체.
+const RANGES: { label: string; months: number | null }[] = [
+  { label: "1M", months: 1 },
+  { label: "3M", months: 3 },
+  { label: "6M", months: 6 },
+  { label: "1Y", months: 12 },
+  { label: "전체", months: null },
+];
+
+/** months 개월 전 날짜 이후의 첫 캔들 인덱스(달력 기준 — 코인/주식 공통). */
+function startIndexForMonths(candles: Candle[], months: number | null): number {
+  if (months == null || candles.length === 0) return 0;
+  const last = new Date(candles[candles.length - 1].date);
+  const cutoff = new Date(last);
+  cutoff.setMonth(cutoff.getMonth() - months);
+  const cutoffStr = cutoff.toISOString().slice(0, 10);
+  const idx = candles.findIndex((c) => c.date >= cutoffStr);
+  return idx < 0 ? 0 : idx;
+}
+
+function windowFor(candles: Candle[], months: number | null): { start: number; end: number } {
+  return { start: startIndexForMonths(candles, months), end: Math.max(0, candles.length - 1) };
+}
+
 function SymbolDetail({ market, item }: { market: Market; item: UniverseItem }) {
   const [quote, setQuote] = useState<Quote | null>(null);
   const [candles, setCandles] = useState<Candle[]>([]);
@@ -133,6 +157,9 @@ function SymbolDetail({ market, item }: { market: Market; item: UniverseItem }) 
   const [feed, setFeed] = useState<FeedItem[]>([]);
   const [tab, setTab] = useState<"fund" | "news">(market === "COIN" ? "news" : "fund");
   const [loading, setLoading] = useState(true);
+  // 차트 가시 구간(인덱스) + 활성 기간 프리셋. 종목 선택마다 컴포넌트가 remount 되어 초기화됨.
+  const [view, setView] = useState<{ start: number; end: number } | null>(null);
+  const [range, setRange] = useState<string | null>("6M");
 
   // 컴포넌트는 종목(symbol)별로 key 되어 선택마다 새로 마운트된다 → 초기 상태가 곧 로딩 상태.
   // effect 는 첫 await 이후에만 setState 하여 동기 setState(set-state-in-effect)를 피한다.
@@ -142,13 +169,15 @@ function SymbolDetail({ market, item }: { market: Market; item: UniverseItem }) 
     (async () => {
       const [q, s, f, n] = await Promise.all([
         fetch(`/api/market/quote?${base}`).then((r) => (r.ok ? r.json() : null)).catch(() => null),
-        fetch(`/api/market/series?${base}&limit=120`).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+        fetch(`/api/market/series?${base}&limit=2000`).then((r) => (r.ok ? r.json() : null)).catch(() => null),
         fetch(`/api/market/fundamentals?${base}&limit=8`).then((r) => (r.ok ? r.json() : null)).catch(() => null),
         fetch(`/api/market/news?${base}&limit=30`).then((r) => (r.ok ? r.json() : null)).catch(() => null),
       ]);
       if (!active) return;
+      const cs: Candle[] = s?.candles ?? [];
       setQuote(q);
-      setCandles(s?.candles ?? []);
+      setCandles(cs);
+      setView(windowFor(cs, 6)); // 기본 6개월 구간
       setQuarters(f?.quarters ?? null);
       setFeed(n?.items ?? []);
       setLoading(false);
@@ -159,6 +188,9 @@ function SymbolDetail({ market, item }: { market: Market; item: UniverseItem }) 
   const up = (quote?.changePct ?? 0) >= 0;
   const color = up ? PROFIT : LOSS;
   const chartData = useMemo(() => candles.map((c) => ({ t: c.date, p: c.close })), [candles]);
+  const v = view ?? { start: 0, end: Math.max(0, chartData.length - 1) };
+  const visibleLabel =
+    chartData.length > 1 ? `${chartData[v.start]?.t} ~ ${chartData[v.end]?.t} · ${v.end - v.start + 1}거래일` : "";
 
   return (
     <div className="space-y-5">
@@ -191,9 +223,23 @@ function SymbolDetail({ market, item }: { market: Market; item: UniverseItem }) 
           )}
         </div>
         {/* 차트 */}
-        <div className="mt-4 -mx-1">
+        <div className="mt-4">
+          <div className="flex items-center justify-between mb-1 px-1">
+            <span className="text-[10px] font-bold text-muted-foreground tracking-widest uppercase">일봉 차트 (종가)</span>
+            <div className="flex gap-0.5">
+              {RANGES.map((r) => (
+                <button key={r.label}
+                  onClick={() => { setRange(r.label); setView(windowFor(candles, r.months)); }}
+                  className={`text-[10px] px-2 py-1 font-bold transition-colors ${
+                    range === r.label ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  }`}>
+                  {r.label}
+                </button>
+              ))}
+            </div>
+          </div>
           {chartData.length > 1 ? (
-            <ResponsiveContainer width="100%" height={200}>
+            <ResponsiveContainer width="100%" height={248}>
               <AreaChart data={chartData} margin={{ top: 5, right: 8, left: -8, bottom: 0 }}>
                 <defs>
                   <linearGradient id="mktGrad" x1="0" y1="0" x2="0" y2="1">
@@ -206,20 +252,31 @@ function SymbolDetail({ market, item }: { market: Market; item: UniverseItem }) 
                   minTickGap={48} />
                 <YAxis tick={{ fontSize: 9, fill: "#6E6A75" }} tickLine={false} axisLine={false}
                   domain={["auto", "auto"]} width={56}
-                  tickFormatter={(v) => formatCompact(v as number)} />
+                  tickFormatter={(val) => formatCompact(val as number)} />
                 <Tooltip
                   contentStyle={{ background: "#1A1720", border: "none", borderRadius: 0, fontSize: 11, padding: "6px 10px" }}
                   labelStyle={{ color: "rgba(245,240,230,0.4)", marginBottom: 2 }}
                   itemStyle={{ color: "#F5F0E6", fontWeight: 600 }}
-                  formatter={(v) => [formatPrice(market, v as number), "종가"]}
+                  formatter={(val) => [formatPrice(market, val as number), "종가"]}
                 />
                 <Area type="monotone" dataKey="p" stroke={color} strokeWidth={2} fill="url(#mktGrad)" dot={false} activeDot={{ r: 3.5, fill: color }} />
+                <Brush dataKey="t" height={26} travellerWidth={8} gap={4}
+                  stroke="#C9A227" fill="rgba(201,162,39,0.05)"
+                  startIndex={v.start} endIndex={v.end}
+                  onChange={(e) => {
+                    if (typeof e.startIndex === "number" && typeof e.endIndex === "number" &&
+                        (e.startIndex !== v.start || e.endIndex !== v.end)) {
+                      setView({ start: e.startIndex, end: e.endIndex });
+                      setRange(null);
+                    }
+                  }}
+                />
               </AreaChart>
             </ResponsiveContainer>
           ) : (
-            <div className="h-[200px] bg-muted/30 animate-pulse" />
+            <div className="h-[248px] bg-muted/30 animate-pulse" />
           )}
-          <p className="text-[10px] text-muted-foreground text-right mt-1">최근 {chartData.length}거래일 일봉 (종가)</p>
+          <p className="text-[10px] text-muted-foreground text-right mt-1">{visibleLabel} · 아래 막대를 드래그해 과거 구간 탐색</p>
         </div>
         {/* 주문 화면으로 */}
         <Link href="/order"

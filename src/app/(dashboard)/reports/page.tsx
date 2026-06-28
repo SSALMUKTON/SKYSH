@@ -17,30 +17,29 @@ function holdLabel(min: number | null): string {
 export default async function ReportsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ id?: string }>;
+  searchParams: Promise<{ id?: string; tradeId?: string }>;
 }) {
-  const { id } = await searchParams;
+  const { id, tradeId } = await searchParams;
   const user = await getDemoUser();
 
   // ── 상세 뷰 ──────────────────────────────────────────────────
-  if (id) {
-    const report = await prisma.report.findUnique({
-      where: { id },
-      include: {
-        trade: {
-          select: {
-            symbol: true,
-            market: true,
-            pnlPct: true,
-            holdDurationMin: true,
-            userId: true,
+  // ?id=reportId (history 페이지) 또는 ?tradeId=xxx (P2 거래 화면) 지원
+  if (id || tradeId) {
+    const report = id
+      ? await prisma.report.findUnique({
+          where: { id },
+          include: {
+            trade: { select: { symbol: true, market: true, pnlPct: true, holdDurationMin: true, userId: true } },
+            suggestions: { orderBy: { createdAt: "asc" } },
           },
-        },
-        suggestions: {
-          orderBy: { createdAt: "asc" },
-        },
-      },
-    });
+        })
+      : await prisma.report.findUnique({
+          where: { tradeId: tradeId! },
+          include: {
+            trade: { select: { symbol: true, market: true, pnlPct: true, holdDurationMin: true, userId: true } },
+            suggestions: { orderBy: { createdAt: "asc" } },
+          },
+        });
 
     if (!report || report.trade.userId !== user.id) {
       return (
@@ -51,7 +50,6 @@ export default async function ReportsPage({
       );
     }
 
-    // 위반 조항 displayText 조회
     const violatedIds = Array.isArray(report.violatedClauses)
       ? (report.violatedClauses as string[])
       : [];
@@ -83,7 +81,6 @@ export default async function ReportsPage({
             className="bg-card overflow-hidden relative mt-4"
             style={{ border: `2px solid ${kindColor}25` }}
           >
-            {/* 인증 도장 */}
             <div className="absolute top-5 right-5 flex flex-col items-end gap-2 pointer-events-none z-10">
               <CertStamp
                 color={kindColor}
@@ -93,7 +90,6 @@ export default async function ReportsPage({
               <CertSeal color={kindColor} line1="故래소" line2="분석인증" rotate={9} />
             </div>
 
-            {/* Header */}
             <div className="bg-[#1B1B26] px-6 py-5">
               <p
                 className="text-[10px] font-bold tracking-[0.2em] uppercase mb-1.5"
@@ -112,7 +108,6 @@ export default async function ReportsPage({
             </div>
 
             <div className="p-6">
-              {/* 수익률 / 보유시간 */}
               <div className="grid grid-cols-2 gap-3 mb-5">
                 <div
                   className="p-4 text-center"
@@ -138,7 +133,6 @@ export default async function ReportsPage({
                 </div>
               </div>
 
-              {/* 분석 본문 */}
               {report.body && (
                 <>
                   <OrnamentalDivider color={kindColor} />
@@ -146,7 +140,6 @@ export default async function ReportsPage({
                 </>
               )}
 
-              {/* 원인 목록 */}
               {causes.length > 0 && (
                 <>
                   <OrnamentalDivider color={kindColor} />
@@ -178,7 +171,6 @@ export default async function ReportsPage({
                 </>
               )}
 
-              {/* 위반 / 준수 조항 */}
               {violatedClauses.length > 0 && (
                 <>
                   <OrnamentalDivider color="#C9A227" />
@@ -200,7 +192,6 @@ export default async function ReportsPage({
                 </>
               )}
 
-              {/* 조항 제안 */}
               {report.suggestions.length > 0 && (
                 <div className="space-y-2 mb-5">
                   <p className="text-[9px] font-bold text-muted-foreground tracking-[0.2em] uppercase mb-2">
@@ -228,7 +219,6 @@ export default async function ReportsPage({
                 </div>
               )}
 
-              {/* Footer */}
               <OrnamentalDivider color={kindColor} />
               <div className="flex items-end justify-between">
                 <div>
