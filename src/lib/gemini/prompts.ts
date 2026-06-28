@@ -2,13 +2,20 @@ import type { RuleType } from "@prisma/client";
 import type { TradeSummary } from "./report";
 
 export const VALID_RULE_TYPES: RuleType[] = [
+  // 인트로용
   "CHASE_SURGE",
-  "PREMARKET_GAP",
   "NO_STOP_LOSS",
   "ALL_IN",
   "REVENGE_TRADE",
   "MARKET_ORDER_IMPULSE",
+  // 옵티마이징용
+  "PREMARKET_GAP",
   "REPEATED_VIEWING",
+  "PROFIT_TAKING",
+  "OVERTRADING",
+  "NEWS_IMPULSE",
+  "AVERAGING_DOWN",
+  "POSITION_SIZING",
 ];
 
 // ────────────────────────────────────────────────────────────

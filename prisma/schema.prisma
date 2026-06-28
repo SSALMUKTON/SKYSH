@@ -62,13 +62,21 @@ enum SuggestionStatus {
 
 // 주문 전 검사 룰 종류 (spec.md 위험 조건 매핑). MVP 는 P4 가 2개부터: CHASE_SURGE, NO_STOP_LOSS.
 enum RuleType {
+  // ── 인트로용 (첫 유언장 작성 시) ──────────────────────────
   CHASE_SURGE // 급등 후 추격 매수 (params: { window, pct })
-  PREMARKET_GAP // 프리마켓 갭상 매수 (params: { pct })
   NO_STOP_LOSS // 손절 기준 없음
   ALL_IN // 전액 일괄 매수 (params: { maxPct })
   REVENGE_TRADE // 손실 만회 재진입
   MARKET_ORDER_IMPULSE // 과열 구간 시장가 충동 매수
-  REPEATED_VIEWING // 반복 조회 후 주문 (params: { count })
+
+  // ── 옵티마이징용 (거래 쌓이면서 보고서 기반 추가) ────────
+  PREMARKET_GAP // 프리마켓 갭상 매수 (params: { pct })
+  REPEATED_VIEWING // 반복 조회 후 충동 주문 (params: { count })
+  PROFIT_TAKING // 목표가 도달해도 못 파는 패턴 (params: { targetPct })
+  OVERTRADING // 하루 거래 횟수 초과 (params: { maxPerDay })
+  NEWS_IMPULSE // 뉴스/커뮤니티 보자마자 주문
+  AVERAGING_DOWN // 손실 중 물타기
+  POSITION_SIZING // 종목별 비중 기준 없음 (params: { maxPct })
 }
 
 // ─── Models ─────────────────────────────────────────────────
