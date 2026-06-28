@@ -3,305 +3,283 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { ChevronRight, Loader2, X } from "lucide-react";
+import { Loader2, X, Check, Edit2 } from "lucide-react";
 import { OrnamentalDivider } from "@/components/cert-ui";
 import { RuleType } from "@prisma/client";
 
-const QUESTIONS = [
-  {
-    id: "CHASE_SURGE" as RuleType,
-    q: "오늘 아침 관심 종목이 +12% 올라있어. 어떻게 해?",
-    options: [
-      { label: "바로 시장가로 산다", risky: true },
-      { label: "눌림목 올 때까지 기다린다", risky: false },
-      { label: "그냥 넘긴다", risky: false },
-    ],
-    clause: "나는 급등 직후 시장가로 추격 매수하지 않는다.",
-  },
-  {
-    id: "NO_STOP_LOSS" as RuleType,
-    q: "매수 전에 손절 기준 먼저 정해?",
-    options: [
-      { label: "아니, 상황 보면서 결정한다", risky: true },
-      { label: "항상 미리 정한다", risky: false },
-      { label: "손절은 안 한다, 오를 때까지 기다린다", risky: true },
-    ],
-    clause: "나는 손절 기준 없는 거래를 시작하지 않는다.",
-  },
-  {
-    id: "AVERAGING_DOWN" as RuleType,
-    q: "보유 종목이 3일 연속 하락 중이야. 어떻게 해?",
-    options: [
-      { label: "더 산다, 평단 낮출 수 있잖아", risky: true },
-      { label: "그냥 기다린다", risky: false },
-      { label: "손절하고 나온다", risky: false },
-    ],
-    clause: "나는 3일 연속 하락 종목에 추가 매수(물타기)하지 않는다.",
-  },
-  {
-    id: "REVENGE_TRADE" as RuleType,
-    q: "TSLA에서 -10% 손절했어. 같은 날 TSLA 다시 들어가고 싶어?",
-    options: [
-      { label: "그렇다, 본전 찾고 싶다", risky: true },
-      { label: "아니, 그날은 손 뗀다", risky: false },
-      { label: "상황 보고 결정한다", risky: true },
-    ],
-    clause: "나는 손실 만회를 목적으로 같은 날 재진입하지 않는다.",
-  },
-  {
-    id: "MARKET_ORDER_IMPULSE" as RuleType,
-    q: "급하게 사고 싶을 때 주문 유형이 뭐야?",
-    options: [
-      { label: "시장가, 빠르게 체결되야 하니까", risky: true },
-      { label: "지정가, 원하는 가격 아니면 안 산다", risky: false },
-      { label: "그때그때 다르다", risky: true },
-    ],
-    clause: "나는 과열 구간에서 충동적으로 시장가 주문을 내지 않는다.",
-  },
-];
+type Step = "draft" | "review" | "done";
 
 interface ConvertedClause {
-  ruleType: RuleType;
+  ruleType: string;
   displayText: string;
-  params: Record<string, unknown>;
-  fromText: string; // 원본 입력
+  params: object;
+  editing?: boolean;
+  editText?: string;
+  skipped?: boolean;
 }
 
-type Step = "quiz" | "custom" | "result";
+const RULE_LABELS: Record<string, string> = {
+  CHASE_SURGE: "급등 추격 매수",
+  PREMARKET_GAP: "프리마켓 갭업 매수",
+  NO_STOP_LOSS: "손절 없는 진입",
+  REVENGE_TRADE: "보복 매매",
+  MARKET_ORDER_IMPULSE: "충동 시장가 주문",
+  AVERAGING_DOWN: "물타기",
+};
 
-export default function WillSetupPage() {
+const DRAFT_PLACEHOLDER = `예시:
+- 급등 종목 보면 바로 시장가로 들어가는 습관이 있어
+- 손절을 항상 미루게 돼. 기다리면 오를 것 같아서
+- 손실 나면 같은 날 바로 다시 들어가서 본전 찾으려 함
+- 하락 중인 종목에 계속 물타기 해왔음`;
+
+async function convertLine(text: string): Promise<ConvertedClause | null> {
+  const res = await fetch("/api/clauses/convert", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text }),
+  });
+  if (!res.ok) return null;
+  const data = await res.json();
+  if (data.error) return null;
+  return { ruleType: data.ruleType, displayText: data.displayText, params: data.params ?? {} };
+}
+
+function splitDraft(draft: string): string[] {
+  return draft
+    .split(/\n|(?<=[.!?。])\s+/)
+    .map((s) => s.replace(/^[-•*\d.]\s*/, "").trim())
+    .filter((s) => s.length > 5);
+}
+
+export default function SetupPage() {
   const router = useRouter();
-  const [step, setStep] = useState<Step>("quiz");
-  const [current, setCurrent] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, boolean>>({});
-
-  // 자연어 입력
-  const [inputText, setInputText] = useState("");
+  const [step, setStep] = useState<Step>("draft");
+  const [draft, setDraft] = useState("");
   const [converting, setConverting] = useState(false);
-  const [customClauses, setCustomClauses] = useState<ConvertedClause[]>([]);
-
+  const [progress, setProgress] = useState(0);
+  const [clauses, setClauses] = useState<ConvertedClause[]>([]);
   const [saving, setSaving] = useState(false);
 
-  function answerQ(risky: boolean) {
-    const next = { ...answers, [QUESTIONS[current].id]: risky };
-    setAnswers(next);
-    if (current < QUESTIONS.length - 1) {
-      setCurrent((c) => c + 1);
-    } else {
-      setStep("custom");
-    }
-  }
-
-  async function convert() {
-    if (!inputText.trim()) return;
+  async function handleConfirm() {
+    const lines = splitDraft(draft);
+    if (lines.length === 0) return;
     setConverting(true);
-    const res = await fetch("/api/clauses/convert", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text: inputText.trim() }),
+    setProgress(0);
+
+    const results: ConvertedClause[] = [];
+    // 병렬 호출, 진행률 표시
+    let done = 0;
+    await Promise.all(
+      lines.map(async (line) => {
+        const clause = await convertLine(line);
+        done++;
+        setProgress(Math.round((done / lines.length) * 100));
+        if (clause) results.push(clause);
+      })
+    );
+
+    // ruleType 중복 제거 (같은 패턴은 첫 번째만)
+    const seen = new Set<string>();
+    const deduped = results.filter((c) => {
+      if (seen.has(c.ruleType)) return false;
+      seen.add(c.ruleType);
+      return true;
     });
-    const data = await res.json();
-    if (data.error) { setConverting(false); return; }
-    setCustomClauses((prev) => [...prev, { ...data, fromText: inputText.trim() }]);
-    setInputText("");
+
+    setClauses(deduped);
     setConverting(false);
+    setStep("review");
   }
 
-  const quizClauses = QUESTIONS.filter((q) => answers[q.id] === true);
-  const finalQuizClauses = quizClauses.length > 0 ? quizClauses : QUESTIONS.slice(0, 2);
+  function toggleEdit(i: number) {
+    setClauses((prev) =>
+      prev.map((c, idx) =>
+        idx === i
+          ? { ...c, editing: !c.editing, editText: c.editing ? c.editText : c.displayText }
+          : c
+      )
+    );
+  }
 
-  async function save() {
+  function saveEdit(i: number) {
+    setClauses((prev) =>
+      prev.map((c, idx) =>
+        idx === i ? { ...c, displayText: c.editText ?? c.displayText, editing: false } : c
+      )
+    );
+  }
+
+  function toggleSkip(i: number) {
+    setClauses((prev) =>
+      prev.map((c, idx) => (idx === i ? { ...c, skipped: !c.skipped } : c))
+    );
+  }
+
+  async function handleFinalConfirm() {
     setSaving(true);
+    const active = clauses.filter((c) => !c.skipped);
+
+    // 기존 조항 전부 삭제 후 새로 저장
     const existing = await fetch("/api/clauses").then((r) => r.json());
-    await Promise.all(existing.map((c: { id: string }) => fetch(`/api/clauses/${c.id}`, { method: "DELETE" })));
-    await Promise.all([
-      ...finalQuizClauses.map((q) =>
+    await Promise.all(
+      existing.map((c: { id: string }) => fetch(`/api/clauses/${c.id}`, { method: "DELETE" }))
+    );
+    await Promise.all(
+      active.map((c) =>
         fetch("/api/clauses", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ ruleType: q.id, params: {}, displayText: q.clause }),
+          body: JSON.stringify({ ruleType: c.ruleType as RuleType, params: c.params, displayText: c.displayText }),
         })
-      ),
-      ...customClauses.map((c) =>
-        fetch("/api/clauses", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ ruleType: c.ruleType, params: c.params, displayText: c.displayText }),
-        })
-      ),
-    ]);
+      )
+    );
+
     setSaving(false);
-    router.push("/will");
+    setStep("done");
+    setTimeout(() => router.push("/will"), 1200);
   }
 
-  const q = QUESTIONS[current];
-  const progress = (current / QUESTIONS.length) * 100;
-  const totalClauses = finalQuizClauses.length + customClauses.length;
+  // ── 드래프트 입력 ──
+  if (step === "draft") {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center p-6">
+        <div className="w-full max-w-xl">
+          <div className="mb-8 text-center">
+            <p className="text-[9px] font-bold tracking-[0.3em] text-[#C9A227] uppercase mb-3">투자 유언장 작성</p>
+            <h1 className="text-2xl font-black text-foreground mb-2">나쁜 투자 습관을 적어보세요</h1>
+            <OrnamentalDivider />
+            <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
+              형식 상관없이 자유롭게. 한 줄에 하나씩 쓰면 더 잘 인식해요.
+            </p>
+          </div>
 
-  return (
-    <div className="min-h-screen bg-background flex flex-col">
-      <header className="flex items-center gap-2 px-12 py-4 border-b border-border">
-        <Link href="/" className="text-lg font-black text-foreground">故래소</Link>
-        <ChevronRight size={12} className="text-muted-foreground" />
-        <span className="text-sm text-muted-foreground">첫 투자 유언장 작성</span>
-      </header>
+          <textarea
+            value={draft}
+            onChange={(e) => setDraft(e.target.value)}
+            placeholder={DRAFT_PLACEHOLDER}
+            rows={10}
+            className="w-full border border-border bg-card px-4 py-3 text-sm text-foreground focus:outline-none focus:border-[#C9A227]/60 resize-none leading-relaxed"
+          />
 
-      <main className="flex-1 flex items-center justify-center py-12 px-8">
-        <div className="w-full max-w-lg">
-
-          {/* ── 퀴즈 단계 ── */}
-          {step === "quiz" && (
-            <div className="border border-[#C9A227]/40">
-              <div className="bg-[#FDF8EC] px-8 pt-7 pb-5 text-center border-b border-[#C9A227]/20">
-                <p className="text-[9px] font-bold tracking-[0.3em] text-[#C9A227] uppercase mb-3">나의 첫 투자 유언장</p>
-                <h2 className="text-xl font-black text-foreground tracking-tight mb-3">투 자 습 관 진 단</h2>
-                <OrnamentalDivider />
-                <p className="text-xs text-[#7A5F0E]/80 mt-1">솔직하게 답할수록 맞춤 유언장이 만들어집니다.</p>
-              </div>
-              <div className="h-0.5 bg-muted">
-                <div className="h-full bg-[#C9A227] transition-all duration-300" style={{ width: `${progress}%` }} />
-              </div>
-              <div className="px-8 py-8">
-                <p className="text-[10px] text-muted-foreground font-bold tracking-wider mb-4 uppercase">
-                  {current + 1} / {QUESTIONS.length}
-                </p>
-                <p className="text-base font-bold text-foreground leading-relaxed mb-6">{q.q}</p>
-                <div className="space-y-2">
-                  {q.options.map((opt, i) => (
-                    <button
-                      key={i}
-                      onClick={() => answerQ(opt.risky)}
-                      className="w-full text-left px-4 py-3.5 border border-border bg-background hover:border-[#C9A227]/50 hover:bg-[#FDF8EC] transition-all text-sm text-foreground"
-                    >
-                      <span className="font-bold text-[#C9A227] mr-2">{String.fromCharCode(65 + i)}.</span>
-                      {opt.label}
-                    </button>
-                  ))}
-                </div>
-                <button onClick={() => setStep("custom")}
-                  className="w-full text-center text-xs text-muted-foreground mt-4 hover:text-foreground transition-colors">
-                  건너뛰기
-                </button>
-              </div>
-            </div>
-          )}
-
-          {/* ── 자연어 입력 단계 ── */}
-          {step === "custom" && (
-            <div className="border border-[#C9A227]/40">
-              <div className="bg-[#FDF8EC] px-8 pt-7 pb-5 text-center border-b border-[#C9A227]/20">
-                <p className="text-[9px] font-bold tracking-[0.3em] text-[#C9A227] uppercase mb-3">추가 원칙</p>
-                <h2 className="text-xl font-black text-foreground tracking-tight mb-3">나만의 원칙 추가</h2>
-                <OrnamentalDivider />
-                <p className="text-xs text-[#7A5F0E]/80 mt-1">
-                  직접 경험한 실수를 적어주세요. AI가 조항으로 만들어드립니다.
-                </p>
-              </div>
-
-              <div className="px-8 py-6">
-                <p className="text-[10px] text-muted-foreground font-bold tracking-wider mb-3 uppercase">예시</p>
-                <div className="space-y-1 mb-6">
-                  {["새벽에 코인 사면 항상 후회함", "뉴스 보고 바로 사면 항상 고점", "물타기 하다가 더 크게 손해봄"].map((ex) => (
-                    <button key={ex} onClick={() => setInputText(ex)}
-                      className="block text-xs text-muted-foreground hover:text-foreground transition-colors underline-offset-2 hover:underline">
-                      "{ex}"
-                    </button>
-                  ))}
-                </div>
-
-                <div className="flex gap-2 mb-4">
-                  <input
-                    value={inputText}
-                    onChange={(e) => setInputText(e.target.value)}
-                    onKeyDown={(e) => e.key === "Enter" && convert()}
-                    placeholder="경험한 실수나 원칙을 자유롭게 적어주세요"
-                    className="flex-1 border border-border bg-background px-3 py-2.5 text-sm text-foreground focus:outline-none focus:border-[#C9A227]/50"
-                  />
-                  <button onClick={convert} disabled={converting || !inputText.trim()}
-                    className="px-4 py-2.5 bg-foreground text-background text-xs font-bold hover:opacity-90 disabled:opacity-40 flex items-center gap-1.5">
-                    {converting ? <Loader2 size={12} className="animate-spin" /> : "변환"}
-                  </button>
-                </div>
-
-                {customClauses.length > 0 && (
-                  <div className="space-y-2 mb-4">
-                    {customClauses.map((c, i) => (
-                      <div key={i} className="border border-[#C9A227]/30 bg-[#FDFAF6] px-4 py-3">
-                        <p className="text-[9px] text-muted-foreground mb-1">"{c.fromText}" →</p>
-                        <div className="flex items-start justify-between gap-2">
-                          <p className="text-sm text-foreground leading-relaxed">{c.displayText}</p>
-                          <button onClick={() => setCustomClauses((prev) => prev.filter((_, j) => j !== i))}
-                            className="text-muted-foreground hover:text-[#B83535] shrink-0 mt-0.5">
-                            <X size={12} />
-                          </button>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              <div className="bg-[#FDF8EC] px-8 py-5 border-t border-[#C9A227]/20">
-                <OrnamentalDivider />
-                <button onClick={() => setStep("result")}
-                  className="w-full bg-foreground text-background py-3.5 font-bold text-sm hover:opacity-90 transition-opacity mt-3">
-                  결과 확인하기
-                </button>
-                <button onClick={() => setStep("result")}
-                  className="w-full text-center text-xs text-muted-foreground mt-3 hover:text-foreground transition-colors">
-                  건너뛰기
-                </button>
-              </div>
-            </div>
-          )}
-
-          {/* ── 결과 단계 ── */}
-          {step === "result" && (
-            <div className="border border-[#C9A227]/40">
-              <div className="bg-[#FDF8EC] px-8 pt-7 pb-5 text-center border-b border-[#C9A227]/20">
-                <p className="text-[9px] font-bold tracking-[0.3em] text-[#C9A227] uppercase mb-3">진단 완료</p>
-                <h2 className="text-xl font-black text-foreground tracking-tight mb-3">나의 투 자 유 언 장</h2>
-                <OrnamentalDivider />
-                <p className="text-xs text-[#7A5F0E]/80 mt-1">
-                  총 {totalClauses}개 조항이 생성됐습니다.
-                </p>
-              </div>
-
-              <div className="px-6 py-4 space-y-2 border-b border-[#C9A227]/20">
-                {finalQuizClauses.map((q, i) => (
-                  <div key={q.id} className="flex items-start gap-3 px-4 py-3.5 border border-[#C9A227]/30 bg-[#FDFAF6]">
-                    <span className="text-[11px] font-black text-[#C9A227] shrink-0 pt-0.5">제{i + 1}조.</span>
-                    <span className="text-sm text-foreground leading-relaxed">{q.clause}</span>
-                  </div>
-                ))}
-                {customClauses.map((c, i) => (
-                  <div key={i} className="flex items-start gap-3 px-4 py-3.5 border border-[#C9A227]/30 bg-[#FDFAF6]">
-                    <span className="text-[11px] font-black text-[#C9A227] shrink-0 pt-0.5">제{finalQuizClauses.length + i + 1}조.</span>
-                    <span className="text-sm text-foreground leading-relaxed">{c.displayText}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="bg-[#FDF8EC] px-8 py-5">
-                <OrnamentalDivider />
-                <button onClick={save} disabled={saving}
-                  className="w-full bg-foreground text-background py-3.5 font-bold text-sm hover:opacity-90 transition-opacity disabled:opacity-40 mt-3">
-                  {saving ? "저장 중..." : "유언장 저장하기"}
-                </button>
-                <button onClick={() => { setCurrent(0); setAnswers({}); setCustomClauses([]); setStep("quiz"); }}
-                  className="w-full text-center text-xs text-muted-foreground mt-3 hover:text-foreground transition-colors">
-                  다시 진단하기
-                </button>
-                <button onClick={() => router.push("/will")}
-                  className="w-full text-center text-xs text-muted-foreground mt-2 hover:text-foreground transition-colors">
-                  넘어가기
-                </button>
-              </div>
-            </div>
-          )}
-
+          <div className="flex items-center justify-between mt-4">
+            <Link href="/will" className="text-xs text-muted-foreground hover:text-foreground">
+              건너뛰기
+            </Link>
+            <button
+              onClick={handleConfirm}
+              disabled={converting || draft.trim().length < 5}
+              className="flex items-center gap-2 bg-foreground text-background px-6 py-2.5 text-sm font-bold hover:opacity-90 disabled:opacity-40 transition-opacity"
+            >
+              {converting ? (
+                <>
+                  <Loader2 size={14} className="animate-spin" />
+                  분석 중 {progress}%
+                </>
+              ) : (
+                "확정하기 →"
+              )}
+            </button>
+          </div>
         </div>
-      </main>
+      </div>
+    );
+  }
+
+  // ── 검토/수정 ──
+  if (step === "review") {
+    const activeCount = clauses.filter((c) => !c.skipped).length;
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center p-6">
+        <div className="w-full max-w-xl">
+          <div className="mb-6 text-center">
+            <p className="text-[9px] font-bold tracking-[0.3em] text-[#C9A227] uppercase mb-3">검토</p>
+            <h1 className="text-2xl font-black text-foreground mb-2">유언장 초안</h1>
+            <OrnamentalDivider />
+            <p className="text-sm text-muted-foreground mt-3">
+              내용을 확인하고 수정하세요. 빼고 싶은 조항은 제외할 수 있어요.
+            </p>
+          </div>
+
+          <div className="space-y-2 mb-6">
+            {clauses.map((c, i) => (
+              <div
+                key={i}
+                className={`border px-4 py-3 transition-all ${
+                  c.skipped
+                    ? "border-border bg-muted/30 opacity-40"
+                    : "border-[#C9A227]/30 bg-[#FDF8EC]"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[9px] font-bold text-[#C9A227] tracking-wider uppercase mb-1">
+                      {RULE_LABELS[c.ruleType] ?? c.ruleType}
+                    </p>
+                    {c.editing ? (
+                      <div className="flex gap-2 items-start">
+                        <textarea
+                          value={c.editText}
+                          onChange={(e) =>
+                            setClauses((prev) =>
+                              prev.map((cl, idx) => (idx === i ? { ...cl, editText: e.target.value } : cl))
+                            )
+                          }
+                          rows={2}
+                          className="flex-1 border border-border bg-card px-2 py-1 text-sm text-foreground focus:outline-none resize-none"
+                        />
+                        <button onClick={() => saveEdit(i)} className="mt-0.5 p-1 hover:bg-[#3D9E72]/10">
+                          <Check size={13} className="text-[#3D9E72]" />
+                        </button>
+                      </div>
+                    ) : (
+                      <p className="text-sm font-bold text-foreground">{c.displayText}</p>
+                    )}
+                  </div>
+                  <div className="flex items-center gap-1 shrink-0 mt-0.5">
+                    {!c.skipped && !c.editing && (
+                      <button onClick={() => toggleEdit(i)} className="p-1 hover:bg-muted">
+                        <Edit2 size={11} className="text-muted-foreground" />
+                      </button>
+                    )}
+                    <button onClick={() => toggleSkip(i)} className="p-1 hover:bg-muted">
+                      <X size={11} className={c.skipped ? "text-[#3D9E72]" : "text-muted-foreground"} />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex items-center justify-between">
+            <button
+              onClick={() => setStep("draft")}
+              className="text-xs text-muted-foreground hover:text-foreground"
+            >
+              ← 다시 작성
+            </button>
+            <button
+              onClick={handleFinalConfirm}
+              disabled={saving || activeCount === 0}
+              className="flex items-center gap-2 bg-foreground text-background px-6 py-2.5 text-sm font-bold hover:opacity-90 disabled:opacity-40 transition-opacity"
+            >
+              {saving ? <Loader2 size={14} className="animate-spin" /> : null}
+              {saving ? "저장 중..." : `진짜 확정 (${activeCount}개)`}
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // ── 완료 ──
+  return (
+    <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="text-center">
+        <p className="text-[#3D9E72] text-4xl mb-3">✓</p>
+        <p className="text-lg font-black text-foreground">유언장이 확정되었습니다.</p>
+        <p className="text-sm text-muted-foreground mt-1">유언장으로 이동합니다...</p>
+      </div>
     </div>
   );
 }
