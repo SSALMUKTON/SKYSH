@@ -31,13 +31,16 @@ export function buildConvertPrompt(text: string): string {
   "params": {}
 }
 
-ruleType은 다음 중 하나 (입력 내용에서 감지되는 패턴):
-- CHASE_SURGE: 급등 직후 시장가로 추격 매수 (예: "떨어진 후에 사야 되는데 올라가니까 바로 샀어", "갭상 보고 FOMO 와서 사버림")
-- NO_STOP_LOSS: 손절 없이 진입 (예: "손절을 안 하고 버텼어", "주문할 때 손절을 정하지 않음")
-- REVENGE_TRADE: 손실 후 같은 날 재진입 (예: "손절 난 다음에 바로 다시 들어갔어")
-- MARKET_ORDER_IMPULSE: 과열 구간에서 충동적 시장가 주문 (예: "급할 때 시장가로 사버림")
-- PREMARKET_GAP: 프리마켓 갭업 후 추격 매수 (예: "프리마켓에서 갭상이면 무조건 구매")
-- AVERAGING_DOWN: 하락 중 추가 매수 (예: "떨어지니까 더 사버렸어", "물타기를 자주 해")
+ruleType: 입력 내용의 투자 습관을 분석해서 가장 가까운 패턴 선택
+  * 사용 가능한 패턴:
+    - CHASE_SURGE: 급등 직후 시장가로 추격 매수
+    - NO_STOP_LOSS: 손절 없이 진입 (디폴트 — 정확히 맞는 게 없으면 이것 사용)
+    - REVENGE_TRADE: 손실 후 같은 날 재진입
+    - MARKET_ORDER_IMPULSE: 과열 구간에서 충동적 시장가 주문
+    - PREMARKET_GAP: 프리마켓 갭업 후 추격 매수
+    - AVERAGING_DOWN: 하락 중 추가 매수
+  * 입력이 이 중 어디에도 정확히 맞지 않으면 → NO_STOP_LOSS 사용
+  * displayText는 입력의 의미를 보존하면서도 백테스트 가능한 형태로 정형화
 
 규칙:
 - displayText: 자유로운 입력을 백테스트 가능한 표준 형태로 변환
