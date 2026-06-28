@@ -1,0 +1,64 @@
+[
+  {
+    "id": 35256991,
+    "headline": "Barron's Weekend Stock Picks: Truist Financial, Groupon And Nvidia's Rising Stock",
+    "summary": "Benzinga reviews this weekend&#39;s top stories covered by Barron&#39;s. Here are the articles investors need to read.\n",
+    "symbols": [
+      "GRPN",
+      "NVDA",
+      "NVO",
+      "TFC",
+      "WFC"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/23/10/35256991/barrons-weekend-stock-picks-truist-financial-groupon-and-nvidias-rising-stock",
+    "created_at": "2023-10-15T17:38:58Z"
+  },
+  {
+    "id": 35256778,
+    "headline": "Cathie Wood's Ark Sold $21M Worth Of Tesla Shares Last Week As EV Maker Prepares To Report Q3 Results",
+    "summary": "Cathie Wood&#39;s Ark Invest sold about $20 million worth of Tesla shares last week even as the stock shed over 3% during the week.",
+    "symbols": [
+      "ARKK",
+      "TSLA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/markets/equities/23/10/35256778/cathie-woods-ark-sold-21m-worth-of-tesla-shares-last-week-as-ev-maker-prepares-to-report-q3-resu",
+    "created_at": "2023-10-15T15:40:16Z"
+  },
+  {
+    "id": 35254697,
+    "headline": "Amazon Listed A Strange Job Opening, Leading To Speculations About The Company's Real Intentions",
+    "summary": "Amazon.com, Inc (NASDAQ: AMZN) inadvertently posted a job listing that has raised eyebrows among recruiters.",
+    "symbols": [
+      "AMZN"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/23/10/35254697/amazon-listed-a-strange-job-opening-leading-to-speculations-about-the-companys-real-intentions",
+    "created_at": "2023-10-15T13:56:48Z"
+  },
+  {
+    "id": 35256498,
+    "headline": "Apple's Right To Repair Becomes Law, Tesla Owners Use iPhone 15 Pro Button As Car Key Substitute And Other Top Tech Stories From This Week",
+    "summary": " ",
+    "symbols": [
+      "AAPL"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/23/10/35256498/apples-right-to-repair-becomes-law-tesla-owners-use-iphone-15-pro-button-as-car-key-substitute-and-o",
+    "created_at": "2023-10-15T13:28:13Z"
+  },
+  {
+    "id": 35256229,
+    "headline": "China's AI 'Blacklist' To Google's Chatbot Fumble: A Round-Up Of The Week's Top AI News",
+    "summary": " ",
+    "symbols": [
+      "GOOG",
+      "MSFT",
+      "NVDA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/23/10/35256229/chinas-ai-blacklist-to-googles-chatbot-fumble-a-round-up-of-the-weeks-top-ai-news",
+    "created_at": "2023-10-15T11:06:14Z"
+  }
+]

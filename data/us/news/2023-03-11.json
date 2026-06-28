@@ -1,0 +1,70 @@
+[
+  {
+    "id": 31300511,
+    "headline": "Benzinga Bulls And Bears: Amazon, Meta, Tesla, And A Bitcoin Bull Says Dogecoin Should Be Worthless",
+    "summary": "Benzinga examined the prospects for many investors&#39; favorite stocks over the last week — here&#39;s a look at some of our top stories. ",
+    "symbols": [
+      "AMZN",
+      "BTCUSD",
+      "DOGEUSD",
+      "META",
+      "SIVB",
+      "SNAP",
+      "TSLA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/large-cap/23/03/31300511/benzinga-bulls-and-bears-amazon-meta-tesla-and-a-bitcoin-bull-says-dogecoin-should-be-worthless",
+    "created_at": "2023-03-11T20:25:26Z"
+  },
+  {
+    "id": 31309130,
+    "headline": "Meta Plans More Layoffs In Key Projects, Likely To Match Job Cut Numbers From 2022: Report",
+    "summary": "Meta Platforms Inc (NASDAQ: META) is planning more job cuts in several rounds over the coming months. ",
+    "symbols": [
+      "META"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/23/03/31309130/meta-plans-more-layoffs-in-key-projects-likely-to-match-job-cut-numbers-from-2022-report",
+    "created_at": "2023-03-11T19:47:44Z"
+  },
+  {
+    "id": 31308887,
+    "headline": "Lights, Camera, Apple: Here's How To Stream Sunday's Oscars On Your iPhone, iPad, Mac, Or Apple TV",
+    "summary": "Attention, users of Apple Inc. (NASDAQ: AAPL) devices — you can stream the Oscars this year on your iPhone, iPad, Mac and Apple TV+!\n",
+    "symbols": [
+      "AAPL",
+      "NFLX"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/general/entertainment/23/03/31308887/lights-camera-apple-heres-how-to-stream-sundays-oscars-on-your-iphone-ipad-mac-or-apple-tv",
+    "created_at": "2023-03-11T19:32:10Z"
+  },
+  {
+    "id": 31307916,
+    "headline": "Tesla Stock Falls, Ford F-150 Lightning Recall, And More: Biggest EV Stories Of The Week",
+    "summary": "The week was marred by negative headlines surrounding electric vehicle companies, and, unsurprisingly, a number of EV stocks ended deep in the red.\n\nHere are several key events that happened during the week:",
+    "symbols": [
+      "F",
+      "HNHPF",
+      "RIDE",
+      "RIVN",
+      "TSLA",
+      "VWAGY"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/earnings/23/03/31307916/tesla-stock-falls-ford-f-150-lightning-recall-and-more-biggest-ev-stories-of-the-week",
+    "created_at": "2023-03-11T16:11:31Z"
+  },
+  {
+    "id": 29000449,
+    "headline": "Elon Musk Saw It Coming: He Once Endorsed Jeremy Siegel's Warning About Fed Acting Tough Until It Crushes The Economy",
+    "summary": "The implosion of SVB Financial Group (NASDAQ: SIVB)-owned Silicon Valley Bank has been blamed on its reckless strategy of investing the deposits mobilized in long-term Treasury bonds.",
+    "symbols": [
+      "SIVB",
+      "TSLA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/22/09/29000449/elon-musk-sides-with-this-wharton-finance-professor-who-launched-a-scathing-attack-on-fed-siegel-is",
+    "created_at": "2022-09-25T15:06:20Z"
+  }
+]

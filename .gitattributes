@@ -7,3 +7,6 @@
 *.jpg binary
 *.jpeg binary
 *.webp binary
+
+# 데이터 파이프라인 바이너리(줄바꿈 변환 금지)
+*.parquet binary

@@ -8,7 +8,7 @@ const NAV_ITEMS = [
   { icon: TrendingUp, label: "거래하기", href: "/order" },
   { icon: Scroll, label: "나의 유언장", href: "/will" },
   { icon: FileText, label: "거래 보고서", href: "/reports" },
-  { icon: Settings, label: "설정", href: "/connect" },
+  { icon: Settings, label: "설정", href: "/settings" },
 ];
 
 export function Sidebar() {
