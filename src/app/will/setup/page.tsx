@@ -60,12 +60,14 @@ export default function SetupPage() {
   const [progress, setProgress] = useState(0);
   const [clauses, setClauses] = useState<ConvertedClause[]>([]);
   const [saving, setSaving] = useState(false);
+  const [draftError, setDraftError] = useState<string | null>(null);
 
   async function handleConfirm() {
     const lines = splitDraft(draft);
     if (lines.length === 0) return;
     setConverting(true);
     setProgress(0);
+    setDraftError(null);
 
     const results: ConvertedClause[] = [];
     // 병렬 호출, 진행률 표시
@@ -87,8 +89,14 @@ export default function SetupPage() {
       return true;
     });
 
-    setClauses(deduped);
     setConverting(false);
+
+    if (deduped.length === 0) {
+      setDraftError("투자 원칙을 찾을 수 없어요. 나쁜 투자 습관이나 원칙을 다시 적어주세요.");
+      return;
+    }
+
+    setClauses(deduped);
     setStep("review");
   }
 
@@ -161,6 +169,12 @@ export default function SetupPage() {
             rows={10}
             className="w-full border border-border bg-card px-4 py-3 text-sm text-foreground focus:outline-none focus:border-[#C9A227]/60 resize-none leading-relaxed"
           />
+
+          {draftError && (
+            <p className="mt-3 text-xs text-[#B83535] bg-[#FDF0F0] border border-[#B83535]/20 px-3 py-2">
+              {draftError}
+            </p>
+          )}
 
           <div className="flex items-center justify-between mt-4">
             <Link href="/will" className="text-xs text-muted-foreground hover:text-foreground">
