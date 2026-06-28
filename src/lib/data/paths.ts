@@ -1,15 +1,14 @@
 import type { Market } from "@prisma/client";
 
 /**
- * 캐싱된 과거 데이터(`data/`) 경로 해석. [owner: P1]
+ * 캐싱된 과거 데이터(`data/`) 키 해석. [owner: P1]
  *
  * 파이프라인(`pipelines/`)이 자산군별로 동일 스키마로 수집해 둔 정적 파일을
- * 앱(서버)에서 읽기 위한 경로 헬퍼. 가격은 parquet, 나머지는 JSON.
- * ⚠️ 서버 전용 — fs 를 쓰므로 클라이언트 컴포넌트에서 import 하지 말 것.
+ * 앱(서버)에서 읽기 위한 키 헬퍼. 가격은 parquet, 나머지는 JSON.
  *
- * 경로는 path.join 대신 템플릿 문자열(슬래시)로 만든다 — 번들러(Turbopack)가
- * path.join(DATA_DIR, ...) 를 동적 모듈 패턴으로 오인해 data/ 전체를 추적하는
- * 경고/과다번들을 피하기 위함. Node fs 는 Windows 에서도 슬래시를 허용한다.
+ * 반환값은 모두 `data/` 기준 **상대 키**(예: `us/prices/AAPL.parquet`)다.
+ * 실제 읽기는 `storage.ts` 가 로컬 fs 또는 원격 버킷(`DATA_BASE_URL`)으로 분기한다.
+ * ⚠️ 서버 전용 — 클라이언트 컴포넌트에서 import 하지 말 것.
  */
 
 /** 자산군 → `data/` 하위 디렉터리. Prisma Market enum(COIN/KR/US)과 매핑. */
@@ -19,10 +18,8 @@ const MARKET_DIR: Record<Market, string> = {
   COIN: "crypto",
 };
 
-export const DATA_DIR = `${process.cwd().replace(/\\/g, "/")}/data`;
-
 export function marketDir(market: Market): string {
-  return `${DATA_DIR}/${MARKET_DIR[market]}`;
+  return MARKET_DIR[market];
 }
 
 /** 일봉 parquet 디렉터리. 3개 자산군 동일 스키마(Date + OHLCV). */
@@ -30,7 +27,7 @@ export function pricesDir(market: Market): string {
   return `${marketDir(market)}/prices`;
 }
 
-/** 특정 종목의 가격 parquet 경로. 심볼이 곧 파일명(KR:코드 / US:티커 / COIN:마켓). */
+/** 특정 종목의 가격 parquet 키. 심볼이 곧 파일명(KR:코드 / US:티커 / COIN:마켓). */
 export function priceFile(market: Market, symbol: string): string {
   return `${pricesDir(market)}/${symbol}.parquet`;
 }
@@ -59,6 +56,11 @@ export function usFilingsFile(symbol: string): string {
 /** 미국 뉴스(Alpaca) — 날짜별(YYYY-MM-DD.json) 파일. */
 export function usNewsDir(): string {
   return `${marketDir("US")}/news`;
+}
+
+/** 국내 DART 보조 이름 매핑 파일. */
+export function krDartCorpcodesFile(): string {
+  return `${marketDir("KR")}/universe/dart_corpcodes.json`;
 }
 
 /** 유니버스(종목 목록) 소스 파일. */

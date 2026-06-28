@@ -1,7 +1,6 @@
-import { readFile } from "node:fs/promises";
-import { existsSync } from "node:fs";
 import type { Market } from "@prisma/client";
 import { fundamentalsFile } from "./paths";
+import { readDataJson } from "./storage";
 
 /**
  * 정형 재무(펀더멘털) JSON 읽기. [owner: P1]
@@ -46,10 +45,9 @@ export async function readFundamentals(
   limit?: number,
 ): Promise<Fundamentals | null> {
   if (market === "COIN") return null; // 코인은 펀더멘털 없음
-  const file = fundamentalsFile(market, symbol);
-  if (!existsSync(file)) return null;
+  const raw = await readDataJson<Fundamentals>(fundamentalsFile(market, symbol));
+  if (raw === null) return null;
 
-  const raw = JSON.parse(await readFile(file, "utf-8")) as Fundamentals;
   const quarters = (raw.quarters ?? [])
     .slice()
     .sort((a, b) => (b.period_end ?? "").localeCompare(a.period_end ?? ""));

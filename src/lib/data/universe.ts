@@ -1,7 +1,6 @@
-import { readFile, readdir } from "node:fs/promises";
-import { existsSync } from "node:fs";
 import type { Market } from "@prisma/client";
-import { marketDir, pricesDir, universeFile } from "./paths";
+import { krDartCorpcodesFile, pricesDir, universeFile } from "./paths";
+import { listData, readDataJson } from "./storage";
 
 /**
  * 자산군별 종목 목록(유니버스). [owner: P1]
@@ -21,21 +20,18 @@ const cache = new Map<Market, UniverseItem[]>();
 /** 자산군별 이름 매핑(symbol → name) 로드. */
 async function loadNames(market: Market): Promise<Map<string, string>> {
   const names = new Map<string, string>();
-  const file = universeFile(market);
-  if (!existsSync(file)) return names;
+  const raw = await readDataJson<unknown>(universeFile(market));
+  if (raw === null) return names;
 
-  const raw = JSON.parse(await readFile(file, "utf-8"));
   if (market === "KR") {
     // [{ code, name }]
     for (const it of raw as { code: string; name: string }[]) {
       names.set(it.code, it.name);
     }
-    const dartFile = `${marketDir("KR")}/universe/dart_corpcodes.json`;
-    if (existsSync(dartFile)) {
-      const dartRaw = JSON.parse(await readFile(dartFile, "utf-8")) as Record<
-        string,
-        { corp_name?: string }
-      >;
+    const dartRaw = await readDataJson<Record<string, { corp_name?: string }>>(
+      krDartCorpcodesFile(),
+    );
+    if (dartRaw) {
       for (const [code, item] of Object.entries(dartRaw)) {
         if (item.corp_name) names.set(code, item.corp_name);
       }
@@ -55,10 +51,10 @@ export async function listUniverse(market: Market): Promise<UniverseItem[]> {
   const cached = cache.get(market);
   if (cached) return cached;
 
-  const dir = pricesDir(market);
-  if (!existsSync(dir)) return [];
-
-  const [files, names] = await Promise.all([readdir(dir), loadNames(market)]);
+  const [files, names] = await Promise.all([
+    listData(pricesDir(market)),
+    loadNames(market),
+  ]);
   const items = files
     .filter((f) => f.endsWith(".parquet"))
     .map((f) => {

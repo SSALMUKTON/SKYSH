@@ -1,9 +1,8 @@
-import { readFile } from "node:fs/promises";
-import { existsSync } from "node:fs";
 import { parquetReadObjects } from "hyparquet";
 import { compressors } from "hyparquet-compressors";
 import type { Market } from "@prisma/client";
 import { priceFile } from "./paths";
+import { readDataBuffer } from "./storage";
 
 /**
  * 캐싱된 일봉 가격(parquet) 읽기. [owner: P1]
@@ -50,13 +49,15 @@ export async function readPriceSeries(
   let candles = cache.get(key);
 
   if (candles === undefined) {
-    const file = priceFile(market, symbol);
-    if (!existsSync(file)) {
+    const buf = await readDataBuffer(priceFile(market, symbol));
+    if (buf === null) {
       cache.set(key, null);
       candles = null;
     } else {
-      const buf = await readFile(file);
-      const ab = buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength);
+      const ab = buf.buffer.slice(
+        buf.byteOffset,
+        buf.byteOffset + buf.byteLength,
+      ) as ArrayBuffer;
       const rows = (await parquetReadObjects({ file: ab, compressors })) as Record<
         string,
         unknown

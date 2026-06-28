@@ -1,7 +1,6 @@
-import { readFile, readdir } from "node:fs/promises";
-import { existsSync } from "node:fs";
 import type { Market } from "@prisma/client";
 import { krDisclosuresFile, usNewsDir } from "./paths";
+import { listData, readDataJson } from "./storage";
 
 /**
  * 종목 관련 뉴스/공시 피드. [owner: P1]
@@ -35,9 +34,8 @@ interface RawNews {
 
 async function readUsNews(symbol: string, limit: number): Promise<FeedItem[]> {
   const dir = usNewsDir();
-  if (!existsSync(dir)) return [];
-  const files = (await readdir(dir))
-    .filter((f) => f.endsWith(".json"))
+  const files = (await listData(dir))
+    .filter((f) => f.endsWith(".json") && f !== "_index.json")
     .sort((a, b) => b.localeCompare(a)) // 최신 날짜 우선
     .slice(0, US_SCAN_FILES);
 
@@ -45,12 +43,8 @@ async function readUsNews(symbol: string, limit: number): Promise<FeedItem[]> {
   const sym = symbol.toUpperCase();
   for (const f of files) {
     if (out.length >= limit) break;
-    let arr: RawNews[];
-    try {
-      arr = JSON.parse(await readFile(`${dir}/${f}`, "utf-8"));
-    } catch {
-      continue;
-    }
+    const arr = await readDataJson<RawNews[]>(`${dir}/${f}`);
+    if (arr === null) continue;
     for (const n of arr) {
       if (!n.symbols?.some((s) => s.toUpperCase() === sym)) continue;
       out.push({
@@ -76,14 +70,8 @@ interface RawDisclosure {
 }
 
 async function readKrDisclosures(symbol: string, limit: number): Promise<FeedItem[]> {
-  const file = krDisclosuresFile(symbol);
-  if (!existsSync(file)) return [];
-  let arr: RawDisclosure[];
-  try {
-    arr = JSON.parse(await readFile(file, "utf-8"));
-  } catch {
-    return [];
-  }
+  const arr = await readDataJson<RawDisclosure[]>(krDisclosuresFile(symbol));
+  if (arr === null) return [];
   return arr.slice(0, limit).map((d) => ({
     kind: "disclosure" as const,
     title: d.report_nm.trim(),
