@@ -14,14 +14,14 @@ interface Clause {
   createdAt: string;
 }
 
+// 백테스트 지원 룰만 (ALL_IN 등 감지 불가 룰 제외)
 const RULE_TYPE_OPTIONS: RuleType[] = [
   "CHASE_SURGE",
   "PREMARKET_GAP",
   "NO_STOP_LOSS",
-  "ALL_IN",
   "REVENGE_TRADE",
   "MARKET_ORDER_IMPULSE",
-  "REPEATED_VIEWING",
+  "AVERAGING_DOWN",
 ];
 
 export default function WillPage() {

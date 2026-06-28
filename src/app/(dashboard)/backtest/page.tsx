@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { BarChart2, TrendingDown, TrendingUp, AlertTriangle } from "lucide-react";
+import { BarChart2, TrendingDown, TrendingUp, AlertTriangle, ChevronRight } from "lucide-react";
 
 interface ReturnStats {
   mean: number;
@@ -27,12 +27,6 @@ interface BacktestResult {
   total_signals: number;
   returns: Record<string, ReturnStats>;
   mdd?: MddStats;
-  recent_dates?: string[];
-}
-
-interface BacktestData {
-  results: BacktestResult[];
-  horizons: number[];
 }
 
 interface Clause {
@@ -50,223 +44,219 @@ const RULE_LABELS: Record<string, string> = {
   NO_STOP_LOSS: "손절 없는 진입",
 };
 
-const MARKET_LABELS: Record<string, string> = {
-  us: "미국",
-  kr: "국내",
-  crypto: "코인",
-};
-
+const MARKET_LABELS: Record<string, string> = { us: "미국", kr: "국내", crypto: "코인" };
 const HORIZONS = [20, 60, 120];
 
 export default function BacktestPage() {
-  const [data, setData] = useState<BacktestData | null>(null);
+  const [results, setResults] = useState<BacktestResult[]>([]);
   const [clauses, setClauses] = useState<Clause[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [selectedClause, setSelectedClause] = useState<Clause | null>(null);
   const [selectedMarket, setSelectedMarket] = useState<string>("us");
   const [selectedHorizon, setSelectedHorizon] = useState<number>(60);
 
   useEffect(() => {
     fetch("/api/backtest")
       .then((r) => r.json())
-      .then((d) => { if (d.error) setError(d.error); else setData(d); });
+      .then((d) => { if (d.error) setError(d.error); else setResults(d.results); });
     fetch("/api/clauses")
       .then((r) => r.json())
-      .then(setClauses);
+      .then((cs: Clause[]) => {
+        setClauses(cs);
+        if (cs.length > 0) setSelectedClause(cs[0]);
+      });
   }, []);
 
-  const myRuleTypes = new Set(clauses.map((c) => c.ruleType));
-  const hasWill = clauses.length > 0;
+  // 선택된 조항 + 시장의 백테스트 결과
+  const result = results.find(
+    (r) => r.rule === selectedClause?.ruleType && r.market === selectedMarket
+  ) ?? null;
 
-  // 내 유언장에 있는 룰만, 없으면 전체
-  const filtered = (data?.results ?? [])
-    .filter((r) => r.market === selectedMarket)
-    .filter((r) => !hasWill || myRuleTypes.has(r.rule));
+  const hasData = result && result.total_signals > 0;
+  const stats = result?.returns[String(selectedHorizon)];
+  const isNoStopLoss = selectedClause?.ruleType === "NO_STOP_LOSS";
 
-  if (error) {
-    return (
-      <div className="p-10 max-w-3xl mx-auto">
-        <p className="text-sm text-[#B83535]">{error}</p>
-      </div>
-    );
-  }
+  // 백테스트 데이터 없는 조항
+  const backtestableRules = new Set(results.map((r) => r.rule));
 
-  if (!data) {
-    return (
-      <div className="p-10 max-w-3xl mx-auto">
-        <p className="text-sm text-muted-foreground">불러오는 중...</p>
-      </div>
-    );
-  }
+  if (error) return (
+    <div className="p-10 max-w-3xl mx-auto">
+      <p className="text-sm text-[#B83535]">{error}</p>
+    </div>
+  );
 
   return (
     <div className="p-8">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         {/* 헤더 */}
         <div className="mb-8">
           <h1 className="text-2xl font-black text-foreground mb-1">유언장 백테스트</h1>
           <p className="text-sm text-muted-foreground">
-            {hasWill
-              ? `내 유언장 ${clauses.length}개 조항 기반 — 위반 패턴이 실제로 얼마나 손해를 유발하는지 검증합니다.`
-              : "조항별 위반 패턴이 실제로 얼마나 손해를 유발하는지 과거 데이터로 검증합니다."}
+            조항을 선택하면 해당 패턴의 과거 수익률 데이터를 보여줍니다.
           </p>
-          {hasWill && (
-            <div className="mt-3 flex flex-wrap gap-2">
-              {clauses.map((c) => (
-                <span key={c.id} className={`text-[10px] font-bold px-2 py-1 border ${
-                  myRuleTypes.has(c.ruleType) && data?.results.some((r) => r.rule === c.ruleType)
-                    ? "border-[#C9A227]/50 bg-[#FDF8EC] text-[#7A5F0E]"
-                    : "border-border bg-muted text-muted-foreground"
-                }`}>
-                  {c.displayText}
-                </span>
-              ))}
+        </div>
+
+        <div className="grid grid-cols-[220px_1fr] gap-6">
+          {/* 왼쪽: 조항 목록 */}
+          <div>
+            <p className="text-[10px] font-bold tracking-[0.2em] text-muted-foreground uppercase mb-2">내 유언장</p>
+            <div className="space-y-1">
+              {clauses.length === 0 && (
+                <p className="text-xs text-muted-foreground">유언장이 없습니다.</p>
+              )}
+              {clauses.filter((c) => backtestableRules.has(c.ruleType)).map((c) => {
+                const active = selectedClause?.id === c.id;
+                return (
+                  <button
+                    key={c.id}
+                    onClick={() => setSelectedClause(c)}
+                    className={`w-full text-left px-3 py-3 border transition-all flex items-start justify-between gap-2 ${
+                      active
+                        ? "border-[#C9A227]/60 bg-[#FDF8EC]"
+                        : "border-border bg-card hover:border-[#C9A227]/30 hover:bg-[#FDF8EC]/50"
+                    }`}
+                  >
+                    <div className="min-w-0 flex-1">
+                      <p className="text-[10px] font-bold text-[#C9A227] mb-0.5">
+                        {RULE_LABELS[c.ruleType] ?? c.ruleType}
+                      </p>
+                      <p className="text-[11px] text-foreground leading-relaxed break-keep">{c.displayText}</p>
+                    </div>
+                    <ChevronRight size={12} className={`shrink-0 mt-0.5 transition-opacity ${active ? "text-[#C9A227] opacity-100" : "opacity-0"}`} />
+                  </button>
+                );
+              })}
             </div>
-          )}
-        </div>
-
-        {/* 필터 */}
-        <div className="flex items-center gap-3 mb-6">
-          <div className="flex border border-border">
-            {Object.entries(MARKET_LABELS).map(([key, label]) => (
-              <button
-                key={key}
-                onClick={() => setSelectedMarket(key)}
-                className={`px-4 py-2 text-xs font-bold transition-all ${
-                  selectedMarket === key
-                    ? "bg-foreground text-background"
-                    : "text-muted-foreground hover:bg-muted"
-                }`}
-              >
-                {label}
-              </button>
-            ))}
           </div>
-          <div className="flex border border-border">
-            {HORIZONS.map((h) => (
-              <button
-                key={h}
-                onClick={() => setSelectedHorizon(h)}
-                className={`px-4 py-2 text-xs font-bold transition-all ${
-                  selectedHorizon === h
-                    ? "bg-foreground text-background"
-                    : "text-muted-foreground hover:bg-muted"
-                }`}
-              >
-                {h}일 후
-              </button>
-            ))}
-          </div>
-        </div>
 
-        {/* 결과 카드 */}
-        <div className="space-y-4">
-          {filtered.map((result) => {
-            const stats = result.returns[String(selectedHorizon)];
-            const isNoStopLoss = result.rule === "NO_STOP_LOSS";
-            const positive = !isNoStopLoss && stats?.mean > 0;
-            const myClause = clauses.find((c) => c.ruleType === result.rule);
-
-            return (
-              <div key={`${result.market}-${result.rule}`} className="border border-[#C9A227]/40 bg-card">
-                {/* 타이틀 바 */}
-                <div className="flex items-center justify-between px-5 py-3 border-b border-[#C9A227]/20 bg-[#FDF8EC]">
-                  <div className="flex items-center gap-2">
-                    <AlertTriangle size={13} className="text-[#C9A227]" />
-                    <span className="text-sm font-black text-foreground">
-                      {RULE_LABELS[result.rule] ?? result.rule}
-                    </span>
-                    <span className="text-[10px] text-muted-foreground font-mono bg-muted px-1.5 py-0.5">
-                      {result.rule}
-                    </span>
-                  </div>
-                  <span className="text-xs text-muted-foreground">
-                    총 <strong className="text-foreground">{result.total_signals.toLocaleString()}</strong>건 감지
-                  </span>
-                </div>
-
-                {myClause && (
-                  <div className="px-5 py-2.5 border-b border-[#C9A227]/20 bg-[#FDFAF6]">
-                    <p className="text-xs text-[#7A5F0E] italic">"{myClause.displayText}"</p>
-                  </div>
-                )}
-
-                <div className="px-5 py-4">
-                  {isNoStopLoss && result.mdd ? (
-                    /* NO_STOP_LOSS — MDD 뷰 */
-                    <div>
-                      <p className="text-[10px] text-muted-foreground font-bold tracking-wider uppercase mb-3">
-                        급등 진입 후 20일 내 최대 낙폭 분포
-                      </p>
-                      <div className="grid grid-cols-4 gap-3">
-                        {[
-                          { label: "평균 MDD", value: `${result.mdd.mean}%`, color: "text-[#B83535]" },
-                          { label: "중간값 MDD", value: `${result.mdd.median}%`, color: "text-[#B83535]" },
-                          { label: "-5% 이상 낙폭", value: `${result.mdd.pct_over_5}%`, color: "text-[#B83535]" },
-                          { label: "-10% 이상 낙폭", value: `${result.mdd.pct_over_10}%`, color: "text-[#B83535]" },
-                        ].map(({ label, value, color }) => (
-                          <div key={label} className="border border-border p-3">
-                            <p className="text-[9px] text-muted-foreground uppercase font-bold tracking-wider mb-1">{label}</p>
-                            <p className={`text-lg font-black ${color}`}>{value}</p>
-                          </div>
-                        ))}
-                      </div>
-                      <p className="text-xs text-muted-foreground mt-3">
-                        손절가 없이 급등 종목 진입 시 {result.mdd.pct_over_5}%의 경우 -5% 이상 낙폭을 경험합니다.
-                      </p>
-                    </div>
-                  ) : stats ? (
-                    /* 일반 룰 — 수익률 뷰 */
-                    <div>
-                      <p className="text-[10px] text-muted-foreground font-bold tracking-wider uppercase mb-3">
-                        위반 다음날 진입 → {selectedHorizon}일 후 수익률
-                      </p>
-                      <div className="grid grid-cols-5 gap-3 mb-3">
-                        {[
-                          { label: "평균 수익률", value: `${stats.mean > 0 ? "+" : ""}${stats.mean}%`, highlight: true },
-                          { label: "중간값", value: `${stats.median > 0 ? "+" : ""}${stats.median}%`, highlight: false },
-                          { label: "승률", value: `${stats.win_rate}%`, highlight: false },
-                          { label: "하위 5%", value: `${stats.worst}%`, highlight: false },
-                          { label: "상위 5%", value: `+${stats.best}%`, highlight: false },
-                        ].map(({ label, value, highlight }) => (
-                          <div key={label} className="border border-border p-3">
-                            <p className="text-[9px] text-muted-foreground uppercase font-bold tracking-wider mb-1">{label}</p>
-                            <p className={`text-base font-black ${
-                              highlight
-                                ? positive ? "text-[#3D9E72]" : "text-[#B83535]"
-                                : "text-foreground"
-                            }`}>
-                              {value}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* 수익률 막대 시각화 */}
-                      <div className="flex items-center gap-2">
-                        <TrendingDown size={11} className="text-[#B83535] shrink-0" />
-                        <div className="flex-1 h-2 bg-muted relative overflow-hidden">
-                          <div
-                            className={`h-full absolute top-0 ${positive ? "bg-[#3D9E72]" : "bg-[#B83535]"}`}
-                            style={{ width: `${Math.min(Math.abs(stats.win_rate), 100)}%`, left: 0 }}
-                          />
-                        </div>
-                        <TrendingUp size={11} className="text-[#3D9E72] shrink-0" />
-                        <span className="text-[10px] text-muted-foreground w-12 text-right">
-                          승률 {stats.win_rate}%
-                        </span>
-                      </div>
-
-                      {stats.n > 0 && (
-                        <p className="text-[10px] text-muted-foreground mt-2">
-                          {stats.n.toLocaleString()}개 샘플 기준
-                        </p>
-                      )}
-                    </div>
-                  ) : null}
-                </div>
+          {/* 오른쪽: 결과 */}
+          <div>
+            {!selectedClause ? (
+              <div className="border border-border bg-card h-full flex items-center justify-center p-10">
+                <p className="text-sm text-muted-foreground">조항을 선택하세요.</p>
               </div>
-            );
-          })}
+            ) : (
+              <div>
+                {/* 조항 헤더 */}
+                <div className="border border-[#C9A227]/40 bg-[#FDF8EC] px-5 py-4 mb-4">
+                  <p className="text-[10px] font-bold text-[#C9A227] tracking-wider uppercase mb-1">
+                    {RULE_LABELS[selectedClause.ruleType] ?? selectedClause.ruleType}
+                  </p>
+                  <p className="text-sm font-bold text-foreground">"{selectedClause.displayText}"</p>
+                </div>
+
+                {/* 필터 */}
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="flex border border-border">
+                    {Object.entries(MARKET_LABELS).map(([key, label]) => (
+                      <button
+                        key={key}
+                        onClick={() => setSelectedMarket(key)}
+                        className={`px-3 py-1.5 text-xs font-bold transition-all ${
+                          selectedMarket === key
+                            ? "bg-foreground text-background"
+                            : "text-muted-foreground hover:bg-muted"
+                        }`}
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                  <div className="flex border border-border">
+                    {HORIZONS.map((h) => (
+                      <button
+                        key={h}
+                        onClick={() => setSelectedHorizon(h)}
+                        className={`px-3 py-1.5 text-xs font-bold transition-all ${
+                          selectedHorizon === h
+                            ? "bg-foreground text-background"
+                            : "text-muted-foreground hover:bg-muted"
+                        }`}
+                      >
+                        {h}일 후
+                      </button>
+                    ))}
+                  </div>
+                  {hasData && (
+                    <span className="text-xs text-muted-foreground ml-auto">
+                      총 <strong className="text-foreground">{result!.total_signals.toLocaleString()}</strong>건 감지
+                    </span>
+                  )}
+                </div>
+
+                {/* 결과 없음 */}
+                {!hasData ? (
+                  <div className="border border-border bg-card px-5 py-10 text-center">
+                    <p className="text-sm text-muted-foreground">
+                      {selectedMarket === "crypto" && selectedClause.ruleType === "PREMARKET_GAP"
+                        ? "코인은 24시간 거래라 갭업 데이터가 없습니다."
+                        : "해당 시장에서 감지된 패턴이 없습니다."}
+                    </p>
+                  </div>
+                ) : isNoStopLoss && result?.mdd ? (
+                  /* NO_STOP_LOSS — MDD */
+                  <div className="border border-border bg-card p-5">
+                    <p className="text-[10px] text-muted-foreground font-bold tracking-wider uppercase mb-4">
+                      급등 진입 후 20일 내 최대 낙폭 분포
+                    </p>
+                    <div className="grid grid-cols-2 gap-3 mb-4">
+                      {[
+                        { label: "평균 MDD", value: `${result.mdd.mean}%` },
+                        { label: "중간값 MDD", value: `${result.mdd.median}%` },
+                        { label: "-5% 이상 낙폭 비율", value: `${result.mdd.pct_over_5}%` },
+                        { label: "-10% 이상 낙폭 비율", value: `${result.mdd.pct_over_10}%` },
+                      ].map(({ label, value }) => (
+                        <div key={label} className="border border-border p-4">
+                          <p className="text-[9px] text-muted-foreground uppercase font-bold tracking-wider mb-1">{label}</p>
+                          <p className="text-2xl font-black text-[#B83535]">{value}</p>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      손절가 없이 급등 종목 진입 시 {result.mdd.pct_over_5}%의 경우 -5% 이상 낙폭을 경험합니다.
+                    </p>
+                  </div>
+                ) : stats ? (
+                  /* 일반 룰 — 수익률 */
+                  <div className="border border-border bg-card p-5">
+                    <p className="text-[10px] text-muted-foreground font-bold tracking-wider uppercase mb-4">
+                      이 패턴 위반 다음날 진입 → {selectedHorizon}일 후 수익률
+                    </p>
+                    <div className="grid grid-cols-5 gap-3 mb-5">
+                      {[
+                        { label: "평균 수익률", value: `${stats.mean > 0 ? "+" : ""}${stats.mean}%`, big: true },
+                        { label: "중간값", value: `${stats.median > 0 ? "+" : ""}${stats.median}%`, big: false },
+                        { label: "승률", value: `${stats.win_rate}%`, big: false },
+                        { label: "하위 5%", value: `${stats.worst}%`, big: false },
+                        { label: "상위 5%", value: `+${stats.best}%`, big: false },
+                      ].map(({ label, value, big }) => (
+                        <div key={label} className="border border-border p-3">
+                          <p className="text-[9px] text-muted-foreground uppercase font-bold tracking-wider mb-1">{label}</p>
+                          <p className={`font-black ${big ? "text-2xl" : "text-base"} ${
+                            big ? (stats.mean > 0 ? "text-[#3D9E72]" : "text-[#B83535]") : "text-foreground"
+                          }`}>{value}</p>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex items-center gap-2 mb-3">
+                      <TrendingDown size={11} className="text-[#B83535] shrink-0" />
+                      <div className="flex-1 h-1.5 bg-muted overflow-hidden">
+                        <div
+                          className="h-full bg-[#3D9E72]"
+                          style={{ width: `${stats.win_rate}%` }}
+                        />
+                      </div>
+                      <TrendingUp size={11} className="text-[#3D9E72] shrink-0" />
+                      <span className="text-[10px] text-muted-foreground w-14 text-right">
+                        승률 {stats.win_rate}%
+                      </span>
+                    </div>
+                    <p className="text-[10px] text-muted-foreground">{stats.n.toLocaleString()}개 샘플 기준</p>
+                  </div>
+                ) : null}
+              </div>
+            )}
+          </div>
         </div>
 
         {/* 안내 */}
