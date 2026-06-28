@@ -30,7 +30,9 @@
 - **Tailwind CSS 4** (`@tailwindcss/postcss`)
 - **Gemini** (`@google/generative-ai`, 기본 `gemini-2.5-flash`) — 조항 변환 + 보고서 생성
 - recharts(차트) · lucide-react(아이콘) · zod(검증)
-- **hyparquet (+ hyparquet-compressors)** — `data/` 의 parquet 가격을 서버에서 직접 읽음(서버 전용)
+- **hyparquet (+ hyparquet-compressors)** — parquet 가격을 서버에서 읽음(서버 전용)
+- **데이터 스토리지(`lib/data/storage.ts`)** — `data/` 정적 데이터를 **로컬은 fs / 배포는 R2 fetch** 로
+  자동 분기. `DATA_BASE_URL` 미설정 시 로컬 `data/`, 설정 시 그 base URL(R2 등)에서 HTTP fetch.
 
 ## 실행
 ```bash
@@ -38,7 +40,9 @@ npm run dev          # next dev (Turbopack)
 npm run db:generate  # prisma generate + scripts/patch-prisma.js (한글 경로 패치)
 npm run db:push      # 스키마 동기화   ·   npm run db:seed  데모 시드
 ```
-필요 env: `DATABASE_URL`, `DIRECT_URL`, `GEMINI_API_KEY` (옵션: `GEMINI_MODEL`, `BROKER_PROVIDER`).
+필요 env: `DATABASE_URL`, `DIRECT_URL`, `GEMINI_API_KEY`
+(옵션: `GEMINI_MODEL`, `BROKER_PROVIDER`, `NEXT_PUBLIC_APP_URL`, `DATA_BASE_URL`).
+로컬은 `DATA_BASE_URL` 없이 레포의 `data/` 를 직접 읽으면 된다(아래 §2·§배포 참고).
 
 ## 데이터 모델 (`prisma/schema.prisma` — 단일 진실원)
 - **User** → **Trade**(매수~매도를 하나로 묶는 단위) → **Order**(개별 주문).
@@ -73,8 +77,12 @@ npm run db:push      # 스키마 동기화   ·   npm run db:seed  데모 시드
 - `reports`(보고서 생성, Gemini) · `backtest`.
 
 ## lib
-- **`lib/data/`** (서버 전용): `data/` parquet 가격을 hyparquet 로 읽고 universe/fundamentals/news 를 제공.
-  `paths.ts` 는 `path.join` 대신 슬래시 템플릿을 쓴다(Turbopack 과다추적 경고 회피).
+- **`lib/data/`** (서버 전용): parquet 가격을 hyparquet 로 읽고 universe/fundamentals/news/macro 를 제공.
+  - **`storage.ts`** 가 유일한 I/O 지점 — `readDataBuffer/Text/Json`·`listData(prefix)`. `DATA_BASE_URL`
+    있으면 R2 등에서 HTTP fetch, 없으면 로컬 `data/` fs. 다른 모듈은 fs 를 직접 쓰지 않는다.
+  - `paths.ts` 는 `data/` 기준 **상대 키**(예: `us/prices/AAPL.parquet`)를 반환한다.
+  - 객체 스토리지엔 `readdir` 이 없으므로 디렉터리별 **`_index.json` 매니페스트**(파일명 배열)로 목록을
+    얻는다 → `scripts/gen-data-manifests.mjs` 로 생성. 새 파일을 추가했으면 매니페스트를 재생성해야 한다.
 - **`lib/broker/`**: `Broker` 인터페이스 + `MockBroker`(기본, 키 불필요) / `KisBroker`(`BROKER_PROVIDER=kis`).
   `credsFromRequest` 가 `Authorization: Bearer <base64(JSON)>` 를 파싱. Mock 은 symbol 에 `"SURGE"` 가 들어가면
   `changePct=18` 을 강제한다(룰 위반 테스트용).
@@ -120,11 +128,18 @@ python -m pipelines.run <us|kr|crypto|all> <dataset> [--start --end --overwrite 
 
 ## 데이터 (`data/`, 커밋됨)
 - `data/{us,kr,crypto}/` 자산군별. 가격 parquet 은 3군 동일: 인덱스 `Date`(datetime64[ms]),
-  컬럼 `Close/High/Low/Open/Volume`(일봉/수정주가). 앱(`lib/data`)이 hyparquet 로 이 파일을 읽는다.
+  컬럼 `Close/High/Low/Open/Volume`(일봉/수정주가). 앱(`lib/data/storage.ts`)이 로컬 fs 또는 R2 에서 읽는다.
 - US: `prices` · `news` · `macro/fred` · `sec/{filings,facts,fundamentals,company_tickers}`
 - KR: `prices` · `disclosures` · `fundamentals` · `valuation` · `macro/ecos` · `universe`
 - crypto: `prices` · `universe`
 - 2.4GB(git pack ~198MB)이나 파이프라인으로 재생성 가능. `.env`(비밀)는 커밋 금지(`.gitignore` `.env*`).
+
+## 배포 (Vercel + Cloudflare R2)
+- **데이터는 레포/Vercel 에 올리지 않는다**(`.vercelignore` 가 루트 `/data/` 제외 — `src/lib/data/` 는 제외 금지).
+  Vercel 의 소스/함수 크기 한도(Hobby 100MB·함수 250MB)를 2.4GB 가 넘기 때문. 런타임엔 R2 에서 fetch.
+- **R2 버킷 `skysh-data`** (public dev URL → `DATA_BASE_URL`). 뉴스는 용량상 최근 7일치만 업로드한다.
+- 데이터 갱신 시: `node scripts/gen-data-manifests.mjs` → R2 키(`R2_*` env)와 함께 `node scripts/upload-data.mjs`.
+- Vercel 환경변수: 위 §실행 필요 env + `DATA_BASE_URL`. `vercel.json` 은 git `main` 푸시 시 자동 배포.
 
 ## 동작 규칙 / 주의 (수정 시 반드시 인지)
 - **증분 수집**: 시계열은 마지막 저장일 이후만, 이미 최신이면 호출 자체 skip(주식은 주말 보정).
