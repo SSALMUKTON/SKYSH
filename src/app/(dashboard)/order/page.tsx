@@ -188,6 +188,11 @@ function TradeWorkspace({ market, item, initialAction, initialQty }: { market: M
   const [violations, setViolations] = useState<Violation[]>([]);
   const [execResult, setExecResult] = useState<ExecuteResult | null>(null);
 
+  // 거래 후 정보 입력
+  const [reasonInput, setReasonInput] = useState("");
+  const [forceReasonInput, setForceReasonInput] = useState("");
+  const [savingReason, setSavingReason] = useState(false);
+
   useEffect(() => {
     let active = true;
     const base = `market=${market}&symbol=${encodeURIComponent(symbol)}`;
@@ -251,13 +256,8 @@ function TradeWorkspace({ market, item, initialAction, initialQty }: { market: M
       const draft = buildDraft();
       const { data, mocked } = await precheck(draft, quote);
       setMocked(mocked);
-      if (data.ok) {
-        setViolations([]);
-        await doExecute(draft);
-      } else {
-        setViolations(data.violations);
-        setShowModal(true);
-      }
+      setViolations(data.violations ?? []);
+      await doExecute(draft, undefined, data.violations);
     } finally {
       setChecking(false);
     }
@@ -297,51 +297,114 @@ function TradeWorkspace({ market, item, initialAction, initialQty }: { market: M
       { label: "증권사 API 전송", done: true },
       { label: "체결 대기", done: false, active: true },
     ];
+
+    const handleSaveReason = async () => {
+      if (!reasonInput.trim()) {
+        alert("의사결정 원인은 필수입니다.");
+        return;
+      }
+      if (violations.length > 0 && !forceReasonInput.trim()) {
+        alert("규정 위반이 있으니 강행 사유를 입력해주세요.");
+        return;
+      }
+
+      setSavingReason(true);
+      try {
+        await fetch("/api/orders/reason", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            brokerOrderId: execResult?.brokerOrderId,
+            decisionReason: reasonInput,
+            forceReason: violations.length > 0 ? forceReasonInput : null,
+          }),
+        });
+        window.location.href = "/history";
+      } finally {
+        setSavingReason(false);
+      }
+    };
+
     return (
-      <div className="max-w-md mx-auto text-center py-4">
+      <div className="max-w-2xl mx-auto py-4">
         <div className="w-14 h-14 bg-[#EBF7F3] flex items-center justify-center mx-auto mb-5">
           <CheckCircle size={28} className="text-[#3D9E72]" />
         </div>
         <h2 className="text-2xl font-bold text-foreground mb-2">주문이 접수되었습니다</h2>
         <p className="text-sm text-muted-foreground mb-8">증권사 API로 주문이 전송되었습니다.</p>
-        <div className="bg-card border border-border p-5 text-left mb-4">
-          <p className="text-[9px] font-bold text-muted-foreground mb-4 tracking-[0.2em] uppercase">주문 상세</p>
-          {[
-            { label: "종목", value: name ? `${name} (${symbol})` : symbol },
-            { label: "주문 유형", value: `${priceType} ${side}` },
-            { label: "수량", value: `${draft.quantity}주` },
-            { label: "예상 주문 금액", value: formatPrice(market, draft.quantity * (draft.price ?? quote.price)) },
-            {
-              label: "유언장 검사 결과",
-              value: violations.length ? `${violations.length}개 조항 위반 — 강행` : "통과",
-              warn: violations.length > 0,
-            },
-            ...(execResult ? [{ label: "주문 번호", value: execResult.brokerOrderId }] : []),
-          ].map(({ label, value, warn }) => (
-            <div key={label} className="flex justify-between items-start py-2.5 border-b border-dashed border-border last:border-0">
-              <span className="text-xs text-muted-foreground">{label}</span>
-              <span className={`text-xs font-semibold text-right max-w-[55%] ${warn ? "text-[#B83535]" : "text-foreground"}`}>{value}</span>
-            </div>
-          ))}
-        </div>
-        <div className="bg-card border border-border p-5 mb-6">
-          <p className="text-[9px] font-bold text-muted-foreground mb-4 tracking-[0.2em] uppercase">처리 현황</p>
-          <div className="space-y-3">
-            {confirmSteps.map(({ label, done, active }) => (
-              <div key={label} className="flex items-center gap-3">
-                <div className={`w-5 h-5 flex items-center justify-center shrink-0 ${done ? "bg-[#3D9E72]" : active ? "bg-[#C9A227]" : "bg-muted"}`}>
-                  {done ? <CheckCircle size={11} className="text-white" /> : active ? <div className="w-1.5 h-1.5 bg-white animate-pulse" /> : <div className="w-1.5 h-1.5 bg-muted-foreground/20" />}
-                </div>
-                <span className={`text-sm flex-1 text-left ${done ? "text-foreground font-medium" : active ? "text-[#C9A227] font-semibold" : "text-muted-foreground"}`}>{label}</span>
-                {done && <CheckCircle size={11} className="text-[#3D9E72]" />}
-                {active && <div className="flex gap-0.5">{[0, 1, 2].map((j) => <div key={j} className="w-1 h-1 bg-[#C9A227] animate-bounce" style={{ animationDelay: `${j * 0.15}s` }} />)}</div>}
+        <div className="grid grid-cols-2 gap-5 mb-6">
+          <div className="bg-card border border-border p-5 text-left">
+            <p className="text-[9px] font-bold text-muted-foreground mb-4 tracking-[0.2em] uppercase">주문 상세</p>
+            {[
+              { label: "종목", value: name ? `${name} (${symbol})` : symbol },
+              { label: "주문 유형", value: `${priceType} ${side}` },
+              { label: "수량", value: `${draft.quantity}주` },
+              { label: "예상 주문 금액", value: formatPrice(market, draft.quantity * (draft.price ?? quote.price)) },
+              {
+                label: "유언장 검사 결과",
+                value: violations.length ? `${violations.length}개 조항 위반 — 강행` : "통과",
+                warn: violations.length > 0,
+              },
+              ...(execResult ? [{ label: "주문 번호", value: execResult.brokerOrderId }] : []),
+            ].map(({ label, value, warn }) => (
+              <div key={label} className="flex justify-between items-start py-2.5 border-b border-dashed border-border last:border-0">
+                <span className="text-xs text-muted-foreground">{label}</span>
+                <span className={`text-xs font-semibold text-right max-w-[45%] ${warn ? "text-[#B83535]" : "text-foreground"}`}>{value}</span>
               </div>
             ))}
           </div>
+          <div className="bg-card border border-border p-5">
+            <p className="text-[9px] font-bold text-muted-foreground mb-4 tracking-[0.2em] uppercase">처리 현황</p>
+            <div className="space-y-3">
+              {confirmSteps.map(({ label, done, active }) => (
+                <div key={label} className="flex items-center gap-3">
+                  <div className={`w-5 h-5 flex items-center justify-center shrink-0 ${done ? "bg-[#3D9E72]" : active ? "bg-[#C9A227]" : "bg-muted"}`}>
+                    {done ? <CheckCircle size={11} className="text-white" /> : active ? <div className="w-1.5 h-1.5 bg-white animate-pulse" /> : <div className="w-1.5 h-1.5 bg-muted-foreground/20" />}
+                  </div>
+                  <span className={`text-sm flex-1 text-left ${done ? "text-foreground font-medium" : active ? "text-[#C9A227] font-semibold" : "text-muted-foreground"}`}>{label}</span>
+                  {done && <CheckCircle size={11} className="text-[#3D9E72]" />}
+                  {active && <div className="flex gap-0.5">{[0, 1, 2].map((j) => <div key={j} className="w-1 h-1 bg-[#C9A227] animate-bounce" style={{ animationDelay: `${j * 0.15}s` }} />)}</div>}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        <Link href="/history" className="w-full bg-foreground text-background py-3.5 font-bold text-sm hover:opacity-90 transition-opacity flex items-center justify-center">
-          거래 기록 보기
-        </Link>
+
+        <div className="bg-card border border-border p-5 mb-6">
+          <p className="text-[9px] font-bold text-muted-foreground mb-4 tracking-[0.2em] uppercase">거래 정보 기록</p>
+          <div className="space-y-4">
+            <div>
+              <label className="text-xs font-bold text-muted-foreground block mb-2">의사결정 원인 *</label>
+              <textarea
+                value={reasonInput}
+                onChange={(e) => setReasonInput(e.target.value)}
+                placeholder="예: 기술적 분석 - 저항선 돌파 / 뉴스 기반 판단 / 시장 심리"
+                className="w-full bg-muted/50 border border-border px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-ring resize-none"
+                rows={3}
+              />
+            </div>
+            {violations.length > 0 && (
+              <div>
+                <label className="text-xs font-bold text-muted-foreground block mb-2">강행 사유 {violations.length > 0 ? "*" : ""}</label>
+                <textarea
+                  value={forceReasonInput}
+                  onChange={(e) => setForceReasonInput(e.target.value)}
+                  placeholder="규정 위반을 무시한 이유를 기록하세요."
+                  className="w-full bg-muted/50 border border-[#B83535]/30 px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-[#B83535]/50 resize-none"
+                  rows={2}
+                />
+              </div>
+            )}
+          </div>
+        </div>
+
+        <button
+          onClick={handleSaveReason}
+          disabled={savingReason}
+          className="w-full bg-foreground text-background py-3.5 font-bold text-sm hover:opacity-90 transition-opacity disabled:opacity-50"
+        >
+          {savingReason ? "저장 중…" : "거래 기록하고 진행"}
+        </button>
       </div>
     );
   }
