@@ -21,6 +21,10 @@ export async function POST(req: NextRequest) {
     const raw = result.response.text().trim();
     const parsed = JSON.parse(raw.replace(/^```json\s*/i, "").replace(/\s*```$/, ""));
 
+    if (parsed.error) {
+      return NextResponse.json({ error: parsed.error }, { status: 422 });
+    }
+
     if (!VALID_RULE_TYPES.includes(parsed.ruleType as RuleType)) {
       parsed.ruleType = "NO_STOP_LOSS";
     }
@@ -31,11 +35,6 @@ export async function POST(req: NextRequest) {
       params: parsed.params ?? {},
     });
   } catch {
-    // fallback: 그대로 NO_STOP_LOSS로 감싸기
-    return NextResponse.json({
-      ruleType: "NO_STOP_LOSS",
-      displayText: text.trim().endsWith(".") ? text.trim() : `${text.trim()}.`,
-      params: {},
-    });
+    return NextResponse.json({ error: "투자 원칙과 관련 없는 내용입니다." }, { status: 422 });
   }
 }

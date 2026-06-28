@@ -27,7 +27,11 @@ export function buildConvertPrompt(text: string): string {
 
 사용자 입력: "${text}"
 
-반환할 JSON:
+먼저 입력이 투자·매매·자산 관련 원칙인지 판단하세요.
+투자와 무관한 내용(인사말, 일상 대화, 무의미한 문자 등)이면 반드시 아래 형식으로만 반환:
+{"error": "투자 원칙과 관련 없는 내용입니다."}
+
+투자 관련 내용이면 아래 JSON 반환:
 {
   "ruleType": "RULE_TYPE_ENUM",
   "displayText": "나는 ... 하지 않는다. / 나는 반드시 ... 한다.",
