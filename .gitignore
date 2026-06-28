@@ -29,6 +29,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+dev-server.log
+dev-server.err.log
 
 # env files — 실제 비밀값은 커밋 금지, 예시 파일만 추적
 .env*
