@@ -5,25 +5,25 @@
       "total_signals": 1613,
       "returns": {
         "20": {
-          "mean": 9.61,
+          "mean": 9.63,
           "median": 8.53,
-          "win_rate": 74.1,
+          "win_rate": 74.2,
           "worst": -18.53,
           "best": 39.37,
           "n": 1613
         },
         "60": {
-          "mean": 25.45,
-          "median": 21.21,
-          "win_rate": 83.7,
-          "worst": -16.33,
+          "mean": 25.49,
+          "median": 21.22,
+          "win_rate": 83.8,
+          "worst": -16.28,
           "best": 83.43,
           "n": 1613
         },
         "120": {
-          "mean": 35.26,
-          "median": 29.38,
-          "win_rate": 85.8,
+          "mean": 35.31,
+          "median": 29.41,
+          "win_rate": 85.9,
           "worst": -18.66,
           "best": 108.64,
           "n": 1613
@@ -57,7 +57,7 @@
           "n": 7168
         },
         "60": {
-          "mean": 17.29,
+          "mean": 17.3,
           "median": 13.37,
           "win_rate": 76.9,
           "worst": -17.74,
@@ -65,11 +65,11 @@
           "n": 7168
         },
         "120": {
-          "mean": 29.13,
+          "mean": 29.14,
           "median": 23.76,
           "win_rate": 83.1,
           "worst": -18.83,
-          "best": 94.36,
+          "best": 94.43,
           "n": 7168
         }
       },
@@ -134,31 +134,31 @@
     },
     {
       "rule": "MARKET_ORDER_IMPULSE",
-      "total_signals": 593,
+      "total_signals": 594,
       "returns": {
         "20": {
-          "mean": 1.37,
-          "median": 1.62,
-          "win_rate": 56.8,
+          "mean": 1.39,
+          "median": 1.63,
+          "win_rate": 56.9,
           "worst": -25.4,
-          "best": 26.83,
-          "n": 593
+          "best": 26.78,
+          "n": 594
         },
         "60": {
-          "mean": 9.44,
+          "mean": 9.47,
           "median": 5.16,
-          "win_rate": 60.2,
-          "worst": -25.74,
-          "best": 60.01,
-          "n": 593
+          "win_rate": 60.3,
+          "worst": -25.71,
+          "best": 59.96,
+          "n": 594
         },
         "120": {
           "mean": 16.58,
-          "median": 11.66,
+          "median": 11.79,
           "win_rate": 67.5,
           "worst": -32.57,
-          "best": 73.32,
-          "n": 593
+          "best": 73.21,
+          "n": 594
         }
       },
       "recent_dates": [
@@ -178,7 +178,7 @@
     },
     {
       "rule": "AVERAGING_DOWN",
-      "total_signals": 24063,
+      "total_signals": 24064,
       "returns": {
         "20": {
           "mean": 1.78,
@@ -186,15 +186,15 @@
           "win_rate": 58.2,
           "worst": -20.11,
           "best": 22.5,
-          "n": 24063
+          "n": 24064
         },
         "60": {
           "mean": 7.35,
           "median": 6.38,
           "win_rate": 66.7,
-          "worst": -22.41,
+          "worst": -22.4,
           "best": 39.14,
-          "n": 24063
+          "n": 24064
         },
         "120": {
           "mean": 14.28,
@@ -202,7 +202,7 @@
           "win_rate": 70.4,
           "worst": -26.3,
           "best": 65.6,
-          "n": 24063
+          "n": 24064
         }
       },
       "recent_dates": [
@@ -262,139 +262,235 @@
     },
     {
       "rule": "CHASE_SURGE",
-      "total_signals": 0,
+      "total_signals": 4273,
       "returns": {
         "20": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 6.07,
+          "median": -0.19,
+          "win_rate": 49.4,
+          "worst": -25.74,
+          "best": 56.06,
+          "n": 4273
         },
         "60": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 12.43,
+          "median": 1.37,
+          "win_rate": 52.0,
+          "worst": -34.92,
+          "best": 92.37,
+          "n": 4273
         },
         "120": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 24.54,
+          "median": 4.43,
+          "win_rate": 54.7,
+          "worst": -42.75,
+          "best": 140.97,
+          "n": 4273
         }
       },
-      "recent_dates": [],
+      "recent_dates": [
+        "2021-12-17",
+        "2021-12-20",
+        "2021-12-21",
+        "2021-12-22",
+        "2021-12-23",
+        "2021-12-24",
+        "2021-12-27",
+        "2021-12-28",
+        "2021-12-29",
+        "2021-12-30"
+      ],
       "market": "kr",
       "period": "2020-01-01 ~ 2021-12-31"
     },
     {
       "rule": "PREMARKET_GAP",
-      "total_signals": 0,
+      "total_signals": 9707,
       "returns": {
         "20": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 5.88,
+          "median": 1.32,
+          "win_rate": 53.4,
+          "worst": -23.07,
+          "best": 47.91,
+          "n": 9707
         },
         "60": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 13.91,
+          "median": 4.96,
+          "win_rate": 58.5,
+          "worst": -30.14,
+          "best": 84.77,
+          "n": 9707
         },
         "120": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 27.25,
+          "median": 10.73,
+          "win_rate": 61.9,
+          "worst": -36.87,
+          "best": 130.56,
+          "n": 9707
         }
       },
-      "recent_dates": [],
+      "recent_dates": [
+        "2021-12-17",
+        "2021-12-20",
+        "2021-12-21",
+        "2021-12-22",
+        "2021-12-23",
+        "2021-12-24",
+        "2021-12-27",
+        "2021-12-28",
+        "2021-12-29",
+        "2021-12-30"
+      ],
       "market": "kr",
       "period": "2020-01-01 ~ 2021-12-31"
     },
     {
       "rule": "REVENGE_TRADE",
-      "total_signals": 0,
+      "total_signals": 7712,
       "returns": {
         "20": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 4.15,
+          "median": 1.91,
+          "win_rate": 54.8,
+          "worst": -28.74,
+          "best": 41.73,
+          "n": 7712
         },
         "60": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 14.4,
+          "median": 6.71,
+          "win_rate": 61.5,
+          "worst": -25.53,
+          "best": 77.5,
+          "n": 7712
         },
         "120": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 25.5,
+          "median": 9.87,
+          "win_rate": 62.2,
+          "worst": -34.07,
+          "best": 128.87,
+          "n": 7712
         }
       },
-      "recent_dates": [],
+      "recent_dates": [
+        "2021-12-17",
+        "2021-12-20",
+        "2021-12-21",
+        "2021-12-22",
+        "2021-12-23",
+        "2021-12-24",
+        "2021-12-27",
+        "2021-12-28",
+        "2021-12-29",
+        "2021-12-30"
+      ],
       "market": "kr",
       "period": "2020-01-01 ~ 2021-12-31"
     },
     {
       "rule": "MARKET_ORDER_IMPULSE",
-      "total_signals": 0,
+      "total_signals": 7878,
       "returns": {
         "20": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 2.95,
+          "median": -1.35,
+          "win_rate": 45.9,
+          "worst": -21.93,
+          "best": 42.77,
+          "n": 7878
         },
         "60": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 8.32,
+          "median": 0.35,
+          "win_rate": 50.5,
+          "worst": -29.69,
+          "best": 70.56,
+          "n": 7878
         },
         "120": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 16.66,
+          "median": 3.17,
+          "win_rate": 53.9,
+          "worst": -37.47,
+          "best": 114.28,
+          "n": 7878
         }
       },
-      "recent_dates": [],
+      "recent_dates": [
+        "2021-12-17",
+        "2021-12-20",
+        "2021-12-21",
+        "2021-12-22",
+        "2021-12-23",
+        "2021-12-24",
+        "2021-12-27",
+        "2021-12-28",
+        "2021-12-29",
+        "2021-12-30"
+      ],
       "market": "kr",
       "period": "2020-01-01 ~ 2021-12-31"
     },
     {
       "rule": "AVERAGING_DOWN",
-      "total_signals": 0,
+      "total_signals": 42520,
+      "returns": {
+        "20": {
+          "mean": 1.72,
+          "median": 0.11,
+          "win_rate": 50.0,
+          "worst": -22.71,
+          "best": 30.77,
+          "n": 42520
+        },
+        "60": {
+          "mean": 7.77,
+          "median": 1.78,
+          "win_rate": 53.8,
+          "worst": -23.71,
+          "best": 58.03,
+          "n": 42520
+        },
+        "120": {
+          "mean": 15.95,
+          "median": 4.72,
+          "win_rate": 56.8,
+          "worst": -29.94,
+          "best": 94.72,
+          "n": 42520
+        }
+      },
+      "recent_dates": [
+        "2021-12-17",
+        "2021-12-20",
+        "2021-12-21",
+        "2021-12-22",
+        "2021-12-23",
+        "2021-12-24",
+        "2021-12-27",
+        "2021-12-28",
+        "2021-12-29",
+        "2021-12-30"
+      ],
+      "market": "kr",
+      "period": "2020-01-01 ~ 2021-12-31"
+    },
+    {
+      "rule": "NO_STOP_LOSS",
+      "total_signals": 6919,
+      "mdd": {
+        "mean": -9.52,
+        "median": -7.12,
+        "worst": -28.37,
+        "pct_over_5": 58.7,
+        "pct_over_10": 39.6,
+        "n": 6919
+      },
       "returns": {
         "20": {
           "mean": 0,
@@ -421,152 +517,240 @@
           "n": 0
         }
       },
-      "recent_dates": [],
-      "market": "kr",
-      "period": "2020-01-01 ~ 2021-12-31"
-    },
-    {
-      "rule": "NO_STOP_LOSS",
-      "total_signals": 0,
-      "mdd": {},
       "market": "kr",
       "period": "2020-01-01 ~ 2021-12-31"
     },
     {
       "rule": "CHASE_SURGE",
-      "total_signals": 0,
+      "total_signals": 3340,
       "returns": {
         "20": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 19.41,
+          "median": 0.84,
+          "win_rate": 50.7,
+          "worst": -42.01,
+          "best": 140.82,
+          "n": 3340
         },
         "60": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 59.5,
+          "median": 4.74,
+          "win_rate": 52.3,
+          "worst": -65.46,
+          "best": 356.07,
+          "n": 3340
         },
         "120": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 92.31,
+          "median": -2.99,
+          "win_rate": 48.6,
+          "worst": -62.29,
+          "best": 515.28,
+          "n": 3340
         }
       },
-      "recent_dates": [],
+      "recent_dates": [
+        "2021-12-17",
+        "2021-12-18",
+        "2021-12-21",
+        "2021-12-22",
+        "2021-12-23",
+        "2021-12-24",
+        "2021-12-25",
+        "2021-12-27",
+        "2021-12-28",
+        "2021-12-30"
+      ],
       "market": "crypto",
       "period": "2020-01-01 ~ 2021-12-31"
     },
     {
       "rule": "PREMARKET_GAP",
-      "total_signals": 0,
+      "total_signals": 141,
       "returns": {
         "20": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 8.7,
+          "median": 6.06,
+          "win_rate": 58.2,
+          "worst": -39.13,
+          "best": 55.56,
+          "n": 141
         },
         "60": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 56.09,
+          "median": 18.18,
+          "win_rate": 59.6,
+          "worst": -52.76,
+          "best": 286.49,
+          "n": 141
         },
         "120": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 253.23,
+          "median": 20.0,
+          "win_rate": 60.3,
+          "worst": -32.81,
+          "best": 1978.95,
+          "n": 141
         }
       },
-      "recent_dates": [],
+      "recent_dates": [
+        "2021-07-11",
+        "2021-07-15",
+        "2021-07-30",
+        "2021-08-02",
+        "2021-08-12",
+        "2021-08-25",
+        "2021-09-08",
+        "2021-09-29",
+        "2021-12-06",
+        "2021-12-10"
+      ],
       "market": "crypto",
       "period": "2020-01-01 ~ 2021-12-31"
     },
     {
       "rule": "REVENGE_TRADE",
-      "total_signals": 0,
+      "total_signals": 115,
       "returns": {
         "20": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 14.32,
+          "median": 0.0,
+          "win_rate": 47.8,
+          "worst": -50.44,
+          "best": 117.46,
+          "n": 115
         },
         "60": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 71.32,
+          "median": -1.66,
+          "win_rate": 48.7,
+          "worst": -51.98,
+          "best": 344.99,
+          "n": 115
         },
         "120": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 168.37,
+          "median": 28.06,
+          "win_rate": 65.2,
+          "worst": -37.06,
+          "best": 546.0,
+          "n": 115
         }
       },
-      "recent_dates": [],
+      "recent_dates": [
+        "2021-06-17",
+        "2021-06-22",
+        "2021-06-23",
+        "2021-06-26",
+        "2021-07-15",
+        "2021-07-17",
+        "2021-07-20",
+        "2021-07-21",
+        "2021-09-06",
+        "2021-10-13"
+      ],
       "market": "crypto",
       "period": "2020-01-01 ~ 2021-12-31"
     },
     {
       "rule": "MARKET_ORDER_IMPULSE",
-      "total_signals": 0,
+      "total_signals": 2333,
       "returns": {
         "20": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 18.74,
+          "median": 1.33,
+          "win_rate": 51.5,
+          "worst": -37.09,
+          "best": 122.79,
+          "n": 2333
         },
         "60": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 64.6,
+          "median": 9.03,
+          "win_rate": 55.9,
+          "worst": -59.92,
+          "best": 371.78,
+          "n": 2333
         },
         "120": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 139.19,
+          "median": 17.19,
+          "win_rate": 56.5,
+          "worst": -56.02,
+          "best": 693.86,
+          "n": 2333
         }
       },
-      "recent_dates": [],
+      "recent_dates": [
+        "2021-12-18",
+        "2021-12-21",
+        "2021-12-22",
+        "2021-12-23",
+        "2021-12-24",
+        "2021-12-25",
+        "2021-12-28",
+        "2021-12-29",
+        "2021-12-30",
+        "2021-12-31"
+      ],
       "market": "crypto",
       "period": "2020-01-01 ~ 2021-12-31"
     },
     {
       "rule": "AVERAGING_DOWN",
-      "total_signals": 0,
+      "total_signals": 4655,
+      "returns": {
+        "20": {
+          "mean": 10.15,
+          "median": 3.01,
+          "win_rate": 55.2,
+          "worst": -37.65,
+          "best": 79.48,
+          "n": 4655
+        },
+        "60": {
+          "mean": 42.93,
+          "median": 5.38,
+          "win_rate": 54.1,
+          "worst": -56.16,
+          "best": 232.33,
+          "n": 4655
+        },
+        "120": {
+          "mean": 100.21,
+          "median": 12.51,
+          "win_rate": 56.5,
+          "worst": -50.26,
+          "best": 533.88,
+          "n": 4655
+        }
+      },
+      "recent_dates": [
+        "2021-12-13",
+        "2021-12-14",
+        "2021-12-17",
+        "2021-12-19",
+        "2021-12-20",
+        "2021-12-27",
+        "2021-12-28",
+        "2021-12-29",
+        "2021-12-30",
+        "2021-12-31"
+      ],
+      "market": "crypto",
+      "period": "2020-01-01 ~ 2021-12-31"
+    },
+    {
+      "rule": "NO_STOP_LOSS",
+      "total_signals": 4888,
+      "mdd": {
+        "mean": -16.85,
+        "median": -13.1,
+        "worst": -48.14,
+        "pct_over_5": 70.3,
+        "pct_over_10": 57.4,
+        "n": 4888
+      },
       "returns": {
         "20": {
           "mean": 0,
@@ -593,14 +777,6 @@
           "n": 0
         }
       },
-      "recent_dates": [],
-      "market": "crypto",
-      "period": "2020-01-01 ~ 2021-12-31"
-    },
-    {
-      "rule": "NO_STOP_LOSS",
-      "total_signals": 0,
-      "mdd": {},
       "market": "crypto",
       "period": "2020-01-01 ~ 2021-12-31"
     }

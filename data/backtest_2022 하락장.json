@@ -262,139 +262,235 @@
     },
     {
       "rule": "CHASE_SURGE",
-      "total_signals": 0,
+      "total_signals": 1209,
       "returns": {
         "20": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -2.97,
+          "median": -5.88,
+          "win_rate": 35.1,
+          "worst": -31.57,
+          "best": 34.28,
+          "n": 1209
         },
         "60": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -7.71,
+          "median": -13.67,
+          "win_rate": 26.6,
+          "worst": -42.36,
+          "best": 46.33,
+          "n": 1209
         },
         "120": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -9.07,
+          "median": -18.54,
+          "win_rate": 27.1,
+          "worst": -51.83,
+          "best": 63.85,
+          "n": 1209
         }
       },
-      "recent_dates": [],
+      "recent_dates": [
+        "2022-12-16",
+        "2022-12-19",
+        "2022-12-20",
+        "2022-12-21",
+        "2022-12-22",
+        "2022-12-23",
+        "2022-12-26",
+        "2022-12-27",
+        "2022-12-28",
+        "2022-12-29"
+      ],
       "market": "kr",
       "period": "2022-01-01 ~ 2022-12-31"
     },
     {
       "rule": "PREMARKET_GAP",
-      "total_signals": 0,
+      "total_signals": 3121,
       "returns": {
         "20": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -0.48,
+          "median": -1.73,
+          "win_rate": 43.5,
+          "worst": -25.3,
+          "best": 28.82,
+          "n": 3121
         },
         "60": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -4.04,
+          "median": -6.4,
+          "win_rate": 35.5,
+          "worst": -35.75,
+          "best": 35.12,
+          "n": 3121
         },
         "120": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -5.47,
+          "median": -10.78,
+          "win_rate": 31.5,
+          "worst": -45.69,
+          "best": 50.09,
+          "n": 3121
         }
       },
-      "recent_dates": [],
+      "recent_dates": [
+        "2022-12-16",
+        "2022-12-19",
+        "2022-12-20",
+        "2022-12-21",
+        "2022-12-22",
+        "2022-12-23",
+        "2022-12-26",
+        "2022-12-27",
+        "2022-12-28",
+        "2022-12-29"
+      ],
       "market": "kr",
       "period": "2022-01-01 ~ 2022-12-31"
     },
     {
       "rule": "REVENGE_TRADE",
-      "total_signals": 0,
+      "total_signals": 4260,
       "returns": {
         "20": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -0.03,
+          "median": -1.14,
+          "win_rate": 45.6,
+          "worst": -19.69,
+          "best": 22.39,
+          "n": 4260
         },
         "60": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 0.23,
+          "median": -2.86,
+          "win_rate": 42.6,
+          "worst": -29.06,
+          "best": 36.3,
+          "n": 4260
         },
         "120": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -2.82,
+          "median": -7.62,
+          "win_rate": 36.1,
+          "worst": -41.31,
+          "best": 49.85,
+          "n": 4260
         }
       },
-      "recent_dates": [],
+      "recent_dates": [
+        "2022-12-15",
+        "2022-12-16",
+        "2022-12-19",
+        "2022-12-20",
+        "2022-12-21",
+        "2022-12-23",
+        "2022-12-26",
+        "2022-12-27",
+        "2022-12-28",
+        "2022-12-29"
+      ],
       "market": "kr",
       "period": "2022-01-01 ~ 2022-12-31"
     },
     {
       "rule": "MARKET_ORDER_IMPULSE",
-      "total_signals": 0,
+      "total_signals": 2687,
       "returns": {
         "20": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -2.27,
+          "median": -3.96,
+          "win_rate": 36.3,
+          "worst": -25.75,
+          "best": 27.02,
+          "n": 2687
         },
         "60": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -6.44,
+          "median": -10.41,
+          "win_rate": 29.0,
+          "worst": -37.26,
+          "best": 36.36,
+          "n": 2687
         },
         "120": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -7.39,
+          "median": -13.92,
+          "win_rate": 28.7,
+          "worst": -46.46,
+          "best": 47.98,
+          "n": 2687
         }
       },
-      "recent_dates": [],
+      "recent_dates": [
+        "2022-12-16",
+        "2022-12-19",
+        "2022-12-20",
+        "2022-12-21",
+        "2022-12-22",
+        "2022-12-23",
+        "2022-12-26",
+        "2022-12-27",
+        "2022-12-28",
+        "2022-12-29"
+      ],
       "market": "kr",
       "period": "2022-01-01 ~ 2022-12-31"
     },
     {
       "rule": "AVERAGING_DOWN",
-      "total_signals": 0,
+      "total_signals": 22391,
+      "returns": {
+        "20": {
+          "mean": -1.19,
+          "median": -1.85,
+          "win_rate": 42.0,
+          "worst": -18.78,
+          "best": 18.0,
+          "n": 22391
+        },
+        "60": {
+          "mean": -1.02,
+          "median": -3.41,
+          "win_rate": 40.4,
+          "worst": -26.13,
+          "best": 29.62,
+          "n": 22391
+        },
+        "120": {
+          "mean": -3.67,
+          "median": -7.47,
+          "win_rate": 34.2,
+          "worst": -37.76,
+          "best": 41.15,
+          "n": 22391
+        }
+      },
+      "recent_dates": [
+        "2022-12-16",
+        "2022-12-19",
+        "2022-12-20",
+        "2022-12-21",
+        "2022-12-22",
+        "2022-12-23",
+        "2022-12-26",
+        "2022-12-27",
+        "2022-12-28",
+        "2022-12-29"
+      ],
+      "market": "kr",
+      "period": "2022-01-01 ~ 2022-12-31"
+    },
+    {
+      "rule": "NO_STOP_LOSS",
+      "total_signals": 1959,
+      "mdd": {
+        "mean": -12.47,
+        "median": -10.64,
+        "worst": -31.76,
+        "pct_over_5": 74.5,
+        "pct_over_10": 52.4,
+        "n": 1959
+      },
       "returns": {
         "20": {
           "mean": 0,
@@ -421,152 +517,240 @@
           "n": 0
         }
       },
-      "recent_dates": [],
-      "market": "kr",
-      "period": "2022-01-01 ~ 2022-12-31"
-    },
-    {
-      "rule": "NO_STOP_LOSS",
-      "total_signals": 0,
-      "mdd": {},
       "market": "kr",
       "period": "2022-01-01 ~ 2022-12-31"
     },
     {
       "rule": "CHASE_SURGE",
-      "total_signals": 0,
+      "total_signals": 690,
       "returns": {
         "20": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -6.28,
+          "median": -7.14,
+          "win_rate": 35.7,
+          "worst": -37.85,
+          "best": 23.49,
+          "n": 690
         },
         "60": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -13.8,
+          "median": -17.57,
+          "win_rate": 23.2,
+          "worst": -56.56,
+          "best": 40.12,
+          "n": 690
         },
         "120": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -22.97,
+          "median": -26.64,
+          "win_rate": 21.9,
+          "worst": -66.64,
+          "best": 36.14,
+          "n": 690
         }
       },
-      "recent_dates": [],
+      "recent_dates": [
+        "2022-12-04",
+        "2022-12-05",
+        "2022-12-06",
+        "2022-12-08",
+        "2022-12-09",
+        "2022-12-10",
+        "2022-12-13",
+        "2022-12-20",
+        "2022-12-23",
+        "2022-12-31"
+      ],
       "market": "crypto",
       "period": "2022-01-01 ~ 2022-12-31"
     },
     {
       "rule": "PREMARKET_GAP",
-      "total_signals": 0,
+      "total_signals": 87,
       "returns": {
         "20": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -6.64,
+          "median": -7.69,
+          "win_rate": 29.9,
+          "worst": -35.88,
+          "best": 18.18,
+          "n": 87
         },
         "60": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -13.63,
+          "median": -11.54,
+          "win_rate": 27.6,
+          "worst": -54.15,
+          "best": 25.0,
+          "n": 87
         },
         "120": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -25.89,
+          "median": -30.77,
+          "win_rate": 13.8,
+          "worst": -53.34,
+          "best": 12.5,
+          "n": 87
         }
       },
-      "recent_dates": [],
+      "recent_dates": [
+        "2022-11-13",
+        "2022-11-25",
+        "2022-11-27",
+        "2022-12-01",
+        "2022-12-20",
+        "2022-12-22",
+        "2022-12-23",
+        "2022-12-24",
+        "2022-12-25",
+        "2022-12-27"
+      ],
       "market": "crypto",
       "period": "2022-01-01 ~ 2022-12-31"
     },
     {
       "rule": "REVENGE_TRADE",
-      "total_signals": 0,
+      "total_signals": 19,
       "returns": {
         "20": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 2.62,
+          "median": 0.47,
+          "win_rate": 52.6,
+          "worst": -12.52,
+          "best": 19.13,
+          "n": 19
         },
         "60": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": 0.22,
+          "median": -13.1,
+          "win_rate": 36.8,
+          "worst": -48.2,
+          "best": 60.47,
+          "n": 19
         },
         "120": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -10.98,
+          "median": -16.67,
+          "win_rate": 26.3,
+          "worst": -52.23,
+          "best": 39.12,
+          "n": 19
         }
       },
-      "recent_dates": [],
+      "recent_dates": [
+        "2022-04-12",
+        "2022-05-10",
+        "2022-05-13",
+        "2022-06-12",
+        "2022-08-18",
+        "2022-09-16",
+        "2022-10-12",
+        "2022-11-10",
+        "2022-11-12",
+        "2022-12-20"
+      ],
       "market": "crypto",
       "period": "2022-01-01 ~ 2022-12-31"
     },
     {
       "rule": "MARKET_ORDER_IMPULSE",
-      "total_signals": 0,
+      "total_signals": 871,
       "returns": {
         "20": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -7.17,
+          "median": -9.1,
+          "win_rate": 30.5,
+          "worst": -35.88,
+          "best": 25.43,
+          "n": 871
         },
         "60": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -12.88,
+          "median": -15.57,
+          "win_rate": 28.4,
+          "worst": -56.29,
+          "best": 38.17,
+          "n": 871
         },
         "120": {
-          "mean": 0,
-          "median": 0,
-          "win_rate": 0,
-          "worst": 0,
-          "best": 0,
-          "n": 0
+          "mean": -23.71,
+          "median": -30.32,
+          "win_rate": 16.8,
+          "worst": -62.09,
+          "best": 35.7,
+          "n": 871
         }
       },
-      "recent_dates": [],
+      "recent_dates": [
+        "2022-12-10",
+        "2022-12-11",
+        "2022-12-12",
+        "2022-12-13",
+        "2022-12-15",
+        "2022-12-20",
+        "2022-12-22",
+        "2022-12-23",
+        "2022-12-24",
+        "2022-12-31"
+      ],
       "market": "crypto",
       "period": "2022-01-01 ~ 2022-12-31"
     },
     {
       "rule": "AVERAGING_DOWN",
-      "total_signals": 0,
+      "total_signals": 4247,
+      "returns": {
+        "20": {
+          "mean": -1.43,
+          "median": -3.07,
+          "win_rate": 42.6,
+          "worst": -35.61,
+          "best": 35.77,
+          "n": 4247
+        },
+        "60": {
+          "mean": 2.91,
+          "median": -4.72,
+          "win_rate": 44.5,
+          "worst": -52.04,
+          "best": 83.04,
+          "n": 4247
+        },
+        "120": {
+          "mean": -10.72,
+          "median": -20.09,
+          "win_rate": 31.7,
+          "worst": -60.79,
+          "best": 67.81,
+          "n": 4247
+        }
+      },
+      "recent_dates": [
+        "2022-12-19",
+        "2022-12-23",
+        "2022-12-24",
+        "2022-12-25",
+        "2022-12-26",
+        "2022-12-27",
+        "2022-12-28",
+        "2022-12-29",
+        "2022-12-30",
+        "2022-12-31"
+      ],
+      "market": "crypto",
+      "period": "2022-01-01 ~ 2022-12-31"
+    },
+    {
+      "rule": "NO_STOP_LOSS",
+      "total_signals": 1094,
+      "mdd": {
+        "mean": -16.8,
+        "median": -13.75,
+        "worst": -41.62,
+        "pct_over_5": 84.1,
+        "pct_over_10": 64.4,
+        "n": 1094
+      },
       "returns": {
         "20": {
           "mean": 0,
@@ -593,14 +777,6 @@
           "n": 0
         }
       },
-      "recent_dates": [],
-      "market": "crypto",
-      "period": "2022-01-01 ~ 2022-12-31"
-    },
-    {
-      "rule": "NO_STOP_LOSS",
-      "total_signals": 0,
-      "mdd": {},
       "market": "crypto",
       "period": "2022-01-01 ~ 2022-12-31"
     }
