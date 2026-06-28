@@ -354,7 +354,7 @@ export default function SetupPage() {
           <textarea
             value={draft}
             onChange={(e) => { setDraft(e.target.value); setDraftError(null); }}
-            placeholder="- 급등 종목 보면 바로 시장가로 들어가는 습관이 있어&#10;- 손절을 항상 미루게 돼. 기다리면 오를 것 같아서&#10;- 하락 중인 종목에 계속 물타기 해왔음"
+            placeholder="나쁜 투자 습관이나 원칙을 적어주세요"
             rows={10}
             className="w-full border border-border bg-card px-4 py-3 text-sm text-foreground focus:outline-none focus:border-[#C9A227]/60 resize-none leading-relaxed"
           />

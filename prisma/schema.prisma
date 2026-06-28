@@ -122,21 +122,22 @@ model Trade {
 
 // 개별 주문. 강행 사유(forceReason)·precheck 위반 스냅샷(willViolations) 기록.  [owner: P1]
 model Order {
-  id            String      @id @default(uuid())
-  tradeId       String
-  trade         Trade       @relation(fields: [tradeId], references: [id], onDelete: Cascade)
-  side          Side
-  orderType     OrderType   @default(LIMIT)
-  price         Decimal?    @db.Decimal(20, 8) // 지정가일 때
-  quantity      Decimal     @db.Decimal(20, 8)
-  stopPrice     Decimal?    @db.Decimal(20, 8) // 손절 기준 (NO_STOP_LOSS 룰의 핵심)
-  thesis        String? // 매수 이유
-  forceReason   String? // 유언장 위반을 강행한 사유
-  willViolations Json? // precheck 위반 스냅샷
-  brokerOrderId String? // 증권사/거래소 주문 번호
-  status        OrderStatus @default(PENDING)
-  executedAt    DateTime?
-  createdAt     DateTime    @default(now())
+  id              String      @id @default(uuid())
+  tradeId         String
+  trade           Trade       @relation(fields: [tradeId], references: [id], onDelete: Cascade)
+  side            Side
+  orderType       OrderType   @default(LIMIT)
+  price           Decimal?    @db.Decimal(20, 8) // 지정가일 때
+  quantity        Decimal     @db.Decimal(20, 8)
+  stopPrice       Decimal?    @db.Decimal(20, 8) // 손절 기준 (NO_STOP_LOSS 룰의 핵심)
+  thesis          String? // 매수 이유
+  decisionReason  String? // 의사결정 원인 (보고서 검증용)
+  forceReason     String? // 유언장 위반을 강행한 사유
+  willViolations  Json? // precheck 위반 스냅샷
+  brokerOrderId   String? // 증권사/거래소 주문 번호
+  status          OrderStatus @default(PENDING)
+  executedAt      DateTime?
+  createdAt       DateTime    @default(now())
 
   @@index([tradeId])
 }
