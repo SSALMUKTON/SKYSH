@@ -1,48 +1,61 @@
 import Link from "next/link";
+import { ChevronRight } from "lucide-react";
+import { OrnamentalDivider } from "@/components/cert-ui";
 
-export default function Home() {
+export default function LandingPage() {
   return (
-    <main className="flex flex-1 flex-col items-center justify-center px-6 py-24">
-      <div className="w-full max-w-2xl space-y-8">
-        <div className="space-y-3">
-          <p className="text-sm font-medium uppercase tracking-widest text-muted-foreground">
-            故래소
-          </p>
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            거래를 부검하다
-          </h1>
-          <p className="text-lg text-muted-foreground">
-            가장 좋은 투자 조언자는 AI가 아니라, 감정이 없을 때의 나일 수 있습니다.
-            주문 직전 투자 유언장을 낭독하고, 거래가 끝나면 사망진단서·생존보고서를
-            발급합니다.
-          </p>
-        </div>
+    <div className="min-h-screen bg-background flex flex-col">
+      <header className="flex items-center justify-between px-12 py-4 border-b border-border">
+        <span className="text-xl font-black text-foreground tracking-tight">故래소</span>
+        <Link href="/dashboard" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+          로그인
+        </Link>
+      </header>
 
-        <div className="flex flex-wrap gap-3">
-          <Link
-            href="/trades"
-            className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            대시보드 열기
-          </Link>
-          <a
-            href="https://github.com/SSALMUKTON/SKYSH"
-            className="inline-flex h-11 items-center justify-center rounded-md border px-6 text-sm font-medium transition-colors hover:bg-accent"
-          >
-            저장소
-          </a>
-        </div>
+      <main className="flex-1 flex flex-col items-center justify-center px-8 py-16">
+        <div className="w-full max-w-3xl border border-foreground/12 p-0.5">
+          <div className="border border-foreground/6 p-10 text-center bg-card">
+            <div className="flex items-center gap-3 mb-6 justify-center">
+              <div className="h-px flex-1 max-w-24" style={{ background: "linear-gradient(to right, transparent, rgba(201,162,39,0.4))" }} />
+              <span className="text-[10px] font-bold tracking-[0.3em] text-[#C9A227] uppercase">공식 서비스 안내</span>
+              <div className="h-px flex-1 max-w-24" style={{ background: "linear-gradient(to left, transparent, rgba(201,162,39,0.4))" }} />
+            </div>
 
-        <div className="rounded-lg border bg-card p-5 text-sm text-card-foreground">
-          <p className="font-medium">핵심 피드백 루프</p>
-          <ol className="mt-2 list-decimal space-y-1 pl-5 text-muted-foreground">
-            <li>유언장 작성 — 평정심 있을 때 나만의 투자 원칙</li>
-            <li>주문 전 검사 — 원칙 위반 시 낭독 모달·강행 사유</li>
-            <li>거래 추적 — 매수~매도 묶음, 청산 시 손익 확정</li>
-            <li>거래 후 복기 — 사망/생존 보고서 + 새 조항 제안</li>
-          </ol>
+            <h1 className="text-7xl font-black text-foreground mb-3 tracking-tighter">故래소</h1>
+            <OrnamentalDivider />
+            <p className="text-base text-muted-foreground max-w-lg mx-auto leading-relaxed mb-10">
+              죽은 거래가 남긴 유언장을 다음 주문 전에 읽어드립니다.
+            </p>
+
+            <div className="grid grid-cols-3 gap-0 mb-10 border border-border">
+              {[
+                { num: "一", title: "주문 전 유언장 검사", desc: "과거 손실 거래가 남긴 교훈을 주문 직전에 자동으로 낭독합니다." },
+                { num: "二", title: "사망진단서 / 생존보고서", desc: "거래 종료 후 원인을 분석하고 공식 문서로 발행합니다." },
+                { num: "三", title: "투자 유언장 업데이트", desc: "거래 경험을 바탕으로 나만의 투자 원칙을 쌓아갑니다." },
+              ].map(({ num, title, desc }, i) => (
+                <div key={num} className={`p-6 text-left ${i < 2 ? "border-r border-border" : ""}`}>
+                  <p className="text-2xl font-black text-[#C9A227] mb-3 opacity-60">{num}</p>
+                  <h3 className="text-sm font-bold text-foreground mb-2">{title}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <Link
+              href="/connect"
+              className="bg-foreground text-background px-8 py-3.5 font-bold text-sm hover:opacity-90 transition-opacity inline-flex items-center gap-2"
+            >
+              증권 계좌 연동하기
+              <ChevronRight size={15} />
+            </Link>
+
+            <OrnamentalDivider />
+            <p className="text-[10px] text-muted-foreground tracking-wide">
+              본 서비스는 투자 추천 서비스가 아닙니다 · 모든 투자 판단은 본인의 책임입니다
+            </p>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }
