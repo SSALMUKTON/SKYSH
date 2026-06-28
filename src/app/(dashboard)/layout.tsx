@@ -17,7 +17,7 @@ export default function DashboardLayout({
       <header className="border-b">
         <div className="mx-auto flex h-14 w-full max-w-5xl items-center gap-6 px-6">
           <Link href="/" className="font-semibold tracking-tight">
-            SKYSH
+            故래소
           </Link>
           <nav className="flex items-center gap-4 text-sm text-muted-foreground">
             {NAV.map((item) => (

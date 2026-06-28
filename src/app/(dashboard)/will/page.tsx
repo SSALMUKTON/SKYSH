@@ -10,8 +10,8 @@ export default function WillPage() {
       <div className="rounded-lg border border-dashed p-8 text-sm text-muted-foreground">
         <p className="font-medium text-foreground">TODO</p>
         <ul className="mt-2 list-disc space-y-1 pl-5">
-          <li>P2: 조항 목록/작성 폼 (GET·POST /api/will)</li>
-          <li>P4: ruleType 별 params 스키마 + 검사 로직(engine.ts)</li>
+          <li>P2: 조항 목록/작성 폼 (GET·POST /api/clauses)</li>
+          <li>P4: ruleType 별 params 스키마 + 검사 로직(engine.ts checkOrder)</li>
           <li>보고서가 제안한 조항(sourceTradeId) 강조 표시</li>
         </ul>
       </div>

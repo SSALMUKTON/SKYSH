@@ -2,8 +2,8 @@
  * 로컬 개발용 시드 데이터.
  *   실행:  npm run db:seed   (DATABASE_URL 설정 + db push/migrate 선행 필요)
  *
- * 데모 유저 1명과 유언 조항 2개를 만들어, 프론트(P2)·규칙엔진(P4)이
- * 바로 화면/로직을 붙여볼 수 있게 합니다. 조항 시드는 P4 가 확장하세요.
+ * 데모 유저 1명과 유언 조항 2개(급등 추격·손절 없음)를 만든다. spec.md P4 의
+ * 조항 시드(CHASE_SURGE, NO_STOP_LOSS)와 일치. P4 가 룰/조항을 확장하세요.
  */
 import { PrismaClient, RuleType } from "@prisma/client";
 
@@ -11,26 +11,25 @@ const prisma = new PrismaClient();
 
 async function main() {
   const user = await prisma.user.upsert({
-    where: { email: "demo@skysh.dev" },
+    where: { email: "demo@goraeso.dev" },
     update: {},
-    create: { email: "demo@skysh.dev", name: "데모 투자자" },
+    create: { email: "demo@goraeso.dev", name: "데모 투자자" },
   });
 
-  // 기존 시드 조항 제거 후 재생성 (idempotent)
-  await prisma.willClause.deleteMany({ where: { userId: user.id } });
-  await prisma.willClause.createMany({
+  await prisma.clause.deleteMany({ where: { userId: user.id } });
+  await prisma.clause.createMany({
     data: [
       {
         userId: user.id,
-        ruleType: RuleType.STOP_LOSS,
-        params: { pct: 7 },
-        displayText: "한 종목에서 7% 이상 손실이 나면 미련 없이 손절한다.",
+        ruleType: RuleType.CHASE_SURGE,
+        params: { window: "1h", pct: 15 },
+        displayText: "급등 직후(최근 1시간 +15% 이상) 시장가로 추격 매수하지 않는다.",
       },
       {
         userId: user.id,
-        ruleType: RuleType.NO_AVERAGING_DOWN,
+        ruleType: RuleType.NO_STOP_LOSS,
         params: {},
-        displayText: "물타기는 하지 않는다. 근거가 깨졌으면 추가 매수 대신 정리한다.",
+        displayText: "손절 기준 없는 거래는 시작하지 않는다.",
       },
     ],
   });

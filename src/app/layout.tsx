@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SKYSH — 투자 유언장",
+  title: "故래소 — 거래를 부검하다",
   description:
-    "흥분한 내가 아니라, 냉정했던 내가 주문을 통과시킨다. 유언장 기반 규율 거래 서비스.",
+    "주문 직전 투자 유언장을 낭독하고, 거래가 끝나면 사망진단서/생존보고서를 발급하는 거래 실행형 투자 복기 서비스.",
 };
 
 export default function RootLayout({

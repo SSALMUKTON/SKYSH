@@ -1,20 +1,27 @@
-import type { Broker } from "./types";
+import type { Broker, BrokerCredentials } from "./types";
 import { MockBroker } from "./mock";
 import { KisBroker } from "./kis";
 
 /**
- * 환경변수 BROKER_PROVIDER 에 따라 Broker 구현을 선택. [owner: P1]
- * 기본값은 "mock" — KIS 키 없이 개발 가능.
+ * Broker 구현 선택. [owner: P1]
+ * 기본값 "mock" — 키 없이 개발 가능. 실연동 시 자격증명은 요청(클라이언트
+ * localStorage → Authorization 헤더)에서 받아 주입한다. 서버에 저장하지 않음(spec.md).
+ *
+ * @param creds 실연동 시 클라이언트가 전달한 자격증명
  */
-export function getBroker(): Broker {
+export function getBroker(creds?: BrokerCredentials): Broker {
   if (process.env.BROKER_PROVIDER === "kis") {
-    return new KisBroker({
-      appKey: process.env.KIS_APP_KEY ?? "",
-      appSecret: process.env.KIS_APP_SECRET ?? "",
-      baseUrl: process.env.KIS_BASE_URL ?? "",
-    });
+    return new KisBroker(creds ?? { apiKey: "" });
   }
   return new MockBroker();
 }
 
-export type { Broker, PlaceOrderInput, PlaceOrderResult, Quote, TokenInfo } from "./types";
+export type {
+  Broker,
+  BrokerCredentials,
+  PlaceOrderInput,
+  OrderAck,
+  Fill,
+  Balance,
+  Quote,
+} from "./types";

@@ -6,14 +6,15 @@ export default function Home() {
       <div className="w-full max-w-2xl space-y-8">
         <div className="space-y-3">
           <p className="text-sm font-medium uppercase tracking-widest text-muted-foreground">
-            SKYSH
+            故래소
           </p>
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            투자 유언장
+            거래를 부검하다
           </h1>
           <p className="text-lg text-muted-foreground">
-            냉정했던 내가 흥분한 나의 주문을 통과시킨다. 미리 적어둔 유언 조항이
-            주문을 게이팅하고, 거래가 끝나면 사망·생존 보고서로 복기합니다.
+            가장 좋은 투자 조언자는 AI가 아니라, 감정이 없을 때의 나일 수 있습니다.
+            주문 직전 투자 유언장을 낭독하고, 거래가 끝나면 사망진단서·생존보고서를
+            발급합니다.
           </p>
         </div>
 
@@ -33,12 +34,12 @@ export default function Home() {
         </div>
 
         <div className="rounded-lg border bg-card p-5 text-sm text-card-foreground">
-          <p className="font-medium">핵심 흐름</p>
+          <p className="font-medium">핵심 피드백 루프</p>
           <ol className="mt-2 list-decimal space-y-1 pl-5 text-muted-foreground">
-            <li>유언 조항 작성 — 자연어 문구 + 실행 룰</li>
-            <li>주문 precheck — 조항에 어긋나면 경고/강행 사유 기록</li>
-            <li>거래(매수~매도) 추적 후 청산</li>
-            <li>Gemini 가 사망/생존 보고서와 새 조항 제안</li>
+            <li>유언장 작성 — 평정심 있을 때 나만의 투자 원칙</li>
+            <li>주문 전 검사 — 원칙 위반 시 낭독 모달·강행 사유</li>
+            <li>거래 추적 — 매수~매도 묶음, 청산 시 손익 확정</li>
+            <li>거래 후 복기 — 사망/생존 보고서 + 새 조항 제안</li>
           </ol>
         </div>
       </div>
