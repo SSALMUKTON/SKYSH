@@ -1,8 +1,9 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Plus, Trash2, FileText, X, Loader2 } from "lucide-react";
+import { Plus, FileText, X, Loader2 } from "lucide-react";
 import { MARKET_META, formatPrice, formatPct, PROFIT, LOSS } from "@/lib/format";
+import { getQuote } from "@/lib/api-client";
 
 type Market = "KR" | "US" | "COIN";
 const MARKETS: Market[] = ["KR", "US", "COIN"];
@@ -19,13 +20,29 @@ interface Trade {
 
 function holdLabel(min: number | null): string {
   if (min == null) return "—";
-  const d = Math.floor(min / 1440), h = Math.floor((min % 1440) / 60), m = min % 60;
-  return [d ? `${d}일` : "", h ? `${h}시간` : "", `${m}분`].filter(Boolean).join(" ");
+  const d = Math.floor(min / 1440);
+  // 24시간 넘으면 일 단위로만 카운트
+  if (d > 0) return `${d}일`;
+  const h = Math.floor((min % 1440) / 60), m = min % 60;
+  return [h ? `${h}시간` : "", `${m}분`].filter(Boolean).join(" ");
+}
+
+// 보유 중 거래의 현재가를 조회해 미실현 손익 계산에 사용. (key: `${market}:${symbol}`)
+async function fetchOpenPrices(trades: Trade[]): Promise<Record<string, number>> {
+  const opens = trades.filter((t) => t.status === "OPEN");
+  const entries = await Promise.all(
+    opens.map(async (t) => {
+      const { data } = await getQuote(t.market, t.symbol);
+      return [`${t.market}:${t.symbol}`, data.price] as const;
+    }),
+  );
+  return Object.fromEntries(entries);
 }
 
 export default function HistoryPage() {
   const router = useRouter();
   const [trades, setTrades] = useState<Trade[]>([]);
+  const [prices, setPrices] = useState<Record<string, number>>({});
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
   const [generatingId, setGeneratingId] = useState<string | null>(null);
@@ -34,8 +51,10 @@ export default function HistoryPage() {
     setLoading(true);
     const r = await fetch("/api/trades");
     const d = await r.json();
-    setTrades(d.trades ?? []);
+    const list: Trade[] = d.trades ?? [];
+    setTrades(list);
     setLoading(false);
+    setPrices(await fetchOpenPrices(list));
   }, []);
 
   // 최초 로드: effect 본문에서 동기 setState 하지 않도록 await 이후에만 갱신.
@@ -45,16 +64,14 @@ export default function HistoryPage() {
       const r = await fetch("/api/trades");
       const d = await r.json();
       if (!active) return;
-      setTrades(d.trades ?? []);
+      const list: Trade[] = d.trades ?? [];
+      setTrades(list);
       setLoading(false);
+      const px = await fetchOpenPrices(list);
+      if (active) setPrices(px);
     })();
     return () => { active = false; };
   }, []);
-
-  const remove = async (id: string) => {
-    await fetch(`/api/trades?id=${id}`, { method: "DELETE" });
-    refresh();
-  };
 
   async function openReport(t: Trade) {
     if (t.report) {
@@ -86,10 +103,6 @@ export default function HistoryPage() {
             </p>
           </div>
           <div className="flex gap-2">
-            <button onClick={() => router.push("/trades")}
-              className="inline-flex items-center gap-1.5 bg-foreground text-background px-4 py-2.5 text-sm font-bold hover:opacity-90 transition-opacity">
-              거래하기
-            </button>
             <button onClick={() => setShowForm((v) => !v)}
               className="inline-flex items-center gap-1.5 bg-foreground text-background px-4 py-2.5 text-sm font-bold hover:opacity-90 transition-opacity">
               {showForm ? <X size={14} /> : <Plus size={14} />}
@@ -115,7 +128,7 @@ export default function HistoryPage() {
               <TradeRow
                 key={t.id}
                 t={t}
-                onDelete={() => remove(t.id)}
+                currentPrice={prices[`${t.market}:${t.symbol}`]}
                 onReport={() => openReport(t)}
                 generating={generatingId === t.id}
               />
@@ -127,19 +140,37 @@ export default function HistoryPage() {
   );
 }
 
-function TradeRow({ t, onDelete, onReport, generating }: { t: Trade; onDelete: () => void; onReport: () => void; generating: boolean }) {
+function TradeRow({ t, currentPrice, onReport, generating }: { t: Trade; currentPrice?: number; onReport: () => void; generating: boolean }) {
   const router = useRouter();
   const closed = t.status === "CLOSED";
-  const win = (t.pnlPct ?? 0) >= 0;
-  const color = closed ? (win ? PROFIT : LOSS) : "#6E6A75";
   const displayName = t.company || t.symbol;
-  const tileText = displayName.length > 4 ? displayName.slice(0, 4) : displayName;
+  // 로고 타일: 글자 깨짐 방지 — 2글자만 한 줄로 표시
+  const tileText = displayName.slice(0, 2);
+
+  // 보유중·청산 모두 수익률(수익금액) 계산. 청산은 확정손익, 보유중은 현재가 기준 미실현.
+  const entry = Number(t.entryPrice);
+  const qty = closed ? Number(t.exitQty ?? t.entryQty) : Number(t.entryQty);
+  const lastPrice = closed ? Number(t.exitPrice) : currentPrice;
+  const hasPrice = lastPrice != null && Number.isFinite(lastPrice) && Number.isFinite(entry) && entry > 0;
+  const pnlPct = closed ? t.pnlPct : hasPrice ? ((lastPrice! - entry) / entry) * 100 : null;
+  const pnlAmt = hasPrice ? (lastPrice! - entry) * qty : null;
+  const win = (pnlPct ?? 0) >= 0;
+  const color = pnlPct == null ? "#6E6A75" : win ? PROFIT : LOSS;
+
+  const goToOrder = () =>
+    router.push(`/order?symbol=${t.symbol}&market=${t.market}&name=${encodeURIComponent(displayName)}`);
 
   return (
-    <div className="bg-card border border-border p-4">
+    <div
+      onClick={goToOrder}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); goToOrder(); } }}
+      className="bg-card border border-border p-4 cursor-pointer hover:border-foreground/30 transition-colors"
+    >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3 min-w-0">
-          <div className="w-10 h-10 bg-muted flex items-center justify-center font-black text-[11px] text-foreground shrink-0">
+          <div className="w-10 h-10 bg-muted flex items-center justify-center font-black text-xs text-foreground shrink-0 whitespace-nowrap leading-none">
             {tileText}
           </div>
           <div className="min-w-0">
@@ -152,23 +183,35 @@ function TradeRow({ t, onDelete, onReport, generating }: { t: Trade; onDelete: (
               }`}>{closed ? "청산" : "보유 중"}</span>
             </div>
             <p className="text-xs text-muted-foreground mt-0.5">
-              진입 {formatPrice(t.market, Number(t.entryPrice))} × {Number(t.entryQty)}
+              진입 {formatPrice(t.market, entry)} × {Number(t.entryQty)}
               {closed && t.exitPrice && <> → 청산 {formatPrice(t.market, Number(t.exitPrice))}</>}
             </p>
           </div>
         </div>
         <div className="flex items-center gap-4">
-          {closed ? (
-            <div className="text-right">
-              <p className="text-lg font-black" style={{ color }}>{formatPct(t.pnlPct)}</p>
-              <p className="text-[10px] text-muted-foreground">보유 {holdLabel(t.holdDurationMin)}</p>
-            </div>
-          ) : (
-            <span className="text-xs text-muted-foreground">미실현</span>
-          )}
+          <div className="text-right">
+            {pnlPct == null ? (
+              <p className="text-lg font-black text-muted-foreground">—</p>
+            ) : (
+              <p className="text-lg font-black" style={{ color }}>
+                {formatPct(pnlPct)}
+                {pnlAmt != null && (
+                  <span className="text-xs font-bold ml-1">
+                    ({pnlAmt >= 0 ? "+" : "-"}{formatPrice(t.market, Math.abs(pnlAmt))})
+                  </span>
+                )}
+              </p>
+            )}
+            <p className="text-[10px] text-muted-foreground">
+              {closed ? `보유 ${holdLabel(t.holdDurationMin)}` : "미실현"}
+            </p>
+          </div>
           {!closed && (
             <button
-              onClick={() => router.push(`/order?symbol=${t.symbol}&market=${t.market}&name=${encodeURIComponent(t.company || t.symbol)}&action=sell&qty=${t.entryQty}`)}
+              onClick={(e) => {
+                e.stopPropagation();
+                router.push(`/order?symbol=${t.symbol}&market=${t.market}&name=${encodeURIComponent(displayName)}&action=sell&qty=${t.entryQty}`);
+              }}
               className="inline-flex items-center gap-1 text-xs font-bold text-foreground border border-border px-2.5 py-1.5 hover:bg-muted transition-colors"
             >
               판매하기
@@ -176,7 +219,7 @@ function TradeRow({ t, onDelete, onReport, generating }: { t: Trade; onDelete: (
           )}
           {closed && (
             <button
-              onClick={onReport}
+              onClick={(e) => { e.stopPropagation(); onReport(); }}
               disabled={generating}
               className="inline-flex items-center gap-1 text-xs font-bold text-foreground border border-border px-2.5 py-1.5 hover:bg-muted transition-colors disabled:opacity-50"
             >
@@ -184,9 +227,6 @@ function TradeRow({ t, onDelete, onReport, generating }: { t: Trade; onDelete: (
               {t.report ? "보고서" : "보고서 발급"}
             </button>
           )}
-          <button onClick={onDelete} className="text-muted-foreground hover:text-[#B83535] transition-colors p-1.5" title="삭제">
-            <Trash2 size={14} />
-          </button>
         </div>
       </div>
     </div>
