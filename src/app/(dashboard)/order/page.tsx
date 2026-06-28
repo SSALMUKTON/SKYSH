@@ -1,38 +1,143 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { AlertTriangle, CheckCircle, Scroll } from "lucide-react";
+import { AlertTriangle, CheckCircle, Scroll, Loader2 } from "lucide-react";
 import {
   AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip, CartesianGrid,
 } from "recharts";
 import { WillPrecheckModal } from "@/components/will-precheck-modal";
 import { CHART_DATA } from "@/lib/mock-data";
+import { getQuote, precheck, execute, type ExecuteResult } from "@/lib/api-client";
+import type { Quote } from "@/lib/broker/types";
+import type { OrderDraft, SuggestedAction, Violation } from "@/lib/rules/types";
 
 type Step = "form" | "confirm";
-type Side = "매수" | "매도";
-type PriceType = "시장가" | "지정가";
+type SideLabel = "매수" | "매도";
+type PriceLabel = "시장가" | "지정가";
+
+const MARKET = "US" as const;
+const SYMBOL = "TSLA";
+
+/** "$250.00" / "250" 등에서 숫자만 파싱. 비어있으면 undefined. */
+function parseMoney(s: string): number | undefined {
+  const n = parseFloat(s.replace(/[^0-9.]/g, ""));
+  return isNaN(n) ? undefined : n;
+}
 
 export default function OrderPage() {
   const [step, setStep] = useState<Step>("form");
   const [showModal, setShowModal] = useState(false);
-  const [side, setSide] = useState<Side>("매수");
-  const [priceType, setPriceType] = useState<PriceType>("시장가");
+
+  // 시세
+  const [quote, setQuote] = useState<Quote | null>(null);
+  const [quoteMocked, setQuoteMocked] = useState(false);
+
+  // 폼
+  const [side, setSide] = useState<SideLabel>("매수");
+  const [priceType, setPriceType] = useState<PriceLabel>("시장가");
   const [qty, setQty] = useState("3");
   const [stopLoss, setStopLoss] = useState("");
   const [takeProfit, setTakeProfit] = useState("");
   const [reason, setReason] = useState("");
+  const stopRef = useRef<HTMLInputElement>(null);
 
-  const amount = qty && !isNaN(parseFloat(qty))
-    ? Math.round(parseFloat(qty) * 275.3 * 1356).toLocaleString("ko-KR")
-    : "—";
+  // 검사/실행
+  const [checking, setChecking] = useState(false);
+  const [mocked, setMocked] = useState(false);
+  const [violations, setViolations] = useState<Violation[]>([]);
+  const [execResult, setExecResult] = useState<ExecuteResult | null>(null);
 
-  if (step === "confirm") {
+  useEffect(() => {
+    let alive = true;
+    getQuote(MARKET, SYMBOL).then(({ data, mocked }) => {
+      if (!alive) return;
+      setQuote(data);
+      setQuoteMocked(mocked);
+    });
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  const qtyNum = parseFloat(qty);
+  const amount =
+    quote && qty && !isNaN(qtyNum)
+      ? Math.round(qtyNum * quote.price * 1356).toLocaleString("ko-KR")
+      : "—";
+
+  function buildDraft(): OrderDraft {
+    return {
+      market: MARKET,
+      symbol: SYMBOL,
+      side: side === "매수" ? "BUY" : "SELL",
+      orderType: priceType === "시장가" ? "MARKET" : "LIMIT",
+      quantity: isNaN(qtyNum) ? 0 : qtyNum,
+      price: priceType === "지정가" && quote ? quote.price : undefined,
+      stopPrice: parseMoney(stopLoss),
+    };
+  }
+
+  async function doExecute(draft: OrderDraft, forceReason?: string, vios?: Violation[]) {
+    const { data } = await execute(draft, forceReason, vios);
+    setExecResult(data);
+    setShowModal(false);
+    setStep("confirm");
+  }
+
+  async function handleCheck() {
+    if (!quote) return;
+    setChecking(true);
+    try {
+      const draft = buildDraft();
+      const { data, mocked } = await precheck(draft, quote);
+      setMocked(mocked);
+      if (data.ok) {
+        setViolations([]);
+        await doExecute(draft);
+      } else {
+        setViolations(data.violations);
+        setShowModal(true);
+      }
+    } finally {
+      setChecking(false);
+    }
+  }
+
+  function handleAction(action: SuggestedAction) {
+    switch (action) {
+      case "postpone":
+        setShowModal(false);
+        break;
+      case "switch_limit":
+        setPriceType("지정가");
+        setShowModal(false);
+        break;
+      case "reduce_amount":
+        setQty((q) => {
+          const n = parseFloat(q);
+          return isNaN(n) ? q : String(Math.max(1, Math.floor(n / 2)));
+        });
+        setShowModal(false);
+        break;
+      case "set_stop_loss":
+        setShowModal(false);
+        setTimeout(() => stopRef.current?.focus(), 50);
+        break;
+      case "force":
+        break;
+    }
+  }
+
+  // ─── 확인 화면 ─────────────────────────────────────────────────
+  if (step === "confirm" && quote) {
+    const draft = buildDraft();
     const confirmSteps = [
       { label: "주문 요청", done: true },
       { label: "유언장 검사", done: true },
       { label: "증권사 API 전송", done: true },
       { label: "체결 대기", done: false, active: true },
     ];
+    const krw = quote ? Math.round(draft.quantity * quote.price * 1356).toLocaleString("ko-KR") : "—";
     return (
       <div className="p-8">
         <div className="max-w-md mx-auto text-center">
@@ -44,11 +149,16 @@ export default function OrderPage() {
           <div className="bg-card border border-border p-5 text-left mb-4">
             <p className="text-[9px] font-bold text-muted-foreground mb-4 tracking-[0.2em] uppercase">주문 상세</p>
             {[
-              { label: "종목", value: "TSLA (Tesla, Inc.)" },
-              { label: "주문 유형", value: `${priceType} 매수` },
-              { label: "수량", value: `${qty || "3"}주` },
-              { label: "예상 주문 금액", value: "₩1,119,282" },
-              { label: "유언장 검사 결과", value: "제2조 위반 경고 — 무시하고 진행", warn: true },
+              { label: "종목", value: `${quote.symbol}` },
+              { label: "주문 유형", value: `${priceType} ${side}` },
+              { label: "수량", value: `${draft.quantity}주` },
+              { label: "예상 주문 금액", value: `₩${krw}` },
+              {
+                label: "유언장 검사 결과",
+                value: violations.length ? `${violations.length}개 조항 위반 — 강행` : "통과",
+                warn: violations.length > 0,
+              },
+              ...(execResult ? [{ label: "주문 번호", value: execResult.brokerOrderId }] : []),
             ].map(({ label, value, warn }) => (
               <div key={label} className="flex justify-between items-start py-2.5 border-b border-dashed border-border last:border-0">
                 <span className="text-xs text-muted-foreground">{label}</span>
@@ -79,33 +189,56 @@ export default function OrderPage() {
     );
   }
 
+  // ─── 주문 입력 화면 ───────────────────────────────────────────
+  const draft = quote ? buildDraft() : null;
+  const changeColor = quote && quote.changePct < 0 ? "text-[#B83535]" : "text-[#3D9E72]";
   return (
     <div className="p-8 relative">
-      {showModal && (
+      {showModal && quote && draft && (
         <WillPrecheckModal
+          violations={violations}
+          quote={quote}
+          draft={draft}
+          onAction={handleAction}
+          onForce={(r) => doExecute(buildDraft(), r, violations)}
           onClose={() => setShowModal(false)}
-          onProceed={() => { setShowModal(false); setStep("confirm"); }}
         />
       )}
       <div className="max-w-5xl mx-auto">
+        {(quoteMocked || mocked) && (
+          <div className="mb-3 inline-flex items-center gap-1.5 bg-[#FFF7E6] border border-[#E6C200]/40 px-2.5 py-1">
+            <span className="text-[10px] font-bold text-[#9A7B00] tracking-wider uppercase">mock</span>
+            <span className="text-[10px] text-[#9A7B00]">API 미연동 — 목 데이터로 동작 중</span>
+          </div>
+        )}
         <div className="flex items-start justify-between mb-6">
           <div>
             <div className="flex items-center gap-3 mb-1.5">
-              <h2 className="text-2xl font-bold text-foreground">TSLA</h2>
+              <h2 className="text-2xl font-bold text-foreground">{quote?.symbol ?? SYMBOL}</h2>
               <span className="text-sm text-muted-foreground">Tesla, Inc.</span>
-              <span className="text-[10px] bg-[#FAEAEA] text-[#B83535] px-2 py-0.5 font-black tracking-wider">프리마켓</span>
+              {quote?.isPremarket && (
+                <span className="text-[10px] bg-[#FAEAEA] text-[#B83535] px-2 py-0.5 font-black tracking-wider">프리마켓</span>
+              )}
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-3xl font-black text-foreground">$275.30</span>
-              <span className="text-sm font-semibold text-[#B83535]">▼ -8.42 (-2.97%)</span>
+              {quote ? (
+                <>
+                  <span className="text-3xl font-black text-foreground">${quote.price.toFixed(2)}</span>
+                  <span className={`text-sm font-semibold ${changeColor}`}>
+                    {quote.changePct >= 0 ? "▲" : "▼"} {quote.changePct >= 0 ? "+" : ""}{quote.changePct.toFixed(2)}%
+                  </span>
+                </>
+              ) : (
+                <span className="h-9 w-40 bg-muted animate-pulse" />
+              )}
             </div>
           </div>
           <div className="flex gap-6 text-right">
             {[
-              { label: "1시간 변동", value: "+3.2%", color: "text-[#3D9E72]" },
-              { label: "거래량", value: "12.4M", color: "text-foreground" },
-              { label: "거래량 스파이크", value: "+230%", color: "text-[#B83535]" },
-              { label: "시장 세션", value: "프리마켓", color: "text-foreground" },
+              { label: "등락률", value: quote ? `${quote.changePct >= 0 ? "+" : ""}${quote.changePct.toFixed(1)}%` : "—", color: changeColor },
+              { label: "거래량", value: quote ? `${(quote.volume / 1_000_000).toFixed(1)}M` : "—", color: "text-foreground" },
+              { label: "전일 종가", value: quote ? `$${quote.prevClose.toFixed(2)}` : "—", color: "text-foreground" },
+              { label: "시장 세션", value: quote?.isPremarket ? "프리마켓" : "정규장", color: "text-foreground" },
             ].map(({ label, value, color }) => (
               <div key={label}>
                 <p className="text-[9px] tracking-wider text-muted-foreground mb-0.5 uppercase font-bold">{label}</p>
@@ -150,7 +283,7 @@ export default function OrderPage() {
           <div className="col-span-1">
             <div className="bg-card border border-border p-5">
               <div className="grid grid-cols-2 gap-0.5 bg-muted mb-4">
-                {(["매수", "매도"] as Side[]).map((s) => (
+                {(["매수", "매도"] as SideLabel[]).map((s) => (
                   <button key={s} onClick={() => setSide(s)}
                     className={`py-2.5 text-sm font-bold transition-all ${side === s ? s === "매수" ? "bg-[#3D9E72] text-white" : "bg-[#B83535] text-white" : "bg-card text-muted-foreground hover:text-foreground"}`}>
                     {s}
@@ -158,7 +291,7 @@ export default function OrderPage() {
                 ))}
               </div>
               <div className="grid grid-cols-2 gap-0.5 bg-muted mb-4">
-                {(["시장가", "지정가"] as PriceType[]).map((pt) => (
+                {(["시장가", "지정가"] as PriceLabel[]).map((pt) => (
                   <button key={pt} onClick={() => setPriceType(pt)}
                     className={`py-1.5 text-xs font-semibold transition-all ${priceType === pt ? "bg-card text-foreground" : "bg-transparent text-muted-foreground"}`}>
                     {pt}
@@ -177,7 +310,7 @@ export default function OrderPage() {
                 </div>
                 <div>
                   <label className="text-[10px] tracking-wider text-muted-foreground font-bold block mb-1 uppercase">손절가</label>
-                  <input type="text" value={stopLoss} onChange={(e) => setStopLoss(e.target.value)}
+                  <input ref={stopRef} type="text" value={stopLoss} onChange={(e) => setStopLoss(e.target.value)}
                     className="w-full bg-muted/50 border border-border px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-ring" placeholder="예: $250.00" />
                 </div>
                 <div>
@@ -198,14 +331,16 @@ export default function OrderPage() {
                   </select>
                 </div>
               </div>
-              <div className="bg-[#FAEAEA] border-l-4 border-[#B83535] px-3 py-2.5 mb-3 flex items-center gap-2">
-                <AlertTriangle size={12} className="text-[#B83535] shrink-0" />
-                <p className="text-[10px] text-[#B83535] leading-relaxed font-semibold">유언장 제2조 위반 가능성 감지</p>
-              </div>
-              <button onClick={() => setShowModal(true)}
-                className="w-full bg-foreground text-background py-3 text-sm font-black hover:opacity-90 transition-opacity flex items-center justify-center gap-2 tracking-wider">
-                <Scroll size={13} />
-                주문 전 유언장 검사
+              {side === "매수" && parseMoney(stopLoss) == null && (
+                <div className="bg-[#FAEAEA] border-l-4 border-[#B83535] px-3 py-2.5 mb-3 flex items-center gap-2">
+                  <AlertTriangle size={12} className="text-[#B83535] shrink-0" />
+                  <p className="text-[10px] text-[#B83535] leading-relaxed font-semibold">손절 기준 미입력 — 유언장 위반 가능성</p>
+                </div>
+              )}
+              <button onClick={handleCheck} disabled={checking || !quote}
+                className="w-full bg-foreground text-background py-3 text-sm font-black hover:opacity-90 transition-opacity flex items-center justify-center gap-2 tracking-wider disabled:opacity-50">
+                {checking ? <Loader2 size={13} className="animate-spin" /> : <Scroll size={13} />}
+                {checking ? "검사 중..." : "주문 전 유언장 검사"}
               </button>
             </div>
           </div>
