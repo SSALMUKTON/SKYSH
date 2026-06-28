@@ -97,7 +97,7 @@ export default function BacktestPage() {
   ) ?? null;
 
   const hasData = result && result.total_signals > 0;
-  const stats = result?.returns[String(selectedHorizon)];
+  const stats = result?.returns?.[String(selectedHorizon)];
   const isNoStopLoss = selectedClause?.ruleType === "NO_STOP_LOSS";
 
   // 백테스트 데이터 없는 조항
