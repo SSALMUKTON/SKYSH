@@ -174,6 +174,8 @@ export default function SetupPage() {
   }
 
   function toggleEdit(i: number) {
+    const clause = clauses[i];
+    if (clause.source === "draft") return; // draft는 수정 불가
     setClauses((prev) =>
       prev.map((c, idx) =>
         idx === i
