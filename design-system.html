@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mortis — Design System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #080C14;
+      --surface:   #0F1420;
+      --surface-2: #161C2D;
+      --border:    #1E2740;
+      --text:      #E8EDF5;
+      --muted:     #6B7A99;
+      --faint:     #2D3A55;
+      --accent:    #C9A84C;
+      --accent-dim:#C9A84C22;
+      --loss:      #EF4444;
+      --loss-dim:  #EF444420;
+      --gain:      #22C55E;
+      --gain-dim:  #22C55E20;
+      --report-bg: #F8F6F0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* ── Layout ── */
+    .page { max-width: 1100px; margin: 0 auto; padding: 48px 24px 120px; }
+    .section { margin-bottom: 72px; }
+    .section-label {
+      font-size: 11px; font-weight: 600; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--muted);
+      margin-bottom: 24px; padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+    /* ── Header ── */
+    .site-header {
+      padding: 24px 0 48px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 64px;
+    }
+    .logo {
+      font-size: 28px; font-weight: 700; letter-spacing: -.02em;
+      color: var(--accent);
+    }
+    .logo span { color: var(--muted); font-weight: 400; font-size: 14px; margin-left: 10px; }
+    .tagline { color: var(--muted); margin-top: 6px; font-size: 13px; }
+
+    /* ── Colors ── */
+    .color-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+    .color-swatch { border-radius: 8px; overflow: hidden; }
+    .swatch-box { height: 56px; }
+    .swatch-info { padding: 8px 0; }
+    .swatch-name { font-size: 12px; font-weight: 500; color: var(--text); }
+    .swatch-val  { font-size: 11px; color: var(--muted); font-family: monospace; }
+
+    /* ── Typography ── */
+    .type-row { padding: 16px 0; border-bottom: 1px solid var(--border); display: flex; align-items: baseline; gap: 24px; }
+    .type-meta { width: 120px; flex-shrink: 0; }
+    .type-meta-label { font-size: 11px; color: var(--muted); }
+    .type-meta-spec  { font-size: 11px; color: var(--faint); margin-top: 2px; font-family: monospace; }
+    .t-display { font-size: 40px; font-weight: 700; letter-spacing: -.02em; }
+    .t-h1      { font-size: 24px; font-weight: 600; letter-spacing: -.01em; }
+    .t-h2      { font-size: 18px; font-weight: 600; }
+    .t-body    { font-size: 14px; font-weight: 400; }
+    .t-caption { font-size: 12px; font-weight: 400; color: var(--muted); }
+    .t-mono    { font-size: 14px; font-weight: 500; font-family: monospace; font-variant-numeric: tabular-nums; }
+
+    /* ── Components ── */
+    .comp-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 16px; border-radius: 6px; font-size: 13px;
+      font-weight: 500; cursor: pointer; border: none; font-family: inherit;
+      transition: opacity .15s;
+    }
+    .btn:hover { opacity: .85; }
+    .btn-primary   { background: var(--accent); color: #080C14; }
+    .btn-secondary { background: var(--surface-2); color: var(--text); border: 1px solid var(--border); }
+    .btn-ghost     { background: transparent; color: var(--muted); }
+    .btn-danger    { background: var(--loss-dim); color: var(--loss); border: 1px solid var(--loss); }
+
+    /* Badges */
+    .badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 3px 10px; border-radius: 99px;
+      font-size: 11px; font-weight: 600; letter-spacing: .02em;
+    }
+    .badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; }
+    .badge-alive  { background: var(--gain-dim);  color: var(--gain); }
+    .badge-alive::before  { background: var(--gain); }
+    .badge-danger { background: var(--loss-dim);  color: var(--loss); }
+    .badge-danger::before { background: var(--loss); }
+    .badge-watch  { background: var(--accent-dim); color: var(--accent); }
+    .badge-watch::before  { background: var(--accent); }
+    .badge-dead   { background: var(--faint);      color: var(--muted); }
+    .badge-dead::before   { background: var(--muted); }
+
+    /* Cards */
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px;
+    }
+    .card-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px; }
+    .card-value { font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+    .card-sub   { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+    /* Will banner */
+    .will-banner {
+      background: var(--accent-dim);
+      border: 1px solid var(--accent);
+      border-radius: 8px; padding: 14px 16px;
+      display: flex; gap: 12px; align-items: flex-start;
+    }
+    .will-banner-icon { font-size: 16px; margin-top: 1px; flex-shrink: 0; }
+    .will-banner-title { font-size: 13px; font-weight: 600; color: var(--accent); }
+    .will-banner-body  { font-size: 12px; color: var(--muted); margin-top: 3px; }
+
+    /* ── Screens ── */
+    .screens { display: flex; flex-direction: column; gap: 48px; }
+    .screen-label { font-size: 12px; color: var(--muted); margin-bottom: 16px; font-weight: 500; }
+
+    .screen-frame {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    /* Topbar */
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 20px; border-bottom: 1px solid var(--border);
+    }
+    .topbar-logo { font-size: 16px; font-weight: 700; color: var(--accent); letter-spacing: -.01em; }
+    .topbar-nav  { display: flex; gap: 4px; }
+    .nav-item {
+      padding: 5px 12px; border-radius: 6px; font-size: 12px;
+      color: var(--muted); cursor: pointer;
+    }
+    .nav-item.active { background: var(--surface-2); color: var(--text); }
+
+    /* Screen body */
+    .screen-body { padding: 24px 20px; }
+
+    /* Stat row */
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
+    .stat-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 10px; padding: 16px;
+    }
+    .stat-label { font-size: 11px; color: var(--muted); margin-bottom: 4px; }
+    .stat-value { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+    .stat-sub   { font-size: 11px; color: var(--muted); margin-top: 2px; }
+    .gain-text { color: var(--gain); }
+    .loss-text { color: var(--loss); }
+    .accent-text { color: var(--accent); }
+
+    /* Trade list */
+    .list-header {
+      font-size: 11px; font-weight: 600; color: var(--muted);
+      text-transform: uppercase; letter-spacing: .08em;
+      margin-bottom: 10px;
+    }
+    .trade-item {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 0; border-bottom: 1px solid var(--border);
+    }
+    .trade-item:last-child { border-bottom: none; }
+    .trade-left { display: flex; align-items: center; gap: 12px; }
+    .trade-icon {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--surface-2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700; color: var(--accent);
+    }
+    .trade-name { font-size: 14px; font-weight: 600; }
+    .trade-meta { font-size: 11px; color: var(--muted); margin-top: 2px; }
+    .trade-right { text-align: right; }
+    .trade-pnl   { font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .trade-days  { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+    /* ── Screen 2: 매수 ── */
+    .input-group { margin-bottom: 16px; }
+    .input-label { font-size: 11px; color: var(--muted); margin-bottom: 6px; font-weight: 500; }
+    .input-field {
+      width: 100%; background: var(--bg); border: 1px solid var(--border);
+      border-radius: 8px; padding: 10px 12px; color: var(--text);
+      font-size: 13px; font-family: inherit; outline: none;
+    }
+    .input-field:focus { border-color: var(--accent); }
+    .input-field::placeholder { color: var(--faint); }
+    textarea.input-field { resize: none; min-height: 80px; }
+
+    .trade-info-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px 16px; margin-bottom: 20px;
+    }
+    .trade-info-row { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; }
+    .trade-info-key { font-size: 12px; color: var(--muted); }
+    .trade-info-val { font-size: 13px; font-weight: 500; font-variant-numeric: tabular-nums; }
+
+    /* ── Screen 3: 보고서 (사망진단서) ── */
+    .report-wrapper { padding: 20px; }
+    .report-card {
+      background: var(--report-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      color: #1A1A1A;
+      font-family: 'Inter', sans-serif;
+    }
+    .report-header {
+      background: #1A1A1A; color: var(--report-bg);
+      padding: 16px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .report-title { font-size: 13px; font-weight: 600; letter-spacing: .05em; }
+    .report-stamp {
+      font-size: 10px; padding: 3px 8px;
+      border: 1.5px solid #EF4444; color: #EF4444;
+      border-radius: 4px; font-weight: 700; letter-spacing: .05em;
+    }
+    .report-body { padding: 20px; }
+    .report-row {
+      display: flex; justify-content: space-between;
+      padding: 8px 0; border-bottom: 1px solid #D4C9B0;
+      font-size: 13px;
+    }
+    .report-row:last-child { border-bottom: none; }
+    .report-key { color: #6B6B6B; font-weight: 400; }
+    .report-val { font-weight: 500; font-variant-numeric: tabular-nums; }
+    .report-val.red   { color: #DC2626; }
+    .report-val.green { color: #16A34A; }
+
+    .report-section { padding: 16px 20px; border-top: 1px dashed #D4C9B0; }
+    .report-section-title {
+      font-size: 10px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: #6B6B6B; margin-bottom: 10px;
+    }
+    .cause-item {
+      display: flex; gap: 8px; align-items: flex-start;
+      font-size: 12px; margin-bottom: 6px; color: #2D2D2D;
+    }
+    .cause-dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: #DC2626; flex-shrink: 0; margin-top: 5px;
+    }
+    .prevention-bar {
+      background: #EDF7EE; border: 1px solid #A3D4A8;
+      border-radius: 6px; padding: 10px 14px; margin-top: 12px;
+      font-size: 12px; color: #166534; font-weight: 500;
+    }
+
+    .suggest-card {
+      background: var(--accent-dim); border: 1px solid var(--accent);
+      border-radius: 8px; padding: 14px 16px; margin-top: 16px;
+    }
+    .suggest-title { font-size: 12px; font-weight: 600; color: var(--accent); margin-bottom: 8px; }
+    .suggest-rule { font-size: 13px; color: var(--text); margin-bottom: 12px; font-style: italic; }
+    .suggest-actions { display: flex; gap: 8px; }
+
+    /* divider */
+    hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="site-header">
+    <div class="logo">Mortis <span>by 故래소 — Design System</span></div>
+    <div class="tagline">진지한 척하는데 사실 웃김. 디자인은 클린, 유머는 카피에서.</div>
+  </div>
+
+  <!-- Colors -->
+  <div class="section">
+    <div class="section-label">Colors</div>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="swatch-box" style="background:#080C14; border:1px solid #1E2740; border-radius:8px;"></div>
+        <div class="swatch-info"><div class="swatch-name">bg</div><div class="swatch-val">#080C14</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-box" style="background:#0F1420; border:1px solid #1E2740; border-radius:8px;"></div>
+        <div class="swatch-info"><div class="swatch-name">surface</div><div class="swatch-val">#0F1420</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-box" style="background:#1E2740; border-radius:8px;"></div>
+        <div class="swatch-info"><div class="swatch-name">border</div><div class="swatch-val">#1E2740</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-box" style="background:#C9A84C; border-radius:8px;"></div>
+        <div class="swatch-info"><div class="swatch-name">accent</div><div class="swatch-val">#C9A84C</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-box" style="background:#E8EDF5; border-radius:8px;"></div>
+        <div class="swatch-info"><div class="swatch-name">text</div><div class="swatch-val">#E8EDF5</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-box" style="background:#EF4444; border-radius:8px;"></div>
+        <div class="swatch-info"><div class="swatch-name">loss</div><div class="swatch-val">#EF4444</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-box" style="background:#22C55E; border-radius:8px;"></div>
+        <div class="swatch-info"><div class="swatch-name">gain</div><div class="swatch-val">#22C55E</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-box" style="background:#F8F6F0; border-radius:8px;"></div>
+        <div class="swatch-info"><div class="swatch-name">report-bg</div><div class="swatch-val">#F8F6F0</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Typography -->
+  <div class="section">
+    <div class="section-label">Typography</div>
+    <div class="type-row">
+      <div class="type-meta"><div class="type-meta-label">Display</div><div class="type-meta-spec">40px / 700</div></div>
+      <div class="t-display">손실은 데이터입니다</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><div class="type-meta-label">Heading 1</div><div class="type-meta-spec">24px / 600</div></div>
+      <div class="t-h1">거래 부검 보고서</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><div class="type-meta-label">Heading 2</div><div class="type-meta-spec">18px / 600</div></div>
+      <div class="t-h2">사망 원인 분석</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><div class="type-meta-label">Body</div><div class="type-meta-spec">14px / 400</div></div>
+      <div class="t-body">유언장을 어기려 하십니까? 지난번에도 이 시간에 들어가서 손절하셨습니다.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><div class="type-meta-label">Caption</div><div class="type-meta-spec">12px / 400</div></div>
+      <div class="t-caption">아직 아무도 죽지 않았습니다</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><div class="type-meta-label">Mono (가격)</div><div class="type-meta-spec">14px / 500</div></div>
+      <div class="t-mono">143,200,000 KRW  −10.3%</div>
+    </div>
+  </div>
+
+  <!-- Components -->
+  <div class="section">
+    <div class="section-label">Components</div>
+
+    <div style="margin-bottom:28px;">
+      <div class="input-label" style="margin-bottom:10px;">Buttons</div>
+      <div class="comp-row">
+        <button class="btn btn-primary">유언장 저장</button>
+        <button class="btn btn-secondary">기록 보기</button>
+        <button class="btn btn-ghost">건너뜀</button>
+        <button class="btn btn-danger">그래도 매수하겠습니다</button>
+      </div>
+    </div>
+
+    <div style="margin-bottom:28px;">
+      <div class="input-label" style="margin-bottom:10px;">Status Badges</div>
+      <div class="comp-row">
+        <span class="badge badge-alive">아직 살아있습니다</span>
+        <span class="badge badge-danger">위험 신호 감지</span>
+        <span class="badge badge-watch">관찰 중</span>
+        <span class="badge badge-dead">사망 확인</span>
+      </div>
+    </div>
+
+    <div style="margin-bottom:28px;">
+      <div class="input-label" style="margin-bottom:10px;">유언장 집행 배너</div>
+      <div class="will-banner">
+        <div class="will-banner-icon">⚖️</div>
+        <div>
+          <div class="will-banner-title">유언장을 어기려 하십니까?</div>
+          <div class="will-banner-body">"나는 +20% 급등 후 진입하지 않는다" — 현재 BTC는 최근 4시간 동안 +23.1% 상승했습니다.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="input-label" style="margin-bottom:10px;">Stat Cards</div>
+      <div class="stat-row">
+        <div class="stat-card">
+          <div class="stat-label">총 거래 적중률</div>
+          <div class="stat-value accent-text">62%</div>
+          <div class="stat-sub">38건 중 24건</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">유언장 위반 후 손실률</div>
+          <div class="stat-value loss-text">81%</div>
+          <div class="stat-sub">위반 11건 중 9건 손실</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">현재 생존 중</div>
+          <div class="stat-value gain-text">3건</div>
+          <div class="stat-sub">총 보유 자산</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Screens -->
+  <div class="section-label" style="margin-bottom:32px;">Screens</div>
+  <div class="screens">
+
+    <!-- Screen 1: 홈 -->
+    <div>
+      <div class="screen-label">① 홈 — 보유 현황</div>
+      <div class="screen-frame">
+        <div class="topbar">
+          <div class="topbar-logo">Mortis</div>
+          <div class="topbar-nav">
+            <div class="nav-item active">홈</div>
+            <div class="nav-item">유언장</div>
+            <div class="nav-item">공동묘지</div>
+          </div>
+        </div>
+        <div class="screen-body">
+          <div class="stat-row">
+            <div class="stat-card">
+              <div class="stat-label">생존 중인 거래</div>
+              <div class="stat-value gain-text">3건</div>
+              <div class="stat-sub">합산 +4.2%</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">이번 달 부검</div>
+              <div class="stat-value loss-text">2건</div>
+              <div class="stat-sub">반복 사인: 급등 추격</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">유언장 준수율</div>
+              <div class="stat-value accent-text">73%</div>
+              <div class="stat-sub">이번 달 11건 중 8건</div>
+            </div>
+          </div>
+
+          <div class="list-header">보유 중 — 생존 여부 모니터링</div>
+
+          <div class="trade-item">
+            <div class="trade-left">
+              <div class="trade-icon">B</div>
+              <div>
+                <div class="trade-name">BTC/KRW</div>
+                <div class="trade-meta">진입 143,200,000 · 12일째</div>
+              </div>
+            </div>
+            <div class="trade-right">
+              <div class="trade-pnl gain-text">+8.2%</div>
+              <div class="trade-days"><span class="badge badge-alive" style="font-size:10px;">아직 살아있습니다</span></div>
+            </div>
+          </div>
+
+          <div class="trade-item">
+            <div class="trade-left">
+              <div class="trade-icon">E</div>
+              <div>
+                <div class="trade-name">ETH/KRW</div>
+                <div class="trade-meta">진입 5,240,000 · 3일째</div>
+              </div>
+            </div>
+            <div class="trade-right">
+              <div class="trade-pnl loss-text">−7.1%</div>
+              <div class="trade-days"><span class="badge badge-danger" style="font-size:10px;">위험 신호 감지</span></div>
+            </div>
+          </div>
+
+          <div class="trade-item">
+            <div class="trade-left">
+              <div class="trade-icon">S</div>
+              <div>
+                <div class="trade-name">SOL/KRW</div>
+                <div class="trade-meta">진입 182,000 · 1일째</div>
+              </div>
+            </div>
+            <div class="trade-right">
+              <div class="trade-pnl" style="color:var(--muted);">+0.3%</div>
+              <div class="trade-days"><span class="badge badge-watch" style="font-size:10px;">관찰 중</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen 2: 매수 -->
+    <div>
+      <div class="screen-label">② 매수 시 — 유언장 집행 + 기록</div>
+      <div class="screen-frame">
+        <div class="topbar">
+          <div class="topbar-logo">Mortis</div>
+          <div style="font-size:12px; color:var(--muted);">BTC/KRW 매수 기록</div>
+        </div>
+        <div class="screen-body">
+          <div class="trade-info-card">
+            <div class="trade-info-row">
+              <span class="trade-info-key">자산</span>
+              <span class="trade-info-val">BTC/KRW</span>
+            </div>
+            <div class="trade-info-row">
+              <span class="trade-info-key">체결가</span>
+              <span class="trade-info-val">143,200,000 KRW</span>
+            </div>
+            <div class="trade-info-row">
+              <span class="trade-info-key">수량</span>
+              <span class="trade-info-val">0.07 BTC</span>
+            </div>
+            <div class="trade-info-row">
+              <span class="trade-info-key">체결 시각</span>
+              <span class="trade-info-val">2026-06-28 02:13</span>
+            </div>
+          </div>
+
+          <div class="will-banner" style="margin-bottom:20px;">
+            <div class="will-banner-icon">⚖️</div>
+            <div>
+              <div class="will-banner-title">유언장 위반 감지 — 2건</div>
+              <div class="will-banner-body">"새벽 2시 이후 거래하지 않는다" · "4시간 봉 +15% 이상일 때 진입하지 않는다"</div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-label">이 거래의 방향 예측</div>
+            <div class="comp-row" style="margin:0; gap:8px;">
+              <button class="btn btn-secondary" style="font-size:12px;">📈 상승</button>
+              <button class="btn btn-secondary" style="font-size:12px;">📉 하락</button>
+              <button class="btn btn-secondary" style="font-size:12px;">↔️ 중립</button>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-label">목표가 / 손절가</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+              <input class="input-field" placeholder="목표가 (KRW)">
+              <input class="input-field" placeholder="손절가 (KRW)">
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-label">왜 지금 삽니까</div>
+            <textarea class="input-field" placeholder="이 거래를 선택한 이유를 기록하세요. 미래의 당신이 읽게 됩니다."></textarea>
+          </div>
+
+          <div style="display:flex; gap:8px; margin-top:4px;">
+            <button class="btn btn-primary" style="flex:1;">기록 저장</button>
+            <button class="btn btn-danger">유언장 무시하고 진행</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen 3: 사망진단서 -->
+    <div>
+      <div class="screen-label">③ 매도 후 — 사망진단서</div>
+      <div class="screen-frame">
+        <div class="topbar">
+          <div class="topbar-logo">Mortis</div>
+          <div style="font-size:12px; color:var(--muted);">ETH/KRW 부검 보고서</div>
+        </div>
+        <div class="report-wrapper">
+          <div class="report-card">
+            <div class="report-header">
+              <div class="report-title">사 망 진 단 서</div>
+              <div class="report-stamp">손실 확정</div>
+            </div>
+            <div class="report-body">
+              <div class="report-row">
+                <span class="report-key">자산</span>
+                <span class="report-val">ETH/KRW</span>
+              </div>
+              <div class="report-row">
+                <span class="report-key">진입가</span>
+                <span class="report-val">5,240,000 KRW</span>
+              </div>
+              <div class="report-row">
+                <span class="report-key">청산가</span>
+                <span class="report-val">4,700,000 KRW</span>
+              </div>
+              <div class="report-row">
+                <span class="report-key">손익</span>
+                <span class="report-val red">−10.3% (−540,000 KRW)</span>
+              </div>
+              <div class="report-row">
+                <span class="report-key">보유 기간</span>
+                <span class="report-val">3일 22시간</span>
+              </div>
+              <div class="report-row">
+                <span class="report-key">유언장 위반</span>
+                <span class="report-val red">2건</span>
+              </div>
+            </div>
+
+            <div class="report-section">
+              <div class="report-section-title">사망 원인</div>
+              <div class="cause-item"><div class="cause-dot"></div><div>급등 직후 추격 매수 (진입 전 4시간 봉 +23.1%)</div></div>
+              <div class="cause-item"><div class="cause-dot"></div><div>새벽 2시 13분 거래 — 유언장 위반</div></div>
+              <div class="cause-item"><div class="cause-dot"></div><div>손절가 미설정</div></div>
+              <div class="cause-item"><div class="cause-dot"></div><div>진입 4분 전 커뮤니티 글 확인 후 즉시 진입</div></div>
+            </div>
+
+            <div class="report-section">
+              <div class="report-section-title">예방 가능성</div>
+              <div class="prevention-bar">✓ 높음 — 유언장 원칙 준수 시 이 거래는 발생하지 않았을 것으로 판단됩니다.</div>
+            </div>
+          </div>
+
+          <div class="suggest-card">
+            <div class="suggest-title">⚖️ 유언장 최적화 제안</div>
+            <div class="suggest-rule">"커뮤니티 글 확인 후 10분 내에 진입하지 않는다"</div>
+            <div style="font-size:12px; color:var(--muted); margin-bottom:12px;">동일 패턴 3번째 손실. 사인 데이터베이스에 기록됐습니다.</div>
+            <div class="suggest-actions">
+              <button class="btn btn-primary" style="font-size:12px;">유언장에 추가</button>
+              <button class="btn btn-ghost" style="font-size:12px;">건너뜀</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
