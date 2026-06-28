@@ -291,6 +291,10 @@ export default function WillSetupPage() {
                   className="w-full text-center text-xs text-muted-foreground mt-3 hover:text-foreground transition-colors">
                   다시 진단하기
                 </button>
+                <button onClick={() => router.push("/will")}
+                  className="w-full text-center text-xs text-muted-foreground mt-2 hover:text-foreground transition-colors">
+                  넘어가기
+                </button>
               </div>
             </div>
           )}
