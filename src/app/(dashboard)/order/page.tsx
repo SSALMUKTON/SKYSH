@@ -337,8 +337,8 @@ function TradeWorkspace({ market, item }: { market: Market; item: UniverseItem }
             ))}
           </div>
         </div>
-        <Link href="/trades" className="w-full bg-foreground text-background py-3.5 font-bold text-sm hover:opacity-90 transition-opacity flex items-center justify-center">
-          체결 상태 보기
+        <Link href="/history" className="w-full bg-foreground text-background py-3.5 font-bold text-sm hover:opacity-90 transition-opacity flex items-center justify-center">
+          거래 기록 보기
         </Link>
       </div>
     );
