@@ -31,12 +31,19 @@ export function buildConvertPrompt(text: string): string {
   "params": {}
 }
 
-ruleType은 반드시 다음 중 하나:
-${VALID_RULE_TYPES.join(", ")}
+ruleType은 반드시 다음 중 하나 (각 패턴 설명 참고):
+- CHASE_SURGE: 급등 종목을 뒤늦게 시장가로 추격 매수하는 습관
+- NO_STOP_LOSS: 손절 기준 없이 진입하거나 손절을 계속 미루는 습관
+- REVENGE_TRADE: 손실 후 본전 심리로 같은 날 재진입하는 보복 매매
+- MARKET_ORDER_IMPULSE: 과열 구간에서 충동적으로 시장가 주문을 내는 습관
+- PREMARKET_GAP: 프리마켓 갭업 종목을 정규장 시작 직후 추격 매수하는 습관
+- AVERAGING_DOWN: 하락 중인 종목에 추가 매수(물타기)하는 습관
 
 규칙:
 - displayText는 반드시 "나는"으로 시작하는 한국어 한 문장
-- 입력 내용과 가장 가까운 ruleType 선택. 딱 맞는 게 없으면 NO_STOP_LOSS
+- 입력 내용이 위 패턴 중 어디에 해당하는지 먼저 판단하고, 그 패턴에 맞는 구체적인 조항 문장 작성
+- 딱 맞는 패턴이 없으면 NO_STOP_LOSS
+- displayText에 구체적인 수치나 조건이 있으면 포함 (예: "3일 연속 하락 시", "+10% 이상 급등 후")
 - params는 수치가 있으면 채우고 없으면 빈 객체
 - JSON만 반환, 설명 금지, 마크다운 코드블록 금지`;
 }
