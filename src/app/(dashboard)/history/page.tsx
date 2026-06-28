@@ -168,7 +168,7 @@ function TradeRow({ t, onDelete, onReport, generating }: { t: Trade; onDelete: (
           )}
           {!closed && (
             <button
-              onClick={() => router.push(`/order?symbol=${t.symbol}&market=${t.market}&name=${t.company || t.symbol}`)}
+              onClick={() => router.push(`/order?symbol=${t.symbol}&market=${t.market}&name=${encodeURIComponent(t.company || t.symbol)}&action=sell&qty=${t.entryQty}`)}
               className="inline-flex items-center gap-1 text-xs font-bold text-foreground border border-border px-2.5 py-1.5 hover:bg-muted transition-colors"
             >
               판매하기

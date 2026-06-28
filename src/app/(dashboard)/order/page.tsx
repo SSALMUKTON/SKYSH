@@ -47,6 +47,8 @@ function parseMoney(s: string): number | undefined {
 function TradePage() {
   const sp = useSearchParams();
   const initialSymbol = sp.get("symbol");
+  const initialAction = sp.get("action");
+  const initialQty = sp.get("qty");
 
   const [market, setMarket] = useState<Market>(asMarket(sp.get("market")));
   const [query, setQuery] = useState("");
@@ -139,7 +141,7 @@ function TradePage() {
         </div>
 
         {selected ? (
-          <TradeWorkspace key={`${market}:${selected.symbol}`} market={market} item={selected} />
+          <TradeWorkspace key={`${market}:${selected.symbol}`} market={market} item={selected} initialAction={initialAction} initialQty={initialQty} />
         ) : (
           <div className="bg-card border border-border min-h-[420px] flex flex-col items-center justify-center text-center p-10">
             <TrendingUp size={28} className="text-muted-foreground/40 mb-3" />
@@ -152,7 +154,7 @@ function TradePage() {
 }
 
 // ─── 종목 상세(차트/재무/뉴스) + 주문 패널 ──────────────────────────────
-function TradeWorkspace({ market, item }: { market: Market; item: UniverseItem }) {
+function TradeWorkspace({ market, item, initialAction, initialQty }: { market: Market; item: UniverseItem; initialAction?: string | null; initialQty?: string | null }) {
   const { symbol, name } = item;
   const displayName = name || symbol;
 
@@ -170,9 +172,9 @@ function TradeWorkspace({ market, item }: { market: Market; item: UniverseItem }
   // 주문 폼
   const [step, setStep] = useState<Step>("form");
   const [showModal, setShowModal] = useState(false);
-  const [side, setSide] = useState<SideLabel>("매수");
+  const [side, setSide] = useState<SideLabel>(initialAction === "sell" ? "매도" : "매수");
   const [priceType, setPriceType] = useState<PriceLabel>("시장가");
-  const [qty, setQty] = useState("3");
+  const [qty, setQty] = useState(initialQty || "3");
   const [limitPrice, setLimitPrice] = useState("");
   const [stopLoss, setStopLoss] = useState("");
   const [takeProfit, setTakeProfit] = useState("");
