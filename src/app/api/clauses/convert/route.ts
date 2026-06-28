@@ -34,7 +34,30 @@ export async function POST(req: NextRequest) {
       displayText: parsed.displayText,
       params: parsed.params ?? {},
     });
-  } catch {
-    return NextResponse.json({ error: "투자 원칙과 관련 없는 내용입니다." }, { status: 422 });
+  } catch (err) {
+    const error = err as Error;
+    console.error("[convert] Error:", error.message);
+
+    // API 키 관련 에러
+    if (error.message.includes("401") || error.message.includes("API key")) {
+      return NextResponse.json(
+        { error: "API 키가 유효하지 않습니다. 관리자에게 문의하세요." },
+        { status: 401 }
+      );
+    }
+
+    // 할당량 초과
+    if (error.message.includes("429") || error.message.includes("quota")) {
+      return NextResponse.json(
+        { error: "요청이 너무 많습니다. 잠시 후 다시 시도하세요." },
+        { status: 429 }
+      );
+    }
+
+    // JSON 파싱 실패 — 투자 원칙 아님
+    return NextResponse.json(
+      { error: "투자 원칙과 관련 없는 내용입니다." },
+      { status: 422 }
+    );
   }
 }
