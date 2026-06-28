@@ -1,0 +1,16 @@
+# --- core ---
+pandas>=2.2
+pyarrow>=15
+requests>=2.31
+
+# --- US ---
+yfinance>=0.2.40        # prices
+# Alpaca news / FRED / SEC / GDELT 는 requests 로 직접 호출 (별도 SDK 불필요)
+
+# --- KR ---
+pykrx>=1.0.45           # KRX 정보데이터시스템 (universe / 밸류에이션 PER·PBR·시총)
+lxml>=5.0               # DART corpCode.xml 파싱
+# KIS / DART / ECOS 는 requests 로 직접 호출
+
+# --- optional ---
+tqdm>=4.66              # 진행률 표시 (없어도 동작)
