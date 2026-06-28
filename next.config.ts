@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  serverExternalPackages: ["@prisma/client", "prisma"],
+  // Prisma(한글 경로 패치) + hyparquet(순수 ESM) 서버 전용 외부화
+  serverExternalPackages: ["@prisma/client", "prisma", "hyparquet", "hyparquet-compressors"],
   turbopack: {
     root: __dirname,
   },
