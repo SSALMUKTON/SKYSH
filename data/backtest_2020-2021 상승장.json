@@ -171,6 +171,350 @@
       "mdd": {},
       "market": "us",
       "period": "2020-01-01 ~ 2021-12-31"
+    },
+    {
+      "rule": "CHASE_SURGE",
+      "total_signals": 0,
+      "returns": {
+        "20": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "60": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "120": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        }
+      },
+      "recent_dates": [],
+      "market": "kr",
+      "period": "2020-01-01 ~ 2021-12-31"
+    },
+    {
+      "rule": "PREMARKET_GAP",
+      "total_signals": 0,
+      "returns": {
+        "20": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "60": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "120": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        }
+      },
+      "recent_dates": [],
+      "market": "kr",
+      "period": "2020-01-01 ~ 2021-12-31"
+    },
+    {
+      "rule": "REVENGE_TRADE",
+      "total_signals": 0,
+      "returns": {
+        "20": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "60": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "120": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        }
+      },
+      "recent_dates": [],
+      "market": "kr",
+      "period": "2020-01-01 ~ 2021-12-31"
+    },
+    {
+      "rule": "MARKET_ORDER_IMPULSE",
+      "total_signals": 0,
+      "returns": {
+        "20": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "60": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "120": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        }
+      },
+      "recent_dates": [],
+      "market": "kr",
+      "period": "2020-01-01 ~ 2021-12-31"
+    },
+    {
+      "rule": "AVERAGING_DOWN",
+      "total_signals": 0,
+      "returns": {
+        "20": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "60": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "120": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        }
+      },
+      "recent_dates": [],
+      "market": "kr",
+      "period": "2020-01-01 ~ 2021-12-31"
+    },
+    {
+      "rule": "NO_STOP_LOSS",
+      "total_signals": 0,
+      "mdd": {},
+      "market": "kr",
+      "period": "2020-01-01 ~ 2021-12-31"
+    },
+    {
+      "rule": "CHASE_SURGE",
+      "total_signals": 0,
+      "returns": {
+        "20": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "60": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "120": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        }
+      },
+      "recent_dates": [],
+      "market": "crypto",
+      "period": "2020-01-01 ~ 2021-12-31"
+    },
+    {
+      "rule": "PREMARKET_GAP",
+      "total_signals": 0,
+      "returns": {
+        "20": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "60": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "120": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        }
+      },
+      "recent_dates": [],
+      "market": "crypto",
+      "period": "2020-01-01 ~ 2021-12-31"
+    },
+    {
+      "rule": "REVENGE_TRADE",
+      "total_signals": 0,
+      "returns": {
+        "20": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "60": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "120": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        }
+      },
+      "recent_dates": [],
+      "market": "crypto",
+      "period": "2020-01-01 ~ 2021-12-31"
+    },
+    {
+      "rule": "MARKET_ORDER_IMPULSE",
+      "total_signals": 0,
+      "returns": {
+        "20": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "60": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "120": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        }
+      },
+      "recent_dates": [],
+      "market": "crypto",
+      "period": "2020-01-01 ~ 2021-12-31"
+    },
+    {
+      "rule": "AVERAGING_DOWN",
+      "total_signals": 0,
+      "returns": {
+        "20": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "60": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        },
+        "120": {
+          "mean": 0,
+          "median": 0,
+          "win_rate": 0,
+          "worst": 0,
+          "best": 0,
+          "n": 0
+        }
+      },
+      "recent_dates": [],
+      "market": "crypto",
+      "period": "2020-01-01 ~ 2021-12-31"
+    },
+    {
+      "rule": "NO_STOP_LOSS",
+      "total_signals": 0,
+      "mdd": {},
+      "market": "crypto",
+      "period": "2020-01-01 ~ 2021-12-31"
     }
   ],
   "horizons": [

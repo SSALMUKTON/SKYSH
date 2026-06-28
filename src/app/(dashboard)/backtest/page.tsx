@@ -247,27 +247,26 @@ export default function BacktestPage() {
                     </p>
                   </div>
                 ) : isNoStopLoss && result?.mdd ? (
-                  /* NO_STOP_LOSS — MDD */
+                  /* NO_STOP_LOSS — MDD (5칸 통일) */
                   <div className="border border-border bg-card p-5">
                     <p className="text-[10px] text-muted-foreground font-bold tracking-wider uppercase mb-4">
                       급등 진입 후 20일 내 최대 낙폭 분포
                     </p>
-                    <div className="grid grid-cols-2 gap-3 mb-4">
+                    <div className="grid grid-cols-5 gap-3 mb-5">
                       {[
-                        { label: "평균 MDD", value: `${result.mdd.mean}%` },
-                        { label: "중간값 MDD", value: `${result.mdd.median}%` },
-                        { label: "-5% 이상 낙폭 비율", value: `${result.mdd.pct_over_5}%` },
-                        { label: "-10% 이상 낙폭 비율", value: `${result.mdd.pct_over_10}%` },
-                      ].map(({ label, value }) => (
-                        <div key={label} className="border border-border p-4">
+                        { label: "평균 MDD", value: `${result.mdd.mean}%`, big: true },
+                        { label: "중간값 MDD", value: `${result.mdd.median}%`, big: false },
+                        { label: "-5% 이상", value: `${result.mdd.pct_over_5}%`, big: false },
+                        { label: "-10% 이상", value: `${result.mdd.pct_over_10}%`, big: false },
+                        { label: "최악 낙폭", value: `${result.mdd.worst}%`, big: false },
+                      ].map(({ label, value, big }) => (
+                        <div key={label} className="border border-border p-3">
                           <p className="text-[9px] text-muted-foreground uppercase font-bold tracking-wider mb-1">{label}</p>
-                          <p className="text-2xl font-black text-[#B83535]">{value}</p>
+                          <p className={`font-black text-[#B83535] ${big ? "text-2xl" : "text-base"}`}>{value}</p>
                         </div>
                       ))}
                     </div>
-                    <p className="text-xs text-muted-foreground">
-                      손절가 없이 급등 종목 진입 시 {result.mdd.pct_over_5}%의 경우 -5% 이상 낙폭을 경험합니다.
-                    </p>
+                    <p className="text-[10px] text-muted-foreground">{result.mdd.n.toLocaleString()}개 샘플 기준</p>
                   </div>
                 ) : stats ? (
                   /* 일반 룰 — 수익률 */
