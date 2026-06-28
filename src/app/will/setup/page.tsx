@@ -111,6 +111,10 @@ export default function SetupPage() {
   const [clauses, setClauses] = useState<ConvertedClause[]>([]);
   const [saving, setSaving] = useState(false);
   const [draftError, setDraftError] = useState<string | null>(null);
+  const [showAddForm, setShowAddForm] = useState(false);
+  const [addInputText, setAddInputText] = useState("");
+  const [addConverting, setAddConverting] = useState(false);
+  const [addError, setAddError] = useState<string | null>(null);
 
   function answerQuiz(risky: boolean) {
     const next = { ...quizAnswers, [QUESTIONS[quizCurrent].id]: risky };
@@ -197,6 +201,36 @@ export default function SetupPage() {
     setClauses((prev) =>
       prev.map((c, idx) => (idx === i ? { ...c, skipped: !c.skipped } : c))
     );
+  }
+
+  async function addCustomClause() {
+    if (!addInputText.trim()) return;
+    setAddConverting(true);
+    setAddError(null);
+    const res = await fetch("/api/clauses/convert", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: addInputText.trim() }),
+    });
+    const data = await res.json();
+    setAddConverting(false);
+
+    if (data.error) {
+      setAddError(data.error);
+      return;
+    }
+
+    setClauses((prev) => [
+      ...prev,
+      {
+        ruleType: data.ruleType,
+        displayText: data.displayText,
+        params: data.params ?? {},
+        source: "draft",
+      },
+    ]);
+    setAddInputText("");
+    setShowAddForm(false);
   }
 
   async function handleFinalConfirm() {
@@ -370,6 +404,36 @@ export default function SetupPage() {
             </p>
           </div>
 
+          {/* 직접 추가 폼 */}
+          {showAddForm && (
+            <div className="mb-4 border border-[#C9A227]/30 bg-[#FDF8EC] p-4 space-y-2">
+              <div className="flex gap-2">
+                <input
+                  value={addInputText}
+                  onChange={(e) => { setAddInputText(e.target.value); setAddError(null); }}
+                  onKeyDown={(e) => e.key === "Enter" && addCustomClause()}
+                  placeholder="나쁜 투자 습관을 입력하세요"
+                  className="flex-1 border border-border bg-card px-3 py-2 text-sm text-foreground focus:outline-none"
+                />
+                <button
+                  onClick={addCustomClause}
+                  disabled={addConverting || !addInputText.trim()}
+                  className="px-4 py-2 text-xs font-bold bg-foreground text-background hover:opacity-90 disabled:opacity-40 flex items-center gap-1"
+                >
+                  {addConverting ? <Loader2 size={12} className="animate-spin" /> : null}
+                  {addConverting ? "변환 중" : "추가"}
+                </button>
+              </div>
+              {addError && <p className="text-xs text-[#B83535]">{addError}</p>}
+              <button
+                onClick={() => { setShowAddForm(false); setAddInputText(""); setAddError(null); }}
+                className="w-full text-xs text-muted-foreground hover:text-foreground py-1"
+              >
+                닫기
+              </button>
+            </div>
+          )}
+
           <div className="space-y-2 mb-6">
             {clauses.map((c, i) => (
               <div
@@ -420,13 +484,23 @@ export default function SetupPage() {
             ))}
           </div>
 
-          <div className="flex items-center justify-between">
-            <button
-              onClick={() => setStep("choose")}
-              className="text-xs text-muted-foreground hover:text-foreground"
-            >
-              ← 다시 선택
-            </button>
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex gap-2">
+              <button
+                onClick={() => setStep("choose")}
+                className="text-xs text-muted-foreground hover:text-foreground"
+              >
+                ← 다시 선택
+              </button>
+              {!showAddForm && (
+                <button
+                  onClick={() => setShowAddForm(true)}
+                  className="text-xs text-[#C9A227] hover:text-[#7A5F0E] font-bold"
+                >
+                  + 직접 추가
+                </button>
+              )}
+            </div>
             <button
               onClick={handleFinalConfirm}
               disabled={saving || activeCount === 0}
