@@ -1,0 +1,1522 @@
+[
+  {
+    "form": "11-K",
+    "filingDate": "2026-06-24",
+    "reportDate": "2026-06-24",
+    "accessionNumber": "0000014693-26-000031",
+    "primaryDocument": "bfb-20260624.htm",
+    "primaryDocDescription": "11-K",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469326000031/bfb-20260624.htm"
+  },
+  {
+    "form": "11-K",
+    "filingDate": "2026-06-24",
+    "reportDate": "2026-06-24",
+    "accessionNumber": "0000014693-26-000030",
+    "primaryDocument": "bfb-20260624.htm",
+    "primaryDocDescription": "11-K",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469326000030/bfb-20260624.htm"
+  },
+  {
+    "form": "DEF 14A",
+    "filingDate": "2026-06-18",
+    "reportDate": "2026-07-23",
+    "accessionNumber": "0001193125-26-275853",
+    "primaryDocument": "d39207ddef14a.htm",
+    "primaryDocDescription": "DEF 14A",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000119312526275853/d39207ddef14a.htm"
+  },
+  {
+    "form": "ARS",
+    "filingDate": "2026-06-18",
+    "reportDate": "2026-04-30",
+    "accessionNumber": "0000014693-26-000027",
+    "primaryDocument": "bfb-010_2026integratedarxv.pdf",
+    "primaryDocDescription": "ARS",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469326000027/bfb-010_2026integratedarxv.pdf"
+  },
+  {
+    "form": "10-K",
+    "filingDate": "2026-06-12",
+    "reportDate": "2026-04-30",
+    "accessionNumber": "0000014693-26-000024",
+    "primaryDocument": "bfb-20260430.htm",
+    "primaryDocDescription": "10-K",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469326000024/bfb-20260430.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2026-06-04",
+    "reportDate": "2026-06-04",
+    "accessionNumber": "0000014693-26-000018",
+    "primaryDocument": "bfb-20260604.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469326000018/bfb-20260604.htm"
+  },
+  {
+    "form": "SCHEDULE 13D/A",
+    "filingDate": "2026-06-03",
+    "reportDate": "",
+    "accessionNumber": "0001193125-26-255001",
+    "primaryDocument": "xslSCHEDULE_13D_X02/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000119312526255001/xslSCHEDULE_13D_X02/primary_doc.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-29",
+    "reportDate": "2026-05-27",
+    "accessionNumber": "0001719142-26-000002",
+    "primaryDocument": "xslF345X06/wk-form4_1780090212.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000171914226000002/xslF345X06/wk-form4_1780090212.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-29",
+    "reportDate": "2026-05-27",
+    "accessionNumber": "0002012793-26-000002",
+    "primaryDocument": "xslF345X06/wk-form4_1780090036.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000201279326000002/xslF345X06/wk-form4_1780090036.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-29",
+    "reportDate": "2026-05-27",
+    "accessionNumber": "0002053121-26-000002",
+    "primaryDocument": "xslF345X06/wk-form4_1780089792.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000205312126000002/xslF345X06/wk-form4_1780089792.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-29",
+    "reportDate": "2026-05-27",
+    "accessionNumber": "0002029882-26-000002",
+    "primaryDocument": "xslF345X06/wk-form4_1780089527.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000202988226000002/xslF345X06/wk-form4_1780089527.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-29",
+    "reportDate": "2026-05-27",
+    "accessionNumber": "0001423209-26-000004",
+    "primaryDocument": "xslF345X06/wk-form4_1780089339.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000142320926000004/xslF345X06/wk-form4_1780089339.xml"
+  },
+  {
+    "form": "4/A",
+    "filingDate": "2026-05-29",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0001423209-26-000002",
+    "primaryDocument": "xslF345X06/wk-form4a_1780089192.xml",
+    "primaryDocDescription": "FORM 4/A",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000142320926000002/xslF345X06/wk-form4a_1780089192.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-29",
+    "reportDate": "2026-05-27",
+    "accessionNumber": "0002012427-26-000002",
+    "primaryDocument": "xslF345X06/wk-form4_1780089017.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000201242726000002/xslF345X06/wk-form4_1780089017.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-29",
+    "reportDate": "2026-05-27",
+    "accessionNumber": "0001934972-26-000002",
+    "primaryDocument": "xslF345X06/wk-form4_1780088777.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000193497226000002/xslF345X06/wk-form4_1780088777.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-29",
+    "reportDate": "2026-05-27",
+    "accessionNumber": "0001938704-26-000002",
+    "primaryDocument": "xslF345X06/wk-form4_1780088580.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000193870426000002/xslF345X06/wk-form4_1780088580.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-29",
+    "reportDate": "2026-05-27",
+    "accessionNumber": "0001572783-26-000004",
+    "primaryDocument": "xslF345X06/wk-form4_1780088362.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000157278326000004/xslF345X06/wk-form4_1780088362.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-29",
+    "reportDate": "2026-05-27",
+    "accessionNumber": "0001871904-26-000002",
+    "primaryDocument": "xslF345X06/wk-form4_1780088061.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000187190426000002/xslF345X06/wk-form4_1780088061.xml"
+  },
+  {
+    "form": "SCHEDULE 13G/A",
+    "filingDate": "2026-05-06",
+    "reportDate": "",
+    "accessionNumber": "0000315066-26-001133",
+    "primaryDocument": "xslSCHEDULE_13G_X02/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000031506626001133/xslSCHEDULE_13G_X02/primary_doc.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-05",
+    "reportDate": "2026-04-30",
+    "accessionNumber": "0002061480-26-000002",
+    "primaryDocument": "xslF345X06/wk-form4_1778013874.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000206148026000002/xslF345X06/wk-form4_1778013874.xml"
+  },
+  {
+    "form": "SCHEDULE 13G",
+    "filingDate": "2026-04-29",
+    "reportDate": "",
+    "accessionNumber": "0002100119-26-000267",
+    "primaryDocument": "xslSCHEDULE_13G_X02/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000210011926000267/xslSCHEDULE_13G_X02/primary_doc.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2026-04-28",
+    "reportDate": "2026-04-28",
+    "accessionNumber": "0000014693-26-000016",
+    "primaryDocument": "bfb-20260428.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469326000016/bfb-20260428.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-04-24",
+    "reportDate": "2026-04-23",
+    "accessionNumber": "0001642689-26-000005",
+    "primaryDocument": "xslF345X06/wk-form4_1777064799.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000164268926000005/xslF345X06/wk-form4_1777064799.xml"
+  },
+  {
+    "form": "3",
+    "filingDate": "2026-03-31",
+    "reportDate": "2026-03-31",
+    "accessionNumber": "0001642689-26-000003",
+    "primaryDocument": "xslF345X06/wk-form3_1774989324.xml",
+    "primaryDocDescription": "FORM 3",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000164268926000003/xslF345X06/wk-form3_1774989324.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2026-03-27",
+    "reportDate": "2026-03-26",
+    "accessionNumber": "0000014693-26-000014",
+    "primaryDocument": "bfb-20260326.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469326000014/bfb-20260326.htm"
+  },
+  {
+    "form": "SCHEDULE 13G/A",
+    "filingDate": "2026-03-26",
+    "reportDate": "",
+    "accessionNumber": "0000102909-26-000851",
+    "primaryDocument": "xslSCHEDULE_13G_X02/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000010290926000851/xslSCHEDULE_13G_X02/primary_doc.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2026-03-16",
+    "reportDate": "2026-03-16",
+    "accessionNumber": "0000014693-26-000012",
+    "primaryDocument": "bfb-20260316.htm",
+    "primaryDocDescription": "8-K",
+    "items": "5.02,7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469326000012/bfb-20260316.htm"
+  },
+  {
+    "form": "S-3ASR",
+    "filingDate": "2026-03-09",
+    "reportDate": "",
+    "accessionNumber": "0001193125-26-098535",
+    "primaryDocument": "d75009ds3asr.htm",
+    "primaryDocDescription": "S-3ASR",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000119312526098535/d75009ds3asr.htm"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2026-03-04",
+    "reportDate": "2026-01-31",
+    "accessionNumber": "0000014693-26-000010",
+    "primaryDocument": "bfb-20260131.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469326000010/bfb-20260131.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2026-03-04",
+    "reportDate": "2026-03-04",
+    "accessionNumber": "0000014693-26-000005",
+    "primaryDocument": "bfb-20260304.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469326000005/bfb-20260304.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-13",
+    "reportDate": "2026-02-12",
+    "accessionNumber": "0001572783-26-000002",
+    "primaryDocument": "xslF345X05/wk-form4_1771027332.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000157278326000002/xslF345X05/wk-form4_1771027332.xml"
+  },
+  {
+    "form": "SCHEDULE 13G/A",
+    "filingDate": "2026-02-05",
+    "reportDate": "",
+    "accessionNumber": "0000315066-26-000399",
+    "primaryDocument": "xslSCHEDULE_13G_X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000031506626000399/xslSCHEDULE_13G_X01/primary_doc.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-12-16",
+    "reportDate": "2025-12-12",
+    "accessionNumber": "0001572783-25-000009",
+    "primaryDocument": "xslF345X05/wk-form4_1765921289.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000157278325000009/xslF345X05/wk-form4_1765921289.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-12-05",
+    "reportDate": "2025-12-04",
+    "accessionNumber": "0001572783-25-000007",
+    "primaryDocument": "xslF345X05/wk-form4_1764979365.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000157278325000007/xslF345X05/wk-form4_1764979365.xml"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2025-12-04",
+    "reportDate": "2025-10-31",
+    "accessionNumber": "0000014693-25-000112",
+    "primaryDocument": "bfb-20251031.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000112/bfb-20251031.htm"
+  },
+  {
+    "form": "144",
+    "filingDate": "2025-12-04",
+    "reportDate": "",
+    "accessionNumber": "0001974078-25-000455",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000197407825000455/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "144",
+    "filingDate": "2025-12-04",
+    "reportDate": "",
+    "accessionNumber": "0001974078-25-000454",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000197407825000454/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-12-04",
+    "reportDate": "2025-12-04",
+    "accessionNumber": "0000014693-25-000107",
+    "primaryDocument": "bfb-20251204.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000107/bfb-20251204.htm"
+  },
+  {
+    "form": "SCHEDULE 13G",
+    "filingDate": "2025-11-05",
+    "reportDate": "",
+    "accessionNumber": "0000315066-25-002717",
+    "primaryDocument": "xslSCHEDULE_13G_X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000031506625002717/xslSCHEDULE_13G_X01/primary_doc.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-10-31",
+    "reportDate": "2025-10-31",
+    "accessionNumber": "0000014693-25-000101",
+    "primaryDocument": "bfb-20251031.htm",
+    "primaryDocDescription": "8-K",
+    "items": "5.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000101/bfb-20251031.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-10-09",
+    "reportDate": "2025-10-08",
+    "accessionNumber": "0001423209-25-000006",
+    "primaryDocument": "xslF345X05/wk-form4_1760042490.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000142320925000006/xslF345X05/wk-form4_1760042490.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-10-02",
+    "reportDate": "2025-10-02",
+    "accessionNumber": "0000014693-25-000098",
+    "primaryDocument": "bfb-20251002.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,8.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000098/bfb-20251002.htm"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2025-08-28",
+    "reportDate": "2025-07-31",
+    "accessionNumber": "0000014693-25-000096",
+    "primaryDocument": "bfb-20250731.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000096/bfb-20250731.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-08-28",
+    "reportDate": "2025-08-28",
+    "accessionNumber": "0000014693-25-000093",
+    "primaryDocument": "bfb-20250828.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000093/bfb-20250828.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-08-25",
+    "reportDate": "2025-08-21",
+    "accessionNumber": "0000014693-25-000088",
+    "primaryDocument": "bfb-20250821.htm",
+    "primaryDocDescription": "8-K",
+    "items": "5.02,7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000088/bfb-20250821.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-23",
+    "accessionNumber": "0001572783-25-000005",
+    "primaryDocument": "xslF345X05/wk-form4_1753477333.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000157278325000005/xslF345X05/wk-form4_1753477333.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0002012793-25-000005",
+    "primaryDocument": "xslF345X05/wk-form4_1753477236.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000201279325000005/xslF345X05/wk-form4_1753477236.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0001871903-25-000004",
+    "primaryDocument": "xslF345X05/wk-form4_1753477118.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000187190325000004/xslF345X05/wk-form4_1753477118.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0002053121-25-000004",
+    "primaryDocument": "xslF345X05/wk-form4_1753477029.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000205312125000004/xslF345X05/wk-form4_1753477029.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0001719142-25-000004",
+    "primaryDocument": "xslF345X05/wk-form4_1753476961.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000171914225000004/xslF345X05/wk-form4_1753476961.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0001871904-25-000004",
+    "primaryDocument": "xslF345X05/wk-form4_1753476870.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000187190425000004/xslF345X05/wk-form4_1753476870.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0002029882-25-000004",
+    "primaryDocument": "xslF345X05/wk-form4_1753476793.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000202988225000004/xslF345X05/wk-form4_1753476793.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0002012427-25-000004",
+    "primaryDocument": "xslF345X05/wk-form4_1753476714.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000201242725000004/xslF345X05/wk-form4_1753476714.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0001934972-25-000004",
+    "primaryDocument": "xslF345X05/wk-form4_1753476613.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000193497225000004/xslF345X05/wk-form4_1753476613.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0001938704-25-000004",
+    "primaryDocument": "xslF345X05/wk-form4_1753476516.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000193870425000004/xslF345X05/wk-form4_1753476516.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0002061480-25-000004",
+    "primaryDocument": "xslF345X05/wk-form4_1753476424.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000206148025000004/xslF345X05/wk-form4_1753476424.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0001423209-25-000004",
+    "primaryDocument": "xslF345X05/wk-form4_1753476279.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000142320925000004/xslF345X05/wk-form4_1753476279.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0000014693-25-000085",
+    "primaryDocument": "xslF345X05/wk-form4_1753476144.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000085/xslF345X05/wk-form4_1753476144.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0000014693-25-000083",
+    "primaryDocument": "xslF345X05/wk-form4_1753475986.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000083/xslF345X05/wk-form4_1753475986.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0001421727-25-000006",
+    "primaryDocument": "xslF345X05/wk-form4_1753475802.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000142172725000006/xslF345X05/wk-form4_1753475802.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0001985370-25-000004",
+    "primaryDocument": "xslF345X05/wk-form4_1753475603.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000198537025000004/xslF345X05/wk-form4_1753475603.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0000014693-25-000081",
+    "primaryDocument": "xslF345X05/wk-form4_1753475448.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000081/xslF345X05/wk-form4_1753475448.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0000014693-25-000079",
+    "primaryDocument": "xslF345X05/wk-form4_1753475303.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000079/xslF345X05/wk-form4_1753475303.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0000014693-25-000077",
+    "primaryDocument": "xslF345X05/wk-form4_1753475202.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000077/xslF345X05/wk-form4_1753475202.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0000014693-25-000075",
+    "primaryDocument": "xslF345X05/wk-form4_1753475083.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000075/xslF345X05/wk-form4_1753475083.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-07-24",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0000014693-25-000073",
+    "primaryDocument": "bfb-20250724.htm",
+    "primaryDocDescription": "8-K",
+    "items": "5.07,7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000073/bfb-20250724.htm"
+  },
+  {
+    "form": "144",
+    "filingDate": "2025-07-23",
+    "reportDate": "",
+    "accessionNumber": "0001974078-25-000222",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000197407825000222/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-17",
+    "reportDate": "2025-07-15",
+    "accessionNumber": "0002030083-25-000009",
+    "primaryDocument": "xslF345X05/wk-form4_1752786521.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000203008325000009/xslF345X05/wk-form4_1752786521.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-07-10",
+    "reportDate": "2025-07-09",
+    "accessionNumber": "0001421727-25-000004",
+    "primaryDocument": "xslF345X05/wk-form4_1752179832.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000142172725000004/xslF345X05/wk-form4_1752179832.xml"
+  },
+  {
+    "form": "11-K",
+    "filingDate": "2025-06-25",
+    "reportDate": "2025-06-25",
+    "accessionNumber": "0000014693-25-000070",
+    "primaryDocument": "a11-kplan0162025.htm",
+    "primaryDocDescription": "11-K",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000070/a11-kplan0162025.htm"
+  },
+  {
+    "form": "11-K",
+    "filingDate": "2025-06-25",
+    "reportDate": "2025-06-25",
+    "accessionNumber": "0000014693-25-000069",
+    "primaryDocument": "a11-kplan0062025.htm",
+    "primaryDocDescription": "11-K",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000069/a11-kplan0062025.htm"
+  },
+  {
+    "form": "DEF 14A",
+    "filingDate": "2025-06-20",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0001193125-25-143663",
+    "primaryDocument": "d913060ddef14a.htm",
+    "primaryDocDescription": "DEF 14A",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000119312525143663/d913060ddef14a.htm"
+  },
+  {
+    "form": "ARS",
+    "filingDate": "2025-06-20",
+    "reportDate": "2025-04-30",
+    "accessionNumber": "0000014693-25-000066",
+    "primaryDocument": "bfb-2025ir_v8xadaxsecx.pdf",
+    "primaryDocDescription": "ARS",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000066/bfb-2025ir_v8xadaxsecx.pdf"
+  },
+  {
+    "form": "10-K",
+    "filingDate": "2025-06-13",
+    "reportDate": "2025-04-30",
+    "accessionNumber": "0000014693-25-000062",
+    "primaryDocument": "bfb-20250430.htm",
+    "primaryDocDescription": "10-K",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000062/bfb-20250430.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-06-05",
+    "reportDate": "2025-06-05",
+    "accessionNumber": "0000014693-25-000055",
+    "primaryDocument": "bfb-20250605.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000055/bfb-20250605.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-06-03",
+    "reportDate": "2025-06-02",
+    "accessionNumber": "0000014693-25-000053",
+    "primaryDocument": "xslF345X05/wk-form4_1748985106.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000053/xslF345X05/wk-form4_1748985106.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-06-03",
+    "reportDate": "2025-06-02",
+    "accessionNumber": "0000014693-25-000051",
+    "primaryDocument": "xslF345X05/wk-form4_1748984993.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000051/xslF345X05/wk-form4_1748984993.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-06-03",
+    "reportDate": "2025-06-02",
+    "accessionNumber": "0000014693-25-000049",
+    "primaryDocument": "xslF345X05/wk-form4_1748984894.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000049/xslF345X05/wk-form4_1748984894.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-06-03",
+    "reportDate": "2025-06-02",
+    "accessionNumber": "0000014693-25-000047",
+    "primaryDocument": "xslF345X05/wk-form4_1748984776.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000047/xslF345X05/wk-form4_1748984776.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-06-03",
+    "reportDate": "2025-06-02",
+    "accessionNumber": "0000014693-25-000045",
+    "primaryDocument": "xslF345X05/wk-form4_1748984651.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000045/xslF345X05/wk-form4_1748984651.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-06-03",
+    "reportDate": "2025-06-02",
+    "accessionNumber": "0000014693-25-000043",
+    "primaryDocument": "xslF345X05/wk-form4_1748984537.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000043/xslF345X05/wk-form4_1748984537.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-06-03",
+    "reportDate": "2025-06-02",
+    "accessionNumber": "0000014693-25-000041",
+    "primaryDocument": "xslF345X05/wk-form4_1748984383.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000041/xslF345X05/wk-form4_1748984383.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-06-03",
+    "reportDate": "2025-06-02",
+    "accessionNumber": "0000014693-25-000039",
+    "primaryDocument": "xslF345X05/wk-form4_1748984282.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000039/xslF345X05/wk-form4_1748984282.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-06-03",
+    "reportDate": "2025-06-02",
+    "accessionNumber": "0000014693-25-000037",
+    "primaryDocument": "xslF345X05/wk-form4_1748984188.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000037/xslF345X05/wk-form4_1748984188.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-06-03",
+    "reportDate": "2025-06-02",
+    "accessionNumber": "0000014693-25-000035",
+    "primaryDocument": "xslF345X05/wk-form4_1748984078.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000035/xslF345X05/wk-form4_1748984078.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-06-03",
+    "reportDate": "2025-06-02",
+    "accessionNumber": "0000014693-25-000033",
+    "primaryDocument": "xslF345X05/wk-form4_1748983976.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000033/xslF345X05/wk-form4_1748983976.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-06-03",
+    "reportDate": "2025-06-02",
+    "accessionNumber": "0000014693-25-000031",
+    "primaryDocument": "xslF345X05/wk-form4_1748983873.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000031/xslF345X05/wk-form4_1748983873.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-06-03",
+    "reportDate": "2025-01-08",
+    "accessionNumber": "0002030083-25-000005",
+    "primaryDocument": "xslF345X05/wk-form4_1748983480.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000203008325000005/xslF345X05/wk-form4_1748983480.xml"
+  },
+  {
+    "form": "3",
+    "filingDate": "2025-05-07",
+    "reportDate": "2025-05-01",
+    "accessionNumber": "0000014693-25-000029",
+    "primaryDocument": "xslF345X02/wk-form3_1746650673.xml",
+    "primaryDocDescription": "FORM 3",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000029/xslF345X02/wk-form3_1746650673.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-04-28",
+    "reportDate": "2025-04-25",
+    "accessionNumber": "0000014693-25-000027",
+    "primaryDocument": "bfb-20250425.htm",
+    "primaryDocDescription": "8-K",
+    "items": "5.02",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000027/bfb-20250425.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-04-03",
+    "reportDate": "2025-04-01",
+    "accessionNumber": "0000014693-25-000024",
+    "primaryDocument": "bfb-20250401.htm",
+    "primaryDocDescription": "8-K",
+    "items": "1.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000024/bfb-20250401.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-03-25",
+    "reportDate": "2025-03-20",
+    "accessionNumber": "0000014693-25-000022",
+    "primaryDocument": "xslF345X05/wk-form4_1742939919.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000022/xslF345X05/wk-form4_1742939919.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-03-12",
+    "reportDate": "2025-03-11",
+    "accessionNumber": "0000014693-25-000020",
+    "primaryDocument": "xslF345X05/wk-form4_1741811857.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000020/xslF345X05/wk-form4_1741811857.xml"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2025-03-05",
+    "reportDate": "2025-01-31",
+    "accessionNumber": "0000014693-25-000018",
+    "primaryDocument": "bfb-20250131.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000018/bfb-20250131.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-03-05",
+    "reportDate": "2025-03-05",
+    "accessionNumber": "0000014693-25-000015",
+    "primaryDocument": "bfb-20250305.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000015/bfb-20250305.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-01-31",
+    "reportDate": "2025-01-30",
+    "accessionNumber": "0000014693-25-000006",
+    "primaryDocument": "xslF345X05/wk-form4_1738359404.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000006/xslF345X05/wk-form4_1738359404.xml"
+  },
+  {
+    "form": "3",
+    "filingDate": "2025-01-24",
+    "reportDate": "2025-01-14",
+    "accessionNumber": "0000014693-25-000004",
+    "primaryDocument": "xslF345X02/wk-form3_1737754675.xml",
+    "primaryDocDescription": "FORM 3",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000004/xslF345X02/wk-form3_1737754675.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-01-14",
+    "reportDate": "2025-01-13",
+    "accessionNumber": "0000014693-25-000002",
+    "primaryDocument": "bfb-20250113.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.05",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469325000002/bfb-20250113.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-12-19",
+    "reportDate": "2024-12-16",
+    "accessionNumber": "0000014693-24-000178",
+    "primaryDocument": "bfb-20241216.htm",
+    "primaryDocDescription": "8-K",
+    "items": "5.02",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000178/bfb-20241216.htm"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2024-12-05",
+    "reportDate": "2024-10-31",
+    "accessionNumber": "0000014693-24-000175",
+    "primaryDocument": "bfb-20241031.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000175/bfb-20241031.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-12-05",
+    "reportDate": "2024-12-05",
+    "accessionNumber": "0000014693-24-000170",
+    "primaryDocument": "bfb-20241205.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000170/bfb-20241205.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-11-18",
+    "reportDate": "2024-11-15",
+    "accessionNumber": "0000014693-24-000164",
+    "primaryDocument": "xslF345X05/wk-form4_1731973286.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000164/xslF345X05/wk-form4_1731973286.xml"
+  },
+  {
+    "form": "3/A",
+    "filingDate": "2024-11-18",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000163",
+    "primaryDocument": "xslF345X02/wk-form3a_1731973264.xml",
+    "primaryDocDescription": "FORM 3/A",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000163/xslF345X02/wk-form3a_1731973264.xml"
+  },
+  {
+    "form": "SC 13G/A",
+    "filingDate": "2024-11-14",
+    "reportDate": "",
+    "accessionNumber": "0001520023-24-000050",
+    "primaryDocument": "fundsmith_brown2024.txt",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000152002324000050/fundsmith_brown2024.txt"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-11-04",
+    "reportDate": "2024-10-31",
+    "accessionNumber": "0000014693-24-000160",
+    "primaryDocument": "xslF345X05/wk-form4_1730760333.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000160/xslF345X05/wk-form4_1730760333.xml"
+  },
+  {
+    "form": "SC 13D/A",
+    "filingDate": "2024-10-08",
+    "reportDate": "",
+    "accessionNumber": "0000014693-24-000158",
+    "primaryDocument": "b-fschedule13damendmentno1.htm",
+    "primaryDocDescription": "SC 13D/A",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000158/b-fschedule13damendmentno1.htm"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2024-08-29",
+    "reportDate": "2024-07-31",
+    "accessionNumber": "0000014693-24-000156",
+    "primaryDocument": "bfb-20240731.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000156/bfb-20240731.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-08-29",
+    "reportDate": "2024-08-29",
+    "accessionNumber": "0000014693-24-000152",
+    "primaryDocument": "bfb-20240829.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000152/bfb-20240829.htm"
+  },
+  {
+    "form": "3",
+    "filingDate": "2024-08-08",
+    "reportDate": "2024-08-01",
+    "accessionNumber": "0000014693-24-000148",
+    "primaryDocument": "xslF345X02/wk-form3_1723155683.xml",
+    "primaryDocDescription": "FORM 3",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000148/xslF345X02/wk-form3_1723155683.xml"
+  },
+  {
+    "form": "3",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000146",
+    "primaryDocument": "xslF345X02/wk-form3_1722284673.xml",
+    "primaryDocDescription": "FORM 3",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000146/xslF345X02/wk-form3_1722284673.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000145",
+    "primaryDocument": "xslF345X05/wk-form4_1722284625.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000145/xslF345X05/wk-form4_1722284625.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000144",
+    "primaryDocument": "xslF345X05/wk-form4_1722284591.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000144/xslF345X05/wk-form4_1722284591.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000143",
+    "primaryDocument": "xslF345X05/wk-form4_1722284545.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000143/xslF345X05/wk-form4_1722284545.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000142",
+    "primaryDocument": "xslF345X05/wk-form4_1722284504.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000142/xslF345X05/wk-form4_1722284504.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000141",
+    "primaryDocument": "xslF345X05/wk-form4_1722284464.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000141/xslF345X05/wk-form4_1722284464.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000140",
+    "primaryDocument": "xslF345X05/wk-form4_1722284432.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000140/xslF345X05/wk-form4_1722284432.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000139",
+    "primaryDocument": "xslF345X05/wk-form4_1722284379.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000139/xslF345X05/wk-form4_1722284379.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000138",
+    "primaryDocument": "xslF345X05/wk-form4_1722284332.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000138/xslF345X05/wk-form4_1722284332.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000137",
+    "primaryDocument": "xslF345X05/wk-form4_1722284297.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000137/xslF345X05/wk-form4_1722284297.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000136",
+    "primaryDocument": "xslF345X05/wk-form4_1722284214.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000136/xslF345X05/wk-form4_1722284214.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000135",
+    "primaryDocument": "xslF345X05/wk-form4_1722284170.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000135/xslF345X05/wk-form4_1722284170.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000134",
+    "primaryDocument": "xslF345X05/wk-form4_1722284114.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000134/xslF345X05/wk-form4_1722284114.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000133",
+    "primaryDocument": "xslF345X05/wk-form4_1722284070.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000133/xslF345X05/wk-form4_1722284070.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000132",
+    "primaryDocument": "xslF345X05/wk-form4_1722284042.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000132/xslF345X05/wk-form4_1722284042.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000131",
+    "primaryDocument": "xslF345X05/wk-form4_1722284001.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000131/xslF345X05/wk-form4_1722284001.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000130",
+    "primaryDocument": "xslF345X05/wk-form4_1722283905.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000130/xslF345X05/wk-form4_1722283905.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000129",
+    "primaryDocument": "xslF345X05/wk-form4_1722283853.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000129/xslF345X05/wk-form4_1722283853.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000128",
+    "primaryDocument": "xslF345X05/wk-form4_1722283813.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000128/xslF345X05/wk-form4_1722283813.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000127",
+    "primaryDocument": "xslF345X05/wk-form4_1722283777.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000127/xslF345X05/wk-form4_1722283777.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-29",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000126",
+    "primaryDocument": "xslF345X05/wk-form4_1722283742.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000126/xslF345X05/wk-form4_1722283742.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-07-25",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000014693-24-000104",
+    "primaryDocument": "bfb-20240725.htm",
+    "primaryDocDescription": "8-K",
+    "items": "5.07,7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000104/bfb-20240725.htm"
+  },
+  {
+    "form": "3",
+    "filingDate": "2024-07-11",
+    "reportDate": "2024-07-01",
+    "accessionNumber": "0000014693-24-000102",
+    "primaryDocument": "xslF345X02/wk-form3_1720736354.xml",
+    "primaryDocDescription": "FORM 3",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000102/xslF345X02/wk-form3_1720736354.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-07-05",
+    "reportDate": "2024-07-02",
+    "accessionNumber": "0000014693-24-000100",
+    "primaryDocument": "xslF345X05/wk-form4_1720211332.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000100/xslF345X05/wk-form4_1720211332.xml"
+  },
+  {
+    "form": "11-K",
+    "filingDate": "2024-06-25",
+    "reportDate": "2024-06-25",
+    "accessionNumber": "0000014693-24-000098",
+    "primaryDocument": "a11-kplan0062024.htm",
+    "primaryDocDescription": "11-K",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000098/a11-kplan0062024.htm"
+  },
+  {
+    "form": "11-K",
+    "filingDate": "2024-06-25",
+    "reportDate": "2024-06-25",
+    "accessionNumber": "0000014693-24-000097",
+    "primaryDocument": "a11-kplan0162024.htm",
+    "primaryDocDescription": "11-K",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000097/a11-kplan0162024.htm"
+  },
+  {
+    "form": "DEF 14A",
+    "filingDate": "2024-06-21",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0001193125-24-165706",
+    "primaryDocument": "d657975ddef14a.htm",
+    "primaryDocDescription": "DEF 14A",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000119312524165706/d657975ddef14a.htm"
+  },
+  {
+    "form": "ARS",
+    "filingDate": "2024-06-20",
+    "reportDate": "2024-04-30",
+    "accessionNumber": "0000014693-24-000094",
+    "primaryDocument": "bf-2024irsec.pdf",
+    "primaryDocDescription": "ARS",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000094/bf-2024irsec.pdf"
+  },
+  {
+    "form": "10-K",
+    "filingDate": "2024-06-14",
+    "reportDate": "2024-04-30",
+    "accessionNumber": "0000014693-24-000086",
+    "primaryDocument": "bfb-20240430.htm",
+    "primaryDocDescription": "10-K",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000086/bfb-20240430.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-06-05",
+    "reportDate": "2023-07-06",
+    "accessionNumber": "0000014693-24-000079",
+    "primaryDocument": "xslF345X05/wk-form4_1717625737.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000079/xslF345X05/wk-form4_1717625737.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-06-05",
+    "reportDate": "2024-06-03",
+    "accessionNumber": "0000014693-24-000077",
+    "primaryDocument": "xslF345X05/wk-form4_1717621853.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000077/xslF345X05/wk-form4_1717621853.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-06-05",
+    "reportDate": "2024-06-03",
+    "accessionNumber": "0000014693-24-000076",
+    "primaryDocument": "xslF345X05/wk-form4_1717621821.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000076/xslF345X05/wk-form4_1717621821.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-06-05",
+    "reportDate": "2024-06-03",
+    "accessionNumber": "0000014693-24-000075",
+    "primaryDocument": "xslF345X05/wk-form4_1717621721.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000075/xslF345X05/wk-form4_1717621721.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-06-05",
+    "reportDate": "2024-06-03",
+    "accessionNumber": "0000014693-24-000074",
+    "primaryDocument": "xslF345X05/wk-form4_1717621660.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000074/xslF345X05/wk-form4_1717621660.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-06-05",
+    "reportDate": "2024-06-03",
+    "accessionNumber": "0000014693-24-000073",
+    "primaryDocument": "xslF345X05/wk-form4_1717621630.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000073/xslF345X05/wk-form4_1717621630.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-06-05",
+    "reportDate": "2024-06-03",
+    "accessionNumber": "0000014693-24-000071",
+    "primaryDocument": "xslF345X05/wk-form4_1717621583.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000071/xslF345X05/wk-form4_1717621583.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-06-05",
+    "reportDate": "2024-06-03",
+    "accessionNumber": "0000014693-24-000070",
+    "primaryDocument": "xslF345X05/wk-form4_1717621508.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000070/xslF345X05/wk-form4_1717621508.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-06-05",
+    "reportDate": "2024-06-03",
+    "accessionNumber": "0000014693-24-000069",
+    "primaryDocument": "xslF345X05/wk-form4_1717621467.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000069/xslF345X05/wk-form4_1717621467.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-06-05",
+    "reportDate": "2024-06-03",
+    "accessionNumber": "0000014693-24-000068",
+    "primaryDocument": "xslF345X05/wk-form4_1717621426.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000068/xslF345X05/wk-form4_1717621426.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-06-05",
+    "reportDate": "2024-06-03",
+    "accessionNumber": "0000014693-24-000067",
+    "primaryDocument": "xslF345X05/wk-form4_1717621393.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000067/xslF345X05/wk-form4_1717621393.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-06-05",
+    "reportDate": "2024-06-03",
+    "accessionNumber": "0000014693-24-000066",
+    "primaryDocument": "xslF345X05/wk-form4_1717621359.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000066/xslF345X05/wk-form4_1717621359.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-06-05",
+    "reportDate": "2024-06-03",
+    "accessionNumber": "0000014693-24-000065",
+    "primaryDocument": "xslF345X05/wk-form4_1717621324.xml",
+    "primaryDocDescription": "FORM 4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000065/xslF345X05/wk-form4_1717621324.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-06-05",
+    "reportDate": "2024-06-05",
+    "accessionNumber": "0000014693-24-000052",
+    "primaryDocument": "bfb-20240605.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/14693/000001469324000052/bfb-20240605.htm"
+  }
+]

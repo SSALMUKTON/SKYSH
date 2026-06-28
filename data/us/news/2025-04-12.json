@@ -1,0 +1,154 @@
+[
+  {
+    "id": 44778760,
+    "headline": "Netflix Debuts OpenAI-Backed Search Engine That Lets You Discover Movies And TV Shows Based On Emotions, Not Just Titles",
+    "summary": "Netflix is testing a new OpenAI-powered search tool that lets users find shows and movies based on emotions and mood, marking a major step forward in personalized content discovery.",
+    "symbols": [
+      "NFLX"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/25/04/44778760/netflix-debuts-openai-backed-search-engine-that-lets-you-discover-movies-and-tv-shows-based-on-emotions-not-just-titles",
+    "created_at": "2025-04-12T20:58:08Z"
+  },
+  {
+    "id": 44778739,
+    "headline": "Elon Musk's Political Fallout Fuels Record Dump of Used Tesla Cars — Now Selling For Thousands Below Market Value",
+    "summary": "A record number of Tesla owners are selling their vehicles amid backlash over Elon Musk&#39;s political affiliations, driving used Tesla listings up 67% year-over-year and pushing prices roughly $10,000 below those of competing EVs.",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/markets/25/04/44778739/elon-musks-political-fallout-fuels-record-dump-of-used-tesla-cars-now-selling-for-thousands-below-market-value",
+    "created_at": "2025-04-12T20:51:33Z"
+  },
+  {
+    "id": 44778730,
+    "headline": "Nvidia, Alphabet To Back OpenAI Co-Founder Ilya Sutskever's New AI Startup Safe Superintelligence: Report",
+    "summary": "Alphabet and Nvidia have reportedly invested in Ilya Sutskever&#39;s $32 billion AI startup Safe Superintelligence, as tech giants deepen ties with top AI labs that also serve as major customers for their cloud and chip infrastructure.",
+    "symbols": [
+      "AMZN",
+      "GOOG",
+      "GOOGL",
+      "NVDA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/25/04/44778730/nvidia-and-alphabet-to-back-openai-co-founder-ilya-sutskevers-new-ai-startup-safe-superintelligence-report",
+    "created_at": "2025-04-12T20:49:59Z"
+  },
+  {
+    "id": 44778503,
+    "headline": "Consumer Tech News (April 7-April 11): US President Puts 90-Days Pause On Tariffs, Microsoft May Cut Jobs & More",
+    "summary": "Trump&#39;s 90-day tariff pause boosts markets, while Michigan auto groups criticize him for not halting auto tariffs.",
+    "symbols": [
+      "AAPL",
+      "AMZN",
+      "INTC",
+      "META",
+      "MSFT",
+      "TSLA",
+      "TSM"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/large-cap/25/04/44778503/consumer-tech-news-april-7-april-11-us-president-puts-90-days-pause-on-tariffs-microsoft-may-cut-jobs-more",
+    "created_at": "2025-04-12T17:20:37Z"
+  },
+  {
+    "id": 44778464,
+    "headline": "Trump Grants Tariff Reprieve to Tech – Including From China - In Surprise Move",
+    "summary": "President Trump has exempted a range of technology products, including some consumer electronics produced in China, from reciprocal tariffs.",
+    "symbols": [
+      "AAPL",
+      "NVDA",
+      "TSM"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/25/04/44778464/trump-administration-grants-tariff-reprieve-to-tech-industry-apple-and-nvidia-among-beneficiaries",
+    "created_at": "2025-04-12T17:01:25Z"
+  },
+  {
+    "id": 44778463,
+    "headline": "Warren Buffett's Wealth Grows Even Amid Tariff War and Global Market Turmoil",
+    "summary": "In the midst of the global market sell-off triggered by President Trump&#39;s tariffs, Warren Buffett has seen a significant increase in his net worth.",
+    "symbols": [
+      "AMZN",
+      "TSLA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/markets/25/04/44778463/warren-buffetts-wealth-grows-even-amid-tariff-war-and-global-market-turmoil",
+    "created_at": "2025-04-12T17:01:13Z"
+  },
+  {
+    "id": 44778243,
+    "headline": "Elon Musk's Cybertruck Is Controversial, But Kids Love It",
+    "summary": "The Tesla Cybertruck may be polarizing among adults, but it is a hit among children.",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/tech/25/04/44778243/elon-musks-cybertruck-is-controversial-but-kids-love-it",
+    "created_at": "2025-04-12T15:01:06Z"
+  },
+  {
+    "id": 44777882,
+    "headline": "Benzinga Bulls And Bears: Apple, Nike, US Steel — And The Markets Ride Out Ongoing Volatility",
+    "summary": "Benzinga examined the prospects for many investors&#39; favorite stocks over the last week — here&#39;s a look at some of our top stories.",
+    "symbols": [
+      "AAPL",
+      "AEHR",
+      "AMD",
+      "AMZN",
+      "AVGO",
+      "GOOGL",
+      "MCHP",
+      "MRVL",
+      "MU",
+      "NKE",
+      "PFE",
+      "TSLA",
+      "TSM",
+      "X"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/25/04/44777882/benzinga-bulls-and-bears-apple-nike-us-steel-and-the-markets-ride-out-ongoing-volatility",
+    "created_at": "2025-04-12T12:01:20Z"
+  },
+  {
+    "id": 44777482,
+    "headline": "Trump Tariff Wars: China's New Rule To Exempt Nvidia, Qualcomm And Others From Levies, But These Chip Companies Will Be Hit With 125% Tariffs",
+    "summary": "China&#39;s new chip origin rule spares U.S. designers like Nvidia, AMD, and Qualcomm from 125% tariffs by exempting Taiwan-fabricated chips, while penalizing U.S.-based manufacturers like Intel, GlobalFoundries, and Texas Instruments, reshaping the global semiconductor supply chain.",
+    "symbols": [
+      "AMD",
+      "AVGO",
+      "GFS",
+      "INTC",
+      "NVDA",
+      "QCOM",
+      "TSM",
+      "TXN",
+      "UMC"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/markets/25/04/44777482/trump-tariff-wars-chinas-new-rule-to-exempt-nvidia-qualcomm-and-others-from-levies-but-these-chip-companies-will-be-hit-with-125-tariffs",
+    "created_at": "2025-04-12T06:23:02Z"
+  },
+  {
+    "id": 44777185,
+    "headline": "Trump And Xi Jinping's Tariff Threats May Be 'Just For The LOLz,' Says Analyst: 'It's Not Like This Is A Great Financial Crisis'",
+    "summary": "Amid escalating U.S.-China tariff threats, BCA Research&#39;s Marko Papic says the rhetoric may be largely performative &#34;for the LOLz.&#34;",
+    "symbols": [
+      "AAPL",
+      "CARR",
+      "CAT",
+      "CMI",
+      "DIS",
+      "F",
+      "HON",
+      "KO",
+      "RTX",
+      "TSLA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/global/25/04/44777185/trump-and-xi-jinpings-tariff-threats-may-be-just-for-the-lolz-says-analyst-its-not-like-this-is-a-great-financial-crisis",
+    "created_at": "2025-04-12T04:21:42Z"
+  }
+]

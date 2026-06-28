@@ -1,0 +1,61 @@
+[
+  {
+    "id": 29863451,
+    "headline": "Barron's Top Weekend Stock Picks: Alibaba, Amazon, Apple And The Quantum Computing Revolution",
+    "summary": "Benzinga reviews this weekend&#39;s top stories covered by Barron&#39;s, here are the articles investors need to read.",
+    "symbols": [
+      "AAPL",
+      "AMZN",
+      "ASO",
+      "BABA",
+      "BTCUSD",
+      "DKS",
+      "MANU"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/large-cap/22/11/29863451/barrons-top-weekend-stock-picks-alibaba-amazon-apple-and-the-quantum-computing-revolution",
+    "created_at": "2022-11-26T21:16:48Z"
+  },
+  {
+    "id": 29865120,
+    "headline": "Black Friday Online Sales Top $9B In New Record: What Were Shoppers Buying? What's Ahead For Cyber Monday?",
+    "summary": "Despite high inflation and a rise in prices, consumers&#39; holiday shopping sentiments are upbeat this year.",
+    "symbols": [
+      "SHOP"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/22/11/29865120/black-friday-online-sales-top-9b-in-new-record-what-were-shoppers-buying-whats-ahead-for-cyber-monda",
+    "created_at": "2022-11-26T20:42:47Z"
+  },
+  {
+    "id": 29852575,
+    "headline": "Bulls And Bears Of The Week: Tesla, GameStop, And Cathie Wood Still Says Bitcoin Will Reach $1M",
+    "summary": "Benzinga examined the prospects for many investors&#39; favorite stocks over the last week — here&#39;s a look at some of our top stories. ",
+    "symbols": [
+      "BTCUSD",
+      "COIN",
+      "CS",
+      "GME",
+      "TSLA",
+      "XOM"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/large-cap/22/11/29852575/bulls-and-bears-of-the-week-tesla-gamestop-and-cathie-wood-still-says-bitcoin-will-reach-1m",
+    "created_at": "2022-11-26T20:20:53Z"
+  },
+  {
+    "id": 29864359,
+    "headline": "Tesla Stock Lifts Off, Lucid's 'Ready To Delivery' Offer, Rivian Worker Safety Complaint And More: Week's Biggest EV Stories",
+    "summary": "Electric vehicle stocks had another down week, despite the broader market reversing course amid hopes of the Federal Reserve relenting from an extremely hawkish stance. Market leader Tesla, Inc.",
+    "symbols": [
+      "GOEV",
+      "HYMTF",
+      "LCID",
+      "RIVN",
+      "TSLA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/22/11/29864359/tesla-stock-lifts-off-lucids-ready-to-delivery-offer-rivian-worker-safety-complaint-and-more-weeks-b",
+    "created_at": "2022-11-26T14:57:20Z"
+  }
+]

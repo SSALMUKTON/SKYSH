@@ -1,0 +1,73 @@
+[
+  {
+    "id": 15836153,
+    "headline": "'Options Action' Traders Weigh In On Apple, S&P 500, Crude Oil",
+    "summary": "On CNBC&#39;s &#34;Options Action,&#34; Carter Worth said that he is a seller of Apple Inc. (NASDAQ: AAPL).",
+    "symbols": [
+      "AAPL",
+      "SPY",
+      "USO"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/markets/commodities/20/04/15836153/options-action-traders-weigh-in-on-apple-s-p-500-crude-oil",
+    "created_at": "2020-04-18T20:44:20Z"
+  },
+  {
+    "id": 15836124,
+    "headline": "Carter Worth And Mike Khouw's XLY Trade",
+    "summary": "On CNBC&#39;s &#34;Options Action,&#34; Carter Worth spoke about the recent rally in Consumer Discretionary SPDR (NYSE: XLY) and suggested that traders should short it after such a move higher.",
+    "symbols": [
+      "AMZN",
+      "HD",
+      "XLY"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/markets/options/20/04/15836124/carter-worth-and-mike-khouws-xly-trade",
+    "created_at": "2020-04-18T20:40:24Z"
+  },
+  {
+    "id": 15836219,
+    "headline": "Smart Option Trading CEO On Gaining An Edge With Options: 'They Show The Overall Sentiment'",
+    "summary": "This special presentation from Mike Pisani is from Benzinga&#39;s first-ever virtual Benzinga Options Boot Camp on Saturday, April 18. Check back with Benzinga for more coverage of this all-day event with options trading experts who are giving traders of all experience levels real, dependabl",
+    "symbols": [
+      "AAPL",
+      "AMD",
+      "ZM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/04/15836219/smart-option-trading-ceo-on-gaining-an-edge-with-options-they-show-the-overall-sentiment",
+    "created_at": "2020-04-18T20:12:59Z"
+  },
+  {
+    "id": 15832804,
+    "headline": "Instacart Launches Pilot Delivery Of Costco Prescriptions",
+    "summary": "Grocery delivery platform Instacart said Thursday that it will expand its partnership to deliver prescriptions to Costco Wholesale Corporation&#39;s (NASDAQ: COST) customers.",
+    "symbols": [
+      "COST"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/04/15832804/instacart-launches-pilot-delivery-of-costco-prescriptions",
+    "created_at": "2020-04-18T17:55:11Z"
+  },
+  {
+    "id": 15822582,
+    "headline": "Indexes End Week Higher As White House Rolls Out State-By-State Coronavirus Strategy, Investors Digest First Round Of Earnings Reports",
+    "summary": "It was a choppy week of trading as investors digested the first wave of abysmal first-quarter earnings reports, followed by a positive turn Friday in the wake of the White House’s rollout of a phased plan for states to reopen their economies and a report on positive results from Gilead’s potential coronavirus therapy remdesivir. ",
+    "symbols": [
+      "BAC",
+      "C",
+      "GILD",
+      "GS",
+      "INTC",
+      "JPM",
+      "KO",
+      "T",
+      "UNH",
+      "VZ",
+      "WFC"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/04/15822582/indexes-end-week-higher-as-white-house-rolls-out-state-by-state-coronavirus-strategy-investors-diges",
+    "created_at": "2020-04-18T16:43:19Z"
+  }
+]

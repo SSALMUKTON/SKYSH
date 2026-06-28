@@ -1,0 +1,1252 @@
+[
+  {
+    "form": "11-K",
+    "filingDate": "2026-06-24",
+    "reportDate": "2025-12-31",
+    "accessionNumber": "0000029905-26-000021",
+    "primaryDocument": "dov-20260623.htm",
+    "primaryDocDescription": "11-K",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990526000021/dov-20260623.htm"
+  },
+  {
+    "form": "SD",
+    "filingDate": "2026-05-27",
+    "reportDate": "",
+    "accessionNumber": "0000029905-26-000018",
+    "primaryDocument": "a20260527formsd.htm",
+    "primaryDocDescription": "SD",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990526000018/a20260527formsd.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2026-05-12",
+    "reportDate": "2026-05-08",
+    "accessionNumber": "0001193125-26-219689",
+    "primaryDocument": "d150207d8k.htm",
+    "primaryDocDescription": "8-K",
+    "items": "5.07,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312526219689/d150207d8k.htm"
+  },
+  {
+    "form": "SCHEDULE 13G/A",
+    "filingDate": "2026-05-12",
+    "reportDate": "",
+    "accessionNumber": "0000019617-26-000206",
+    "primaryDocument": "xslSCHEDULE_13G_X02/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000001961726000206/xslSCHEDULE_13G_X02/primary_doc.xml"
+  },
+  {
+    "form": "SCHEDULE 13G/A",
+    "filingDate": "2026-05-04",
+    "reportDate": "",
+    "accessionNumber": "0000019617-26-000143",
+    "primaryDocument": "xslSCHEDULE_13G_X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000001961726000143/xslSCHEDULE_13G_X01/primary_doc.xml"
+  },
+  {
+    "form": "SCHEDULE 13G",
+    "filingDate": "2026-04-29",
+    "reportDate": "",
+    "accessionNumber": "0002100119-26-000467",
+    "primaryDocument": "xslSCHEDULE_13G_X02/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000210011926000467/xslSCHEDULE_13G_X02/primary_doc.xml"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2026-04-23",
+    "reportDate": "2026-03-31",
+    "accessionNumber": "0000029905-26-000015",
+    "primaryDocument": "dov-20260331.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990526000015/dov-20260331.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2026-04-23",
+    "reportDate": "2026-04-23",
+    "accessionNumber": "0000029905-26-000014",
+    "primaryDocument": "dov-20260423.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990526000014/dov-20260423.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2026-04-08",
+    "reportDate": "2026-04-02",
+    "accessionNumber": "0001193125-26-147940",
+    "primaryDocument": "d111508d8k.htm",
+    "primaryDocDescription": "8-K",
+    "items": "1.01,1.02,2.03,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312526147940/d111508d8k.htm"
+  },
+  {
+    "form": "SCHEDULE 13G/A",
+    "filingDate": "2026-03-26",
+    "reportDate": "",
+    "accessionNumber": "0000102909-26-001162",
+    "primaryDocument": "xslSCHEDULE_13G_X02/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000010290926001162/xslSCHEDULE_13G_X02/primary_doc.xml"
+  },
+  {
+    "form": "ARS",
+    "filingDate": "2026-03-24",
+    "reportDate": "2025-12-31",
+    "accessionNumber": "0001193125-26-120721",
+    "primaryDocument": "d936738dars.pdf",
+    "primaryDocDescription": "ARS",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312526120721/d936738dars.pdf"
+  },
+  {
+    "form": "DEFA14A",
+    "filingDate": "2026-03-24",
+    "reportDate": "",
+    "accessionNumber": "0001193125-26-120714",
+    "primaryDocument": "d79083ddefa14a.htm",
+    "primaryDocDescription": "DEFA14A",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312526120714/d79083ddefa14a.htm"
+  },
+  {
+    "form": "DEF 14A",
+    "filingDate": "2026-03-24",
+    "reportDate": "2026-05-08",
+    "accessionNumber": "0001193125-26-120708",
+    "primaryDocument": "d935769ddef14a.htm",
+    "primaryDocDescription": "DEF 14A",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312526120708/d935769ddef14a.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-03-17",
+    "reportDate": "2026-03-13",
+    "accessionNumber": "0001829655-26-000042",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965526000042/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-03-17",
+    "reportDate": "2026-03-13",
+    "accessionNumber": "0001829655-26-000040",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965526000040/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-03-17",
+    "reportDate": "2026-03-13",
+    "accessionNumber": "0001829655-26-000039",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965526000039/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-03-17",
+    "reportDate": "2026-03-13",
+    "accessionNumber": "0001829655-26-000038",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965526000038/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-03-17",
+    "reportDate": "2026-03-13",
+    "accessionNumber": "0001829655-26-000037",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965526000037/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-03-17",
+    "reportDate": "2026-03-13",
+    "accessionNumber": "0001829655-26-000036",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965526000036/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-03-17",
+    "reportDate": "2026-03-13",
+    "accessionNumber": "0001829655-26-000035",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965526000035/xslF345X05/form4.xml"
+  },
+  {
+    "form": "S-3ASR",
+    "filingDate": "2026-02-24",
+    "reportDate": "",
+    "accessionNumber": "0001193125-26-066963",
+    "primaryDocument": "d25160ds3asr.htm",
+    "primaryDocDescription": "S-3ASR",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312526066963/d25160ds3asr.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-20",
+    "reportDate": "2026-02-19",
+    "accessionNumber": "0001829655-26-000020",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965526000020/xslF345X05/form4.xml"
+  },
+  {
+    "form": "144",
+    "filingDate": "2026-02-20",
+    "reportDate": "",
+    "accessionNumber": "0001950047-26-001576",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000195004726001576/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-18",
+    "reportDate": "2026-02-13",
+    "accessionNumber": "0001829655-26-000018",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965526000018/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-18",
+    "reportDate": "2026-02-13",
+    "accessionNumber": "0001829655-26-000016",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965526000016/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-18",
+    "reportDate": "2026-02-13",
+    "accessionNumber": "0001829655-26-000014",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965526000014/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-18",
+    "reportDate": "2026-02-13",
+    "accessionNumber": "0001829655-26-000012",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965526000012/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-18",
+    "reportDate": "2026-02-13",
+    "accessionNumber": "0001829655-26-000010",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965526000010/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-18",
+    "reportDate": "2026-02-13",
+    "accessionNumber": "0001829655-26-000008",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965526000008/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-18",
+    "reportDate": "2026-02-13",
+    "accessionNumber": "0001829655-26-000006",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965526000006/xslF345X05/form4.xml"
+  },
+  {
+    "form": "144",
+    "filingDate": "2026-02-17",
+    "reportDate": "",
+    "accessionNumber": "0001628280-26-008526",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000162828026008526/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "10-K",
+    "filingDate": "2026-02-13",
+    "reportDate": "2025-12-31",
+    "accessionNumber": "0000029905-26-000009",
+    "primaryDocument": "dov-20251231.htm",
+    "primaryDocDescription": "10-K",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990526000009/dov-20251231.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-12",
+    "reportDate": "2026-02-11",
+    "accessionNumber": "0001829655-26-000004",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965526000004/xslF345X05/form4.xml"
+  },
+  {
+    "form": "144",
+    "filingDate": "2026-02-11",
+    "reportDate": "",
+    "accessionNumber": "0001628280-26-007192",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000162828026007192/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2026-01-29",
+    "reportDate": "2026-01-29",
+    "accessionNumber": "0000029905-26-000004",
+    "primaryDocument": "dov-20260129.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990526000004/dov-20260129.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-01-09",
+    "reportDate": "2026-01-07",
+    "accessionNumber": "0001829655-26-000002",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965526000002/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-12-10",
+    "reportDate": "2025-12-08",
+    "accessionNumber": "0001829655-25-000056",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965525000056/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-12-05",
+    "reportDate": "2025-12-03",
+    "accessionNumber": "0001829655-25-000054",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965525000054/xslF345X05/form4.xml"
+  },
+  {
+    "form": "144",
+    "filingDate": "2025-12-04",
+    "reportDate": "",
+    "accessionNumber": "0001628280-25-055288",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000162828025055288/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-12-01",
+    "reportDate": "2025-11-26",
+    "accessionNumber": "0001829655-25-000050",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965525000050/xslF345X05/form4.xml"
+  },
+  {
+    "form": "144",
+    "filingDate": "2025-11-28",
+    "reportDate": "",
+    "accessionNumber": "0001628280-25-054239",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000162828025054239/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-11-21",
+    "reportDate": "2025-11-20",
+    "accessionNumber": "0001829655-25-000048",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965525000048/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-11-19",
+    "reportDate": "2025-11-17",
+    "accessionNumber": "0001829655-25-000045",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965525000045/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-11-19",
+    "reportDate": "2025-11-17",
+    "accessionNumber": "0001829655-25-000044",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965525000044/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-11-19",
+    "reportDate": "2025-11-17",
+    "accessionNumber": "0001829655-25-000043",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965525000043/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-11-19",
+    "reportDate": "2025-11-17",
+    "accessionNumber": "0001829655-25-000042",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965525000042/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-11-19",
+    "reportDate": "2025-11-17",
+    "accessionNumber": "0001829655-25-000041",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965525000041/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-11-19",
+    "reportDate": "2025-11-17",
+    "accessionNumber": "0001829655-25-000040",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965525000040/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-11-19",
+    "reportDate": "2025-11-17",
+    "accessionNumber": "0001829655-25-000039",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965525000039/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-11-19",
+    "reportDate": "2025-11-17",
+    "accessionNumber": "0001829655-25-000038",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000182965525000038/xslF345X05/form4.xml"
+  },
+  {
+    "form": "CERT",
+    "filingDate": "2025-11-13",
+    "reportDate": "",
+    "accessionNumber": "0000876661-25-000868",
+    "primaryDocument": "DOV33111325.pdf",
+    "primaryDocDescription": "NYSE CERTIFICATION",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000087666125000868/DOV33111325.pdf"
+  },
+  {
+    "form": "8-A12B",
+    "filingDate": "2025-11-12",
+    "reportDate": "",
+    "accessionNumber": "0001193125-25-277732",
+    "primaryDocument": "d80674d8a12b.htm",
+    "primaryDocDescription": "8-A12B",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312525277732/d80674d8a12b.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-11-12",
+    "reportDate": "2025-11-12",
+    "accessionNumber": "0001193125-25-277534",
+    "primaryDocument": "d84051d8k.htm",
+    "primaryDocDescription": "8-K",
+    "items": "8.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312525277534/d84051d8k.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-11-10",
+    "reportDate": "2025-11-10",
+    "accessionNumber": "0001193125-25-274595",
+    "primaryDocument": "d80041d8k.htm",
+    "primaryDocDescription": "8-K",
+    "items": "8.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312525274595/d80041d8k.htm"
+  },
+  {
+    "form": "424B2",
+    "filingDate": "2025-11-07",
+    "reportDate": "",
+    "accessionNumber": "0001193125-25-272509",
+    "primaryDocument": "d98612d424b2.htm",
+    "primaryDocDescription": "424B2",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312525272509/d98612d424b2.htm"
+  },
+  {
+    "form": "FWP",
+    "filingDate": "2025-11-05",
+    "reportDate": "",
+    "accessionNumber": "0001193125-25-266632",
+    "primaryDocument": "d98612dfwp.htm",
+    "primaryDocDescription": "FWP",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312525266632/d98612dfwp.htm"
+  },
+  {
+    "form": "424B2",
+    "filingDate": "2025-11-05",
+    "reportDate": "",
+    "accessionNumber": "0001193125-25-265581",
+    "primaryDocument": "d98612d424b2.htm",
+    "primaryDocDescription": "424B2",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312525265581/d98612d424b2.htm"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2025-10-23",
+    "reportDate": "2025-09-30",
+    "accessionNumber": "0000029905-25-000034",
+    "primaryDocument": "dov-20250930.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990525000034/dov-20250930.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-10-23",
+    "reportDate": "2025-10-23",
+    "accessionNumber": "0000029905-25-000032",
+    "primaryDocument": "dov-20251023.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990525000032/dov-20251023.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-08-05",
+    "reportDate": "2025-08-01",
+    "accessionNumber": "0001062993-25-013617",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299325013617/xslF345X05/form4.xml"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2025-07-24",
+    "reportDate": "2025-06-30",
+    "accessionNumber": "0000029905-25-000024",
+    "primaryDocument": "dov-20250630.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990525000024/dov-20250630.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-07-24",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0000029905-25-000022",
+    "primaryDocument": "dov-20250724.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990525000022/dov-20250724.htm"
+  },
+  {
+    "form": "11-K",
+    "filingDate": "2025-06-18",
+    "reportDate": "2024-12-31",
+    "accessionNumber": "0000029905-25-000018",
+    "primaryDocument": "a2024123111-k.htm",
+    "primaryDocDescription": "11-K",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990525000018/a2024123111-k.htm"
+  },
+  {
+    "form": "SD",
+    "filingDate": "2025-05-29",
+    "reportDate": "",
+    "accessionNumber": "0000029905-25-000016",
+    "primaryDocument": "a20250529formsd.htm",
+    "primaryDocDescription": "SD",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990525000016/a20250529formsd.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-05-06",
+    "reportDate": "2025-05-02",
+    "accessionNumber": "0001193125-25-113813",
+    "primaryDocument": "d86044d8k.htm",
+    "primaryDocDescription": "8-K",
+    "items": "5.07,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312525113813/d86044d8k.htm"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2025-04-24",
+    "reportDate": "2025-03-31",
+    "accessionNumber": "0000029905-25-000014",
+    "primaryDocument": "dov-20250331.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990525000014/dov-20250331.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-04-24",
+    "reportDate": "2025-04-24",
+    "accessionNumber": "0000029905-25-000012",
+    "primaryDocument": "dov-20250424.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990525000012/dov-20250424.htm"
+  },
+  {
+    "form": "144",
+    "filingDate": "2025-04-16",
+    "reportDate": "",
+    "accessionNumber": "0001971857-25-000199",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000197185725000199/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-04-03",
+    "reportDate": "2025-04-03",
+    "accessionNumber": "0001193125-25-072471",
+    "primaryDocument": "d928407d8k.htm",
+    "primaryDocDescription": "8-K",
+    "items": "8.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312525072471/d928407d8k.htm"
+  },
+  {
+    "form": "ARS",
+    "filingDate": "2025-03-20",
+    "reportDate": "2024-12-31",
+    "accessionNumber": "0001193125-25-058325",
+    "primaryDocument": "d883409dars.pdf",
+    "primaryDocDescription": "ARS",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312525058325/d883409dars.pdf"
+  },
+  {
+    "form": "DEFA14A",
+    "filingDate": "2025-03-20",
+    "reportDate": "",
+    "accessionNumber": "0001193125-25-058318",
+    "primaryDocument": "d781654ddefa14a.htm",
+    "primaryDocDescription": "DEFA14A",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312525058318/d781654ddefa14a.htm"
+  },
+  {
+    "form": "DEF 14A",
+    "filingDate": "2025-03-20",
+    "reportDate": "2025-05-02",
+    "accessionNumber": "0001193125-25-058312",
+    "primaryDocument": "d781654ddef14a.htm",
+    "primaryDocDescription": "DEF 14A",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312525058312/d781654ddef14a.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-03-18",
+    "reportDate": "2025-03-14",
+    "accessionNumber": "0001062993-25-005775",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299325005775/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-03-18",
+    "reportDate": "2025-03-14",
+    "accessionNumber": "0001062993-25-005772",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299325005772/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-03-18",
+    "reportDate": "2025-03-14",
+    "accessionNumber": "0001062993-25-005770",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299325005770/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-03-18",
+    "reportDate": "2025-03-14",
+    "accessionNumber": "0001062993-25-005768",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299325005768/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-03-18",
+    "reportDate": "2025-03-14",
+    "accessionNumber": "0001062993-25-005767",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299325005767/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-03-18",
+    "reportDate": "2025-03-14",
+    "accessionNumber": "0001062993-25-005765",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299325005765/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-19",
+    "reportDate": "2025-02-14",
+    "accessionNumber": "0001062993-25-002871",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299325002871/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-19",
+    "reportDate": "2025-02-14",
+    "accessionNumber": "0001062993-25-002870",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299325002870/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-19",
+    "reportDate": "2025-02-14",
+    "accessionNumber": "0001062993-25-002869",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299325002869/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-19",
+    "reportDate": "2025-02-14",
+    "accessionNumber": "0001062993-25-002868",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299325002868/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-19",
+    "reportDate": "2025-02-14",
+    "accessionNumber": "0001062993-25-002865",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299325002865/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-19",
+    "reportDate": "2025-02-14",
+    "accessionNumber": "0001062993-25-002864",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299325002864/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-19",
+    "reportDate": "2025-02-14",
+    "accessionNumber": "0001062993-25-002862",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299325002862/xslF345X05/form4.xml"
+  },
+  {
+    "form": "10-K",
+    "filingDate": "2025-02-14",
+    "reportDate": "2024-12-31",
+    "accessionNumber": "0000029905-25-000006",
+    "primaryDocument": "dov-20241231.htm",
+    "primaryDocDescription": "10-K",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990525000006/dov-20241231.htm"
+  },
+  {
+    "form": "3",
+    "filingDate": "2025-02-07",
+    "reportDate": "2025-01-31",
+    "accessionNumber": "0001062993-25-001890",
+    "primaryDocument": "xslF345X02/form3.xml",
+    "primaryDocDescription": "INITIAL STATEMENT OF BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299325001890/xslF345X02/form3.xml"
+  },
+  {
+    "form": "144",
+    "filingDate": "2025-02-06",
+    "reportDate": "",
+    "accessionNumber": "0002007317-25-000090",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000200731725000090/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-01-30",
+    "reportDate": "2025-01-30",
+    "accessionNumber": "0000029905-25-000003",
+    "primaryDocument": "dov-20250130.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990525000003/dov-20250130.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-12-10",
+    "reportDate": "2024-12-06",
+    "accessionNumber": "0001062993-24-020377",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324020377/xslF345X05/form4.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-12-09",
+    "reportDate": "2024-12-09",
+    "accessionNumber": "0001193125-24-273534",
+    "primaryDocument": "d846422d8k.htm",
+    "primaryDocDescription": "8-K",
+    "items": "5.02,7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312524273534/d846422d8k.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-11-19",
+    "reportDate": "2024-11-15",
+    "accessionNumber": "0001062993-24-019365",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324019365/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-11-19",
+    "reportDate": "2024-11-15",
+    "accessionNumber": "0001062993-24-019364",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324019364/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-11-19",
+    "reportDate": "2024-11-15",
+    "accessionNumber": "0001062993-24-019363",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324019363/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-11-19",
+    "reportDate": "2024-11-15",
+    "accessionNumber": "0001062993-24-019362",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324019362/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-11-19",
+    "reportDate": "2024-11-15",
+    "accessionNumber": "0001062993-24-019361",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324019361/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-11-19",
+    "reportDate": "2024-11-15",
+    "accessionNumber": "0001062993-24-019360",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324019360/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-11-19",
+    "reportDate": "2024-11-15",
+    "accessionNumber": "0001062993-24-019359",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324019359/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-11-19",
+    "reportDate": "2024-11-15",
+    "accessionNumber": "0001062993-24-019358",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324019358/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-11-19",
+    "reportDate": "2024-11-15",
+    "accessionNumber": "0001062993-24-019357",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324019357/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-11-12",
+    "reportDate": "2024-11-11",
+    "accessionNumber": "0001062993-24-018941",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324018941/xslF345X05/form4.xml"
+  },
+  {
+    "form": "144",
+    "filingDate": "2024-11-12",
+    "reportDate": "",
+    "accessionNumber": "0002007317-24-000573",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000200731724000573/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-11-08",
+    "reportDate": "2024-11-06",
+    "accessionNumber": "0001062993-24-018724",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324018724/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-11-08",
+    "reportDate": "2024-11-07",
+    "accessionNumber": "0001062993-24-018721",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324018721/xslF345X05/form4.xml"
+  },
+  {
+    "form": "144",
+    "filingDate": "2024-11-07",
+    "reportDate": "",
+    "accessionNumber": "0001971857-24-000773",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000197185724000773/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2024-10-24",
+    "reportDate": "2024-09-30",
+    "accessionNumber": "0000029905-24-000045",
+    "primaryDocument": "dov-20240930.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990524000045/dov-20240930.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-10-24",
+    "reportDate": "2024-10-24",
+    "accessionNumber": "0000029905-24-000044",
+    "primaryDocument": "dov-20241024.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990524000044/dov-20241024.htm"
+  },
+  {
+    "form": "SC 13G/A",
+    "filingDate": "2024-10-17",
+    "reportDate": "",
+    "accessionNumber": "0000019617-24-000589",
+    "primaryDocument": "DOVER_CORPORATION.htm",
+    "primaryDocDescription": "FILING DOVER CORPORATION",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000001961724000589/DOVER_CORPORATION.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-10-10",
+    "reportDate": "2024-10-10",
+    "accessionNumber": "0000029905-24-000037",
+    "primaryDocument": "dov-20241010.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990524000037/dov-20241010.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-10-08",
+    "reportDate": "2024-10-08",
+    "accessionNumber": "0001193125-24-234476",
+    "primaryDocument": "d859250d8k.htm",
+    "primaryDocDescription": "8-K",
+    "items": "8.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312524234476/d859250d8k.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-09-10",
+    "reportDate": "2024-09-06",
+    "accessionNumber": "0001062993-24-016430",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324016430/xslF345X05/form4.xml"
+  },
+  {
+    "form": "144",
+    "filingDate": "2024-09-06",
+    "reportDate": "",
+    "accessionNumber": "0002002698-24-000375",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000200269824000375/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-09-04",
+    "reportDate": "2024-08-30",
+    "accessionNumber": "0001062993-24-016114",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324016114/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-08-30",
+    "reportDate": "2024-08-29",
+    "accessionNumber": "0001062993-24-015940",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324015940/xslF345X05/form4.xml"
+  },
+  {
+    "form": "144",
+    "filingDate": "2024-08-26",
+    "reportDate": "",
+    "accessionNumber": "0002002698-24-000296",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000200269824000296/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-08-23",
+    "reportDate": "2024-08-21",
+    "accessionNumber": "0001062993-24-015609",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324015609/xslF345X05/form4.xml"
+  },
+  {
+    "form": "144",
+    "filingDate": "2024-08-21",
+    "reportDate": "",
+    "accessionNumber": "0001950047-24-006342",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000195004724006342/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-08-05",
+    "reportDate": "2024-08-01",
+    "accessionNumber": "0001062993-24-014449",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324014449/xslF345X05/form4.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-08-01",
+    "reportDate": "2024-07-31",
+    "accessionNumber": "0001062993-24-014319",
+    "primaryDocument": "xslF345X05/form4.xml",
+    "primaryDocDescription": "STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324014319/xslF345X05/form4.xml"
+  },
+  {
+    "form": "144",
+    "filingDate": "2024-07-31",
+    "reportDate": "",
+    "accessionNumber": "0002007317-24-000473",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000200731724000473/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2024-07-25",
+    "reportDate": "2024-06-30",
+    "accessionNumber": "0000029905-24-000035",
+    "primaryDocument": "dov-20240630.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990524000035/dov-20240630.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-07-25",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000029905-24-000033",
+    "primaryDocument": "dov-20240725.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990524000033/dov-20240725.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-07-23",
+    "reportDate": "2024-07-21",
+    "accessionNumber": "0001193125-24-182970",
+    "primaryDocument": "d844281d8k.htm",
+    "primaryDocDescription": "8-K",
+    "items": "1.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000119312524182970/d844281d8k.htm"
+  },
+  {
+    "form": "3",
+    "filingDate": "2024-07-15",
+    "reportDate": "2024-07-08",
+    "accessionNumber": "0001062993-24-013806",
+    "primaryDocument": "xslF345X02/form3.xml",
+    "primaryDocDescription": "INITIAL STATEMENT OF BENEFICIAL OWNERSHIP OF SECURITIES",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000106299324013806/xslF345X02/form3.xml"
+  },
+  {
+    "form": "11-K",
+    "filingDate": "2024-06-20",
+    "reportDate": "2023-12-31",
+    "accessionNumber": "0000029905-24-000027",
+    "primaryDocument": "a2023123111-k.htm",
+    "primaryDocDescription": "11-K",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/29905/000002990524000027/a2023123111-k.htm"
+  }
+]

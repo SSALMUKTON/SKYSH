@@ -1,0 +1,872 @@
+[
+  {
+    "id": 16558097,
+    "headline": "Feds Fine Amazon For Selling To Sanctioned Countries",
+    "summary": "",
+    "symbols": [
+      "AMZN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16558097/feds-fine-amazon-for-selling-to-sanctioned-countries",
+    "created_at": "2020-07-08T21:46:18Z"
+  },
+  {
+    "id": 16558108,
+    "headline": "Tesla Model 3 Is UK's Top-Selling EV In June",
+    "summary": "While the coronavirus lockdown had traditional auto manufacturers struggling to sell and produce cars, Tesla Inc (NASDAQ: TSLA) seemed less effected, selling more cars than predicted&amp;nb",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16558108/tesla-model-3-is-uks-top-selling-ev-in-june",
+    "created_at": "2020-07-08T21:34:11Z"
+  },
+  {
+    "id": 16560344,
+    "headline": "Regeneron Shares Indicated Higher After Hours As Hearing SunTrust Upgrades From Hold To Buy",
+    "summary": "",
+    "symbols": [
+      "REGN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16560344/regeneron-shares-indicated-higher-after-hours-as-hearing-suntrust-upgrades-from-hold-to-buy",
+    "created_at": "2020-07-08T20:57:50Z"
+  },
+  {
+    "id": 16559798,
+    "headline": "Ivy League Cancels All Sports For Upcoming Semester",
+    "summary": "",
+    "symbols": [
+      "CMCSA",
+      "DIS",
+      "SPY",
+      "T"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16559798/ivy-league-cancels-all-sports-for-upcoming-semester",
+    "created_at": "2020-07-08T20:26:19Z"
+  },
+  {
+    "id": 16559716,
+    "headline": "Google Says It Does Not Offer And Has Not Offered Cloud Platform Services Inside China; Co. Also Said Google Cloud Is Not Weighing Options To Offer The Google Cloud Platform In China",
+    "summary": "",
+    "symbols": [
+      "GOOG",
+      "GOOGL"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16559716/google-says-it-does-not-offer-and-has-not-offered-cloud-platform-services-inside-china-co-also-said",
+    "created_at": "2020-07-08T20:21:33Z"
+  },
+  {
+    "id": 16559665,
+    "headline": "Costco June Comparable Sales Up 11.5% YoY",
+    "summary": "",
+    "symbols": [
+      "COST"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16559665/costco-june-comparable-sales-up-11-5-yoy",
+    "created_at": "2020-07-08T20:16:32Z"
+  },
+  {
+    "id": 16559456,
+    "headline": "Microsoft Announces It Earnings For Q4 Will Be On July 22, 2020",
+    "summary": "",
+    "symbols": [
+      "MSFT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16559456/microsoft-announces-it-earnings-for-q4-will-be-on-july-22-2020",
+    "created_at": "2020-07-08T20:06:43Z"
+  },
+  {
+    "id": 16553536,
+    "headline": "3 Expert Takes On Walmart's New Subscription Service: 'Godzilla Vs. King Kong'",
+    "summary": "Retail giant Walmart Inc (NYSE: WM) is reportedly set to launch a new $98-a-year subscription service platform, Walmart+, and it can be considered both a defensive and offensive strategy, according to Oppen",
+    "symbols": [
+      "AMZN",
+      "KR",
+      "TGT",
+      "WM",
+      "WMT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/analyst-color/20/07/16553536/3-expert-takes-on-walmarts-new-subscription-service-godzilla-vs-king-kong",
+    "created_at": "2020-07-08T19:40:06Z"
+  },
+  {
+    "id": 16558233,
+    "headline": "Tesla Shares Down 3% Over Last Hour And A Half As Price Pushes Below $1,380 Level; Recent Tweet Highlights 'Over 27,000 $TSLA 7/10 $1300 puts for $16.05 have traded today\nobviously very expensive but seems people protecting hedging profits today'",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16558233/tesla-shares-down-3-over-last-hour-and-a-half-as-price-pushes-below-1-380-level-recent-tweet-highlig",
+    "created_at": "2020-07-08T19:00:13Z"
+  },
+  {
+    "id": 16557713,
+    "headline": "UPDATE: Gilead Announces Initiation Of Phase 1A Clinical Study To Evaluate Investigational, Inhaled Solution Of Remdesivir In Healthy Volunteers",
+    "summary": "",
+    "symbols": [
+      "GILD"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16557713/update-gilead-announces-initiation-of-phase-1a-clinical-study-to-evaluate-investigational-inhaled-so",
+    "created_at": "2020-07-08T18:20:05Z"
+  },
+  {
+    "id": 16557699,
+    "headline": "Gilead Sciences Says Randomized, Placebo-Controlled Trial Will Enroll About 60 Healthy Individuals Aged 18-45 In U.S.",
+    "summary": "",
+    "symbols": [
+      "GILD"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16557699/gilead-sciences-says-randomized-placebo-controlled-trial-will-enroll-about-60-healthy-individuals-ag",
+    "created_at": "2020-07-08T18:18:31Z"
+  },
+  {
+    "id": 16557695,
+    "headline": "Google Is Said To Shutter Cloud Project Over Tensions, Pandemic; Co. Scrapped Cloud Initiative In China, 'Sensitive Markets'",
+    "summary": "",
+    "symbols": [
+      "GOOG",
+      "GOOGL"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16557695/google-is-said-to-shutter-cloud-project-over-tensions-pandemic-co-scrapped-cloud-initiative-in-china",
+    "created_at": "2020-07-08T18:17:54Z"
+  },
+  {
+    "id": 16556384,
+    "headline": "Nvidia's Valuation Passes Intel's, With Stock Up 70% Year-To-Date",
+    "summary": "NVIDIA Corporation (NASDAQ: NVDA) has achieved a first of sorts, as its market capitalization outgrew that of rival Intel Corporation (NASDAQ: INTC) for the first time in Wednesday&#39;s session.",
+    "symbols": [
+      "INTC",
+      "MSFT",
+      "NTDOY",
+      "NVDA",
+      "SNE"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/top-stories/20/07/16556384/nvidias-valuation-passes-intels-with-stock-up-70-year-to-date",
+    "created_at": "2020-07-08T18:15:10Z"
+  },
+  {
+    "id": 16557627,
+    "headline": "CrowdStrike Holdings Option Alert: Jul 31 $115 Calls at the Ask: 950 @ $5.0 vs 59 OI; Earnings 9/3 After Close [est] Ref=$111.91",
+    "summary": "",
+    "symbols": [
+      "CRWD"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/markets/options/20/07/16557627/crowdstrike-holdings-option-alert-jul-31-115-calls-at-the-ask-950-5-0-vs-59-oi-earnings-93-after-",
+    "created_at": "2020-07-08T18:12:13Z"
+  },
+  {
+    "id": 16557544,
+    "headline": "Zoom Shares Move Lower After Microsoft Shares Press Release Titled 'Re-imagine meeting room experiences with Teams-enabled devices for shared spaces' For Microsoft Team",
+    "summary": "",
+    "symbols": [
+      "MSFT",
+      "ZM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16557544/zoom-shares-move-lower-after-microsoft-shares-press-release-titled-re-imagine-meeting-room-experienc",
+    "created_at": "2020-07-08T18:06:55Z"
+  },
+  {
+    "id": 16557348,
+    "headline": "Streamer Ninja Begins Streaming On YouTube After Microsoft Shut Down Mixer Last Month",
+    "summary": "",
+    "symbols": [
+      "AMZN",
+      "GOOG",
+      "GOOGL",
+      "MSFT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16557348/streamer-ninja-begins-streaming-on-youtube-after-microsoft-shut-down-mixer-last-month",
+    "created_at": "2020-07-08T17:59:48Z"
+  },
+  {
+    "id": 16556937,
+    "headline": "WePlay! Esports' $50,000 'VALORANT' Invitational Begins July 13",
+    "summary": "As part of Riot Games&#39; Ignition Series, WePlay! Esports is hosting a $50,000 &#34;VALORANT&#34; Invitational. The six-day event will highlight some of the best European teams, including G2 Esports and Ninjas in Pyjamas.",
+    "symbols": [
+      "AMZN",
+      "GOOG"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16556937/weplay-esports-50-000-valorant-invitational-begins-july-13",
+    "created_at": "2020-07-08T17:55:20Z"
+  },
+  {
+    "id": 16556283,
+    "headline": "Tyler 'Ninja' Blevins Mysteriously Reveals YouTube As New Streaming Home",
+    "summary": "Fans of popular streamer Tyler &#34;Ninja&#34; Blevins have been waiting anxiously for his return after Microsoft Corporation&#39;s (NASDAQ: MSFT) Mixer was dissolved and handed over to Facebook&#39;s (NASDAQ: FB) Gamin",
+    "symbols": [
+      "AMZN",
+      "FB",
+      "GOOG",
+      "MSFT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16556283/tyler-ninja-blevins-mysteriously-reveals-youtube-as-new-streaming-home",
+    "created_at": "2020-07-08T17:47:08Z"
+  },
+  {
+    "id": 16556918,
+    "headline": "'Tesla leads UK's 150% increase in electric car sales' -Elektrek Report",
+    "summary": "",
+    "symbols": [
+      "F",
+      "TSLA",
+      "VWAGY"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16556918/tesla-leads-uks-150-increase-in-electric-car-sales-elektrek-report",
+    "created_at": "2020-07-08T17:27:21Z"
+  },
+  {
+    "id": 16556578,
+    "headline": "Electronic Arts Creates Reality Competition Show, The Sims Spark'd, Partners With Turner Sports, Buzzfeed Multiplayer",
+    "summary": "",
+    "symbols": [
+      "EA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16556578/electronic-arts-creates-reality-competition-show-the-sims-sparkd-partners-with-turner-sports-buzzfee",
+    "created_at": "2020-07-08T17:03:37Z"
+  },
+  {
+    "id": 16555188,
+    "headline": "Tesla Model 3 Takes 23% of Chinese EV Market In June",
+    "summary": "After Tesla beat expectations with second-quarter deliveries, it&#39;s no surprise that Tesla&#39;s China division delivered an im",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16555188/tesla-model-3-takes-23-of-chinese-ev-market-in-june",
+    "created_at": "2020-07-08T16:28:15Z"
+  },
+  {
+    "id": 16554785,
+    "headline": "Amazon To Power Cargo Jets With Sustainable Fuel",
+    "summary": "",
+    "symbols": [
+      "AMZN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16554785/amazon-to-power-cargo-jets-with-sustainable-fuel",
+    "created_at": "2020-07-08T16:18:18Z"
+  },
+  {
+    "id": 16553170,
+    "headline": "Commentary: Do Environmental Regulations Really Push Markets?",
+    "summary": "The views expressed here are solely those of the author and do not necessarily represent the views of FreightWaves or its affiliates.  ",
+    "symbols": [
+      "HMC",
+      "TM",
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/opinion/20/07/16553170/commentary-do-environmental-regulations-really-push-markets",
+    "created_at": "2020-07-08T16:15:54Z"
+  },
+  {
+    "id": 16553339,
+    "headline": "Chinese EV Manufacturer Nio Races To All-Time High",
+    "summary": "Shares of Chinese electric vehicle startup Nio Inc – ADR (NYSE: NIO) have been on a roll, with investors showing optimism over alternative energy vehicles as well as battery manufacturers.",
+    "symbols": [
+      "BLNK",
+      "NIO",
+      "PLUG",
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16553339/chinese-ev-manufacturer-nio-races-to-all-time-high",
+    "created_at": "2020-07-08T15:10:49Z"
+  },
+  {
+    "id": 16553358,
+    "headline": "Exclusive: Genius Brands CEO Sees Profitability 'By The End Of The Year'",
+    "summary": "Andy Heyward, chairman and CEO of Genius Brands International Inc (NASDAQ: GNUS), joined Benzinga’s PreMarket Prep on Wednesday to discuss the major developments with the company that has its stock up more than 760% year to",
+    "symbols": [
+      "AAPL",
+      "AMZN",
+      "BRK-A",
+      "BRK-B",
+      "CMCSA",
+      "GNUS",
+      "NFLX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/markets/penny-stocks/20/07/16553358/exclusive-genius-brands-ceo-sees-profitability-by-the-end-of-the-year",
+    "created_at": "2020-07-08T15:05:06Z"
+  },
+  {
+    "id": 16542751,
+    "headline": "Tesla's Climbing Stock Makes Employees Rich, Elon Musk Richest",
+    "summary": "Unlike most automotive companies, Tesla Inc (NASDAQ: TSLA) offers stock options and grants to all of its employees.",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/tech/20/07/16542751/teslas-climbing-stock-makes-employees-rich-elon-musk-richest",
+    "created_at": "2020-07-08T14:49:12Z"
+  },
+  {
+    "id": 16553809,
+    "headline": "Stocks That Hit 52-Week Highs On Wednesday",
+    "summary": "On Wednesday, 140 companies set new 52-week highs.",
+    "symbols": [
+      "AAPL",
+      "AGI",
+      "AKRO",
+      "AMZN",
+      "ANGI",
+      "APD",
+      "ARGX",
+      "ASA",
+      "ASMB",
+      "ASML",
+      "AU",
+      "AUG",
+      "AUY",
+      "BABA",
+      "BHVN",
+      "BLDP",
+      "BST",
+      "BSTZ",
+      "BTG",
+      "BVXV",
+      "BWEN",
+      "CEF",
+      "CELH",
+      "CHGG",
+      "CHN",
+      "CLGX",
+      "CLNE",
+      "CLX",
+      "COUP",
+      "CRM",
+      "CRSP",
+      "CRWD",
+      "DADA",
+      "DDOG",
+      "DFNS",
+      "DMYT",
+      "DOCU",
+      "DOMO",
+      "DRD",
+      "EBAY",
+      "EBS",
+      "ECOM",
+      "ELF",
+      "EMX",
+      "EQX",
+      "FDS",
+      "FIVN",
+      "FOLD",
+      "FOUR",
+      "FRHC",
+      "FSLY",
+      "FTFT",
+      "FUTU",
+      "FVRR",
+      "GAU",
+      "GDS",
+      "GFI",
+      "GMAB",
+      "GNMK",
+      "GRBK",
+      "GSX",
+      "HMY",
+      "IAG",
+      "IMMU",
+      "JBHT",
+      "JD",
+      "KC",
+      "KGC",
+      "LGIH",
+      "LLY",
+      "LRN",
+      "LSCC",
+      "LVGO",
+      "MAG",
+      "MCO",
+      "MCRB",
+      "MGNX",
+      "MKTX",
+      "MRSN",
+      "MRVL",
+      "MSCI",
+      "MTBC",
+      "MTH",
+      "NEO",
+      "NGHC",
+      "NH",
+      "NIO",
+      "NIU",
+      "NK",
+      "NTES",
+      "NTLA",
+      "NVDA",
+      "NVTA",
+      "NYT",
+      "OKTA",
+      "OSTK",
+      "PAAS",
+      "PHI",
+      "PHYS",
+      "PRPL",
+      "PRTS",
+      "PTON",
+      "PYPL",
+      "PZZA",
+      "QDEL",
+      "QFIN",
+      "RARE",
+      "RH",
+      "RUN",
+      "SA",
+      "SAIA",
+      "SAND",
+      "SBSW",
+      "SNAP",
+      "SNDR",
+      "SPGI",
+      "SQ",
+      "SSRM",
+      "STKL",
+      "TDF",
+      "TDOC",
+      "TGTX",
+      "TIGR",
+      "TME",
+      "TMO",
+      "TWN",
+      "TWOU",
+      "TWST",
+      "USX",
+      "VAPO",
+      "VBIV",
+      "VEEV",
+      "VICR",
+      "VRME",
+      "VSLR",
+      "VUZI",
+      "W",
+      "WILC",
+      "WIX",
+      "ZNGA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16553809/stocks-that-hit-52-week-highs-on-wednesday",
+    "created_at": "2020-07-08T14:42:20Z"
+  },
+  {
+    "id": 16553397,
+    "headline": "Canaccord Genuity Maintains Buy on Regeneron Pharmaceuticals, Raises Price Target to $700",
+    "summary": "",
+    "symbols": [
+      "REGN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16553397/canaccord-genuity-maintains-buy-on-regeneron-pharmaceuticals-raises-price-target-to-700",
+    "created_at": "2020-07-08T14:21:20Z"
+  },
+  {
+    "id": 16552547,
+    "headline": "Morning Market Stats in 5 Minutes",
+    "summary": "Movers\n\nIndices\n\n• S&amp;P 500 ETF (NYSE:SPY) rose 0.28% to $314.66.\n\n• Nasdaq ETF (NASDAQ:QQQ) increased 0.58% to $258.09.\n\n• Dow Jones Industrial Average ETF (NYSE:DIA) increased 0.20% to $259.69.",
+    "symbols": [
+      "BABA",
+      "BBBY",
+      "DIA",
+      "FXI",
+      "GLD",
+      "MOGU",
+      "MSM",
+      "NKLA",
+      "NOK",
+      "QQQ",
+      "SPY",
+      "TLT",
+      "USO",
+      "VGK",
+      "WMT",
+      "XENT",
+      "XLE",
+      "XLF",
+      "XLK",
+      "XRT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/markets/20/07/16552547/morning-market-stats-in-5-minutes",
+    "created_at": "2020-07-08T14:05:49Z"
+  },
+  {
+    "id": 16552517,
+    "headline": "Argus Research Maintains Buy on T-Mobile US, Raises Price Target to $123",
+    "summary": "",
+    "symbols": [
+      "TMUS"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16552517/argus-research-maintains-buy-on-t-mobile-us-raises-price-target-to-123",
+    "created_at": "2020-07-08T13:43:48Z"
+  },
+  {
+    "id": 16551020,
+    "headline": "Morgan Stanley Maintains Equal-Weight on Paychex, Raises Price Target to $74",
+    "summary": "",
+    "symbols": [
+      "PAYX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16551020/morgan-stanley-maintains-equal-weight-on-paychex-raises-price-target-to-74",
+    "created_at": "2020-07-08T12:52:56Z"
+  },
+  {
+    "id": 16550820,
+    "headline": "EXCLUSIVE: Plug Power CEO Marsh Says 'Amazon Is Probably My Biggest Customer'",
+    "summary": "",
+    "symbols": [
+      "AMZN",
+      "PLUG"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/exclusives/20/07/16550820/exclusive-plug-power-ceo-marsh-says-amazon-is-probably-my-biggest-customer",
+    "created_at": "2020-07-08T12:43:07Z"
+  },
+  {
+    "id": 16550556,
+    "headline": "BMO Capital Maintains Market Perform on Paychex, Raises Price Target to $74",
+    "summary": "",
+    "symbols": [
+      "PAYX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16550556/bmo-capital-maintains-market-perform-on-paychex-raises-price-target-to-74",
+    "created_at": "2020-07-08T12:31:47Z"
+  },
+  {
+    "id": 16550424,
+    "headline": "Google Spokesperson Tells Benzinga Co. Last Wednesday Paused Production On Any New Data Requests From Hong Kong Authorities After China Security Bill Took Effect; Says Will Continue To Review The Details Of New Law",
+    "summary": "",
+    "symbols": [
+      "FXI",
+      "GOOG",
+      "GOOGL",
+      "SPY"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/hot/20/07/16550424/google-spokesperson-tells-benzinga-co-last-wednesday-paused-production-on-any-new-data-requests-from",
+    "created_at": "2020-07-08T12:29:54Z"
+  },
+  {
+    "id": 16550056,
+    "headline": "10 Biggest Price Target Changes For Wednesday",
+    "summary": "\n\tCitigroup lifted  Goldman Sachs Group Inc  (NYSE: GS) price target from $245 to $265. Goldman Sachs shares closed at $199.36 on Tuesday.\n",
+    "symbols": [
+      "ARCE",
+      "BTAI",
+      "GS",
+      "LVGO",
+      "NFLX",
+      "NVAX",
+      "PAYX",
+      "RDUS",
+      "SPR",
+      "VRTX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/price-target/20/07/16550056/10-biggest-price-target-changes-for-wednesday",
+    "created_at": "2020-07-08T12:10:44Z"
+  },
+  {
+    "id": 16545233,
+    "headline": "3 Futuristic Transportation ETFs Hitting New Highs",
+    "summary": "Whether it&#39;s Tesla Inc (NASDAQ: TSLA), Workhorse Group (NASDAQ: WKHS), Uber (NYSE: UBER) or another company, how the w",
+    "symbols": [
+      "GOOG",
+      "HAIL",
+      "IDRV",
+      "KARS",
+      "NVDA",
+      "TSLA",
+      "UBER",
+      "WKHS"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/trading-ideas/long-ideas/20/07/16545233/3-futuristic-transportation-etfs-hitting-new-highs",
+    "created_at": "2020-07-08T12:10:06Z"
+  },
+  {
+    "id": 16549870,
+    "headline": "Xperi Subsidiary DTS Launches Sound Unbound On Xbox One",
+    "summary": "",
+    "symbols": [
+      "MSFT",
+      "XPER"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16549870/xperi-subsidiary-dts-launches-sound-unbound-on-xbox-one",
+    "created_at": "2020-07-08T12:06:38Z"
+  },
+  {
+    "id": 16549797,
+    "headline": "Morgan Stanley Maintains Equal-Weight on Diamondback Energy, Raises Price Target to $36",
+    "summary": "",
+    "symbols": [
+      "FANG"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16549797/morgan-stanley-maintains-equal-weight-on-diamondback-energy-raises-price-target-to-36",
+    "created_at": "2020-07-08T12:04:12Z"
+  },
+  {
+    "id": 16546287,
+    "headline": "OLED Displays Coming To All 5G Model Apple iPhones In 2020: Report",
+    "summary": "All of Apple Inc.&#39;s (NASDAQ: AAPL) 5G smartphones will be equipped with OLED screens in 2020, which is likely to spur competition among display panel suppliers.",
+    "symbols": [
+      "AAPL",
+      "JNNDF",
+      "LPL",
+      "SSNLF"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16546287/oled-displays-coming-to-all-5g-model-apple-iphones-in-2020-report",
+    "created_at": "2020-07-08T12:01:08Z"
+  },
+  {
+    "id": 16549423,
+    "headline": "Alnylam Pharmaceuticals And Taiba Group Partner To Commercialize RNAi Therapeutics In The Gulf States",
+    "summary": "",
+    "symbols": [
+      "ALNY"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/general/biotech/20/07/16549423/alnylam-pharmaceuticals-and-taiba-group-partner-to-commercialize-rnai-therapeutics-in-the-gulf-st",
+    "created_at": "2020-07-08T11:58:14Z"
+  },
+  {
+    "id": 16549360,
+    "headline": "Rosenblatt Reiterates Neutral on Netflix, Raises Price Target to $445",
+    "summary": "",
+    "symbols": [
+      "NFLX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16549360/rosenblatt-reiterates-neutral-on-netflix-raises-price-target-to-445",
+    "created_at": "2020-07-08T11:51:25Z"
+  },
+  {
+    "id": 16549173,
+    "headline": "B of A Securities Reinstates Buy on CoStar Gr, Announces $850 Price Target",
+    "summary": "",
+    "symbols": [
+      "CSGP"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16549173/b-of-a-securities-reinstates-buy-on-costar-gr-announces-850-price-target",
+    "created_at": "2020-07-08T11:37:30Z"
+  },
+  {
+    "id": 16548838,
+    "headline": "The Daily Biotech Pulse: Intersect ENT Jumps On M&A Speculation, VIVUS Files For Bankruptcy",
+    "summary": "Here&#39;s a roundup of top developments in the biotech space over the last 24 hours.\n\nScaling The Peaks\n\n(Biotech Stocks Hitting 52-week Highs July 7)",
+    "symbols": [
+      "ABBV",
+      "ACAD",
+      "AKBA",
+      "AKRO",
+      "ALNY",
+      "ARGX",
+      "ASND",
+      "AYLA",
+      "BMRN",
+      "BSTC",
+      "BVXV",
+      "CERS",
+      "CRSP",
+      "CRVS",
+      "CYTK",
+      "DXCM",
+      "ENDP",
+      "ESALY",
+      "FATE",
+      "GMAB",
+      "GNMK",
+      "IBB",
+      "IMMU",
+      "IMTX",
+      "INCY",
+      "MDT",
+      "MGNX",
+      "MRK",
+      "NEO",
+      "NTLA",
+      "NVAX",
+      "NXTC",
+      "PCRX",
+      "REGN",
+      "RPTX",
+      "SGEN",
+      "SONN",
+      "TGTX",
+      "TPTX",
+      "TWST",
+      "UMRX",
+      "VBIV",
+      "VIR",
+      "VRTX",
+      "VVUS",
+      "XBI",
+      "XENT",
+      "ZLAB"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/general/biotech/20/07/16548838/the-daily-biotech-pulse-intersect-ent-jumps-on-m-a-speculation-vivus-files-for-bankruptcy",
+    "created_at": "2020-07-08T11:31:40Z"
+  },
+  {
+    "id": 16548906,
+    "headline": "Citigroup Maintains Neutral on Paychex, Raises Price Target to $75",
+    "summary": "",
+    "symbols": [
+      "PAYX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16548906/citigroup-maintains-neutral-on-paychex-raises-price-target-to-75",
+    "created_at": "2020-07-08T11:15:18Z"
+  },
+  {
+    "id": 16548848,
+    "headline": "Citigroup Maintains Neutral on Old Dominion Freight, Raises Price Target to $185",
+    "summary": "",
+    "symbols": [
+      "ODFL"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16548848/citigroup-maintains-neutral-on-old-dominion-freight-raises-price-target-to-185",
+    "created_at": "2020-07-08T11:12:03Z"
+  },
+  {
+    "id": 16548818,
+    "headline": "Ireland Says Will Get Apple State Case Decision On July 15",
+    "summary": "",
+    "symbols": [
+      "AAPL"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/government/20/07/16548818/ireland-says-will-get-apple-state-case-decision-on-july-15",
+    "created_at": "2020-07-08T11:09:39Z"
+  },
+  {
+    "id": 16547016,
+    "headline": "Volvo Invests In Blockchain Startup To Keep Track Of Its Electric Vehicle Raw Material Supply Chain",
+    "summary": "Swedish automaker Volvo AB (OTC: VLVLY) has invested an undisclosed amount in blockchain startup Circulor, it announced Wednesday.",
+    "symbols": [
+      "AAPL",
+      "DELL",
+      "GOOG",
+      "GOOGL",
+      "MSFT",
+      "TSLA",
+      "VLVLY"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/fintech/20/07/16547016/volvo-invests-in-blockchain-startup-to-keep-track-of-its-electric-vehicle-raw-material-supply-chain",
+    "created_at": "2020-07-08T09:51:59Z"
+  },
+  {
+    "id": 16547640,
+    "headline": "Morgan Stanley Downgrades Vertex Pharmaceuticals to Equal-Weight, Raises Price Target to $300",
+    "summary": "",
+    "symbols": [
+      "VRTX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16547640/morgan-stanley-downgrades-vertex-pharmaceuticals-to-equal-weight-raises-price-target-to-300",
+    "created_at": "2020-07-08T09:45:24Z"
+  },
+  {
+    "id": 16547636,
+    "headline": "Intel's Mobileye and WILLER Partner on Self-Driving Mobility Solutions for Japan, Southeast Asia",
+    "summary": "",
+    "symbols": [
+      "INTC"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16547636/intels-mobileye-and-willer-partner-on-self-driving-mobility-solutions-for-japan-southeast-asia",
+    "created_at": "2020-07-08T09:43:51Z"
+  },
+  {
+    "id": 16546021,
+    "headline": "Elon Musk's Boring Company Launches New Challenge To 'Beat The Snail'",
+    "summary": "Billionaire entrepreneur Elon Musk&#39;s tunnel boring company has launched a new competition as it looks to make technical advancements in the field.",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16546021/elon-musks-boring-company-launches-new-challenge-to-beat-the-snail",
+    "created_at": "2020-07-08T09:34:58Z"
+  },
+  {
+    "id": 16547494,
+    "headline": "Gilead Presents Survey Findings on PrEP Access and Utilization in the U.S. During COVID-19 Shelter-in-Place Orders at the 23rd International AIDS Conference",
+    "summary": "",
+    "symbols": [
+      "GILD"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16547494/gilead-presents-survey-findings-on-prep-access-and-utilization-in-the-u-s-during-covid-19-shelter-in",
+    "created_at": "2020-07-08T09:19:47Z"
+  },
+  {
+    "id": 16547485,
+    "headline": "Tesla China Sold 14,954 Model 3 Vehicles in June, +35% MoM",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16547485/tesla-china-sold-14-954-model-3-vehicles-in-june-35-mom",
+    "created_at": "2020-07-08T09:18:04Z"
+  },
+  {
+    "id": 16545779,
+    "headline": "DocuSign Buys Liveoak For $38M As It Looks To Offer Online Notary Service",
+    "summary": "DocuSign Inc. (NASDAQ: DOCU) on Tuesday announced it had acquired virtual customer engagement and business platform Liveoak for $38 million in an all-s",
+    "symbols": [
+      "DOCU",
+      "MSFT",
+      "WORK",
+      "ZM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/m-a/20/07/16545779/docusign-buys-liveoak-for-38m-as-it-looks-to-offer-online-notary-service",
+    "created_at": "2020-07-08T09:09:58Z"
+  },
+  {
+    "id": 16545289,
+    "headline": "Advertising Boycott Likely To Continue As Civil Rights Groups And Facebook Fail To Make Progress At Talks",
+    "summary": "Talks held Tuesday between civil rights groups and Facebook Inc (NASDAQ: FB) did not yield results, increasing the likelihood that the advertising boycott ca",
+    "symbols": [
+      "FB",
+      "KO",
+      "SBUX",
+      "VZ",
+      "ZM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/07/16545289/advertising-boycott-likely-to-continue-as-civil-rights-groups-and-facebook-fail-to-make-progress-at",
+    "created_at": "2020-07-08T08:33:02Z"
+  }
+]

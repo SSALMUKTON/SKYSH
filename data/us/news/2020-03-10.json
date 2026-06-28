@@ -1,0 +1,970 @@
+[
+  {
+    "id": 15522848,
+    "headline": "Shippers To Drivers: What's Your Health And Travel History?",
+    "summary": "",
+    "symbols": [
+      "AMZN",
+      "FDX",
+      "UPS"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15522848",
+    "created_at": "2020-03-10T21:56:40Z"
+  },
+  {
+    "id": 15522833,
+    "headline": "Google Recommends All North America Employees Work From Home",
+    "summary": "",
+    "symbols": [
+      "GOOG",
+      "GOOGL",
+      "SPY"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15522833",
+    "created_at": "2020-03-10T21:30:03Z"
+  },
+  {
+    "id": 15470079,
+    "headline": "How Close Are Biotechs To Bringing A COVID-19 Treatment To Market?",
+    "summary": "",
+    "symbols": [
+      "COCP",
+      "GILD",
+      "GSK",
+      "INO",
+      "JNJ",
+      "MRNA",
+      "NNVC",
+      "NVAX",
+      "PFE",
+      "SNY",
+      "VIR",
+      "VXRT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15470079",
+    "created_at": "2020-03-10T21:24:22Z"
+  },
+  {
+    "id": 15522008,
+    "headline": "Regeneron, Sanofi To Test Arthritis Drug As Potential Coronavirus Treatment",
+    "summary": "",
+    "symbols": [
+      "REGN",
+      "SNY"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15522008",
+    "created_at": "2020-03-10T20:48:17Z"
+  },
+  {
+    "id": 15521545,
+    "headline": "Walmart Announces Emergency Coronavirus Leave Policy, Effective Immediately; Co. To Waive Attendance Occurrence Policy For US Associates Through End Of April",
+    "summary": "",
+    "symbols": [
+      "SPY",
+      "WMT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15521545",
+    "created_at": "2020-03-10T20:22:43Z"
+  },
+  {
+    "id": 15518803,
+    "headline": "BofA Downgrades 14 Oil And Gas Stocks In Face Of Oil Price War",
+    "summary": "",
+    "symbols": [
+      "APY",
+      "BKR",
+      "CLB",
+      "FET",
+      "HAL",
+      "HLX",
+      "HP",
+      "LBRT",
+      "NBR",
+      "NEX",
+      "OII",
+      "PTEN",
+      "PUMP",
+      "RIG",
+      "SLB",
+      "WHD"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15518803",
+    "created_at": "2020-03-10T20:11:04Z"
+  },
+  {
+    "id": 15518341,
+    "headline": "Wedbush Analyzes Microsoft Amid Coronavirus Uncertainties",
+    "summary": "",
+    "symbols": [
+      "MSFT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15518341",
+    "created_at": "2020-03-10T19:20:14Z"
+  },
+  {
+    "id": 15518019,
+    "headline": "SunTrust Cuts Booking Holdings Price Target On Worsening Travel Trends",
+    "summary": "",
+    "symbols": [
+      "BKNG"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15518019",
+    "created_at": "2020-03-10T19:00:04Z"
+  },
+  {
+    "id": 15520161,
+    "headline": "Treatment With Gilead's Vesatolimod Is Evaluated For Safety And Virologic And Immunologic Response Versus Placebo In Phase 1B HIV Functional Cure Study",
+    "summary": "",
+    "symbols": [
+      "GILD"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15520161",
+    "created_at": "2020-03-10T18:34:14Z"
+  },
+  {
+    "id": 15519668,
+    "headline": "Competition For Madden? Take-Two, NFL Reach Deal On 'Non-Simulation' Football Game",
+    "summary": "",
+    "symbols": [
+      "EA",
+      "TTWO"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15519668",
+    "created_at": "2020-03-10T18:31:38Z"
+  },
+  {
+    "id": 15519939,
+    "headline": "'Call Of Duty' Launches Free-To-Play Battle Royale Mode 'Warzone' Today",
+    "summary": "",
+    "symbols": [
+      "ATVI",
+      "EA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15519939",
+    "created_at": "2020-03-10T18:20:30Z"
+  },
+  {
+    "id": 15519896,
+    "headline": "'Tesla gets banned from KC Auto Show, owners volunteer to take over' -Electrek",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15519896",
+    "created_at": "2020-03-10T18:07:58Z"
+  },
+  {
+    "id": 15519796,
+    "headline": "Peloton Shares Tick To Session Low As Hearing Report Apple Working On 'Guided Workout' Fitness App",
+    "summary": "",
+    "symbols": [
+      "AAPL",
+      "PTON"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15519796",
+    "created_at": "2020-03-10T17:59:05Z"
+  },
+  {
+    "id": 15514097,
+    "headline": "No Starlink Spin-Off In The Works, Says Elon Musk",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15514097",
+    "created_at": "2020-03-10T17:13:35Z"
+  },
+  {
+    "id": 15517281,
+    "headline": "Nio Fundamentals Have Bottomed Out; COVID-19, Tesla Competition Keep BofA On Sidelines",
+    "summary": "",
+    "symbols": [
+      "NIO",
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15517281",
+    "created_at": "2020-03-10T17:00:23Z"
+  },
+  {
+    "id": 15517613,
+    "headline": "Here's How Long It Took Amazon To Reach A $100B Market Cap",
+    "summary": "",
+    "symbols": [
+      "AMZN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15517613",
+    "created_at": "2020-03-10T16:40:04Z"
+  },
+  {
+    "id": 15519021,
+    "headline": "82 Stocks Moving In Tuesday's Mid-Day Session",
+    "summary": "",
+    "symbols": [
+      "AHPI",
+      "AIM",
+      "ALT",
+      "ANGI",
+      "APA",
+      "APT",
+      "ASNA",
+      "AVID",
+      "BHP",
+      "BLDP",
+      "CBLI",
+      "CGEN",
+      "CODX",
+      "CPE",
+      "CRC",
+      "CVGW",
+      "CY",
+      "DARE",
+      "DKS",
+      "DRAD",
+      "ELA",
+      "ENZ",
+      "FCEL",
+      "FCX",
+      "GKOS",
+      "GLOG",
+      "GNMK",
+      "GPX",
+      "HESM",
+      "HOME",
+      "HOV",
+      "INSG",
+      "KBR",
+      "LBRT",
+      "MDLA",
+      "MDWD",
+      "MESO",
+      "MT",
+      "NAT",
+      "NBLX",
+      "NMM",
+      "NNA",
+      "NNVC",
+      "NOVN",
+      "NS",
+      "NVAX",
+      "NXGN",
+      "OAS",
+      "OIS",
+      "OPK",
+      "ORGO",
+      "OVV",
+      "OXY",
+      "PBA",
+      "PBFX",
+      "PRPL",
+      "RES",
+      "REV",
+      "RIO",
+      "SDRL",
+      "SFIX",
+      "SM",
+      "SOHO",
+      "SPEX",
+      "SPH",
+      "SSL",
+      "STKL",
+      "STNG",
+      "TCON",
+      "TK",
+      "TNK",
+      "TSLA",
+      "VIR",
+      "VNTR",
+      "VVNT",
+      "VXRT",
+      "WAL",
+      "WES",
+      "WPX",
+      "XP",
+      "YTEN",
+      "ZYNE"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15519021",
+    "created_at": "2020-03-10T16:25:26Z"
+  },
+  {
+    "id": 15517812,
+    "headline": "In Volatile Markets, It Works To Fade The Move: PreMarket Prep Recap For March 10, 2020",
+    "summary": "",
+    "symbols": [
+      "CY",
+      "FANG",
+      "ORLY",
+      "SFIX",
+      "SPY"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15517812",
+    "created_at": "2020-03-10T16:15:44Z"
+  },
+  {
+    "id": 15518258,
+    "headline": "CSX Says Deployment Of Train Inspection Technology Going Smoothly",
+    "summary": "",
+    "symbols": [
+      "CSX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15518258",
+    "created_at": "2020-03-10T15:49:28Z"
+  },
+  {
+    "id": 15518334,
+    "headline": "Gilead Presents 96-Week DISCOVER Trial Data Demonstrating 'Favorable Renal and Bone Safety Profile of Descovy for HIV PrEP in At-Risk Populations'",
+    "summary": "",
+    "symbols": [
+      "GILD"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15518334",
+    "created_at": "2020-03-10T15:33:37Z"
+  },
+  {
+    "id": 15517906,
+    "headline": "Morning Market Stats In 5 Minutes",
+    "summary": "",
+    "symbols": [
+      "AAPL",
+      "CEPU",
+      "CLDR",
+      "CLNE",
+      "DIA",
+      "DKS",
+      "FXI",
+      "GLD",
+      "NS",
+      "OPK",
+      "PBA",
+      "QQQ",
+      "SPY",
+      "TLT",
+      "USO",
+      "VGK",
+      "VZ",
+      "XLE",
+      "XLF",
+      "XLK",
+      "XP",
+      "XRT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15517906",
+    "created_at": "2020-03-10T15:16:40Z"
+  },
+  {
+    "id": 15516011,
+    "headline": "Why This Netflix Analyst Says Coronavirus Outbreak Is Negative For Streaming Platform",
+    "summary": "",
+    "symbols": [
+      "NFLX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15516011",
+    "created_at": "2020-03-10T15:05:24Z"
+  },
+  {
+    "id": 15517566,
+    "headline": "One-Year Anniversary Of Whitney Tilson's $100 Tesla Call",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15517566",
+    "created_at": "2020-03-10T15:01:49Z"
+  },
+  {
+    "id": 15517355,
+    "headline": "The Main Challenges Faced By The Upcoming EV Era",
+    "summary": "",
+    "symbols": [
+      "AAPL",
+      "CSCO",
+      "FNHI",
+      "GOOG",
+      "MSFT",
+      "NSANY",
+      "ORCL",
+      "TM",
+      "TSLA",
+      "VWAGY"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15517355",
+    "created_at": "2020-03-10T14:34:30Z"
+  },
+  {
+    "id": 15517622,
+    "headline": "Piper Sandler Maintains Neutral on Starbucks, Lowers Price Target to $74",
+    "summary": "",
+    "symbols": [
+      "SBUX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15517622",
+    "created_at": "2020-03-10T14:33:26Z"
+  },
+  {
+    "id": 15517356,
+    "headline": "Jedi Wars Between Amazon And Microsoft Are Still Very Much On",
+    "summary": "",
+    "symbols": [
+      "AAPL",
+      "AMZN",
+      "CRM",
+      "FB",
+      "GOOG",
+      "INTC",
+      "MSFT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15517356",
+    "created_at": "2020-03-10T14:27:34Z"
+  },
+  {
+    "id": 15517357,
+    "headline": "The Electric Revolution Speeding Up From Increased Regulations",
+    "summary": "",
+    "symbols": [
+      "AMZN",
+      "FNHI",
+      "PCRFY",
+      "TM",
+      "TSLA",
+      "VWAGY"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15517357",
+    "created_at": "2020-03-10T14:22:46Z"
+  },
+  {
+    "id": 15500670,
+    "headline": "Here's How Much Investing $100 In Broadcom Stock Back In 2010 Would Be Worth Today",
+    "summary": "",
+    "symbols": [
+      "AVGO",
+      "QCOM",
+      "SPY"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15500670",
+    "created_at": "2020-03-10T14:17:17Z"
+  },
+  {
+    "id": 15516995,
+    "headline": "SunTrust Robinson Humphrey Maintains Buy on Booking Holdings, Lowers Price Target to $2100",
+    "summary": "",
+    "symbols": [
+      "BKNG"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15516995",
+    "created_at": "2020-03-10T13:49:21Z"
+  },
+  {
+    "id": 15516784,
+    "headline": "Morgan Stanley Maintains Overweight on Verisk Analytics, Lowers Price Target to $176",
+    "summary": "",
+    "symbols": [
+      "VRSK"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15516784",
+    "created_at": "2020-03-10T13:35:03Z"
+  },
+  {
+    "id": 15516775,
+    "headline": "Morgan Stanley Maintains Equal-Weight on Texas Instruments, Lowers Price Target to $119",
+    "summary": "",
+    "symbols": [
+      "TXN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15516775",
+    "created_at": "2020-03-10T13:34:17Z"
+  },
+  {
+    "id": 15516721,
+    "headline": "Morgan Stanley Maintains Overweight on NXP Semiconductors, Lowers Price Target to $139",
+    "summary": "",
+    "symbols": [
+      "NXPI"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15516721",
+    "created_at": "2020-03-10T13:30:52Z"
+  },
+  {
+    "id": 15516708,
+    "headline": "Morgan Stanley Maintains Overweight on Intel, Lowers Price Target to $69",
+    "summary": "",
+    "symbols": [
+      "INTC"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15516708",
+    "created_at": "2020-03-10T13:30:12Z"
+  },
+  {
+    "id": 15516665,
+    "headline": "Morgan Stanley Maintains Equal-Weight on Analog Devices, Lowers Price Target to $115",
+    "summary": "",
+    "symbols": [
+      "ADI"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15516665",
+    "created_at": "2020-03-10T13:27:13Z"
+  },
+  {
+    "id": 15516436,
+    "headline": "'Tesla to add production capacity for 250,000 cars at Gigafactory Shanghai' -Electrek",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15516436",
+    "created_at": "2020-03-10T13:05:12Z"
+  },
+  {
+    "id": 15516348,
+    "headline": "Qualcomm Raises Quarterly Dividend From $0.62 To $0.65/Share",
+    "summary": "",
+    "symbols": [
+      "QCOM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15516348",
+    "created_at": "2020-03-10T13:01:24Z"
+  },
+  {
+    "id": 15515828,
+    "headline": "11 Consumer Cyclical Stocks Moving In Tuesday's Pre-Market Session",
+    "summary": "",
+    "symbols": [
+      "CCL",
+      "CUK",
+      "DKS",
+      "HOME",
+      "NCLH",
+      "OSTK",
+      "RACE",
+      "RCL",
+      "SFIX",
+      "TSLA",
+      "WKHS"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15515828",
+    "created_at": "2020-03-10T12:54:51Z"
+  },
+  {
+    "id": 15515754,
+    "headline": "HanesBrands Launches Its Popular C9 Champion Brand On Amazon With A Multiyear Exclusive Agreement",
+    "summary": "",
+    "symbols": [
+      "AMZN",
+      "HBI"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15515754",
+    "created_at": "2020-03-10T12:28:48Z"
+  },
+  {
+    "id": 15515716,
+    "headline": "Benzinga Pro's Top 5 Stocks To Watch For Tues., Mar. 10, 2020: FXI, TSLA, OXY, CORV, CLDR",
+    "summary": "",
+    "symbols": [
+      "CLDR",
+      "CORV",
+      "FXI",
+      "OXY",
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15515716",
+    "created_at": "2020-03-10T12:22:48Z"
+  },
+  {
+    "id": 15515696,
+    "headline": "Honeywell Says Expecting Coronavirus To Be Short-Term Disruption At This Stage",
+    "summary": "",
+    "symbols": [
+      "HON"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15515696",
+    "created_at": "2020-03-10T12:18:11Z"
+  },
+  {
+    "id": 15515539,
+    "headline": "NFL And 2K Announce Partnership To Produce Multiple New Video Games",
+    "summary": "",
+    "symbols": [
+      "TTWO"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15515539",
+    "created_at": "2020-03-10T12:07:20Z"
+  },
+  {
+    "id": 15515184,
+    "headline": "Credit Suisse Maintains Outperform on Booking Holdings, Lowers Price Target to $1870",
+    "summary": "",
+    "symbols": [
+      "BKNG"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15515184",
+    "created_at": "2020-03-10T11:45:15Z"
+  },
+  {
+    "id": 15515164,
+    "headline": "Wells Fargo Reiterates Overweight on Diamondback Energy, Lowers Price Target to $91",
+    "summary": "",
+    "symbols": [
+      "FANG"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15515164",
+    "created_at": "2020-03-10T11:39:52Z"
+  },
+  {
+    "id": 15515130,
+    "headline": "25 Stocks Moving in Tuesday's Pre-Market Session",
+    "summary": "",
+    "symbols": [
+      "ALB",
+      "APA",
+      "AYX",
+      "BCRX",
+      "BHP",
+      "CPE",
+      "CY",
+      "FCEL",
+      "FCX",
+      "INSG",
+      "MT",
+      "NOVN",
+      "NVAX",
+      "OAS",
+      "ORGO",
+      "OVV",
+      "OXY",
+      "RIO",
+      "SDRL",
+      "SFIX",
+      "SM",
+      "SPEX",
+      "TCON",
+      "TSLA",
+      "WES"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15515130",
+    "created_at": "2020-03-10T11:33:35Z"
+  },
+  {
+    "id": 15515054,
+    "headline": "Honeywell Says Reaffirming Q1 Guidance, Full Year Guidance Unchanged, Monitoring Macro Situation",
+    "summary": "",
+    "symbols": [
+      "HON"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15515054",
+    "created_at": "2020-03-10T11:22:02Z"
+  },
+  {
+    "id": 15514989,
+    "headline": "UBS Maintains Buy on Apple, Lowers Price Target to $335",
+    "summary": "",
+    "symbols": [
+      "AAPL"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15514989",
+    "created_at": "2020-03-10T11:06:55Z"
+  },
+  {
+    "id": 15514978,
+    "headline": "UBS Maintains Neutral on Booking Holdings, Lowers Price Target to $1540",
+    "summary": "",
+    "symbols": [
+      "BKNG"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15514978",
+    "created_at": "2020-03-10T11:04:55Z"
+  },
+  {
+    "id": 15514597,
+    "headline": "China's Industry Ministry Urges Tesla to Keep Products Consistent as Buyers Complain About Computers Containing Less Advanced Chips",
+    "summary": "",
+    "symbols": [
+      "FXI",
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15514597",
+    "created_at": "2020-03-10T10:30:51Z"
+  },
+  {
+    "id": 15514575,
+    "headline": "JP Morgan Upgrades Baker Hughes to Overweight, Announces $18 Price Target",
+    "summary": "",
+    "symbols": [
+      "BKR"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15514575",
+    "created_at": "2020-03-10T10:26:22Z"
+  },
+  {
+    "id": 15514299,
+    "headline": "Needham Says COVID-19 Is Negative For Netflix As It Does Not Benefit Economically From Additional Viewing Hours By Users",
+    "summary": "",
+    "symbols": [
+      "NFLX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15514299",
+    "created_at": "2020-03-10T09:57:54Z"
+  },
+  {
+    "id": 15514298,
+    "headline": "123 Biggest Movers From Yesterday",
+    "summary": "",
+    "symbols": [
+      "AAPL",
+      "AEMD",
+      "AHPI",
+      "AIM",
+      "AMPY",
+      "APA",
+      "APY",
+      "AXAS",
+      "BBL",
+      "BHP",
+      "BKR",
+      "BOOM",
+      "BOOT",
+      "BP",
+      "CDEV",
+      "CEQP",
+      "CFR",
+      "CGEN",
+      "CHK",
+      "CLB",
+      "CLR",
+      "CNQ",
+      "CNX",
+      "COCP",
+      "COP",
+      "CPAH",
+      "CPE",
+      "CPG",
+      "CRC",
+      "CVE",
+      "CVX",
+      "CXO",
+      "DCP",
+      "DK",
+      "DS",
+      "DVN",
+      "E",
+      "ENBL",
+      "ENLC",
+      "ENPH",
+      "ENZ",
+      "EPD",
+      "EQNR",
+      "EQT",
+      "ERF",
+      "ET",
+      "FANG",
+      "FI",
+      "FLMN",
+      "FRO",
+      "GEL",
+      "GPRE",
+      "GTLS",
+      "HAL",
+      "HES",
+      "HESM",
+      "HLX",
+      "HOME",
+      "HP",
+      "INO",
+      "IO",
+      "KALA",
+      "KERN",
+      "LAMR",
+      "MCF",
+      "MNK",
+      "MRC",
+      "MRNA",
+      "MRO",
+      "MTDR",
+      "MUR",
+      "NBL",
+      "NBLX",
+      "NCLH",
+      "NEX",
+      "NGL",
+      "NINE",
+      "NNVC",
+      "NOV",
+      "NR",
+      "NS",
+      "OAS",
+      "OII",
+      "OIS",
+      "OKE",
+      "OMP",
+      "OSW",
+      "OVV",
+      "OXY",
+      "PAA",
+      "PAGP",
+      "PDCE",
+      "PE",
+      "PSTI",
+      "PTEN",
+      "PUMP",
+      "PVAC",
+      "PXD",
+      "RIG",
+      "RRC",
+      "RTLR",
+      "SBOW",
+      "SLB",
+      "SLCA",
+      "SM",
+      "SPEX",
+      "SSL",
+      "TALO",
+      "TELL",
+      "TOT",
+      "TRGP",
+      "VAL",
+      "VET",
+      "VNOM",
+      "VXRT",
+      "WAFU",
+      "WES",
+      "WHD",
+      "WLL",
+      "WPX",
+      "XEC",
+      "XOM",
+      "YNDX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15514298",
+    "created_at": "2020-03-10T09:57:35Z"
+  },
+  {
+    "id": 15514267,
+    "headline": "Morgan Stanley Upgrades American Electric Power to Overweight, Lowers Price Target to $102",
+    "summary": "",
+    "symbols": [
+      "AEP"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15514267",
+    "created_at": "2020-03-10T09:40:31Z"
+  },
+  {
+    "id": 15514126,
+    "headline": "Nomura Initiates Coverage On Qualcomm with Buy Rating, Announces $98 Price Target",
+    "summary": "",
+    "symbols": [
+      "QCOM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15514126",
+    "created_at": "2020-03-10T08:57:21Z"
+  },
+  {
+    "id": 15513764,
+    "headline": "NBCUniversal Got Rid Off Its Entire Stake In Snap In 2019: Report",
+    "summary": "",
+    "symbols": [
+      "AMZN",
+      "CMCSA",
+      "DIS",
+      "NFLX",
+      "SNAP"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15513764",
+    "created_at": "2020-03-10T06:46:48Z"
+  },
+  {
+    "id": 15513735,
+    "headline": "Exxon Mobil Stocks Tank In Market Blood Bath After OPEC Talks Fail",
+    "summary": "",
+    "symbols": [
+      "CVX",
+      "FANG",
+      "HES",
+      "MRO",
+      "XOM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15513735",
+    "created_at": "2020-03-10T05:19:31Z"
+  },
+  {
+    "id": 15513682,
+    "headline": "FANG Stocks Lose Nearly $150B In A Day As Coronavirus Fears Rise Even More, Oil Crashes",
+    "summary": "",
+    "symbols": [
+      "AMZN",
+      "FB",
+      "GOOG",
+      "GOOGL",
+      "NFLX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15513682",
+    "created_at": "2020-03-10T04:58:12Z"
+  },
+  {
+    "id": 15513759,
+    "headline": "Little Known Company's Shares Surge Again As Investors Confuse It With Zoom Video Communications",
+    "summary": "",
+    "symbols": [
+      "AMZN",
+      "FB",
+      "ZM",
+      "ZOOM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15513759",
+    "created_at": "2020-03-10T03:51:41Z"
+  }
+]

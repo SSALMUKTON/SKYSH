@@ -1,0 +1,78 @@
+[
+  {
+    "id": 45183831,
+    "headline": "Benzinga's 'Stock Whisper' Index: 5 Stocks Investors Secretly Monitor But Don't Talk About Yet",
+    "summary": "The Benzinga Stock Whisper Index highlights five stocks seeing increased interest from readers and a look at the reasons why the stocks are trending.",
+    "symbols": [
+      "DUK",
+      "LNG",
+      "MELI",
+      "NTNX",
+      "WPM"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/trading-ideas/25/05/45183831/benzingas-stock-whisper-index-5-stocks-investors-secretly-monitor-but-dont-talk-about-yet-63",
+    "created_at": "2025-05-03T13:43:57Z"
+  },
+  {
+    "id": 45183625,
+    "headline": "Benzinga Bulls And Bears: Lilly, Microsoft, Starbucks — And Markets Fully Recover Tariff Chaos Losses",
+    "summary": "Benzinga examined the prospects for many investors&#39; favorite stocks over the last week — here&#39;s a look at some of our top stories.",
+    "symbols": [
+      "AAPL",
+      "ABBV",
+      "AMZN",
+      "BBAI",
+      "BE",
+      "EAT",
+      "LLY",
+      "MSFT",
+      "NCLH",
+      "PLUG",
+      "SBUX"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/25/05/45183625/benzinga-bulls-and-bears-lilly-microsoft-starbucks-and-markets-fully-recover-tariff-chaos-losses",
+    "created_at": "2025-05-03T12:02:33Z"
+  },
+  {
+    "id": 45183623,
+    "headline": "Warren Buffett's Favorite 'Single Best Measure' For Equities Flashes Buying Signal As US Stocks Rebound",
+    "summary": "Warren Buffett&#39;s favored &#34;Buffett Indicator&#34; suggests U.S. equities may be undervalued, signaling a potential buy opportunity as stocks rebound.",
+    "symbols": [
+      "AAPL",
+      "AMZN",
+      "META",
+      "MSFT",
+      "QQQ",
+      "SPY"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/markets/equities/25/05/45183623/warren-buffetts-favorite-single-best-measure-for-equities-flashes-buying-signal-as-us-stocks-rebound",
+    "created_at": "2025-05-03T12:02:30Z"
+  },
+  {
+    "id": 45183052,
+    "headline": "Nvidia Boss Jensen Huang's Total Compensation Hits $50M After First Raise In 10 Years",
+    "summary": "Nvidia CEO Jensen Huang received his first salary increase in a decade, with his base salary rising 50% to $1.5 million, as part of a larger compensation package reflecting the company&#39;s growth in the AI sector.",
+    "symbols": [
+      "NVDA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/markets/equities/25/05/45183052/nvidia-boss-jensen-huangs-total-compensation-hits-50m-after-first-raise-in-10-years",
+    "created_at": "2025-05-03T06:12:38Z"
+  },
+  {
+    "id": 45182565,
+    "headline": "Nvidia Reportedly Designing New AI Chips For Alibaba, ByteDance, Tencent After Jensen Huang-Led Company Warned US Export Ban On H20 Could Cost $5.5 Billion",
+    "summary": "Nvidia is developing new AI chips for Alibaba, ByteDance, and Tencent in response to U.S. export restrictions on its H20 chip, which could cost the company $5.5 billion.",
+    "symbols": [
+      "BABA",
+      "NVDA",
+      "TCEHY"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/25/05/45182565/nvidia-designing-new-ai-chips-for-alibaba-bytedance-tencent-after-warning-us-export-ban-on-h20-could-cost-the-company-55-billion-report",
+    "created_at": "2025-05-03T03:26:41Z"
+  }
+]

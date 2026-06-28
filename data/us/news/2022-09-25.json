@@ -1,0 +1,41 @@
+[
+  {
+    "id": 26437392,
+    "headline": "If You Had $1,000 Right Now, Would You Invest In Dogecoin, Bitcoin Cash, Ethereum Classic Or Litecoin?",
+    "summary": "Every week, Benzinga conducts a survey to collect sentiment on what traders are most excited about, interested in or thinking about as they manage and build their personal portfolios.",
+    "symbols": [
+      "BCHUSD",
+      "DOGEUSD",
+      "ETCUSD",
+      "LTCUSD",
+      "TSLA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/markets/cryptocurrency/22/04/26437392/if-you-had-1-00-right-now-would-you-put-it-on-doge-shiba-inu-or-etc-classic",
+    "created_at": "2022-09-25T17:27:00Z"
+  },
+  {
+    "id": 28917270,
+    "headline": "Will Google's Pixel Watch End Apple Watch's Dominance?",
+    "summary": "Alphabet Inc.&#39;s (NASDAQ: GOOG) (NASDAQ: GOOGL) Google recently confirmed the existence of its long-rumored Pixel Watch — its take on Apple Inc.&#39;s (NASDAQ: ",
+    "symbols": [
+      "AAPL",
+      "GOOG",
+      "GOOGL"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/tech/22/09/28917270/the-end-of-apple-watch-heres-all-we-know-about-googles-pixel-watch",
+    "created_at": "2022-09-25T16:40:20Z"
+  },
+  {
+    "id": 27771874,
+    "headline": "A 2014 Tesla Has Surpassed 1 Million Miles Driven, But One Component Had To Be Replaced 8 Times",
+    "summary": "Originally published on June 19, 2022.\n\nOne concern about electric vehicles is battery longevity. As the battery is used, charged, and discharged, its useful life is depleted. This is seen in cell phones. Many cell phone users notice that their battery doesn&#39;t last quite as long after 2 or 3 years of use.",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/tech/22/06/27771874/a-2014-tesla-has-surpassed-1-million-miles-driven-1",
+    "created_at": "2022-09-24T21:10:51Z"
+  }
+]

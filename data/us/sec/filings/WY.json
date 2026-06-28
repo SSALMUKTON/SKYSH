@@ -1,0 +1,1702 @@
+[
+  {
+    "form": "8-K",
+    "filingDate": "2026-06-25",
+    "reportDate": "2026-06-25",
+    "accessionNumber": "0000106535-26-000007",
+    "primaryDocument": "wy-20260625.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000010653526000007/wy-20260625.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-06-04",
+    "reportDate": "2026-06-03",
+    "accessionNumber": "0002024439-26-000004",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000202443926000004/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2026-05-28",
+    "reportDate": "2026-05-28",
+    "accessionNumber": "0000106535-26-000005",
+    "primaryDocument": "wy-20260528.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000010653526000005/wy-20260528.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2026-05-20",
+    "reportDate": "2026-05-14",
+    "accessionNumber": "0000106535-26-000003",
+    "primaryDocument": "wy-20260514.htm",
+    "primaryDocDescription": "8-K",
+    "items": "5.02,5.07,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000010653526000003/wy-20260514.htm"
+  },
+  {
+    "form": "4/A",
+    "filingDate": "2026-05-19",
+    "reportDate": "2026-05-15",
+    "accessionNumber": "0001183850-26-000002",
+    "primaryDocument": "xslF345X06/primary_doc.xml",
+    "primaryDocDescription": "PRIMARY DOCUMENT",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000118385026000002/xslF345X06/primary_doc.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-19",
+    "reportDate": "2026-05-16",
+    "accessionNumber": "0001776782-26-000004",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000177678226000004/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-19",
+    "reportDate": "2026-05-15",
+    "accessionNumber": "0001375725-26-000006",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000137572526000006/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-19",
+    "reportDate": "2026-05-15",
+    "accessionNumber": "0001757570-26-000003",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000175757026000003/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-19",
+    "reportDate": "2026-05-15",
+    "accessionNumber": "0001165970-26-000005",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000116597026000005/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-19",
+    "reportDate": "2026-05-15",
+    "accessionNumber": "0001202543-26-000002",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000120254326000002/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-19",
+    "reportDate": "2026-05-15",
+    "accessionNumber": "0001425727-26-000004",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000142572726000004/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-19",
+    "reportDate": "2026-05-15",
+    "accessionNumber": "0001542323-26-000004",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000154232326000004/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-19",
+    "reportDate": "2026-05-15",
+    "accessionNumber": "0001434857-26-000005",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000143485726000005/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-19",
+    "reportDate": "2026-05-15",
+    "accessionNumber": "0001197193-26-000006",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119719326000006/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-19",
+    "reportDate": "2026-05-15",
+    "accessionNumber": "0001453221-26-000004",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000145322126000004/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-18",
+    "reportDate": "2026-05-15",
+    "accessionNumber": "0001183850-26-000001",
+    "primaryDocument": "xslF345X06/primary_doc.xml",
+    "primaryDocDescription": "PRIMARY DOCUMENT",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000118385026000001/xslF345X06/primary_doc.xml"
+  },
+  {
+    "form": "SCHEDULE 13G/A",
+    "filingDate": "2026-05-14",
+    "reportDate": "",
+    "accessionNumber": "0001325447-26-000015",
+    "primaryDocument": "xslSCHEDULE_13G_X02/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000132544726000015/xslSCHEDULE_13G_X02/primary_doc.xml"
+  },
+  {
+    "form": "SCHEDULE 13G/A",
+    "filingDate": "2026-05-13",
+    "reportDate": "",
+    "accessionNumber": "0001325447-26-000014",
+    "primaryDocument": "xslSCHEDULE_13G_X02/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000132544726000014/xslSCHEDULE_13G_X02/primary_doc.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-12",
+    "reportDate": "2026-05-09",
+    "accessionNumber": "0001193125-26-220225",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526220225/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-12",
+    "reportDate": "2026-05-09",
+    "accessionNumber": "0001425727-26-000002",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000142572726000002/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-12",
+    "reportDate": "2026-05-09",
+    "accessionNumber": "0001197193-26-000004",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119719326000004/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-12",
+    "reportDate": "2026-05-09",
+    "accessionNumber": "0001375725-26-000004",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000137572526000004/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-12",
+    "reportDate": "2026-05-09",
+    "accessionNumber": "0001434857-26-000003",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000143485726000003/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-12",
+    "reportDate": "2026-05-09",
+    "accessionNumber": "0001542323-26-000002",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000154232326000002/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-05-12",
+    "reportDate": "2026-05-09",
+    "accessionNumber": "0001453221-26-000002",
+    "primaryDocument": "xslF345X06/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000145322126000002/xslF345X06/ownership.xml"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2026-05-01",
+    "reportDate": "2026-03-31",
+    "accessionNumber": "0001193125-26-201473",
+    "primaryDocument": "wy-20260331.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526201473/wy-20260331.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2026-04-30",
+    "reportDate": "2026-04-30",
+    "accessionNumber": "0001193125-26-197281",
+    "primaryDocument": "wy-20260430.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526197281/wy-20260430.htm"
+  },
+  {
+    "form": "SCHEDULE 13G",
+    "filingDate": "2026-04-30",
+    "reportDate": "",
+    "accessionNumber": "0002100119-26-001272",
+    "primaryDocument": "xslSCHEDULE_13G_X02/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000210011926001272/xslSCHEDULE_13G_X02/primary_doc.xml"
+  },
+  {
+    "form": "SCHEDULE 13G",
+    "filingDate": "2026-04-29",
+    "reportDate": "",
+    "accessionNumber": "0002100121-26-000773",
+    "primaryDocument": "xslSCHEDULE_13G_X02/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000210012126000773/xslSCHEDULE_13G_X02/primary_doc.xml"
+  },
+  {
+    "form": "ARS",
+    "filingDate": "2026-04-01",
+    "reportDate": "2025-12-31",
+    "accessionNumber": "0001193125-26-135641",
+    "primaryDocument": "d98541dars.pdf",
+    "primaryDocDescription": "ARS",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526135641/d98541dars.pdf"
+  },
+  {
+    "form": "DEFA14A",
+    "filingDate": "2026-04-01",
+    "reportDate": "",
+    "accessionNumber": "0001140361-26-012454",
+    "primaryDocument": "ny20063863x2_defa14a.htm",
+    "primaryDocDescription": "DEFA14A",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000114036126012454/ny20063863x2_defa14a.htm"
+  },
+  {
+    "form": "DEF 14A",
+    "filingDate": "2026-04-01",
+    "reportDate": "2026-05-15",
+    "accessionNumber": "0001140361-26-012453",
+    "primaryDocument": "ny20063863x1_def14a.htm",
+    "primaryDocDescription": "DEF 14A",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000114036126012453/ny20063863x1_def14a.htm"
+  },
+  {
+    "form": "SCHEDULE 13G/A",
+    "filingDate": "2026-03-27",
+    "reportDate": "",
+    "accessionNumber": "0000102909-26-002652",
+    "primaryDocument": "xslSCHEDULE_13G_X02/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000010290926002652/xslSCHEDULE_13G_X02/primary_doc.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2026-03-26",
+    "reportDate": "2026-03-26",
+    "accessionNumber": "0000106535-26-000001",
+    "primaryDocument": "wy-20260326.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000010653526000001/wy-20260326.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-03-03",
+    "reportDate": "2026-03-01",
+    "accessionNumber": "0002058004-26-000002",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000205800426000002/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-03-03",
+    "reportDate": "2026-03-01",
+    "accessionNumber": "0001776782-26-000002",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000177678226000002/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-03-03",
+    "reportDate": "2026-03-01",
+    "accessionNumber": "0001601170-26-000006",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000160117026000006/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-03-03",
+    "reportDate": "2026-03-01",
+    "accessionNumber": "0001880478-26-000002",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000188047826000002/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-03-03",
+    "reportDate": "2026-03-01",
+    "accessionNumber": "0002024439-26-000002",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000202443926000002/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-03-03",
+    "reportDate": "2026-03-01",
+    "accessionNumber": "0001693774-26-000002",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000169377426000002/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-03-03",
+    "reportDate": "2026-03-01",
+    "accessionNumber": "0001613252-26-000002",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000161325226000002/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-03-03",
+    "reportDate": "2026-03-01",
+    "accessionNumber": "0002050515-26-000002",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000205051526000002/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2026-02-26",
+    "reportDate": "2026-02-26",
+    "accessionNumber": "0001193125-26-076924",
+    "primaryDocument": "wy-20260226.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526076924/wy-20260226.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-20",
+    "reportDate": "2026-02-20",
+    "accessionNumber": "0001193125-26-061925",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526061925/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-20",
+    "reportDate": "2026-02-19",
+    "accessionNumber": "0001193125-26-061874",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526061874/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "8-K/A",
+    "filingDate": "2026-02-19",
+    "reportDate": "2025-11-13",
+    "accessionNumber": "0001193125-26-059494",
+    "primaryDocument": "wy-20251113.htm",
+    "primaryDocDescription": "8-K/A",
+    "items": "5.02",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526059494/wy-20251113.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-17",
+    "reportDate": "2026-02-12",
+    "accessionNumber": "0001193125-26-055430",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526055430/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-17",
+    "reportDate": "2026-02-12",
+    "accessionNumber": "0001193125-26-055415",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526055415/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-17",
+    "reportDate": "2026-02-12",
+    "accessionNumber": "0001193125-26-055408",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526055408/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-17",
+    "reportDate": "2026-02-12",
+    "accessionNumber": "0001193125-26-055375",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526055375/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-17",
+    "reportDate": "2026-02-12",
+    "accessionNumber": "0001193125-26-055369",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526055369/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-17",
+    "reportDate": "2026-02-12",
+    "accessionNumber": "0001193125-26-055345",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526055345/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-17",
+    "reportDate": "2026-02-12",
+    "accessionNumber": "0001193125-26-055330",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526055330/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-17",
+    "reportDate": "2026-02-13",
+    "accessionNumber": "0001193125-26-055315",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526055315/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "10-K",
+    "filingDate": "2026-02-13",
+    "reportDate": "2025-12-31",
+    "accessionNumber": "0001193125-26-051422",
+    "primaryDocument": "wy-20251231.htm",
+    "primaryDocDescription": "10-K",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526051422/wy-20251231.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2026-02-04",
+    "reportDate": "2026-02-03",
+    "accessionNumber": "0001193125-26-037755",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526037755/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "SCHEDULE 13G",
+    "filingDate": "2026-02-04",
+    "reportDate": "",
+    "accessionNumber": "0001325447-26-000005",
+    "primaryDocument": "xslSCHEDULE_13G_X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000132544726000005/xslSCHEDULE_13G_X01/primary_doc.xml"
+  },
+  {
+    "form": "144",
+    "filingDate": "2026-02-03",
+    "reportDate": "",
+    "accessionNumber": "0001964306-26-000079",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000196430626000079/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2026-01-29",
+    "reportDate": "2026-01-29",
+    "accessionNumber": "0001193125-26-029351",
+    "primaryDocument": "wy-20260129.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526029351/wy-20260129.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2026-01-27",
+    "reportDate": "2026-01-21",
+    "accessionNumber": "0001193125-26-024507",
+    "primaryDocument": "wy-20260121.htm",
+    "primaryDocDescription": "8-K",
+    "items": "5.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312526024507/wy-20260121.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-12-18",
+    "reportDate": "2025-12-17",
+    "accessionNumber": "0001193125-25-325117",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312525325117/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-12-18",
+    "reportDate": "2025-12-18",
+    "accessionNumber": "0001193125-25-324926",
+    "primaryDocument": "wy-20251218.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312525324926/wy-20251218.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-12-17",
+    "reportDate": "2025-12-15",
+    "accessionNumber": "0001193125-25-322563",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312525322563/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "144",
+    "filingDate": "2025-12-15",
+    "reportDate": "",
+    "accessionNumber": "0001964306-25-000444",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000196430625000444/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-12-11",
+    "reportDate": "2025-12-11",
+    "accessionNumber": "0001193125-25-315157",
+    "primaryDocument": "wy-20251211.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312525315157/wy-20251211.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-12-03",
+    "reportDate": "2025-12-01",
+    "accessionNumber": "0001193125-25-307107",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312525307107/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-11-18",
+    "reportDate": "2025-11-13",
+    "accessionNumber": "0001193125-25-286451",
+    "primaryDocument": "wy-20251113.htm",
+    "primaryDocDescription": "8-K",
+    "items": "5.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312525286451/wy-20251113.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-11-17",
+    "reportDate": "2025-11-14",
+    "accessionNumber": "0001193125-25-284820",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312525284820/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "3",
+    "filingDate": "2025-11-17",
+    "reportDate": "2025-11-14",
+    "accessionNumber": "0001193125-25-284765",
+    "primaryDocument": "xslF345X02/ownership.xml",
+    "primaryDocDescription": "3",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312525284765/xslF345X02/ownership.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-11-12",
+    "reportDate": "2025-11-05",
+    "accessionNumber": "0001193125-25-277594",
+    "primaryDocument": "wy-20251105.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.03",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312525277594/wy-20251105.htm"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2025-10-31",
+    "reportDate": "2025-09-30",
+    "accessionNumber": "0001193125-25-260808",
+    "primaryDocument": "wy-20250930.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312525260808/wy-20250930.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-10-30",
+    "reportDate": "2025-10-30",
+    "accessionNumber": "0001193125-25-258510",
+    "primaryDocument": "wy-20251030.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312525258510/wy-20251030.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-09-25",
+    "reportDate": "2025-09-25",
+    "accessionNumber": "0001193125-25-217477",
+    "primaryDocument": "wy-20250925.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312525217477/wy-20250925.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-09-15",
+    "reportDate": "2025-09-13",
+    "accessionNumber": "0001193125-25-204012",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312525204012/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-09-04",
+    "reportDate": "2025-09-04",
+    "accessionNumber": "0000950170-25-113030",
+    "primaryDocument": "wy-20250904.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025113030/wy-20250904.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-08-28",
+    "reportDate": "2025-08-25",
+    "accessionNumber": "0000950170-25-111963",
+    "primaryDocument": "wy-20250825.htm",
+    "primaryDocDescription": "8-K",
+    "items": "1.01,2.03,8.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025111963/wy-20250825.htm"
+  },
+  {
+    "form": "SCHEDULE 13G/A",
+    "filingDate": "2025-08-14",
+    "reportDate": "",
+    "accessionNumber": "0000080255-25-000561",
+    "primaryDocument": "xslSCHEDULE_13G_X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000008025525000561/xslSCHEDULE_13G_X01/primary_doc.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-08-13",
+    "reportDate": "2025-08-11",
+    "accessionNumber": "0000950170-25-108170",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025108170/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "SCHEDULE 13G",
+    "filingDate": "2025-08-12",
+    "reportDate": "",
+    "accessionNumber": "0000902219-25-000347",
+    "primaryDocument": "xslSCHEDULE_13G_X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000090221925000347/xslSCHEDULE_13G_X01/primary_doc.xml"
+  },
+  {
+    "form": "SCHEDULE 13G/A",
+    "filingDate": "2025-08-07",
+    "reportDate": "",
+    "accessionNumber": "0001284812-25-000261",
+    "primaryDocument": "xslSCHEDULE_13G_X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000128481225000261/xslSCHEDULE_13G_X01/primary_doc.xml"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2025-07-25",
+    "reportDate": "2025-06-30",
+    "accessionNumber": "0000950170-25-098794",
+    "primaryDocument": "wy-20250630.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025098794/wy-20250630.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-07-24",
+    "reportDate": "2025-07-24",
+    "accessionNumber": "0000950170-25-098338",
+    "primaryDocument": "wy-20250724.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025098338/wy-20250724.htm"
+  },
+  {
+    "form": "SCHEDULE 13G/A",
+    "filingDate": "2025-07-17",
+    "reportDate": "",
+    "accessionNumber": "0002052113-25-003281",
+    "primaryDocument": "xslSCHEDULE_13G_X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000205211325003281/xslSCHEDULE_13G_X01/primary_doc.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-07-03",
+    "reportDate": "2025-06-30",
+    "accessionNumber": "0000950170-25-093746",
+    "primaryDocument": "wy-20250630.htm",
+    "primaryDocDescription": "8-K",
+    "items": "1.01,2.03,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025093746/wy-20250630.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-06-26",
+    "reportDate": "2025-06-26",
+    "accessionNumber": "0000950170-25-090393",
+    "primaryDocument": "wy-20250626.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025090393/wy-20250626.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-06-05",
+    "reportDate": "2025-06-03",
+    "accessionNumber": "0000950170-25-082155",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025082155/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-05-29",
+    "reportDate": "2025-05-29",
+    "accessionNumber": "0000950170-25-078977",
+    "primaryDocument": "wy-20250529.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025078977/wy-20250529.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-05-20",
+    "reportDate": "2025-05-16",
+    "accessionNumber": "0000950170-25-075329",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025075329/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-05-13",
+    "reportDate": "2025-05-09",
+    "accessionNumber": "0000950170-25-070553",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025070553/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-05-13",
+    "reportDate": "2025-05-09",
+    "accessionNumber": "0000950170-25-070548",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025070548/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-05-13",
+    "reportDate": "2025-05-09",
+    "accessionNumber": "0000950170-25-070535",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025070535/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-05-13",
+    "reportDate": "2025-05-09",
+    "accessionNumber": "0000950170-25-070392",
+    "primaryDocument": "wy-20250509.htm",
+    "primaryDocDescription": "8-K",
+    "items": "5.07",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025070392/wy-20250509.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-05-12",
+    "reportDate": "2025-05-09",
+    "accessionNumber": "0000950170-25-069673",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025069673/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-05-12",
+    "reportDate": "2025-05-09",
+    "accessionNumber": "0000950170-25-069671",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025069671/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-05-12",
+    "reportDate": "2025-05-09",
+    "accessionNumber": "0000950170-25-069665",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025069665/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-05-12",
+    "reportDate": "2025-05-09",
+    "accessionNumber": "0000950170-25-069662",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025069662/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-05-12",
+    "reportDate": "2025-05-09",
+    "accessionNumber": "0000950170-25-069660",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025069660/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4/A",
+    "filingDate": "2025-05-12",
+    "reportDate": "2025-05-08",
+    "accessionNumber": "0000950170-25-069651",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4/A",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025069651/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-05-12",
+    "reportDate": "2025-05-08",
+    "accessionNumber": "0001183850-25-000003",
+    "primaryDocument": "xslF345X05/primary_doc.xml",
+    "primaryDocDescription": "PRIMARY DOCUMENT",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000118385025000003/xslF345X05/primary_doc.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-05-09",
+    "reportDate": "2025-05-08",
+    "accessionNumber": "0000950170-25-068116",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025068116/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-05-09",
+    "reportDate": "2025-05-08",
+    "accessionNumber": "0000950170-25-068070",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025068070/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-05-09",
+    "reportDate": "2025-05-08",
+    "accessionNumber": "0000950170-25-068061",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025068061/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-05-09",
+    "reportDate": "2025-05-08",
+    "accessionNumber": "0000950170-25-068051",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025068051/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-05-09",
+    "reportDate": "2025-05-08",
+    "accessionNumber": "0000950170-25-068032",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025068032/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2025-04-25",
+    "reportDate": "2025-03-31",
+    "accessionNumber": "0000950170-25-058770",
+    "primaryDocument": "wy-20250331.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025058770/wy-20250331.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-04-24",
+    "reportDate": "2025-04-24",
+    "accessionNumber": "0000950170-25-058035",
+    "primaryDocument": "wy-20250424.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025058035/wy-20250424.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-03-27",
+    "reportDate": "2025-03-27",
+    "accessionNumber": "0000950170-25-046086",
+    "primaryDocument": "wy-20250327.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025046086/wy-20250327.htm"
+  },
+  {
+    "form": "ARS",
+    "filingDate": "2025-03-26",
+    "reportDate": "2024-12-31",
+    "accessionNumber": "0001193125-25-063098",
+    "primaryDocument": "d865484dars.pdf",
+    "primaryDocDescription": "ARS",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312525063098/d865484dars.pdf"
+  },
+  {
+    "form": "DEFA14A",
+    "filingDate": "2025-03-26",
+    "reportDate": "",
+    "accessionNumber": "0001140361-25-010319",
+    "primaryDocument": "ny20041684x2_defa14a.htm",
+    "primaryDocDescription": "DEFA14A",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000114036125010319/ny20041684x2_defa14a.htm"
+  },
+  {
+    "form": "DEF 14A",
+    "filingDate": "2025-03-26",
+    "reportDate": "2025-05-09",
+    "accessionNumber": "0001140361-25-010318",
+    "primaryDocument": "ny20041684x1_def14a.htm",
+    "primaryDocDescription": "DEF 14A",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000114036125010318/ny20041684x1_def14a.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-03-04",
+    "reportDate": "2025-03-01",
+    "accessionNumber": "0000950170-25-032474",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025032474/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-03-04",
+    "reportDate": "2025-03-01",
+    "accessionNumber": "0000950170-25-032447",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025032447/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-03-04",
+    "reportDate": "2025-03-01",
+    "accessionNumber": "0000950170-25-032433",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025032433/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-03-04",
+    "reportDate": "2025-03-01",
+    "accessionNumber": "0000950170-25-032388",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025032388/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-03-04",
+    "reportDate": "2025-03-01",
+    "accessionNumber": "0000950170-25-032341",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025032341/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-03-04",
+    "reportDate": "2025-03-01",
+    "accessionNumber": "0000950170-25-032203",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025032203/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-03-04",
+    "reportDate": "2025-03-01",
+    "accessionNumber": "0000950170-25-032176",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025032176/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-03-04",
+    "reportDate": "2025-03-01",
+    "accessionNumber": "0000950170-25-032124",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025032124/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-02-27",
+    "reportDate": "2025-02-27",
+    "accessionNumber": "0000950170-25-029075",
+    "primaryDocument": "wy-20250227.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025029075/wy-20250227.htm"
+  },
+  {
+    "form": "3",
+    "filingDate": "2025-02-26",
+    "reportDate": "2025-02-18",
+    "accessionNumber": "0000950170-25-027900",
+    "primaryDocument": "xslF345X02/ownership.xml",
+    "primaryDocDescription": "3",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025027900/xslF345X02/ownership.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-02-21",
+    "reportDate": "2025-02-14",
+    "accessionNumber": "0000950170-25-024864",
+    "primaryDocument": "wy-20250214.htm",
+    "primaryDocDescription": "8-K",
+    "items": "5.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025024864/wy-20250214.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-18",
+    "reportDate": "2025-02-14",
+    "accessionNumber": "0000950170-25-022567",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025022567/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-18",
+    "reportDate": "2025-02-14",
+    "accessionNumber": "0000950170-25-022562",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025022562/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-18",
+    "reportDate": "2025-02-14",
+    "accessionNumber": "0000950170-25-022551",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025022551/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-18",
+    "reportDate": "2025-02-14",
+    "accessionNumber": "0000950170-25-022544",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025022544/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-18",
+    "reportDate": "2025-02-14",
+    "accessionNumber": "0000950170-25-022541",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025022541/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-18",
+    "reportDate": "2025-02-14",
+    "accessionNumber": "0000950170-25-022539",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025022539/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-18",
+    "reportDate": "2025-02-14",
+    "accessionNumber": "0000950170-25-022522",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025022522/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-14",
+    "reportDate": "2025-02-13",
+    "accessionNumber": "0000950170-25-021644",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025021644/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-14",
+    "reportDate": "2025-02-13",
+    "accessionNumber": "0000950170-25-021641",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025021641/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-14",
+    "reportDate": "2025-02-13",
+    "accessionNumber": "0000950170-25-021634",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025021634/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-14",
+    "reportDate": "2025-02-13",
+    "accessionNumber": "0000950170-25-021627",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025021627/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-14",
+    "reportDate": "2025-02-13",
+    "accessionNumber": "0000950170-25-021618",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025021618/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-14",
+    "reportDate": "2025-02-13",
+    "accessionNumber": "0000950170-25-021615",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025021615/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-14",
+    "reportDate": "2025-02-13",
+    "accessionNumber": "0000950170-25-021611",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025021611/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "10-K",
+    "filingDate": "2025-02-14",
+    "reportDate": "2024-12-31",
+    "accessionNumber": "0000950170-25-021254",
+    "primaryDocument": "wy-20241231.htm",
+    "primaryDocDescription": "10-K",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025021254/wy-20241231.htm"
+  },
+  {
+    "form": "SCHEDULE 13G",
+    "filingDate": "2025-02-13",
+    "reportDate": "",
+    "accessionNumber": "0001284812-25-000068",
+    "primaryDocument": "xslSCHEDULE_13G_X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000128481225000068/xslSCHEDULE_13G_X01/primary_doc.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-13",
+    "reportDate": "2025-02-12",
+    "accessionNumber": "0000950170-25-019912",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025019912/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-12",
+    "reportDate": "2025-02-11",
+    "accessionNumber": "0000950170-25-019135",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025019135/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-12",
+    "reportDate": "2025-02-11",
+    "accessionNumber": "0000950170-25-019124",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025019124/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-12",
+    "reportDate": "2025-02-11",
+    "accessionNumber": "0000950170-25-019113",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025019113/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-12",
+    "reportDate": "2025-02-11",
+    "accessionNumber": "0000950170-25-019105",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025019105/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-12",
+    "reportDate": "2025-02-11",
+    "accessionNumber": "0000950170-25-019095",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025019095/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2025-02-12",
+    "reportDate": "2025-02-11",
+    "accessionNumber": "0000950170-25-019088",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025019088/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "SCHEDULE 13G/A",
+    "filingDate": "2025-02-05",
+    "reportDate": "",
+    "accessionNumber": "0002012383-25-001344",
+    "primaryDocument": "xslSCHEDULE_13G_X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000201238325001344/xslSCHEDULE_13G_X01/primary_doc.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-01-30",
+    "reportDate": "2025-01-30",
+    "accessionNumber": "0000950170-25-011092",
+    "primaryDocument": "wy-20250130.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025011092/wy-20250130.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2025-01-28",
+    "reportDate": "2025-01-22",
+    "accessionNumber": "0000950170-25-009857",
+    "primaryDocument": "wy-20250122.htm",
+    "primaryDocDescription": "8-K",
+    "items": "5.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025009857/wy-20250122.htm"
+  },
+  {
+    "form": "3",
+    "filingDate": "2025-01-08",
+    "reportDate": "2025-01-01",
+    "accessionNumber": "0000950170-25-003505",
+    "primaryDocument": "xslF345X02/ownership.xml",
+    "primaryDocDescription": "3",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017025003505/xslF345X02/ownership.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-12-18",
+    "reportDate": "2024-12-18",
+    "accessionNumber": "0000950170-24-137901",
+    "primaryDocument": "wy-20241218.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017024137901/wy-20241218.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-12-09",
+    "reportDate": "2024-12-06",
+    "accessionNumber": "0000950170-24-134673",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017024134673/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "SC 13G/A",
+    "filingDate": "2024-11-14",
+    "reportDate": "",
+    "accessionNumber": "0000080255-24-001360",
+    "primaryDocument": "wy13gasep24.txt",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000008025524001360/wy13gasep24.txt"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-11-12",
+    "reportDate": "2024-11-08",
+    "accessionNumber": "0000950170-24-125562",
+    "primaryDocument": "wy-20241108.htm",
+    "primaryDocDescription": "8-K",
+    "items": "5.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017024125562/wy-20241108.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-11-07",
+    "reportDate": "2024-11-07",
+    "accessionNumber": "0000950170-24-123461",
+    "primaryDocument": "wy-20241107.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017024123461/wy-20241107.htm"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2024-10-25",
+    "reportDate": "2024-09-30",
+    "accessionNumber": "0000950170-24-117425",
+    "primaryDocument": "wy-20240930.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017024117425/wy-20240930.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-10-24",
+    "reportDate": "2024-10-24",
+    "accessionNumber": "0000950170-24-117057",
+    "primaryDocument": "wy-20241024.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017024117057/wy-20241024.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-09-26",
+    "reportDate": "2024-09-26",
+    "accessionNumber": "0000950170-24-109662",
+    "primaryDocument": "wy-20240926.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017024109662/wy-20240926.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-09-17",
+    "reportDate": "2024-09-13",
+    "accessionNumber": "0000950170-24-107443",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017024107443/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-09-16",
+    "reportDate": "2024-09-13",
+    "accessionNumber": "0000950170-24-106947",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017024106947/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-08-28",
+    "reportDate": "2024-08-27",
+    "accessionNumber": "0000950170-24-101515",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017024101515/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-08-27",
+    "reportDate": "2024-08-26",
+    "accessionNumber": "0000950170-24-101126",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017024101126/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "144",
+    "filingDate": "2024-08-27",
+    "reportDate": "",
+    "accessionNumber": "0002002698-24-000307",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000200269824000307/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-08-15",
+    "reportDate": "2024-08-15",
+    "accessionNumber": "0000950170-24-097590",
+    "primaryDocument": "wy-20240815.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017024097590/wy-20240815.htm"
+  },
+  {
+    "form": "10-Q",
+    "filingDate": "2024-07-26",
+    "reportDate": "2024-06-30",
+    "accessionNumber": "0000950170-24-086899",
+    "primaryDocument": "wy-20240630.htm",
+    "primaryDocDescription": "10-Q",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017024086899/wy-20240630.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-07-25",
+    "reportDate": "2024-07-25",
+    "accessionNumber": "0000950170-24-086513",
+    "primaryDocument": "wy-20240725.htm",
+    "primaryDocDescription": "8-K",
+    "items": "2.02,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017024086513/wy-20240725.htm"
+  },
+  {
+    "form": "8-K",
+    "filingDate": "2024-06-26",
+    "reportDate": "2024-06-26",
+    "accessionNumber": "0000950170-24-077917",
+    "primaryDocument": "wy-20240626.htm",
+    "primaryDocDescription": "8-K",
+    "items": "7.01,9.01",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017024077917/wy-20240626.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-06-10",
+    "reportDate": "2024-06-07",
+    "accessionNumber": "0001183850-24-000003",
+    "primaryDocument": "xslF345X05/primary_doc.xml",
+    "primaryDocDescription": "PRIMARY DOCUMENT",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000118385024000003/xslF345X05/primary_doc.xml"
+  },
+  {
+    "form": "144",
+    "filingDate": "2024-06-07",
+    "reportDate": "",
+    "accessionNumber": "0001959173-24-004292",
+    "primaryDocument": "xsl144X01/primary_doc.xml",
+    "primaryDocDescription": "",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000195917324004292/xsl144X01/primary_doc.xml"
+  },
+  {
+    "form": "S-3ASR",
+    "filingDate": "2024-06-05",
+    "reportDate": "",
+    "accessionNumber": "0001193125-24-155169",
+    "primaryDocument": "d825085ds3asr.htm",
+    "primaryDocDescription": "S-3ASR",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000119312524155169/d825085ds3asr.htm"
+  },
+  {
+    "form": "4",
+    "filingDate": "2024-06-04",
+    "reportDate": "2024-06-03",
+    "accessionNumber": "0000950170-24-068972",
+    "primaryDocument": "xslF345X05/ownership.xml",
+    "primaryDocDescription": "4",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017024068972/xslF345X05/ownership.xml"
+  },
+  {
+    "form": "3",
+    "filingDate": "2024-06-04",
+    "reportDate": "2024-06-03",
+    "accessionNumber": "0000950170-24-068963",
+    "primaryDocument": "xslF345X02/ownership.xml",
+    "primaryDocDescription": "3",
+    "items": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/106535/000095017024068963/xslF345X02/ownership.xml"
+  }
+]

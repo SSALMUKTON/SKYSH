@@ -1,0 +1,926 @@
+[
+  {
+    "id": 16003112,
+    "headline": "3 Soaring Cloud Computing ETFs",
+    "summary": "The technology sector is proving to be a premier source of strength this year. Just look at the tech-heavy Nasdaq-100 Index (NDX), which was the first of the major domestic equity benchmarks to return to positive territory following the March market swoon.",
+    "symbols": [
+      "AMZN",
+      "CLOU",
+      "MSFT",
+      "SKYY",
+      "WCLD",
+      "ZM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/trading-ideas/long-ideas/20/05/16003112/3-soaring-cloud-computing-etfs",
+    "created_at": "2020-05-11T22:10:15Z"
+  },
+  {
+    "id": 16005571,
+    "headline": "Tesla Restarts Production, Musk Tweets 'If Anyone Is Arrested, I Ask That It Only Be Me'",
+    "summary": "Tesla Inc (NASDAQ: TSLA) CEO Elon Musk said Monday the company is restarting production at its California factory.\n\nWhat Happened Over The Weekend",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16005571/tesla-restarts-production-musk-tweets-if-anyone-is-arrested-i-ask-that-it-only-be-me",
+    "created_at": "2020-05-11T21:30:33Z"
+  },
+  {
+    "id": 16005912,
+    "headline": "14 Stocks Moving In Monday's After-Hours Session",
+    "summary": "Gainers\n\n\n\tDatadog (NASDAQ: DDOG) shares are trading higher after the company reported better-than-expected Q1 EPS and sales results. The company also issued Q2 &amp; FY20 EPS and sales guidance above estimates. \n",
+    "symbols": [
+      "AKBA",
+      "BHF",
+      "CBAY",
+      "DDOG",
+      "EB",
+      "GO",
+      "HALO",
+      "IIVI",
+      "INO",
+      "MIME",
+      "MVIS",
+      "NVAX",
+      "TME",
+      "YRCW"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16005912/14-stocks-moving-in-mondays-after-hours-session",
+    "created_at": "2020-05-11T21:19:38Z"
+  },
+  {
+    "id": 16005501,
+    "headline": "Microvision Shares Spike In After Hours On Volume As Traders Circulate May 10-Dated Report From Unknown Source Florida Independent 'Microsoft's Acquisition of Microvision Confirmed'",
+    "summary": "",
+    "symbols": [
+      "MSFT",
+      "MVIS"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16005501/microvision-shares-spike-in-after-hours-on-volume-as-traders-circulate-may-10-dated-report-from-unkn",
+    "created_at": "2020-05-11T20:54:42Z"
+  },
+  {
+    "id": 16005346,
+    "headline": "Elon Musk Tweets: 'Tesla is restarting production today against Alameda County rules. I will be on the line with everyone else. If anyone is arrested, I ask that it only be me.'",
+    "summary": "https://twitter.com/elonmusk/status/1259945593805221891",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16005346/elon-musk-tweets-tesla-is-restarting-production-today-against-alameda-county-rules-i-will-be-on-the",
+    "created_at": "2020-05-11T20:40:00Z"
+  },
+  {
+    "id": 16004554,
+    "headline": "Datadog Sees Q2 Adj. EPS $0.00-$0.01 vs $(0.02) Est., Sales $134M-$136M vs $125.46M Est., Sees FY20 Adj. EPS $0.02-$0.06 vs $(0.06) Est., Sales $555M-$565M vs $530.47M Est.",
+    "summary": "",
+    "symbols": [
+      "DDOG"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16004554/datadog-sees-q2-adj-eps-0-00-0-01-vs-0-02-est-sales-134m-136m-vs-125-46m-est-sees-fy20-adj-eps-0-02",
+    "created_at": "2020-05-11T20:13:19Z"
+  },
+  {
+    "id": 16004474,
+    "headline": "Datadog Q1 Adj. EPS $0.060 Beats $(0.010) Estimate, Sales $131.200M Beat $117.570M Estimate",
+    "summary": "",
+    "symbols": [
+      "DDOG"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/earnings/20/05/16004474/datadog-q1-adj-eps-0-060-beats-0-010-estimate-sales-131-200m-beat-117-570m-estimate",
+    "created_at": "2020-05-11T20:11:18Z"
+  },
+  {
+    "id": 16003941,
+    "headline": "'A Movie Studio Could Buy AMC, Even if Amazon Isn't Interested' -Barron's Article",
+    "summary": "",
+    "symbols": [
+      "AMC",
+      "AMZN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16003941/a-movie-studio-could-buy-amc-even-if-amazon-isnt-interested-barrons-article",
+    "created_at": "2020-05-11T19:55:38Z"
+  },
+  {
+    "id": 16003805,
+    "headline": "California Governor Newsom Says Will Look Into Tesla Reopening Related To Possible Violation Of Public Health Order",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16003805/california-governor-newsom-says-will-look-into-tesla-reopening-related-to-possible-violation-of-publ",
+    "created_at": "2020-05-11T19:43:51Z"
+  },
+  {
+    "id": 16003781,
+    "headline": "Tesla Tells California Factory Employees Furlough Has Ended, Employees Back To Normal Employment Status As Of Sunday",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16003781/tesla-tells-california-factory-employees-furlough-has-ended-employees-back-to-normal-employment-stat",
+    "created_at": "2020-05-11T19:40:50Z"
+  },
+  {
+    "id": 16003708,
+    "headline": "California Governor Says Tesla's California Plant Could Open As Soon As Next Week",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16003708/california-governor-says-teslas-california-plant-could-open-as-soon-as-next-week",
+    "created_at": "2020-05-11T19:31:48Z"
+  },
+  {
+    "id": 16003627,
+    "headline": "'Shopify-what can i say.. this one is one of the greatest stories i have ever seen' -Tweet From CNBC's Jim Cramer",
+    "summary": "",
+    "symbols": [
+      "SHOP",
+      "TSX:SHOP"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/media/20/05/16003627/shopify-what-can-i-say-this-one-is-one-of-the-greatest-stories-i-have-ever-seen-tweet-from-cnbcs-jim",
+    "created_at": "2020-05-11T19:22:52Z"
+  },
+  {
+    "id": 16002288,
+    "headline": "Why Nvidia Has A New Street-High Price Target",
+    "summary": "NVIDIA Corporation (NASDAQ: NVDA) is scheduled to report its fiscal year 2021 first-quarter results May 21 after the close. Ahead of the results, and following the recent strong run in the shares, an analyst at Needham hiked their Nvidia price target to a Street-high number.",
+    "symbols": [
+      "NTDOY",
+      "NVDA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/analyst-color/20/05/16002288/why-nvidia-has-a-new-street-high-price-target",
+    "created_at": "2020-05-11T19:06:30Z"
+  },
+  {
+    "id": 16003402,
+    "headline": "UPDATE: European Medicines Authority Says Has Added Treatment Duration Of 5 Days For Gilead's Remdesivir Alongside 10-Day Course",
+    "summary": "",
+    "symbols": [
+      "GILD"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16003402/update-european-medicines-authority-says-has-added-treatment-duration-of-5-days-for-gileads-remdesiv",
+    "created_at": "2020-05-11T18:52:09Z"
+  },
+  {
+    "id": 16003369,
+    "headline": "European Medicine Authority Recommends Expanding Gilead's Remdesivir Compassionate Use To Patients Not On Mechanical Ventilation",
+    "summary": "",
+    "symbols": [
+      "GILD"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16003369/european-medicine-authority-recommends-expanding-gileads-remdesivir-compassionate-use-to-patients-no",
+    "created_at": "2020-05-11T18:47:39Z"
+  },
+  {
+    "id": 16003185,
+    "headline": "'Amazon needs movies more than a multiplex' -BNN Bloomberg; Mentions 'Lions Gate Entertainment Corp., ViacomCBS Inc.'s Paramount Pictures, Sony Pictures and Metro-Goldwyn-Mayer Inc. are all options and may be willing sellers'",
+    "summary": "",
+    "symbols": [
+      "AMZN",
+      "SNE",
+      "VIAC",
+      "VIACA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16003185/amazon-needs-movies-more-than-a-multiplex-bnn-bloomberg-mentions-lions-gate-entertainment-corp-viaco",
+    "created_at": "2020-05-11T18:25:39Z"
+  },
+  {
+    "id": 16002953,
+    "headline": "'Volvo will introduce XC100 Recharge as sleeker, full-size all-electric SUV' -Electrek Report",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16002953/volvo-will-introduce-xc100-recharge-as-sleeker-full-size-all-electric-suv-electrek-report",
+    "created_at": "2020-05-11T17:54:25Z"
+  },
+  {
+    "id": 16001842,
+    "headline": "PreMarket Prep Stock Of The Day: AMC Entertainment Holdings",
+    "summary": "Benzinga&#39;s PreMarket Prep airs every morning from 8-9 a.m. ET. During that fast-paced, highly informative hour, traders and investors tune in to get the major news of the day, the catalysts behind those moves and the corresponding price action for the upcoming session.",
+    "symbols": [
+      "AMC",
+      "AMZN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/trading-ideas/long-ideas/20/05/16001842/premarket-prep-stock-of-the-day-amc-entertainment-holdings",
+    "created_at": "2020-05-11T17:00:23Z"
+  },
+  {
+    "id": 16002232,
+    "headline": "BMO Capital Maintains Outperform on Exelon, Lowers Price Target to $48",
+    "summary": "",
+    "symbols": [
+      "EXC"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16002232/bmo-capital-maintains-outperform-on-exelon-lowers-price-target-to-48",
+    "created_at": "2020-05-11T16:32:18Z"
+  },
+  {
+    "id": 16002229,
+    "headline": "FCC Responds To Trump Tweet: This is not how our rules work. The FCC doesn't sanction stations for what journalists say.",
+    "summary": "",
+    "symbols": [
+      "CMCSA",
+      "SPY"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16002229/fcc-responds-to-trump-tweet-this-is-not-how-our-rules-work-the-fcc-doesnt-sanction-stations-for-what",
+    "created_at": "2020-05-11T16:31:57Z"
+  },
+  {
+    "id": 16001179,
+    "headline": "Biotech Stock Rally Is Crushing Short Sellers",
+    "summary": "Benzinga’s Take\n\nBiotech stocks are often high-risk, high-reward investments that have binary outcomes based on one or a handful of drug or device candidates in development. Shorting these types of stocks can be very risky due to the potential for unexpected positive testing data, regulatory approvals and buyouts.",
+    "symbols": [
+      "ABBV",
+      "AMGN",
+      "GILD",
+      "INO",
+      "LGND",
+      "MDGL",
+      "MRNA",
+      "NVAX",
+      "PGEN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/analyst-color/20/05/16001179/biotech-stock-rally-is-crushing-short-sellers",
+    "created_at": "2020-05-11T16:15:19Z"
+  },
+  {
+    "id": 16001910,
+    "headline": "Barclays Maintains Overweight on PayPal Holdings, Raises Price Target to $169",
+    "summary": "",
+    "symbols": [
+      "PYPL"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16001910/barclays-maintains-overweight-on-paypal-holdings-raises-price-target-to-169",
+    "created_at": "2020-05-11T16:02:54Z"
+  },
+  {
+    "id": 16001667,
+    "headline": "Fauci: \"If the virus is so low that even in the general community the risk is low, then I could see filling a third of the stadium or half the stadium so people could be six feet apart.\"",
+    "summary": "",
+    "symbols": [
+      "CMCSA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16001667/fauci-if-the-virus-is-so-low-that-even-in-the-general-community-the-risk-is-low-then-i-could-see-fil",
+    "created_at": "2020-05-11T15:41:31Z"
+  },
+  {
+    "id": 16001078,
+    "headline": "Wells Fargo Maintains Overweight on Exelon, Lowers Price Target to $49",
+    "summary": "",
+    "symbols": [
+      "EXC"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16001078/wells-fargo-maintains-overweight-on-exelon-lowers-price-target-to-49",
+    "created_at": "2020-05-11T14:47:16Z"
+  },
+  {
+    "id": 16000678,
+    "headline": "Amazon Might Be Looking To Buy Struggling AMC Theaters: Report",
+    "summary": "Amazon.com (NASDAQ: AMZN) is considering buying AMC Theatres (NYSE: AMC) which owns Odeon Cinemas in the U.K., reportes The",
+    "symbols": [
+      "AMC",
+      "AMZN",
+      "NFLX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/m-a/20/05/16000678/amazon-might-be-looking-to-buy-struggling-amc-theaters-report",
+    "created_at": "2020-05-11T14:35:40Z"
+  },
+  {
+    "id": 16000864,
+    "headline": "Stocks That Hit 52-Week Highs On Monday",
+    "summary": "Monday&#39;s morning session saw 70 companies set new 52-week highs.",
+    "symbols": [
+      "ACIA",
+      "AKBA",
+      "APVO",
+      "ATRC",
+      "AUY",
+      "BAND",
+      "BVSN",
+      "CARR",
+      "CDNS",
+      "CEVA",
+      "CGEN",
+      "CHGG",
+      "CJJD",
+      "CMG",
+      "COUP",
+      "CTMX",
+      "CTXS",
+      "CUE",
+      "CYBE",
+      "CYTK",
+      "DDOG",
+      "DOCU",
+      "DXCM",
+      "EBS",
+      "ECOM",
+      "ELMD",
+      "ETSY",
+      "EVBG",
+      "FSLY",
+      "FTNT",
+      "HAIN",
+      "HZNP",
+      "IMMU",
+      "LTBR",
+      "LUMO",
+      "MASI",
+      "MCRB",
+      "MELI",
+      "MKTX",
+      "MRNA",
+      "MYOK",
+      "NBSE",
+      "NERV",
+      "NTRA",
+      "NVDA",
+      "NVMI",
+      "OSUR",
+      "PDD",
+      "PFSW",
+      "PODD",
+      "PRTS",
+      "PZZA",
+      "QDEL",
+      "RGR",
+      "RNG",
+      "ROL",
+      "RVP",
+      "SE",
+      "SFM",
+      "SPTN",
+      "TECH",
+      "TW",
+      "TWLO",
+      "VIVO",
+      "VRTX",
+      "VTIQ",
+      "WMK",
+      "WST",
+      "ZLAB",
+      "ZTO"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16000864/stocks-that-hit-52-week-highs-on-monday",
+    "created_at": "2020-05-11T14:28:58Z"
+  },
+  {
+    "id": 16000838,
+    "headline": "UBS Maintains Buy on Exelon, Lowers Price Target to $48",
+    "summary": "",
+    "symbols": [
+      "EXC"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16000838/ubs-maintains-buy-on-exelon-lowers-price-target-to-48",
+    "created_at": "2020-05-11T14:25:33Z"
+  },
+  {
+    "id": 16000823,
+    "headline": "AMC Shares Fall To Session Low, Still Up 30% For Session; Traders Circulate Deadline Article Suggesting Co. Sources Say No Talks With Amazon Happening",
+    "summary": "",
+    "symbols": [
+      "AMC",
+      "AMZN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16000823/amc-shares-fall-to-session-low-still-up-30-for-session-traders-circulate-deadline-article-suggesting",
+    "created_at": "2020-05-11T14:23:41Z"
+  },
+  {
+    "id": 16000602,
+    "headline": "AMC Shares Largely Unaffected As Traders Circulate Word CNBC's David Faber Questioned Amazon Rumor",
+    "summary": "",
+    "symbols": [
+      "AMC",
+      "AMZN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16000602/amc-shares-largely-unaffected-as-traders-circulate-word-cnbcs-david-faber-questioned-amazon-rumor",
+    "created_at": "2020-05-11T14:01:52Z"
+  },
+  {
+    "id": 16000601,
+    "headline": "Benzinga's Top Upgrades, Downgrades For May 11, 2020",
+    "summary": "Upgrades\n\n\n",
+    "symbols": [
+      "BAND",
+      "CAG",
+      "CARG",
+      "CCL",
+      "CF",
+      "COLD",
+      "CTVA",
+      "FRPT",
+      "GTT",
+      "ICD",
+      "IMUX",
+      "MESA",
+      "MNST",
+      "MOS",
+      "RDFN",
+      "SABR",
+      "UDR",
+      "UFS",
+      "VALE"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/markets/penny-stocks/20/05/16000601/benzingas-top-upgrades-downgrades-for-may-11-2020",
+    "created_at": "2020-05-11T14:01:48Z"
+  },
+  {
+    "id": 15999550,
+    "headline": "Tesla Negotiates $565M Loan In China Amid Factory Shutdowns, Shrinking Sales",
+    "summary": "Tesla Inc (NASDAQ: TSLA) is yet again relying on debt to keep its operations going in China, with the electric vehicle manufacturer negotiating a loan facility, according to an 8-K filing with the SEC.",
+    "symbols": [
+      "NIO",
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15999550/tesla-negotiates-565m-loan-in-china-amid-factory-shutdowns-shrinking-sales",
+    "created_at": "2020-05-11T13:56:42Z"
+  },
+  {
+    "id": 16000147,
+    "headline": "Mnuchin Says California Should Act To Ensure Tesla Can Operate",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16000147/mnuchin-says-california-should-act-to-ensure-tesla-can-operate",
+    "created_at": "2020-05-11T13:29:09Z"
+  },
+  {
+    "id": 16000136,
+    "headline": "Morgan Stanley Maintains Overweight on Old Dominion Freight, Raises Price Target to $154",
+    "summary": "",
+    "symbols": [
+      "ODFL"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16000136/morgan-stanley-maintains-overweight-on-old-dominion-freight-raises-price-target-to-154",
+    "created_at": "2020-05-11T13:28:17Z"
+  },
+  {
+    "id": 16000121,
+    "headline": "Marriott CEO Says An Economic Hangover Is Possible When COVID-19 Recedes",
+    "summary": "",
+    "symbols": [
+      "MAR"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16000121/marriott-ceo-says-an-economic-hangover-is-possible-when-covid-19-recedes",
+    "created_at": "2020-05-11T13:26:47Z"
+  },
+  {
+    "id": 16000082,
+    "headline": "CRISPR Therapeutics, Vertex Pharma Report FDA Granted Regenerative Medicine Advanced Therapy Designation To CTX001 For Treatment Of Severe Sickle Cell Disease",
+    "summary": "",
+    "symbols": [
+      "CRSP",
+      "VRTX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/16000082/crispr-therapeutics-vertex-pharma-report-fda-granted-regenerative-medicine-advanced-therapy-designat",
+    "created_at": "2020-05-11T13:21:44Z"
+  },
+  {
+    "id": 15999963,
+    "headline": "Marriott CEO Says April Seems To Have Defined The Bottom; Trendline Now IS towards More Hotel Openings, Not Closings",
+    "summary": "",
+    "symbols": [
+      "MAR"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15999963/marriott-ceo-says-april-seems-to-have-defined-the-bottom-trendline-now-is-towards-more-hotel-opening",
+    "created_at": "2020-05-11T13:09:49Z"
+  },
+  {
+    "id": 15999564,
+    "headline": "Shares Of AMC Up 71% Pre-Market After Traders Circulate Daily Mail Report That Amazon Is In Talks With Odeon Cinemas, Which AMC Owns",
+    "summary": "",
+    "symbols": [
+      "AMC",
+      "AMZN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15999564/shares-of-amc-up-71-pre-market-after-traders-circulate-daily-mail-report-that-amazon-is-in-talks-wit",
+    "created_at": "2020-05-11T12:50:12Z"
+  },
+  {
+    "id": 15999485,
+    "headline": "'Tesla Model X with extreme mileage racked up $29,000 in repair/maintenance and that's good' -Electrek",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15999485/tesla-model-x-with-extreme-mileage-racked-up-29-000-in-repairmaintenance-and-thats-good-electrek",
+    "created_at": "2020-05-11T12:43:05Z"
+  },
+  {
+    "id": 15999027,
+    "headline": "10 Biggest Price Target Changes For Monday",
+    "summary": "\n\tNeedham boosted the price target for  NVIDIA Corporation  (NASDAQ: NVDA) from $270 to $360. NVIDIA closed at $312.50 on Friday.\n",
+    "symbols": [
+      "ABBV",
+      "GTT",
+      "HLT",
+      "IAC",
+      "LEA",
+      "MNST",
+      "NTAP",
+      "NVDA",
+      "RDFN",
+      "UFS"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/price-target/20/05/15999027/10-biggest-price-target-changes-for-monday",
+    "created_at": "2020-05-11T12:20:06Z"
+  },
+  {
+    "id": 15998949,
+    "headline": "Nomura Instinet Maintains Neutral on Ross Stores, Raises Price Target to $100",
+    "summary": "",
+    "symbols": [
+      "ROST"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15998949/nomura-instinet-maintains-neutral-on-ross-stores-raises-price-target-to-100",
+    "created_at": "2020-05-11T12:12:24Z"
+  },
+  {
+    "id": 15998917,
+    "headline": "RBC Capital Maintains Sector Perform on Datadog, Raises Price Target to $50",
+    "summary": "",
+    "symbols": [
+      "DDOG"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15998917/rbc-capital-maintains-sector-perform-on-datadog-raises-price-target-to-50",
+    "created_at": "2020-05-11T12:08:54Z"
+  },
+  {
+    "id": 15998612,
+    "headline": "Benzinga Pro's Top 5 Stocks To Watch For Mon., May 11, 2020: SNE, CNK, MRNA, WORK, KMX",
+    "summary": "Today&#39;s 5 Stock Ideas: \n\n\n\tSony (SNE) - An earnings play. Will report quarterly results before the market open on Wednesday, May 13.\n\tCinemark (CNK) - A sympathy/potential peer play following a",
+    "symbols": [
+      "AMC",
+      "AMZN",
+      "CNK",
+      "GOOG",
+      "GOOGL",
+      "MRNA",
+      "SNE",
+      "WORK",
+      "ZM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/pre-market-outlook/20/05/15998612/benzinga-pros-top-5-stocks-to-watch-for-mon-may-11-2020-sne-cnk-mrna-work-kmx",
+    "created_at": "2020-05-11T11:57:37Z"
+  },
+  {
+    "id": 15998519,
+    "headline": "Oppenheimer Maintains Outperform on Palo Alto Networks, Raises Price Target to $225",
+    "summary": "",
+    "symbols": [
+      "PANW"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15998519/oppenheimer-maintains-outperform-on-palo-alto-networks-raises-price-target-to-225",
+    "created_at": "2020-05-11T11:44:48Z"
+  },
+  {
+    "id": 15998490,
+    "headline": "Citigroup Downgrades Monster Beverage to Neutral, Lowers Price Target of $73",
+    "summary": "",
+    "symbols": [
+      "MNST"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15998490/citigroup-downgrades-monster-beverage-to-neutral-lowers-price-target-of-73",
+    "created_at": "2020-05-11T11:40:15Z"
+  },
+  {
+    "id": 15998488,
+    "headline": "DexCom Announces Proposed Offering of $850M of Convertible Senior Notes",
+    "summary": "",
+    "symbols": [
+      "DXCM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15998488/dexcom-announces-proposed-offering-of-850m-of-convertible-senior-notes",
+    "created_at": "2020-05-11T11:40:11Z"
+  },
+  {
+    "id": 15998418,
+    "headline": "12 Energy Stocks Moving In Monday's Pre-Market Session",
+    "summary": "Gainers\n\n• Tetra Technologies, Inc. (NYSE:TTI) stock increased by 19.59% to $0.55 during Monday&#39;s pre-market session. The most recent rating by Wells Fargo, on Mar 13, is at Equal-Weight, with a price target of $1.",
+    "symbols": [
+      "BKR",
+      "BORR",
+      "CLNE",
+      "CLR",
+      "CVE",
+      "FET",
+      "FLNG",
+      "OAS",
+      "OVV",
+      "SAEX",
+      "SSL",
+      "TTI"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/pre-market-outlook/20/05/15998418/12-energy-stocks-moving-in-mondays-pre-market-session",
+    "created_at": "2020-05-11T11:39:48Z"
+  },
+  {
+    "id": 15998329,
+    "headline": "Raymond James Maintains Strong Buy on PACCAR, Raises Price Target to $80",
+    "summary": "",
+    "symbols": [
+      "PCAR"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15998329/raymond-james-maintains-strong-buy-on-paccar-raises-price-target-to-80",
+    "created_at": "2020-05-11T11:25:15Z"
+  },
+  {
+    "id": 15998257,
+    "headline": "Regeneron And Colorado Center For Personalized Medicine Announce Human Genetics Research Collaboration",
+    "summary": "",
+    "symbols": [
+      "REGN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/general/biotech/20/05/15998257/regeneron-and-colorado-center-for-personalized-medicine-announce-human-genetics-research-collabor",
+    "created_at": "2020-05-11T11:18:58Z"
+  },
+  {
+    "id": 15998197,
+    "headline": "Needham Maintains Buy on NVIDIA, Raises Price Target to $360",
+    "summary": "",
+    "symbols": [
+      "NVDA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15998197/needham-maintains-buy-on-nvidia-raises-price-target-to-360",
+    "created_at": "2020-05-11T11:12:19Z"
+  },
+  {
+    "id": 15998171,
+    "headline": "Daily Mail, Citing Sources, Reports Amazon Is 'Circling' AMC Theaters, Says 'The duo are said to have held talks about a potential takeover of AMC by Amazon'",
+    "summary": "",
+    "symbols": [
+      "AMC",
+      "AMZN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15998171/daily-mail-citing-sources-reports-amazon-is-circling-amc-theaters-says-the-duo-are-said-to-have-held",
+    "created_at": "2020-05-11T11:08:48Z"
+  },
+  {
+    "id": 15998145,
+    "headline": "CORRECTION: B. Riley FBR Maintains Neutral On Applied Materials, Raises Price Target To $56; Initial Headline Had Incorrect Ticker",
+    "summary": "",
+    "symbols": [
+      "AMAT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15998145/correction-b-riley-fbr-maintains-neutral-on-applied-materials-raises-price-target-to-56-initial-head",
+    "created_at": "2020-05-11T11:04:11Z"
+  },
+  {
+    "id": 15998131,
+    "headline": "Marriott International Q1 EPS $0.260 Misses $0.910 Estimate, Sales $4.681B Beat $4.270B Estimate",
+    "summary": "",
+    "symbols": [
+      "MAR"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/earnings/20/05/15998131/marriott-international-q1-eps-0-260-misses-0-910-estimate-sales-4-681b-beat-4-270b-estimate",
+    "created_at": "2020-05-11T11:02:43Z"
+  },
+  {
+    "id": 15996979,
+    "headline": "Trump, Intel, TSMC Plan US 'Self-Sufficiency' In Semiconductors As Coronavirus Gives Supply-Chain Scare",
+    "summary": "President Donald Trump&#39;s administration is in talks with Intel Corporation (NASDAQ: INTC) and Taiwan Semiconductor Manufacturing Co.",
+    "symbols": [
+      "AAPL",
+      "INTC",
+      "SSNLF",
+      "TSM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/government/20/05/15996979/trump-intel-tsmc-plan-us-self-sufficiency-in-semiconductors-as-coronavirus-gives-supply-chain-scare",
+    "created_at": "2020-05-11T10:25:40Z"
+  },
+  {
+    "id": 15997024,
+    "headline": "Tesla's China Sales Dropped 64% In April, Even As Wider Market Recovered, CPCA Says",
+    "summary": "Tesla Inc. (NASDAQ: TSLA) sold 3,635 units of its Shanghai-made Model 3 cars in China in April, the China Passenger Car Association (CPCA) said Monday.",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15997024/teslas-china-sales-dropped-64-in-april-even-as-wider-market-recovered-cpca-says",
+    "created_at": "2020-05-11T10:16:34Z"
+  },
+  {
+    "id": 15997415,
+    "headline": "A Peek Into The Markets: US Stock Futures Edge Lower; Crude Oil Down Over 3%",
+    "summary": "Pre-open movers",
+    "symbols": [
+      "AN",
+      "AZN",
+      "CAH",
+      "F",
+      "GM",
+      "MAR",
+      "MRCC",
+      "NTAP",
+      "QDEL",
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/earnings/20/05/15997415/a-peek-into-the-markets-us-stock-futures-edge-lower-crude-oil-down-over-3",
+    "created_at": "2020-05-11T09:57:07Z"
+  },
+  {
+    "id": 15996955,
+    "headline": "Former Google CEO Eric Schmidt Cut Last Ties With The Company: Report",
+    "summary": "Eric Schmidt, who had led Alphabet Inc. (NASDAQ: GOOGL) (NASDAQ: GOOGL) and former entity Google Inc.",
+    "symbols": [
+      "AMZN",
+      "GOOG",
+      "GOOGL",
+      "IBM",
+      "MSFT",
+      "ORCL"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15996955/former-google-ceo-eric-schmidt-cut-last-ties-with-the-company-report",
+    "created_at": "2020-05-11T09:36:41Z"
+  },
+  {
+    "id": 15997384,
+    "headline": "Wuhan Considers Policies to Help Automaker Dongfeng",
+    "summary": "",
+    "symbols": [
+      "NIO",
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15997384/wuhan-considers-policies-to-help-automaker-dongfeng",
+    "created_at": "2020-05-11T09:36:31Z"
+  },
+  {
+    "id": 15997368,
+    "headline": "China Passenger Car Association Reports China Sold 3,635 Model 3 Vehicles in April, Down 64% vs March",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15997368/china-passenger-car-association-reports-china-sold-3-635-model-3-vehicles-in-april-down-64-vs-march",
+    "created_at": "2020-05-11T09:28:31Z"
+  },
+  {
+    "id": 15997321,
+    "headline": "7 Stocks To Watch For May 11, 2020",
+    "summary": "Some of the stocks that may grab investor focus today are:",
+    "symbols": [
+      "AFG",
+      "AN",
+      "CAH",
+      "MAR",
+      "MRCC",
+      "QDEL",
+      "UA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/earnings/20/05/15997321/7-stocks-to-watch-for-may-11-2020",
+    "created_at": "2020-05-11T09:00:52Z"
+  },
+  {
+    "id": 15997249,
+    "headline": "Earnings Scheduled For May 11, 2020",
+    "summary": "Companies Reporting Before The Bell\n\n\n\tCardinal Health, Inc.  (NYSE: CAH) is projected to report quarterly earnings at $1.43 per share on revenue of $36.95 billion.\n",
+    "symbols": [
+      "AEE",
+      "AFG",
+      "AMCR",
+      "AMN",
+      "AMRX",
+      "AN",
+      "AVYA",
+      "BHF",
+      "CABO",
+      "CAH",
+      "CBT",
+      "CEIX",
+      "CHH",
+      "CLF",
+      "CLR",
+      "COTY",
+      "CPE",
+      "CPS",
+      "CZR",
+      "DIOD",
+      "ERI",
+      "ET",
+      "ETR",
+      "FBM",
+      "G",
+      "GDOT",
+      "GO",
+      "GTX",
+      "IFF",
+      "IIVI",
+      "JCOM",
+      "KWR",
+      "LOGI",
+      "MAR",
+      "MGLN",
+      "MYL",
+      "NVAX",
+      "OAS",
+      "ON",
+      "PK",
+      "SCSC",
+      "SUN",
+      "TME",
+      "UA",
+      "UNVR",
+      "XHR",
+      "YRCW",
+      "ZBH"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/earnings/20/05/15997249/earnings-scheduled-for-may-11-2020",
+    "created_at": "2020-05-11T08:19:15Z"
+  },
+  {
+    "id": 15996848,
+    "headline": "Major US Automakers Plan To Return To Work May 18 With Enhanced Safety Measures In Place",
+    "summary": "Automakers such as General Motors (NYSE: GM), Ford Motor Company (NYSE: F), and Tesla (NASDAQ: TSLA), are planning to reopen factories",
+    "symbols": [
+      "F",
+      "GM",
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15996848/major-us-automakers-plan-to-return-to-work-may-18-with-enhanced-safety-measures-in-place",
+    "created_at": "2020-05-11T04:50:46Z"
+  },
+  {
+    "id": 15996902,
+    "headline": "Amazon Worker Claims At Least 600 Employees Struck By COVID-19, Six Dead",
+    "summary": "In an interview with CBS’ 60 Minutes Overtime, Amazon Inc. (NASDAQ: AMZN) warehouse worker Jana Jumpp, revealed the extent of COVID-19 infections and deaths at the online retailer.",
+    "symbols": [
+      "AMZN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/05/15996902/amazon-worker-claims-at-least-600-employees-struck-by-covid-19-six-dead",
+    "created_at": "2020-05-11T04:20:03Z"
+  },
+  {
+    "id": 15996859,
+    "headline": "'F*** Elon Musk,' Responds California Assemblywoman Over Musk's Threats To Leave State",
+    "summary": "Tesla Inc.’s (NASDAQ: TSLA) CEO was the subject of California State Assemblywoman Lorena Gonzalez’s ire after he threatened to move the factory out of the state.",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/government/20/05/15996859/f-elon-musk-responds-california-assemblywoman-over-musks-threats-to-leave-state",
+    "created_at": "2020-05-11T03:44:44Z"
+  }
+]

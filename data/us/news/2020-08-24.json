@@ -1,0 +1,919 @@
+[
+  {
+    "id": 17220711,
+    "headline": "Class I Railroads Brace For Tropical Storms Marco And Laura",
+    "summary": "Class I railroads with operations along the U.S. Gulf Coast are bracing for potential impacts from tropical storms Marco and Laura.",
+    "symbols": [
+      "BRK",
+      "CSX",
+      "KSU",
+      "NSC",
+      "UNP"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17220711/class-i-railroads-brace-for-tropical-storms-marco-and-laura",
+    "created_at": "2020-08-24T22:14:03Z"
+  },
+  {
+    "id": 17220373,
+    "headline": "Salesforce.com, Amgen And Honeywell International Set to Join Dow Jones Industrial Average",
+    "summary": "",
+    "symbols": [
+      "AMGN",
+      "CRM",
+      "HON"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17220373/salesforce-com-amgen-and-honeywell-international-set-to-join-dow-jones-industrial-average",
+    "created_at": "2020-08-24T21:27:26Z"
+  },
+  {
+    "id": 17215083,
+    "headline": "Why Tesla Puts The S&P Selection Committee 'In A Real Bind'",
+    "summary": "One of the most common explanations for the frenzy of buying in Tesla Inc (NASDAQ: TSLA) in 2020 has been the stock’s eligibility for the S&amp;P 500, which bulls say ",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/analyst-color/20/08/17215083/why-tesla-puts-the-s-p-selection-committee-in-a-real-bind",
+    "created_at": "2020-08-24T21:22:18Z"
+  },
+  {
+    "id": 17217047,
+    "headline": "Recap: Palo Alto Networks Q4 Earnings",
+    "summary": "Shares of Palo Alto Networks (NYSE:PANW) decreased 2.4% in after-market trading after the company reported Q4 results.\n\nQuarterly Results\n\nEarnings per share increased 0.68% year over year to $1.48, which beat the estimate of $1.39.",
+    "symbols": [
+      "PANW"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/earnings/20/08/17217047/recap-palo-alto-networks-q4-earnings",
+    "created_at": "2020-08-24T20:29:46Z"
+  },
+  {
+    "id": 17216888,
+    "headline": "Palo Alto Networks Sees Q1 Adj. EPS $1.32-$1.35 vs $1.18 Est., Sales $915M-$925M vs $901.08M Est., Total Billings $1.03B-$1.05B",
+    "summary": "",
+    "symbols": [
+      "PANW"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17216888/palo-alto-networks-sees-q1-adj-eps-1-32-1-35-vs-1-18-est-sales-915m-925m-vs-901-08m-est-total-billin",
+    "created_at": "2020-08-24T20:13:16Z"
+  },
+  {
+    "id": 17216852,
+    "headline": "Palo Alto Networks Q4 EPS $1.48 Beats $1.39 Estimate, Sales $950.40M Beat $923.51M Estimate",
+    "summary": "",
+    "symbols": [
+      "PANW"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/earnings/20/08/17216852/palo-alto-networks-q4-eps-1-48-beats-1-39-estimate-sales-950-40m-beat-923-51m-estimate",
+    "created_at": "2020-08-24T20:10:58Z"
+  },
+  {
+    "id": 17216808,
+    "headline": "Palo Alto Networks Announces Intent to Acquire The Crypsis Group For $265M",
+    "summary": "",
+    "symbols": [
+      "PANW"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/m-a/20/08/17216808/palo-alto-networks-announces-intent-to-acquire-the-crypsis-group-for-265m",
+    "created_at": "2020-08-24T20:10:08Z"
+  },
+  {
+    "id": 17215895,
+    "headline": "Why Intuit's Stock Is Trading Higher Today",
+    "summary": "Intuit (NASDAQ: INTU) shares are trading higher on Monday after KeyBanc maintained an Overweight rating and raised its price target from $315 to $350.",
+    "symbols": [
+      "INTU"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17215895/why-intuits-stock-is-trading-higher-today",
+    "created_at": "2020-08-24T19:23:25Z"
+  },
+  {
+    "id": 17211329,
+    "headline": "Why KeyBanc Is Bullish On Pinduoduo Despite Short-Term Challenges",
+    "summary": "While Pinduoduo Inc’s (NASDAQ: PDD) near-term prospects remain under pressure due to elevated competition, its big new customer wins and market share gains in high-frequency categories bode well for growth in the long term, according to KeyBanc Capital Markets.",
+    "symbols": [
+      "PDD"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/analyst-color/20/08/17211329/why-keybanc-is-bullish-on-pinduoduo-despite-short-term-challenges",
+    "created_at": "2020-08-24T19:13:02Z"
+  },
+  {
+    "id": 17215377,
+    "headline": "'Tesla is doing major construction at 'Tera battery manufacturing facility', drone video shows' -Elektrek Report",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17215377/tesla-is-doing-major-construction-at-tera-battery-manufacturing-facility-drone-video-shows-elektrek",
+    "created_at": "2020-08-24T18:44:10Z"
+  },
+  {
+    "id": 17213472,
+    "headline": "Why Nintendo Shares Hit A 52-Week High Friday",
+    "summary": "Shares of Nintendo Co., Ltd. (Pink: NTDOY) hit a new 52-week high of $68.27 Friday.",
+    "symbols": [
+      "MSFT",
+      "NTDOY",
+      "SNE"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17213472/why-nintendo-shares-hit-a-52-week-high-friday",
+    "created_at": "2020-08-24T18:08:43Z"
+  },
+  {
+    "id": 17214811,
+    "headline": "Reckoning With My Worst Trading Week In Months",
+    "summary": "It’s been another okay week for my August trading account. There’s still a good deal of opportunity out there, it’s just hard to find in between some of the chop. ",
+    "symbols": [
+      "NFLX",
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/general/education/20/08/17214811/reckoning-with-my-worst-trading-week-in-months",
+    "created_at": "2020-08-24T18:07:39Z"
+  },
+  {
+    "id": 17202951,
+    "headline": "3 Alternative Energy ETFs For A Biden White House",
+    "summary": "Some sectors are more levered to political outcomes than others and while the renewable energy space is still in its formative stages, there&#39;s political leverage here, too.",
+    "symbols": [
+      "ACES",
+      "SMOG",
+      "TAN",
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/government/20/08/17202951/3-alternative-energy-etfs-for-a-biden-white-house",
+    "created_at": "2020-08-24T17:40:17Z"
+  },
+  {
+    "id": 17211305,
+    "headline": "Short Sellers Target Crowdstrike",
+    "summary": "Crowdstrike Holdings Inc (NASDAQ: CRWD) has been a volatile but strong performer in 2020, gaining 125.2% year to date.",
+    "symbols": [
+      "CRWD",
+      "VMW"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/analyst-color/20/08/17211305/short-sellers-target-crowdstrike",
+    "created_at": "2020-08-24T17:30:30Z"
+  },
+  {
+    "id": 17212067,
+    "headline": "Tesla's Battery Day Invite Reveals Potential Clue Of What's To Come",
+    "summary": "Tesla Inc&#39;s (NASDAQ: TSLA) investor and battery day, which is expected to show battery technology breakthroughs, is scheduled for Sept. 22.",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17212067/teslas-battery-day-invite-reveals-potential-clue-of-whats-to-come",
+    "created_at": "2020-08-24T17:11:47Z"
+  },
+  {
+    "id": 17212852,
+    "headline": "Here's How Much Investing $1,000 In Amazon At Dot-Com Bubble Peak Would Be Worth Today",
+    "summary": "Despite an ongoing pandemic and the U.S. economy barely limping along, the Nasdaq is trading at all-time highs and is now more than 65% above its March lows. The surge in tech stocks in 2020 has understandably led investors to draw comparisons to the dot-com bubble in 2000.",
+    "symbols": [
+      "AMZN",
+      "WMT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/general/education/20/08/17212852/heres-how-much-investing-1-000-in-amazon-at-dot-com-bubble-peak-would-be-worth-today",
+    "created_at": "2020-08-24T16:55:19Z"
+  },
+  {
+    "id": 17210430,
+    "headline": "Fastly Has 'Sustainable Product Differentiation,' Analyst Says In Upgrade Of Cloud Stock",
+    "summary": "A virtual meeting with Fastly Inc’s (NYSE: FSLY) CFO Adriel Lares and industry checks provide greater optimism around the company&#39;s potential to gain market share, its relationship with Microsoft Corporation (NASDAQ: ",
+    "symbols": [
+      "AMZN",
+      "FSLY",
+      "MSFT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/analyst-color/20/08/17210430/fastly-has-sustainable-product-differentiation-analyst-says-in-upgrade-of-cloud-sto",
+    "created_at": "2020-08-24T15:21:10Z"
+  },
+  {
+    "id": 17212066,
+    "headline": "Return On Capital Employed Overview: Alphabet",
+    "summary": "Looking at Q2, Alphabet (NASDAQ: GOOGL) earned $6.38 billion, a 19.98% increase from the preceding quarter. Alphabet&#39;s sales decreased to $38.30 billion, a 6.95% change since Q1. Alphabet earned $7.98 billion, and sales totaled $41.16 billion in Q1.",
+    "symbols": [
+      "GOOGL"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/earnings/20/08/17212066/return-on-capital-employed-overview-alphabet",
+    "created_at": "2020-08-24T15:19:11Z"
+  },
+  {
+    "id": 17210184,
+    "headline": "Autodesk Earnings Preview",
+    "summary": "On Tuesday, August 25, Autodesk (NASDAQ: ADSK) will release its latest earnings report. Benzinga&#39;s report can help you figure out the ins and outs of the earnings release.",
+    "symbols": [
+      "ADSK"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/earnings/20/08/17210184/autodesk-earnings-preview",
+    "created_at": "2020-08-24T15:01:44Z"
+  },
+  {
+    "id": 17211604,
+    "headline": "TikTok Says It Has 'No Choice' But To Sue Trump Administration over Executive Order Banning The Popular App From U.S.",
+    "summary": "",
+    "symbols": [
+      "MSFT",
+      "ORCL"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17211604/tiktok-says-it-has-no-choice-but-to-sue-trump-administration-over-executive-order-banning-the-popula",
+    "created_at": "2020-08-24T15:01:03Z"
+  },
+  {
+    "id": 17210858,
+    "headline": "Apple Analysts See 'Once In A Decade' Opportunity Ahead Of iPhone 'Supercycle'",
+    "summary": "Even as Apple Inc.&#39;s (NASDAQ: AAPL) shares are hovering around all-time highs, Wall Street analysts see the scope for further upside.",
+    "symbols": [
+      "AAPL",
+      "TCEHY"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/analyst-color/20/08/17210858/apple-analysts-see-once-in-a-decade-opportunity-ahead-of-iphone-supercycle",
+    "created_at": "2020-08-24T15:00:43Z"
+  },
+  {
+    "id": 17210180,
+    "headline": "Earnings Preview: Intuit",
+    "summary": "Intuit (NASDAQ: INTU) unveils its next round of earnings this Tuesday, August 25. Here is Benzinga&#39;s everything-that-matters guide for the earnings announcement.",
+    "symbols": [
+      "INTU"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/earnings/20/08/17210180/earnings-preview-intuit",
+    "created_at": "2020-08-24T14:59:50Z"
+  },
+  {
+    "id": 17211171,
+    "headline": "'Tesla teases nanowire technology in Battery Day announcement' -Elektrek Report",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17211171/tesla-teases-nanowire-technology-in-battery-day-announcement-elektrek-report",
+    "created_at": "2020-08-24T14:42:01Z"
+  },
+  {
+    "id": 17211079,
+    "headline": "Stocks That Hit 52-Week Highs On Monday",
+    "summary": "During Monday&#39;s morning session, 127 stocks hit new 52-week highs.",
+    "symbols": [
+      "AAPL",
+      "ABT",
+      "ACN",
+      "ACV",
+      "ADBE",
+      "ADSK",
+      "AEYE",
+      "AKTS",
+      "AMED",
+      "AMSC",
+      "AMZN",
+      "ANSS",
+      "ARLO",
+      "ASG",
+      "ASPU",
+      "AVGO",
+      "AVTR",
+      "BABA",
+      "BAH",
+      "BBY",
+      "BJ",
+      "BRP",
+      "BST",
+      "CATB",
+      "CCS",
+      "CDNS",
+      "CERS",
+      "CGIX",
+      "CHN",
+      "CHTR",
+      "CL",
+      "CLCT",
+      "CMG",
+      "CNI",
+      "COST",
+      "CPTA",
+      "CRDF",
+      "CSIQ",
+      "CTAS",
+      "DE",
+      "DHI",
+      "DHR",
+      "DPZ",
+      "DSGX",
+      "ENSG",
+      "EOS",
+      "EPAM",
+      "EPIX",
+      "FAST",
+      "FBIO",
+      "FDX",
+      "FIZZ",
+      "FLWS",
+      "FND",
+      "FRHC",
+      "FSV",
+      "GLW",
+      "GNRC",
+      "GOOG",
+      "GOOGL",
+      "GRPN",
+      "HOME",
+      "HRL",
+      "ICE",
+      "IEX",
+      "INTU",
+      "IRTC",
+      "JBHT",
+      "JD",
+      "KMDA",
+      "KMX",
+      "LEN",
+      "LII",
+      "LL",
+      "LOW",
+      "LSTR",
+      "LTRN",
+      "LULU",
+      "LYTS",
+      "MRTX",
+      "MTLS",
+      "NKE",
+      "NOW",
+      "NSTG",
+      "NVDA",
+      "NVR",
+      "NVTA",
+      "OC",
+      "OFLX",
+      "OLLI",
+      "OPRX",
+      "PCH",
+      "PEGA",
+      "PGR",
+      "PHM",
+      "POOL",
+      "PPD",
+      "PRNB",
+      "PTGX",
+      "QQQX",
+      "RDFN",
+      "ROL",
+      "RUN",
+      "SAIL",
+      "SAM",
+      "SHW",
+      "SMG",
+      "SNDR",
+      "SNPS",
+      "SOL",
+      "SPGI",
+      "SPT",
+      "TDF",
+      "TFII",
+      "TGB",
+      "TMO",
+      "TPTX",
+      "TREX",
+      "TRMB",
+      "TSLA",
+      "TXN",
+      "VSLR",
+      "W",
+      "WERN",
+      "WILC",
+      "WSM",
+      "YNDX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17211079/stocks-that-hit-52-week-highs-on-monday",
+    "created_at": "2020-08-24T14:36:25Z"
+  },
+  {
+    "id": 17208892,
+    "headline": "Aanlyst Raises Tesla Bull-Case Target To $3,500, Sees $35 EPS Potential In China Alone",
+    "summary": "The insane run by Tesla Inc (NASDAQ: TSLA) in 2020 continued on Monday morning, and one analyst once again raised his bull case price target for the stock.",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/analyst-color/20/08/17208892/aanlyst-raises-tesla-bull-case-target-to-3-500-sees-35-eps-potential-in-china-alone",
+    "created_at": "2020-08-24T14:02:18Z"
+  },
+  {
+    "id": 17209940,
+    "headline": "Tesla Shares Move Sharply Lower; Shares Down 3.9% For The Session",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/general/movers-shakers/20/08/17209940/tesla-shares-move-sharply-lower-shares-down-3-9-for-the-session",
+    "created_at": "2020-08-24T13:54:42Z"
+  },
+  {
+    "id": 17208903,
+    "headline": "Morning Market Stats in 5 Minutes",
+    "summary": "Movers\n\nIndices\n\n• S&amp;P 500 ETF (NYSE:SPY) rose 0.78% to $342.11.\n\n• Nasdaq ETF (NASDAQ:QQQ) remained unchanged at at $281.87.\n\n• Dow Jones Industrial Average ETF (NYSE:DIA) rose 0.86% to $281.75.",
+    "symbols": [
+      "APO",
+      "BABA",
+      "BILI",
+      "BITA",
+      "BMO",
+      "DIA",
+      "FXI",
+      "GLD",
+      "JNJ",
+      "LMNL",
+      "NAK",
+      "PANW",
+      "QQQ",
+      "SPY",
+      "TLT",
+      "USO",
+      "VGK",
+      "XLE",
+      "XLF",
+      "XLK",
+      "XRT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/markets/20/08/17208903/morning-market-stats-in-5-minutes",
+    "created_at": "2020-08-24T13:46:08Z"
+  },
+  {
+    "id": 17208630,
+    "headline": "Benzinga's Top Upgrades, Downgrades For August 24, 2020",
+    "summary": "Upgrades\n\n\n",
+    "symbols": [
+      "ALVR",
+      "AMD",
+      "APH",
+      "BLDP",
+      "CNSP",
+      "DE",
+      "EL",
+      "ES",
+      "GLPG",
+      "HP",
+      "LVGO",
+      "MFA",
+      "PDD",
+      "PEGA",
+      "PINS",
+      "PLD",
+      "QGEN",
+      "RTRX",
+      "SCS",
+      "SPT",
+      "TA",
+      "TACO",
+      "VERX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/markets/penny-stocks/20/08/17208630/benzingas-top-upgrades-downgrades-for-august-24-2020",
+    "created_at": "2020-08-24T13:34:28Z"
+  },
+  {
+    "id": 17208582,
+    "headline": "Oblong Says Co Secures 'Largest Initial Mezzanine Order In Company History,' Announces Partnership With Cisco",
+    "summary": "",
+    "symbols": [
+      "CSCO",
+      "OBLG"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17208582/oblong-says-co-secures-largest-initial-mezzanine-order-in-company-history-announces-partnership-with",
+    "created_at": "2020-08-24T13:32:32Z"
+  },
+  {
+    "id": 17173849,
+    "headline": "Bracing For A Second Wave: What Investors Should Expect From A Coronavirus Resurgence",
+    "summary": "In March, the coronavirus hit the global economy like a freight train. ",
+    "symbols": [
+      "AMZN",
+      "FDX",
+      "FSLY",
+      "LLY",
+      "NKE",
+      "TMO",
+      "TWLO",
+      "WMT",
+      "WORK",
+      "ZM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/general/education/20/08/17173849/bracing-for-a-second-wave-what-investors-should-expect-from-a-coronavirus-resurgence",
+    "created_at": "2020-08-24T12:50:18Z"
+  },
+  {
+    "id": 17207293,
+    "headline": "Ligand Announces Amgen's KYPROLIS Approved By FDA As Combination Regimen With DARZALEX And Dexamethasone In Once- And Twice-Weekly Dosing Regimens For Patients With Relapsed/Refractory Multiple Myeloma",
+    "summary": "",
+    "symbols": [
+      "AMGN",
+      "LGND"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/general/biotech/20/08/17207293/ligand-announces-amgens-kyprolis-approved-by-fda-as-combination-regimen-with-darzalex-and-dexamet",
+    "created_at": "2020-08-24T12:34:25Z"
+  },
+  {
+    "id": 17207029,
+    "headline": "10 Biggest Price Target Changes For Monday",
+    "summary": "\n\tCitigroup lifted the price target for  Facebook, Inc.  (NASDAQ: FB) from $275 to $315. Facebook shares rose 0.9% to $269.51 in pre-market trading.\n",
+    "symbols": [
+      "CYRX",
+      "DE",
+      "EL",
+      "FB",
+      "INTU",
+      "MOS",
+      "RGEN",
+      "SNAP",
+      "VRTX",
+      "ZM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/price-target/20/08/17207029/10-biggest-price-target-changes-for-monday",
+    "created_at": "2020-08-24T12:21:29Z"
+  },
+  {
+    "id": 17206780,
+    "headline": "Apple's Debt Overview",
+    "summary": "Over the past three months, shares of Apple Inc. (NASDAQ: AAPL) moved higher by 60.82%. Before we understand the importance of debt, let&#39;s look at how much debt Apple has.",
+    "symbols": [
+      "AAPL"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17206780/apples-debt-overview",
+    "created_at": "2020-08-24T12:11:07Z"
+  },
+  {
+    "id": 17206274,
+    "headline": "Northland Capital Markets Downgrades Advanced Micro Devices to Market Perform, Announces $80 Price Target",
+    "summary": "",
+    "symbols": [
+      "AMD"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17206274/northland-capital-markets-downgrades-advanced-micro-devices-to-market-perform-announces-80-price-tar",
+    "created_at": "2020-08-24T11:57:49Z"
+  },
+  {
+    "id": 17206240,
+    "headline": "Morgan Stanley Maintains Overweight on Apple, Raises Price Target to $520",
+    "summary": "",
+    "symbols": [
+      "AAPL"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17206240/morgan-stanley-maintains-overweight-on-apple-raises-price-target-to-520",
+    "created_at": "2020-08-24T11:54:52Z"
+  },
+  {
+    "id": 17206137,
+    "headline": "'Lamborghini partners with Xiaomi, unveils new electric go-kart for adults' -Elektrek Report",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17206137/lamborghini-partners-with-xiaomi-unveils-new-electric-go-kart-for-adults-elektrek-report",
+    "created_at": "2020-08-24T11:43:41Z"
+  },
+  {
+    "id": 17206135,
+    "headline": "BOCOM International Downgrades Pinduoduo to Neutral, Announces $89 Price Target",
+    "summary": "",
+    "symbols": [
+      "PDD"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17206135/bocom-international-downgrades-pinduoduo-to-neutral-announces-89-price-target",
+    "created_at": "2020-08-24T11:43:35Z"
+  },
+  {
+    "id": 17206131,
+    "headline": "CLSA Downgrades Pinduoduo to Outperform, Raises Price Target to $95",
+    "summary": "",
+    "symbols": [
+      "PDD"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17206131/clsa-downgrades-pinduoduo-to-outperform-raises-price-target-to-95",
+    "created_at": "2020-08-24T11:42:08Z"
+  },
+  {
+    "id": 17205934,
+    "headline": "What Does Tesla's Debt Look Like?",
+    "summary": "Shares of Tesla Inc. (NASDAQ: TSLA) moved higher by 161.97% in the past three months. Before we understand the importance of debt, let&#39;s look at how much debt Tesla has.",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17205934/what-does-teslas-debt-look-like",
+    "created_at": "2020-08-24T11:29:02Z"
+  },
+  {
+    "id": 17205917,
+    "headline": "Wedbush Maintains Outperform Rating and $515 Price Target On Apple's Stock; Sets its Bull Case To $600",
+    "summary": "",
+    "symbols": [
+      "AAPL"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/price-target/20/08/17205917/wedbush-maintains-outperform-rating-and-515-price-target-on-apples-stock-sets-its-bu",
+    "created_at": "2020-08-24T11:26:09Z"
+  },
+  {
+    "id": 17205914,
+    "headline": "Wells Fargo Maintains Overweight on Exelon, Lowers Price Target to $48",
+    "summary": "",
+    "symbols": [
+      "EXC"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17205914/wells-fargo-maintains-overweight-on-exelon-lowers-price-target-to-48",
+    "created_at": "2020-08-24T11:25:44Z"
+  },
+  {
+    "id": 17205862,
+    "headline": "Wedbush Maintains Neutral Rating and $1900 Price Target on Tesla's Stock; Raises its Bull Case From $2500 To $3500",
+    "summary": "",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/analyst-ratings/price-target/20/08/17205862/wedbush-maintains-neutral-rating-and-1900-price-target-on-teslas-stock-raises-its-bu",
+    "created_at": "2020-08-24T11:21:05Z"
+  },
+  {
+    "id": 17205392,
+    "headline": "SVB Leerink Maintains Market Perform on Vertex Pharmaceuticals, Raises Price Target to $283",
+    "summary": "",
+    "symbols": [
+      "VRTX"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17205392/svb-leerink-maintains-market-perform-on-vertex-pharmaceuticals-raises-price-target-to-283",
+    "created_at": "2020-08-24T10:55:55Z"
+  },
+  {
+    "id": 17205362,
+    "headline": "Citigroup Maintains Buy on Analog Devices, Raises Price Target to $134",
+    "summary": "",
+    "symbols": [
+      "ADI"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17205362/citigroup-maintains-buy-on-analog-devices-raises-price-target-to-134",
+    "created_at": "2020-08-24T10:51:42Z"
+  },
+  {
+    "id": 17204881,
+    "headline": "A Peek Into The Markets: US Stock Futures Surge As FDA Authorizes Convalescent Plasma For Coronavirus Treatment",
+    "summary": "Pre-open movers",
+    "symbols": [
+      "BMO",
+      "EL",
+      "KZIA",
+      "NVS",
+      "PANW"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/earnings/20/08/17204881/a-peek-into-the-markets-us-stock-futures-surge-as-fda-authorizes-convalescent-plasma-for-coronaviru",
+    "created_at": "2020-08-24T10:09:46Z"
+  },
+  {
+    "id": 17204583,
+    "headline": "Bytedance Investors, Including  General Atlantic, Seeking Large Stake in Tiktok Assets for Sale",
+    "summary": "",
+    "symbols": [
+      "MSFT",
+      "ORCL"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/m-a/20/08/17204583/bytedance-investors-including-general-atlantic-seeking-large-stake-in-tiktok-assets-for-sale",
+    "created_at": "2020-08-24T09:44:18Z"
+  },
+  {
+    "id": 17204388,
+    "headline": "60 Biggest Movers From Friday",
+    "summary": "Gainers\n\n\n\tKymera Therapeutics, Inc. (NASDAQ: KYMR) shares gained 66.3% to close at $33.26 on Friday after the company priced its 8.684 million share IPO at $20 per share.\n",
+    "symbols": [
+      "AESE",
+      "AEYE",
+      "AKER",
+      "AMTX",
+      "AUTO",
+      "AVGR",
+      "BBX",
+      "BDR",
+      "BIGC",
+      "BKE",
+      "BLNK",
+      "BNTX",
+      "BPTH",
+      "CALT",
+      "CATB",
+      "CATO",
+      "CLPS",
+      "CLXT",
+      "CMBM",
+      "CYRX",
+      "DE",
+      "ELMD",
+      "EYPT",
+      "GAN",
+      "GASS",
+      "GEVO",
+      "GME",
+      "HARP",
+      "HJLI",
+      "HTGM",
+      "IFMK",
+      "JAN",
+      "KELYB",
+      "KEYS",
+      "KIRK",
+      "KOSS",
+      "KYMR",
+      "LEU",
+      "LMPX",
+      "MARA",
+      "MICT",
+      "MOBL",
+      "MOGU",
+      "MTP",
+      "NAKD",
+      "NMTR",
+      "NNOX",
+      "OSUR",
+      "PDD",
+      "PEIX",
+      "PIXY",
+      "PRPO",
+      "PVAC",
+      "SHSP",
+      "SMRT",
+      "TOPS",
+      "UONE",
+      "VEL",
+      "VUZI",
+      "VVPR"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17204388/60-biggest-movers-from-friday",
+    "created_at": "2020-08-24T09:12:26Z"
+  },
+  {
+    "id": 17203897,
+    "headline": "Tesla Reportedly Shrinks Model 3 'Frunk,' Leading To Speculations Over Heat Pump",
+    "summary": "Tesla Inc (NASDAQ: TSLA) has made changes to internal design in its Model 3 electric vehicles, according to a Electrek report Sunday.",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17203897/tesla-reportedly-shrinks-model-3-frunk-leading-to-speculations-over-heat-pump",
+    "created_at": "2020-08-24T09:03:59Z"
+  },
+  {
+    "id": 17204242,
+    "headline": "5 Stocks To Watch For August 24, 2020",
+    "summary": "Some of the stocks that may grab investor focus today are:",
+    "symbols": [
+      "AZN",
+      "BITA",
+      "BMO",
+      "KZIA",
+      "PANW"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/earnings/20/08/17204242/5-stocks-to-watch-for-august-24-2020",
+    "created_at": "2020-08-24T08:52:26Z"
+  },
+  {
+    "id": 17204234,
+    "headline": "KeyBanc Maintains Overweight on Old Dominion Freight Line, Raises Price Target to $220",
+    "summary": "",
+    "symbols": [
+      "ODFL"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17204234/keybanc-maintains-overweight-on-old-dominion-freight-line-raises-price-target-to-220",
+    "created_at": "2020-08-24T08:51:32Z"
+  },
+  {
+    "id": 17204232,
+    "headline": "KeyBanc Maintains Overweight on Intuit, Raises Price Target to $350",
+    "summary": "",
+    "symbols": [
+      "INTU"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/20/08/17204232/keybanc-maintains-overweight-on-intuit-raises-price-target-to-350",
+    "created_at": "2020-08-24T08:50:37Z"
+  },
+  {
+    "id": 17203687,
+    "headline": "Google Filings With FCC For Two Streaming Devices Hint At New Android TV product",
+    "summary": "Alphabet Inc (NASDAQ: GOOGL) (NASDAQ: GOOG) subsidiary Google is seeking the Federal Communications Commission approval for two next-generation streaming devices with wireless capability.",
+    "symbols": [
+      "AAPL",
+      "GOOG",
+      "GOOGL",
+      "NVDA",
+      "ROKU",
+      "XIACF"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/government/20/08/17203687/google-filings-with-fcc-for-two-streaming-devices-hint-at-new-android-tv-product",
+    "created_at": "2020-08-24T08:33:49Z"
+  },
+  {
+    "id": 17203944,
+    "headline": "Earnings Scheduled For August 24, 2020",
+    "summary": "Companies Reporting Before The Bell\n\n• Bitauto Hldgs Inc. (NYSE:BITA) is estimated to report quarterly loss at $0.97 per share on revenue of $305.82 million.\n\n• iClick Interactive Asia Inc. (NASDAQ:ICLK) is estimated to report earnings for its second quarter.",
+    "symbols": [
+      "BITA",
+      "BMO",
+      "CANG",
+      "CNF",
+      "DADA",
+      "FANH",
+      "FLXS",
+      "ICLK",
+      "JE",
+      "MOGU",
+      "NEW",
+      "NOAH",
+      "PANW",
+      "SXI",
+      "VIOT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/earnings/20/08/17203944/earnings-scheduled-for-august-24-2020",
+    "created_at": "2020-08-24T08:00:25Z"
+  },
+  {
+    "id": 17203198,
+    "headline": "Palantir Remains Unprofitable Ahead Of Planned Direct Listing: Report",
+    "summary": "Data analytics company Palantir Technologies Inc. remains unprofitable, even as it prepares to go public, leaked screenshots of an investor presentation suggest, TechCrunch reported Sunday.",
+    "symbols": [
+      "FB",
+      "FJTSY",
+      "PYPL",
+      "SMPNY"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/earnings/20/08/17203198/palantir-remains-unprofitable-ahead-of-planned-direct-listing-report",
+    "created_at": "2020-08-24T05:42:42Z"
+  },
+  {
+    "id": 17203082,
+    "headline": "Microsoft Sides With Epic In Legal Battle Against Apple, Says Starving Unreal Engine Harms Developers, Gamers",
+    "summary": "Microsoft Corporation (NASDAQ: MSFT) filed a motion Sunday in support of Epic Games Inc., as the latter fights a legal battle with Apple Inc. (NASDAQ: ",
+    "symbols": [
+      "AAPL",
+      "FB",
+      "MSFT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/government/20/08/17203082/microsoft-sides-with-epic-in-legal-battle-against-apple-says-starving-unreal-engine-harms-developers",
+    "created_at": "2020-08-24T03:28:06Z"
+  },
+  {
+    "id": 17202933,
+    "headline": "Zuckerberg Fueled Trump Administration's TikTok Anxieties Ahead Of Executive Order: WSJ",
+    "summary": "Facebook Inc (NASDAQ: FB) CEO Mark Zuckerberg raised the issue of Chinese companies threatening American businesses at a White House dinner last October, and discussed TikTok with multiple senators, the Wall Street Journal ",
+    "symbols": [
+      "FB",
+      "MSFT",
+      "ORCL",
+      "TWTR"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/government/20/08/17202933/zuckerberg-fueled-trump-administrations-tiktok-anxieties-ahead-of-executive-order-wsj",
+    "created_at": "2020-08-24T02:22:26Z"
+  }
+]
