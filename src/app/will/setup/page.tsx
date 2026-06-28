@@ -67,6 +67,7 @@ interface ConvertedClause {
   editing?: boolean;
   editText?: string;
   skipped?: boolean;
+  source?: "quiz" | "draft"; // quiz는 수정 가능, draft는 불가
 }
 
 type Step = "choose" | "quiz" | "draft" | "review" | "done";
@@ -128,6 +129,7 @@ export default function SetupPage() {
       ruleType: q.id,
       displayText: q.clause,
       params: {},
+      source: "quiz" as const,
     }));
     setClauses(converted);
     setStep("review");
@@ -159,11 +161,13 @@ export default function SetupPage() {
     }
 
     const seen = new Set<string>();
-    const deduped = results.filter((c) => {
-      if (seen.has(c.ruleType)) return false;
-      seen.add(c.ruleType);
-      return true;
-    });
+    const deduped = results
+      .filter((c) => {
+        if (seen.has(c.ruleType)) return false;
+        seen.add(c.ruleType);
+        return true;
+      })
+      .map((c) => ({ ...c, source: "draft" as const }));
 
     setClauses(deduped);
     setStep("review");
@@ -400,7 +404,7 @@ export default function SetupPage() {
                     )}
                   </div>
                   <div className="flex items-center gap-1 shrink-0">
-                    {!c.skipped && !c.editing && (
+                    {!c.skipped && !c.editing && c.source === "quiz" && (
                       <button onClick={() => toggleEdit(i)} className="p-1">
                         <Edit2 size={11} className="text-muted-foreground" />
                       </button>
