@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Plus, Edit2, Trash2, Check, X } from "lucide-react";
+import { Plus, Edit2, Trash2, Check, X, Loader2 } from "lucide-react";
 import { OrnamentalDivider, CertSeal } from "@/components/cert-ui";
 import { RuleType } from "@prisma/client";
 
@@ -14,23 +14,24 @@ interface Clause {
   createdAt: string;
 }
 
-// 백테스트 지원 룰만 (ALL_IN 등 감지 불가 룰 제외)
-const RULE_TYPE_OPTIONS: RuleType[] = [
-  "CHASE_SURGE",
-  "PREMARKET_GAP",
-  "NO_STOP_LOSS",
-  "REVENGE_TRADE",
-  "MARKET_ORDER_IMPULSE",
-  "AVERAGING_DOWN",
-];
+const RULE_LABELS: Record<string, string> = {
+  CHASE_SURGE: "급등 추격 매수",
+  PREMARKET_GAP: "프리마켓 갭업 매수",
+  NO_STOP_LOSS: "손절 없는 진입",
+  REVENGE_TRADE: "보복 매매",
+  MARKET_ORDER_IMPULSE: "충동 시장가 주문",
+  AVERAGING_DOWN: "물타기",
+};
 
 export default function WillPage() {
   const [clauses, setClauses] = useState<Clause[]>([]);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editText, setEditText] = useState("");
   const [showAddForm, setShowAddForm] = useState(false);
-  const [newText, setNewText] = useState("");
-  const [newRuleType, setNewRuleType] = useState<RuleType>("NO_STOP_LOSS");
+  const [inputText, setInputText] = useState("");
+  const [converting, setConverting] = useState(false);
+  const [preview, setPreview] = useState<{ ruleType: string; displayText: string } | null>(null);
+  const [convertError, setConvertError] = useState<string | null>(null);
 
   useEffect(() => {
     fetch("/api/clauses")
@@ -38,16 +39,36 @@ export default function WillPage() {
       .then(setClauses);
   }, []);
 
+  async function convertClause() {
+    if (!inputText.trim()) return;
+    setConverting(true);
+    setConvertError(null);
+    setPreview(null);
+    const res = await fetch("/api/clauses/convert", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: inputText.trim() }),
+    });
+    const data = await res.json();
+    setConverting(false);
+    if (data.error) {
+      setConvertError(data.error);
+    } else {
+      setPreview({ ruleType: data.ruleType, displayText: data.displayText });
+    }
+  }
+
   async function addClause() {
-    if (!newText.trim()) return;
+    if (!preview) return;
     const res = await fetch("/api/clauses", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ruleType: newRuleType, params: {}, displayText: newText.trim() }),
+      body: JSON.stringify({ ruleType: preview.ruleType, params: {}, displayText: preview.displayText }),
     });
     const created = await res.json();
     setClauses((prev) => [...prev, created]);
-    setNewText("");
+    setInputText("");
+    setPreview(null);
     setShowAddForm(false);
   }
 
@@ -89,24 +110,51 @@ export default function WillPage() {
         {/* 조항 추가 폼 */}
         {showAddForm && (
           <div className="mb-4 border border-[#C9A227]/30 bg-[#FDF8EC] p-4 space-y-3">
-            <select
-              value={newRuleType}
-              onChange={(e) => setNewRuleType(e.target.value as RuleType)}
-              className="w-full border border-border bg-card px-3 py-2 text-xs text-foreground focus:outline-none"
-            >
-              {RULE_TYPE_OPTIONS.map((r) => (
-                <option key={r} value={r}>{r}</option>
-              ))}
-            </select>
-            <input
-              value={newText}
-              onChange={(e) => setNewText(e.target.value)}
-              placeholder="나는 ... 하지 않는다."
-              className="w-full border border-border bg-card px-3 py-2 text-sm text-foreground focus:outline-none"
-            />
+            <p className="text-[10px] font-bold text-[#7A5F0E] tracking-wider uppercase">나쁜 투자 습관을 자연어로 적어주세요</p>
+            <div className="flex gap-2">
+              <input
+                value={inputText}
+                onChange={(e) => { setInputText(e.target.value); setPreview(null); setConvertError(null); }}
+                onKeyDown={(e) => e.key === "Enter" && convertClause()}
+                placeholder="예: 급등 종목 보면 바로 시장가로 들어가는 습관이 있어"
+                className="flex-1 border border-border bg-card px-3 py-2 text-sm text-foreground focus:outline-none"
+              />
+              <button
+                onClick={convertClause}
+                disabled={converting || !inputText.trim()}
+                className="px-4 py-2 text-xs font-bold bg-foreground text-background hover:opacity-90 disabled:opacity-40 flex items-center gap-1.5"
+              >
+                {converting ? <Loader2 size={12} className="animate-spin" /> : null}
+                {converting ? "변환 중" : "변환"}
+              </button>
+            </div>
+
+            {convertError && (
+              <p className="text-xs text-[#B83535]">{convertError}</p>
+            )}
+
+            {preview && (
+              <div className="border border-[#C9A227]/50 bg-white px-4 py-3 space-y-1">
+                <p className="text-[9px] font-bold text-[#C9A227] tracking-wider uppercase">
+                  {RULE_LABELS[preview.ruleType] ?? preview.ruleType}
+                </p>
+                <p className="text-sm font-bold text-foreground">"{preview.displayText}"</p>
+                <p className="text-[10px] text-muted-foreground pt-1">이 조항으로 추가할까요?</p>
+              </div>
+            )}
+
             <div className="flex gap-2 justify-end">
-              <button onClick={() => setShowAddForm(false)} className="px-3 py-1.5 text-xs text-muted-foreground border border-border hover:bg-muted">취소</button>
-              <button onClick={addClause} className="px-3 py-1.5 text-xs font-bold bg-foreground text-background hover:opacity-90">추가</button>
+              <button
+                onClick={() => { setShowAddForm(false); setInputText(""); setPreview(null); setConvertError(null); }}
+                className="px-3 py-1.5 text-xs text-muted-foreground border border-border hover:bg-muted"
+              >
+                취소
+              </button>
+              {preview && (
+                <button onClick={addClause} className="px-3 py-1.5 text-xs font-bold bg-foreground text-background hover:opacity-90">
+                  추가
+                </button>
+              )}
             </div>
           </div>
         )}
