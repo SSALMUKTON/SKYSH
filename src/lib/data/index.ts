@@ -11,3 +11,5 @@ export { readFundamentals } from "./fundamentals";
 export type { Fundamentals, FundamentalQuarter } from "./fundamentals";
 export { readFeed } from "./news";
 export type { FeedItem } from "./news";
+export { readMacro, MACRO_SOURCE } from "./macro";
+export type { MacroIndicator, MacroPoint } from "./macro";

@@ -1,6 +1,9 @@
 /** /order(거래하기) 페이지 공용 타입. 런타임 코드 없음 → 서버/클라이언트 양쪽에서 import 가능. */
 import type { Quote } from "@/lib/broker/types";
 
+// 거시지표 타입은 data 레이어에 정의 — type-only 재노출이라 클라이언트 번들엔 fs 가 안 들어간다.
+export type { MacroIndicator, MacroPoint } from "@/lib/data/macro";
+
 export interface UniverseItem { symbol: string; name: string }
 export interface Candle { date: string; close: number }
 export interface Quarter {

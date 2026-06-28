@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   AlertTriangle, CheckCircle, XCircle, Scroll, Loader2, Search, TrendingUp,
-  Newspaper, FileBarChart, ExternalLink,
+  Newspaper, FileBarChart, Activity, ExternalLink,
 } from "lucide-react";
 import {
   AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip, CartesianGrid, Brush,
@@ -16,7 +16,7 @@ import { checkOrder } from "@/lib/rules/engine";
 import type { Market, RuleType } from "@prisma/client";
 import type { Quote } from "@/lib/broker/types";
 import type { OrderDraft, SuggestedAction, Violation, ClauseRule, MarketData } from "@/lib/rules/types";
-import type { UniverseItem, Candle, Quarter, FeedItem, InitialSymbolData } from "./types";
+import type { UniverseItem, Candle, Quarter, FeedItem, InitialSymbolData, MacroIndicator } from "./types";
 
 type Step = "form" | "confirm";
 type SideLabel = "매수" | "매도";
@@ -175,7 +175,9 @@ function TradeWorkspace({ market, item, initial, initialAction, initialQty, onSt
   const [candles, setCandles] = useState<Candle[]>(initial?.candles ?? []);
   const [quarters, setQuarters] = useState<Quarter[] | null>(initial?.quarters ?? null);
   const [feed, setFeed] = useState<FeedItem[]>(initial?.feed ?? []);
-  const [tab, setTab] = useState<"fund" | "news">(market === "COIN" ? "news" : "fund");
+  const [tab, setTab] = useState<"fund" | "macro" | "news">(market === "COIN" ? "macro" : "fund");
+  // 거시지표 — 종목 무관(시장 단위). 탭을 처음 열 때만 지연 로드(null=미로드/로딩 중).
+  const [macro, setMacro] = useState<MacroIndicator[] | null>(null);
   const [loading, setLoading] = useState(!initial);
   const [view, setView] = useState<{ start: number; end: number } | null>(
     initial ? windowFor(initial.candles, 6) : null,
@@ -253,6 +255,18 @@ function TradeWorkspace({ market, item, initial, initialAction, initialQty, onSt
       .catch(() => { if (active) setClausesLoaded(true); });
     return () => { active = false; };
   }, []);
+
+  // 거시지표는 탭을 처음 열 때(아직 미로드일 때) 가져온다. 시장 단위라 종목이 바뀌어도 유지.
+  // macro!==null 가드로 재요청을 막고, active 플래그로 언마운트/재마운트 경합을 처리한다.
+  useEffect(() => {
+    if (tab !== "macro" || macro !== null) return;
+    let active = true;
+    fetch(`/api/market/macro?market=${market}`)
+      .then((r) => (r.ok ? r.json() : { indicators: [] }))
+      .then((d) => { if (active) setMacro(d.indicators ?? []); })
+      .catch(() => { if (active) setMacro([]); });
+    return () => { active = false; };
+  }, [tab, market, macro]);
 
   const chartData = useMemo(() => candles.map((c) => ({ t: c.date, p: c.close })), [candles]);
 
@@ -578,17 +592,22 @@ function TradeWorkspace({ market, item, initial, initialAction, initialQty, onSt
             </div>
           </div>
 
-          {/* 탭: 펀더멘털 / 뉴스 */}
+          {/* 탭: 펀더멘털 / 거시지표 / 뉴스 — 코인은 거시지표만(펀더멘털·뉴스 소스 없음) */}
           <div className="bg-card border border-border">
             <div className="flex border-b border-border">
               {market !== "COIN" && (
                 <TabBtn active={tab === "fund"} onClick={() => setTab("fund")} icon={<FileBarChart size={13} />} label="펀더멘털" />
               )}
-              <TabBtn active={tab === "news"} onClick={() => setTab("news")} icon={<Newspaper size={13} />}
-                label={market === "KR" ? "공시" : "뉴스"} />
+              <TabBtn active={tab === "macro"} onClick={() => setTab("macro")} icon={<Activity size={13} />} label="거시지표" />
+              {market !== "COIN" && (
+                <TabBtn active={tab === "news"} onClick={() => setTab("news")} icon={<Newspaper size={13} />}
+                  label={market === "KR" ? "공시" : "뉴스"} />
+              )}
             </div>
             <div className="p-5">
-              {loading ? (
+              {tab === "macro" ? (
+                <MacroPanel indicators={macro} market={market} />
+              ) : loading ? (
                 <div className="space-y-2">
                   {[0, 1, 2].map((i) => <div key={i} className="h-8 bg-muted/40 animate-pulse" />)}
                 </div>
@@ -769,6 +788,92 @@ function TabBtn({ active, onClick, icon, label }: { active: boolean; onClick: ()
       }`}>
       {icon}{label}
     </button>
+  );
+}
+
+// ─── 거시지표 탭 ───────────────────────────────────────────────────
+const MACRO_SOURCE_LABEL: Record<Market, string> = {
+  US: "FRED (미 연준)",
+  KR: "한국은행 ECOS",
+  COIN: "FRED (미 연준)",
+};
+
+function fmtMacro(v: number | null, unit: string, decimals: number): string {
+  if (v == null || !Number.isFinite(v)) return "—";
+  const n = v.toLocaleString("ko-KR", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+  if (unit === "원") return `${n}원`;
+  if (unit === "%") return `${n}%`;
+  if (unit === "%p") return `${n}%p`;
+  return unit ? `${n} ${unit}` : n;
+}
+
+function MacroPanel({ indicators, market }: { indicators: MacroIndicator[] | null; market: Market }) {
+  if (indicators === null) {
+    return (
+      <div className="grid grid-cols-2 gap-3">
+        {[0, 1, 2, 3].map((i) => <div key={i} className="h-28 bg-muted/40 animate-pulse" />)}
+      </div>
+    );
+  }
+  if (indicators.length === 0) {
+    return <p className="text-sm text-muted-foreground text-center py-6">표시할 거시지표가 없습니다.</p>;
+  }
+  return (
+    <div>
+      <div className="grid grid-cols-2 gap-3">
+        {indicators.map((ind) => <MacroCard key={ind.key} ind={ind} />)}
+      </div>
+      <p className="text-[10px] text-muted-foreground mt-3">시장 전체 지표 · 출처 {MACRO_SOURCE_LABEL[market]}</p>
+    </div>
+  );
+}
+
+function MacroCard({ ind }: { ind: MacroIndicator }) {
+  const delta = ind.latest != null && ind.prev != null ? ind.latest - ind.prev : null;
+  const dir = delta == null || Math.abs(delta) < 1e-9 ? 0 : delta > 0 ? 1 : -1;
+  const gradId = `macroGrad-${ind.key}`;
+  const data = ind.series.map((p) => ({ t: p.date, v: p.value }));
+  return (
+    <div className="border border-border p-3">
+      <div className="flex items-start justify-between gap-2">
+        <p className="text-[11px] font-bold text-foreground leading-tight">{ind.label}</p>
+        {delta != null && (
+          <span className="text-[10px] font-bold text-muted-foreground shrink-0 tabular-nums">
+            {dir > 0 ? "▲" : dir < 0 ? "▼" : "·"} {delta > 0 ? "+" : ""}{delta.toFixed(ind.decimals)}
+          </span>
+        )}
+      </div>
+      <div className="flex items-baseline gap-1.5 mt-1">
+        <span className="text-lg font-black text-foreground tabular-nums">{fmtMacro(ind.latest, ind.unit, ind.decimals)}</span>
+        {ind.asOf && <span className="text-[9px] text-muted-foreground">{ind.asOf}</span>}
+      </div>
+      {data.length > 1 && (
+        <div className="mt-1.5 -mx-1">
+          <ResponsiveContainer width="100%" height={48}>
+            <AreaChart data={data} margin={{ top: 4, right: 4, left: 4, bottom: 0 }}>
+              <defs>
+                <linearGradient id={gradId} x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="#C9A227" stopOpacity={0.3} />
+                  <stop offset="95%" stopColor="#C9A227" stopOpacity={0} />
+                </linearGradient>
+              </defs>
+              {/* 숨긴 축 — 화면엔 안 보이지만 툴팁의 날짜 라벨과 값 변동 스케일을 잡아준다 */}
+              <XAxis dataKey="t" hide />
+              <YAxis hide domain={["auto", "auto"]} />
+              <Tooltip
+                cursor={{ stroke: "rgba(201,162,39,0.5)", strokeWidth: 1 }}
+                contentStyle={{ background: "#1A1720", border: "none", borderRadius: 0, fontSize: 11, padding: "5px 9px" }}
+                labelStyle={{ color: "rgba(245,240,230,0.4)", marginBottom: 2 }}
+                itemStyle={{ color: "#F5F0E6", fontWeight: 600 }}
+                formatter={(val) => [fmtMacro(val as number, ind.unit, ind.decimals), ind.label]}
+              />
+              <Area type="monotone" dataKey="v" stroke="#C9A227" strokeWidth={1.5} fill={`url(#${gradId})`} dot={false} isAnimationActive={false} activeDot={{ r: 3, fill: "#C9A227", stroke: "none" }} />
+            </AreaChart>
+          </ResponsiveContainer>
+        </div>
+      )}
+      {ind.hint && <p className="text-[9px] text-muted-foreground mt-1 leading-snug">{ind.hint}</p>}
+    </div>
   );
 }
 
