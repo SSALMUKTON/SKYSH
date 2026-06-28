@@ -1,9 +1,7 @@
-import { readFile } from "node:fs/promises";
-import { existsSync } from "node:fs";
 import { parquetReadObjects } from "hyparquet";
 import { compressors } from "hyparquet-compressors";
 import type { Market } from "@prisma/client";
-import { DATA_DIR } from "./paths";
+import { readDataBuffer } from "./storage";
 
 /**
  * 거시경제 지표(`data/{us,kr}/macro/*`) 읽기. [owner: P2]
@@ -96,21 +94,23 @@ function toDateStr(v: unknown): string {
 
 /** 단일 지표 parquet → 오름차순 시계열. 파일 없으면 null. 결과는 프로세스 캐시. */
 async function readSeries(relPath: string, col: string): Promise<MacroPoint[] | null> {
-  const file = `${DATA_DIR}/${relPath}`;
-  let pts = cache.get(file);
+  let pts = cache.get(relPath);
   if (pts === undefined) {
-    if (!existsSync(file)) {
+    const buf = await readDataBuffer(relPath);
+    if (buf === null) {
       pts = null;
     } else {
-      const buf = await readFile(file);
-      const ab = buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength);
+      const ab = buf.buffer.slice(
+        buf.byteOffset,
+        buf.byteOffset + buf.byteLength,
+      ) as ArrayBuffer;
       const rows = (await parquetReadObjects({ file: ab, compressors })) as Record<string, unknown>[];
       pts = rows
         .map((r) => ({ date: toDateStr(r.__index_level_0__), value: toNum(r[col]) }))
         .filter((p) => Number.isFinite(p.value))
         .sort((a, b) => a.date.localeCompare(b.date));
     }
-    cache.set(file, pts);
+    cache.set(relPath, pts);
   }
   return pts;
 }
