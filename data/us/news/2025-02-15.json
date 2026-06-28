@@ -1,0 +1,155 @@
+[
+  {
+    "id": 43756546,
+    "headline": "David Tepper's Appaloosa Revamps Portfolio, Cuts Down On Semiconductor Stocks",
+    "summary": "David Tepper&#39;s hedge fund, Appaloosa LP, has made significant alterations to its portfolio.",
+    "symbols": [
+      "AMD",
+      "AMZN",
+      "ANET",
+      "ARKK",
+      "BABA",
+      "BEKE",
+      "CZR",
+      "EPD",
+      "FMC",
+      "GM",
+      "INTC",
+      "M",
+      "MAS",
+      "MHK",
+      "MPLX",
+      "MSFT",
+      "OC",
+      "ORCL",
+      "PDD",
+      "QCOM",
+      "TSM",
+      "UBER"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/earnings/25/02/43756546/david-teppers-appaloosa-revamps-portfolio-cuts-down-on-semiconductor-stocks",
+    "created_at": "2025-02-15T16:15:37Z"
+  },
+  {
+    "id": 43756510,
+    "headline": "Berkshire Hathaway Adjusts Portfolio, Keeps Apple Stake Unchanged, Offloads Stakes in BofA",
+    "summary": "Berkshire Hathaway made significant adjustments to its portfolio in Q4 2024, reducing its investment in a number of stocks. However, its stake in Apple remains unchanged.",
+    "symbols": [
+      "AAPL",
+      "BAC",
+      "BRK",
+      "C",
+      "COF",
+      "STZ"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/earnings/25/02/43756510/berkshire-hathaway-adjusts-portfolio-keeps-apple-stake-unchanged-offloads-stakes-in-bofa",
+    "created_at": "2025-02-15T16:00:17Z"
+  },
+  {
+    "id": 43756457,
+    "headline": "Benzinga Bulls and Bears: Apple, Nvidia, Netflix and Trader Predicts Dogecoin Surge by March 24",
+    "summary": "Benzinga examined the prospects for many investors’ favorite stocks over the last week — here’s a look at some of our top stories.",
+    "symbols": [
+      "AA",
+      "AAPL",
+      "AVGO",
+      "CENX",
+      "CLF",
+      "DOGEUSD",
+      "NFLX",
+      "NVDA",
+      "SBUX",
+      "TSM",
+      "X"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/trading-ideas/long-ideas/25/02/43756457/benzinga-bulls-and-bears-apple-nvidia-netflix-and-trader-predicts-dogecoin-surge-by-march-24",
+    "created_at": "2025-02-15T15:30:19Z"
+  },
+  {
+    "id": 43755136,
+    "headline": "Bill Gates Wanted A Friend To 'Take Charge' Of Microsoft Due To Regret Over Leaving Harvard, But Here's Why He Panicked And Dropped Out",
+    "summary": "Bill Gates, co-founder of Microsoft, expressed regret over leaving Harvard University to start the tech giant.",
+    "symbols": [
+      "INTC",
+      "MSFT"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/25/02/43755136/bill-gates-wanted-a-friend-to-take-charge-of-microsoft-due-to-regret-over-leaving-harvard-but-heres-why-he-panicked-and-dropped-out",
+    "created_at": "2025-02-15T08:51:17Z"
+  },
+  {
+    "id": 43755111,
+    "headline": "Billionaire Investor Dan Loeb Boosts Stake In Mark Zuckerberg's Meta, Elon Musk's Tesla, But Sold These Three Mag 7 Stocks In Q4",
+    "summary": "Activist investor Dan Loeb‘s Third Point LLC has significantly ramped up its stakes in Flutter Entertainment, Elon Musk&#39;s Tesla, and Mark Zuckerberg&#39;s Meta Platforms during the final quarter of 2024.",
+    "symbols": [
+      "AAPL",
+      "AMZN",
+      "FLUT",
+      "META",
+      "MSFT",
+      "TSLA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/markets/equities/25/02/43755111/billionaire-investor-dan-loeb-boosts-stake-in-mark-zuckerbergs-meta-elon-musks-tesla-but-sold-these-three-mag-7-stocks-in-q4",
+    "created_at": "2025-02-15T08:41:43Z"
+  },
+  {
+    "id": 43755055,
+    "headline": "Tesla, Ford, GM In Focus: After Tariffs On China, Mexico, And Canada, Trump Now Eyes Auto Industry For Next Move",
+    "summary": "President Donald Trump hinted at the possibility of imposing tariffs on automobiles, continuing his aggressive trade policy.",
+    "symbols": [
+      "F",
+      "GM",
+      "TSLA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/tech/25/02/43755055/tesla-ford-gm-in-focus-after-tariffs-on-china-mexico-and-canada-trump-now-eyes-auto-industry-for-next-move",
+    "created_at": "2025-02-15T08:15:00Z"
+  },
+  {
+    "id": 43754366,
+    "headline": "Mark Zuckerberg Follows Elon Musk's Footsteps As Meta Reportedly Plans Major Investment Into AI-Powered Humanoid Robots",
+    "summary": "Mark Zuckerberg could be following Elon Musk&#39;s footsteps, as Meta Platforms is reportedly planning a significant investment into AI-powered humanoid robots.",
+    "symbols": [
+      "AAPL",
+      "GM",
+      "GOOG",
+      "GOOGL",
+      "META",
+      "TSLA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/25/02/43754366/mark-zuckerberg-follows-elon-musks-footsteps-as-meta-reportedly-plans-major-investment-into-ai-powered-humanoid-robots",
+    "created_at": "2025-02-15T05:15:50Z"
+  },
+  {
+    "id": 43753772,
+    "headline": "Jeff Bezos-Backed Anthropic Fights US Proposal Blocking Google From Investing In AI Startups, Says It Would Benefit Rivals OpenAI, Mark Zuckerberg's Meta",
+    "summary": "Jeff Bezos-Backed Anthropic, an artificial intelligence (AI) developer, has filed a plea with a federal court to dismiss a U.S. government proposal that would prevent Google from investing in AI startups.",
+    "symbols": [
+      "AMZN",
+      "GOOG",
+      "GOOGL",
+      "META",
+      "MSFT"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/markets/25/02/43753772/jeff-bezos-backed-anthropic-fights-us-proposal-blocking-google-from-investing-in-ai-startups-says-it-would-benefit-rivals-openai-mark-zuckerbergs-meta",
+    "created_at": "2025-02-15T03:12:31Z"
+  },
+  {
+    "id": 43753533,
+    "headline": "Trump Administration 'Unlikely' To Support TSMC's Control Of Intel's US Chip Factories: Report",
+    "summary": "The Trump administration is reportedly unlikely to back Taiwan Semiconductor taking over Intel&#39;s U.S. chip factories.",
+    "symbols": [
+      "INTC",
+      "TSM"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/markets/equities/25/02/43753533/trump-administration-unlikely-to-support-tsmcs-control-of-intels-us-chip-factories-report",
+    "created_at": "2025-02-15T02:22:25Z"
+  }
+]

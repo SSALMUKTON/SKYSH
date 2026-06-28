@@ -1,0 +1,67 @@
+[
+  {
+    "id": 21353329,
+    "headline": "Apple Delays Launch Of Podcast Subscription Service Until June",
+    "summary": "Tech giant Apple Inc&#39;s (NASDAQ: AAPL) podcasts subscription was slated to start this month with iOS 14.6",
+    "symbols": [
+      "AAPL",
+      "SONY"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/21/05/21353329/apple-delays-launch-of-podcast-subscription-service-until-june",
+    "created_at": "2021-05-30T20:01:46Z"
+  },
+  {
+    "id": 21351736,
+    "headline": "Barron's Latest Picks And Pans: Amazon, Dollar General, EQT, Planet Fitness And More",
+    "summary": "The cover story in this weekend&#39;s Barron&#39;s offers 10 ways to cash in on the shortage of just about everything.\n\nOther featured articles discuss why bad news for big oil is good news for investors and how to play the semiconductor shortage.",
+    "symbols": [
+      "AAPL",
+      "AMAT",
+      "AMZN",
+      "AXTA",
+      "CVX",
+      "DG",
+      "EQT",
+      "LRCX",
+      "MLHR",
+      "PLNT",
+      "WHR",
+      "XOM"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/media/21/05/21351736/barrons-latest-picks-and-pans-amazon-dollar-general-eqt-planet-fitness-and-more",
+    "created_at": "2021-05-30T16:40:33Z"
+  },
+  {
+    "id": 21353111,
+    "headline": "Microsoft Says Russian Hackers Behind SolarWinds Targeting Government Agencies",
+    "summary": "According to Microsoft Corporation (NASDAQ: MSFT), Nobelium, a Russian group, sent about 3,000 malicious emails to accounts across 150 different organizations. ",
+    "symbols": [
+      "MSFT"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/government/21/05/21353111/microsoft-says-russian-hackers-behind-solarwinds-targeting-government-agencies",
+    "created_at": "2021-05-30T16:31:55Z"
+  },
+  {
+    "id": 21351615,
+    "headline": "Tesla Rival Rivian Selects Underwriters For IPO, Could Seek $70B Valuation",
+    "summary": "Amazon.com, Inc (NASDAQ: AMZN) -backed Rivian Automotive Inc has selected underwriters for an initial public offering, Bloomberg reports. ",
+    "symbols": [
+      "AMZN",
+      "CCIV",
+      "DCRB",
+      "F",
+      "GS",
+      "JPM",
+      "MS",
+      "NKLA",
+      "TROW",
+      "TSLA"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/news/21/05/21351615/tesla-rival-rivian-selects-underwriters-for-ipo-could-seek-70b-valuation",
+    "created_at": "2021-05-30T15:34:28Z"
+  }
+]

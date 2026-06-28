@@ -1,0 +1,56 @@
+[
+  {
+    "id": 15554245,
+    "headline": "Barron's Picks And Pans: Roundtable Picks, Airline And Oil Stocks, And More",
+    "summary": "",
+    "symbols": [
+      "AAPL",
+      "AMZN",
+      "BMY",
+      "BRK-A",
+      "CCL",
+      "DAL",
+      "DIS",
+      "LUV",
+      "MRK",
+      "SAVE",
+      "SLB",
+      "UAL",
+      "UNH"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15554245",
+    "created_at": "2020-03-14T16:58:23Z"
+  },
+  {
+    "id": 15554232,
+    "headline": "All Apple Stores Outside Of China To Temporarily Close",
+    "summary": "",
+    "symbols": [
+      "AAPL"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15554232",
+    "created_at": "2020-03-14T15:02:57Z"
+  },
+  {
+    "id": 15547758,
+    "headline": "Intel, AMD And Marvel Screen The Best In This Analyst's Macro Stress Test For COVID-19 Impact",
+    "summary": "",
+    "symbols": [
+      "AMAT",
+      "AMD",
+      "INTC",
+      "KLAC",
+      "MRVL",
+      "MU",
+      "QRVO",
+      "SOXX",
+      "SWKS",
+      "TXN"
+    ],
+    "source": "",
+    "url": "https://www.benzinga.com/node/15547758",
+    "created_at": "2020-03-14T14:44:45Z"
+  }
+]

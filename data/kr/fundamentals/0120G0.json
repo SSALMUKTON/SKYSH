@@ -1,0 +1,51 @@
+{
+  "ticker": "0120G0",
+  "asof": null,
+  "currency": "KRW",
+  "quarters": [
+    {
+      "period_end": "2025-12-31",
+      "form": "사업보고서",
+      "filed": null,
+      "revenue": 28594373504.0,
+      "gross_profit": 14569755095.0,
+      "operating_income": 2691177859.0,
+      "net_income": 2236509935.0,
+      "eps_diluted": null,
+      "operating_cash_flow": 9774248356.0,
+      "shares_diluted": null,
+      "total_assets": 339282592997.0,
+      "total_equity": 234733712990.0,
+      "total_liabilities": 339282592997.0,
+      "cash": 29683845969.0,
+      "shares_outstanding": null,
+      "gross_margin": 0.5095322369263264,
+      "operating_margin": 0.09411564336681612,
+      "net_margin": 0.07821503537005768,
+      "revenue_yoy": null,
+      "net_income_yoy": null
+    },
+    {
+      "period_end": "2026-03-31",
+      "form": "분기보고서",
+      "filed": null,
+      "revenue": 31173917568.0,
+      "gross_profit": 15150027671.0,
+      "operating_income": 1386436905.0,
+      "net_income": 2566559688.0,
+      "eps_diluted": null,
+      "operating_cash_flow": 5164938211.0,
+      "shares_diluted": null,
+      "total_assets": 353353824818.0,
+      "total_equity": 237295987356.0,
+      "total_liabilities": 116057837462.0,
+      "cash": 35821750618.0,
+      "shares_outstanding": null,
+      "gross_margin": 0.4859840806967261,
+      "operating_margin": 0.044474259674798663,
+      "net_margin": 0.08233035461140024,
+      "revenue_yoy": null,
+      "net_income_yoy": null
+    }
+  ]
+}

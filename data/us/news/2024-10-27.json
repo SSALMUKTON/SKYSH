@@ -1,0 +1,112 @@
+[
+  {
+    "id": 41563972,
+    "headline": "World's Richest Man Elon Musk Gets Even Richer As Tesla Stocks Soar",
+    "summary": "The net worth of Elon Musk witnessed a staggering increase of over $30 billion on Thursday, following a significant surge in Tesla Inc. (NASDAQ: TSLA) shares. ",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/24/10/41563972/worlds-richest-man-elon-musk-gets-even-richer-as-tesla-stocks-soar",
+    "created_at": "2024-10-27T15:00:25Z"
+  },
+  {
+    "id": 41563712,
+    "headline": "Consumer Tech News (Oct 21-Oct 25): Apple May Scale Back Production Of Vision Pro Headset, Netflix Restructures Gaming Division",
+    "summary": "Rupert Murdoch&#39;s Dow Jones and New York Post sue Jeff Bezos-backed Perplexity for copyright infringement and Disney, Netflix make strategic moves.",
+    "symbols": [
+      "AAPL",
+      "ARM",
+      "CRM",
+      "DIS",
+      "MSFT",
+      "NFLX",
+      "NVDA",
+      "QCOM",
+      "SONY",
+      "TCEHY"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/24/10/41563712/consumer-tech-news-oct-21-oct-25-apple-may-scale-back-production-of-vision-pro-headset-netflix-restr",
+    "created_at": "2024-10-27T13:30:43Z"
+  },
+  {
+    "id": 41563594,
+    "headline": "AI Demand Fuels Record Profits, Chip Controversies, And Tech Giants Redefine AI Landscape: This Week In The World Of Artificial Intelligence",
+    "summary": "The tech world had a busy week with AI at the center of it all. From record-breaking profits to potential export violations, here&#39;s a roundup of the top stories.",
+    "symbols": [
+      "AAPL",
+      "BABA",
+      "HXSCF",
+      "META",
+      "NVDA",
+      "TSM"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/24/10/41563594/ai-demand-fuels-record-profits-chip-controversies-and-tech-giants-redefine-ai-landscape-this-week-in",
+    "created_at": "2024-10-27T13:00:17Z"
+  },
+  {
+    "id": 41563148,
+    "headline": "Apple's Week Of Peaks And Valleys: From Record iPhone Sales To Legal And Regulatory Challenges",
+    "summary": "Apple&#39;s rollercoaster week: facing U.S. probe, patent dispute, streaming services leaving App Store, but sets new iPhone sales record.",
+    "symbols": [
+      "AAPL",
+      "DIS",
+      "MASI",
+      "SSNLF",
+      "TSM"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/24/10/41563148/apples-week-of-peaks-and-valleys-from-record-iphone-sales-to-legal-and-regulatory-challenges",
+    "created_at": "2024-10-27T11:00:18Z"
+  },
+  {
+    "id": 41562652,
+    "headline": "Tesla Celebrates Milestone With 1 Millionth Model Y Produced At Fremont's Iconic 'Big Tent' Facility",
+    "summary": "EV giant Tesla said on Friday that it has built its one millionth Model Y SUV at GA4 in the Fremont factory.",
+    "symbols": [
+      "TSLA"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/24/10/41562652/tesla-celebrates-milestone-with-1-millionth-model-y-produced-at-fremonts-iconic-big-tent-facility",
+    "created_at": "2024-10-27T04:49:06Z"
+  },
+  {
+    "id": 41562639,
+    "headline": "Delta Air Lines Sues CrowdStrike For $500M Over July Outage That Disrupted Flights, Affecting 1.3M Customers",
+    "summary": "Delta Air Lines has filed a lawsuit against cybersecurity firm CrowdStrike in a Georgia state court, following a global outage in July that led to widespread flight cancellations.",
+    "symbols": [
+      "CRWD",
+      "DAL",
+      "MSFT"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/24/10/41562639/delta-air-lines-sues-crowdstrike-for-500m-over-july-outage-that-disrupted-flights-affecting-1-3m-cus",
+    "created_at": "2024-10-27T04:36:02Z"
+  },
+  {
+    "id": 41562593,
+    "headline": "Apple Secures Victory In Masimo Patent Dispute With Token Damages Of $250",
+    "summary": "A Delaware jury has ruled in favor of Apple in a patent infringement case against Masimo, awarding Cupertino a symbolic $250 in damages.",
+    "symbols": [
+      "AAPL",
+      "MASI"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/24/10/41562593/apple-secures-victory-in-masimo-patent-dispute-with-token-damages-of-250",
+    "created_at": "2024-10-27T04:04:07Z"
+  },
+  {
+    "id": 41562574,
+    "headline": "Google Is Working On An AI System Named 'Jarvis' To Handle Your Search, Shopping, And Flight Booking Needs: Report",
+    "summary": "Google&#39;s &#39;Project Jarvis&#39; AI system is designed to handle tasks like research, shopping, and booking flights on behalf of users.",
+    "symbols": [
+      "GOOG",
+      "GOOGL"
+    ],
+    "source": "benzinga",
+    "url": "https://www.benzinga.com/news/24/10/41562574/google-is-working-on-an-ai-system-named-jarvis-to-handle-your-search-shopping-and-flight-booking-nee",
+    "created_at": "2024-10-27T03:47:54Z"
+  }
+]
