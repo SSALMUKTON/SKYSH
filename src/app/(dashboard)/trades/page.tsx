@@ -113,8 +113,8 @@ export default function TradesPage() {
                       <div className="space-y-3 mb-4 relative">
                         <div className="absolute left-3 top-4 bottom-4 w-px bg-border" />
                         {[
-                          { label: "매수 체결", value: `$${t.entryPrice.toFixed(2)}`, time: fmtDateTime(t.entryAt) },
-                          { label: "매도 체결", value: `$${t.exitPrice?.toFixed(2) ?? "—"}`, time: fmtDateTime(t.exitAt) },
+                          { label: "매수 체결", value: `$${Number(t.entryPrice).toFixed(2)}`, time: fmtDateTime(t.entryAt) },
+                          { label: "매도 체결", value: `$${t.exitPrice ? Number(t.exitPrice).toFixed(2) : "—"}`, time: fmtDateTime(t.exitAt) },
                         ].map(({ label, value, time }) => (
                           <div key={label} className="flex items-center gap-3">
                             <div className="w-6 h-6 bg-foreground flex items-center justify-center text-[9px] font-black text-background shrink-0 z-10">{label[0]}</div>
@@ -177,12 +177,12 @@ export default function TradesPage() {
                     </div>
                     <div className="text-right">
                       <p className="text-[10px] tracking-wider text-muted-foreground mb-0.5 uppercase font-bold">현재가</p>
-                      <p className="text-2xl font-black text-foreground">${(t.currentPrice ?? t.entryPrice).toFixed(2)}</p>
+                      <p className="text-2xl font-black text-foreground">${(Number(t.currentPrice ?? t.entryPrice)).toFixed(2)}</p>
                     </div>
                   </div>
                   <div className="grid grid-cols-3 gap-3 mb-4">
                     {[
-                      { label: "평균 매수가", value: `$${t.entryPrice.toFixed(2)}`, color: "" },
+                      { label: "평균 매수가", value: `$${Number(t.entryPrice).toFixed(2)}`, color: "" },
                       { label: "보유 수량", value: `${t.entryQty}주`, color: "" },
                       { label: "평가 금액", value: `$${evalAmt.toFixed(2)}`, color: "" },
                       { label: "평가손익", value: `${evalPnl >= 0 ? "+" : ""}$${evalPnl.toFixed(2)}`, color: pnlColor },
@@ -198,12 +198,12 @@ export default function TradesPage() {
                   <div className="grid grid-cols-2 gap-3">
                     <div className="bg-[#EBF7F3] border border-[#3D9E72]/20 p-3">
                       <p className="text-[9px] text-[#3D9E72] mb-1 font-black tracking-wider uppercase">목표가</p>
-                      <p className="text-sm font-bold text-[#3D9E72] mb-2">{t.targetPrice ? `$${t.targetPrice.toFixed(2)}` : "—"}</p>
+                      <p className="text-sm font-bold text-[#3D9E72] mb-2">{t.targetPrice ? `$${Number(t.targetPrice).toFixed(2)}` : "—"}</p>
                       <div className="h-1 bg-[#3D9E72]/15 overflow-hidden"><div className="h-full bg-[#3D9E72]" style={{ width: "55%" }} /></div>
                     </div>
                     <div className="bg-[#FAEAEA] border border-[#B83535]/20 p-3">
                       <p className="text-[9px] text-[#B83535] mb-1 font-black tracking-wider uppercase">손절가</p>
-                      <p className="text-sm font-bold text-[#B83535] mb-2">{hasStop ? `$${t.stopPrice!.toFixed(2)}` : "미설정"}</p>
+                      <p className="text-sm font-bold text-[#B83535] mb-2">{hasStop ? `$${Number(t.stopPrice!).toFixed(2)}` : "미설정"}</p>
                       <div className="h-1 bg-[#B83535]/15 overflow-hidden"><div className="h-full bg-[#B83535]" style={{ width: "20%" }} /></div>
                     </div>
                   </div>
