@@ -340,15 +340,20 @@ export async function getReport(tradeId: string): Promise<ApiResult<ReportDTO>> 
   }
 }
 
-/**
- * 조항 제안 승인/버리기. 승인 적용 로직은 P4(조항 갱신) 담당 — 엔드포인트 확정 전까지는
- * mock 성공으로 처리하고 UI 에 반영. 실 엔드포인트 생기면 이 함수만 배선하면 된다.
- */
+/** 조항 제안 승인/버리기. PATCH /api/clauses/suggestions/[id] (P4). */
 export async function decideSuggestion(
   suggestionId: string,
   decision: "APPROVED" | "REJECTED",
 ): Promise<ApiResult<{ ok: true }>> {
-  void suggestionId;
-  void decision;
-  return { data: { ok: true }, mocked: true };
+  try {
+    const res = await fetch(`/api/clauses/suggestions/${suggestionId}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ status: decision }),
+    });
+    if (!res.ok) throw new Error(`suggestion ${res.status}`);
+    return { data: { ok: true }, mocked: false };
+  } catch {
+    return { data: { ok: true }, mocked: true };
+  }
 }

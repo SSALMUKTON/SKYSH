@@ -29,14 +29,14 @@ const QUESTIONS = [
     clause: "나는 손절 기준 없는 거래를 시작하지 않는다.",
   },
   {
-    id: "ALL_IN" as RuleType,
-    q: "확신이 생기면 얼마나 넣어?",
+    id: "AVERAGING_DOWN" as RuleType,
+    q: "보유 종목이 3일 연속 하락 중이야. 어떻게 해?",
     options: [
-      { label: "다 넣는다, 확신이면 의미 없잖아", risky: true },
-      { label: "일부만, 나눠서 들어간다", risky: false },
-      { label: "소액만, 틀릴 수도 있으니까", risky: false },
+      { label: "더 산다, 평단 낮출 수 있잖아", risky: true },
+      { label: "그냥 기다린다", risky: false },
+      { label: "손절하고 나온다", risky: false },
     ],
-    clause: "나는 확신이 있어도 한 번에 전액 매수하지 않는다.",
+    clause: "나는 3일 연속 하락 종목에 추가 매수(물타기)하지 않는다.",
   },
   {
     id: "REVENGE_TRADE" as RuleType,
@@ -101,6 +101,7 @@ export default function WillSetupPage() {
       body: JSON.stringify({ text: inputText.trim() }),
     });
     const data = await res.json();
+    if (data.error) { setConverting(false); return; }
     setCustomClauses((prev) => [...prev, { ...data, fromText: inputText.trim() }]);
     setInputText("");
     setConverting(false);
