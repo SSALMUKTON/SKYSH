@@ -52,10 +52,20 @@ def forward_return(series: pd.Series, idx: int, n: int) -> float | None:
     return (series.iloc[idx + n] - entry) / entry * 100
 
 
+def slice_period(df: pd.DataFrame, start: str | None, end: str | None) -> pd.DataFrame:
+    if start:
+        df = df[df.index >= pd.Timestamp(start)]
+    if end:
+        df = df[df.index <= pd.Timestamp(end)]
+    return df
+
+
 def analyze_violations(
     prices: dict[str, pd.DataFrame],
     detector: Callable[[pd.DataFrame], pd.Series],
     label: str,
+    start: str | None = None,
+    end: str | None = None,
 ) -> dict:
     """
     detector(df) → bool Series (True = 위반 시점)
@@ -66,24 +76,29 @@ def analyze_violations(
     total_signals = 0
 
     for symbol, df in prices.items():
-        if len(df) < max(HORIZONS) + 2:
+        # 슬라이스는 signal 감지에만 적용, 이후 수익률 계산엔 전체 df 유지
+        df_full = df
+        df_window = slice_period(df, start, end)
+        if len(df_window) < 20:
             continue
         try:
-            signal = detector(df)
+            signal = detector(df_window)
         except Exception:
             continue
 
-        signal = signal.reindex(df.index).fillna(False)
-        idxs = np.where(signal.values)[0]
+        signal = signal.reindex(df_window.index).fillna(False)
+        # 위반 시점의 df_full 인덱스 위치 찾기
+        signal_dates = df_window.index[signal.values]
 
-        for i in idxs:
-            buy_i = i + 1  # 위반 다음날 매수
-            if buy_i >= len(df):
+        for sig_date in signal_dates:
+            full_i = df_full.index.get_loc(sig_date)
+            buy_i = full_i + 1
+            if buy_i >= len(df_full):
                 continue
             total_signals += 1
-            violation_dates.append(str(df.index[i].date()))
+            violation_dates.append(str(sig_date.date()))
             for h in HORIZONS:
-                r = forward_return(df["Close"], buy_i, h)
+                r = forward_return(df_full["Close"], buy_i, h)
                 if r is not None:
                     returns[h].append(r)
 
@@ -155,26 +170,29 @@ def detect_no_stop_loss(df: pd.DataFrame) -> pd.Series:
 
 # ── MDD 분석 (NO_STOP_LOSS 전용) ──────────────────────────────────────────────
 
-def analyze_no_stop_loss(prices: dict[str, pd.DataFrame]) -> dict:
+def analyze_no_stop_loss(prices: dict[str, pd.DataFrame], start: str | None = None, end: str | None = None) -> dict:
     """급등 진입 후 최대 낙폭(MDD) 분석"""
     mdds: list[float] = []
     total_signals = 0
 
     for symbol, df in prices.items():
-        if len(df) < 25:
+        df_full = df
+        df_window = slice_period(df, start, end)
+        if len(df_window) < 25:
             continue
         try:
-            signal = detect_no_stop_loss(df)
+            signal = detect_no_stop_loss(df_window)
         except Exception:
             continue
 
-        idxs = np.where(signal.values)[0]
-        for i in idxs:
-            buy_i = i + 1
-            if buy_i + 20 >= len(df):
+        signal_dates = df_window.index[signal.reindex(df_window.index).fillna(False).values]
+        for sig_date in signal_dates:
+            full_i = df_full.index.get_loc(sig_date)
+            buy_i = full_i + 1
+            if buy_i + 20 >= len(df_full):
                 continue
             total_signals += 1
-            window = df["Close"].iloc[buy_i: buy_i + 20]
+            window = df_full["Close"].iloc[buy_i: buy_i + 20]
             entry = window.iloc[0]
             if entry == 0:
                 continue
@@ -216,11 +234,24 @@ RULES = [
 MARKETS = ["us", "kr", "crypto"]
 
 
-def run(markets: list[str], out_path: Path) -> None:
+# 사전 정의 기간 프리셋
+PERIODS: dict[str, tuple[str | None, str | None]] = {
+    "전체": (None, None),
+    "2020-2021 상승장": ("2020-01-01", "2021-12-31"),
+    "2022 하락장": ("2022-01-01", "2022-12-31"),
+    "2023-2024 반등장": ("2023-01-01", "2024-12-31"),
+}
+
+
+def run(markets: list[str], out_path: Path, start: str | None = None, end: str | None = None) -> None:
+    period_label = "전체"
+    if start or end:
+        period_label = f"{start or '~'} ~ {end or '~'}"
+
     results = []
 
     for market in markets:
-        print(f"\n[{market.upper()}] 가격 데이터 로드 중...")
+        print(f"\n[{market.upper()}] 가격 데이터 로드 중... (기간: {period_label})")
         prices = load_prices(market)
         print(f"  → {len(prices)}개 종목")
         if not prices:
@@ -228,30 +259,53 @@ def run(markets: list[str], out_path: Path) -> None:
 
         for rule_type, detector in RULES:
             print(f"  [{rule_type}] 분석 중...", end=" ", flush=True)
-            res = analyze_violations(prices, detector, rule_type)
+            res = analyze_violations(prices, detector, rule_type, start=start, end=end)
             res["market"] = market
+            res["period"] = period_label
             results.append(res)
             print(f"{res['total_signals']}건")
 
-        # NO_STOP_LOSS는 MDD 분석
         print(f"  [NO_STOP_LOSS] MDD 분석 중...", end=" ", flush=True)
-        res = analyze_no_stop_loss(prices)
+        res = analyze_no_stop_loss(prices, start=start, end=end)
         res["market"] = market
+        res["period"] = period_label
         results.append(res)
         print(f"{res['total_signals']}건")
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
-        json.dump({"results": results, "horizons": HORIZONS}, f, ensure_ascii=False, indent=2)
+        json.dump({
+            "results": results,
+            "horizons": HORIZONS,
+            "period": period_label,
+            "start": start,
+            "end": end,
+        }, f, ensure_ascii=False, indent=2)
 
-    print(f"\n✓ 저장 완료: {out_path}")
+    print(f"\n✓ 저장 완료: {out_path} ({period_label})")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--market", default="all", choices=["us", "kr", "crypto", "all"])
-    parser.add_argument("--out", default="data/backtest_results.json")
+    parser.add_argument("--out", default=None, help="출력 경로 (기본값: data/backtest_{period}.json)")
+    parser.add_argument("--start", default=None, help="시작일 YYYY-MM-DD")
+    parser.add_argument("--end", default=None, help="종료일 YYYY-MM-DD")
+    parser.add_argument("--period", default=None, choices=list(PERIODS.keys()), help="프리셋 기간 선택")
     args = parser.parse_args()
 
+    if args.period:
+        start, end = PERIODS[args.period]
+    else:
+        start, end = args.start, args.end
+
     markets = MARKETS if args.market == "all" else [args.market]
-    run(markets, Path(args.out))
+
+    if args.out:
+        out_path = Path(args.out)
+    elif args.period:
+        out_path = Path(f"data/backtest_{args.period}.json")
+    else:
+        out_path = Path("data/backtest_전체.json")
+
+    run(markets, out_path, start=start, end=end)
