@@ -1,17 +1,42 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import {
   Shield, BarChart2, FileText, CheckCircle, Scroll,
   Bell, AlertTriangle, AlertCircle,
 } from "lucide-react";
 
+interface Clause {
+  id: string;
+  ruleType: string;
+  displayText: string;
+  violationCount: number;
+}
+
 export default function DashboardPage() {
+  const [clauses, setClauses] = useState<Clause[]>([]);
+
+  useEffect(() => {
+    fetch("/api/clauses").then((r) => r.json()).then(setClauses);
+  }, []);
+
+  const topViolations = [...clauses]
+    .sort((a, b) => b.violationCount - a.violationCount)
+    .slice(0, 3);
+  const maxViolations = topViolations[0]?.violationCount ?? 1;
+
+  const today = new Date().toLocaleDateString("ko-KR", {
+    year: "numeric", month: "long", day: "numeric", weekday: "long",
+  });
+
   return (
     <div className="p-8">
       <div className="max-w-5xl mx-auto">
         <div className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-2xl font-bold text-foreground">홈</h1>
-            <p className="text-sm text-muted-foreground mt-1">2026년 6월 28일 토요일 · 프리마켓 진행 중</p>
+            <p className="text-sm text-muted-foreground mt-1">{today} · 프리마켓 진행 중</p>
           </div>
           <div className="flex items-center gap-1.5 bg-[#FDF8EC] border border-[#C9A227]/30 px-3 py-1.5">
             <Bell size={12} className="text-[#C9A227]" />
@@ -25,7 +50,7 @@ export default function DashboardPage() {
             { label: "보유 종목", value: "3 종목", icon: BarChart2, color: "text-foreground" },
             { label: "사망진단서", value: "7 건", icon: FileText, color: "text-[#B83535]" },
             { label: "생존보고서", value: "4 건", icon: CheckCircle, color: "text-[#3D9E72]" },
-            { label: "유언장 조항", value: "5 조항", icon: Scroll, color: "text-[#C9A227]" },
+            { label: "유언장 조항", value: `${clauses.length} 조항`, icon: Scroll, color: "text-[#C9A227]" },
           ].map(({ label, value, icon: Icon, color }) => (
             <div key={label} className="bg-card border border-border p-4">
               <Icon size={14} className={`${color} mb-3`} />
@@ -112,24 +137,24 @@ export default function DashboardPage() {
             <AlertCircle size={12} className="text-[#C9A227]" />
             가장 많이 위반한 조항
           </h3>
-          <div className="grid grid-cols-3 gap-3">
-            {[
-              { art: "제1조", text: "급등 직후 시장가 추격 매수 금지", violations: 3, pct: 75 },
-              { art: "제3조", text: "손절 기준 없는 거래 시작 금지", violations: 2, pct: 50 },
-              { art: "제2조", text: "프리마켓 갭상 직후 시장가 매수 금지", violations: 1, pct: 25 },
-            ].map(({ art, text, violations, pct }) => (
-              <div key={art} className="bg-card border border-border p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-black text-[#C9A227]">{art}</span>
-                  <span className="text-xs font-bold text-[#B83535]">{violations}회 위반</span>
+          {topViolations.length === 0 ? (
+            <p className="text-xs text-muted-foreground">아직 위반 기록이 없습니다.</p>
+          ) : (
+            <div className="grid grid-cols-3 gap-3">
+              {topViolations.map((c, i) => (
+                <div key={c.id} className="bg-card border border-border p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs font-black text-[#C9A227]">제{i + 1}조</span>
+                    <span className="text-xs font-bold text-[#B83535]">{c.violationCount}회 위반</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground leading-relaxed mb-3">{c.displayText}</p>
+                  <div className="h-1 bg-muted overflow-hidden">
+                    <div className="h-full bg-[#B83535]" style={{ width: `${maxViolations > 0 ? (c.violationCount / maxViolations) * 100 : 0}%` }} />
+                  </div>
                 </div>
-                <p className="text-xs text-muted-foreground leading-relaxed mb-3">{text}</p>
-                <div className="h-1 bg-muted overflow-hidden">
-                  <div className="h-full bg-[#B83535]" style={{ width: `${pct}%` }} />
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
