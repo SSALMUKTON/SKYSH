@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
-  AlertTriangle, CheckCircle, Scroll, Loader2, Search, TrendingUp,
+  AlertTriangle, CheckCircle, XCircle, Scroll, Loader2, Search, TrendingUp,
   Newspaper, FileBarChart, ExternalLink,
 } from "lucide-react";
 import {
@@ -12,9 +12,10 @@ import { getQuote, precheck, execute, type ExecuteResult } from "@/lib/api-clien
 import {
   MARKET_META, formatPrice, formatPct, formatCompact, formatFinancial, PROFIT, LOSS,
 } from "@/lib/format";
-import type { Market } from "@prisma/client";
+import { checkOrder } from "@/lib/rules/engine";
+import type { Market, RuleType } from "@prisma/client";
 import type { Quote } from "@/lib/broker/types";
-import type { OrderDraft, SuggestedAction, Violation } from "@/lib/rules/types";
+import type { OrderDraft, SuggestedAction, Violation, ClauseRule, MarketData } from "@/lib/rules/types";
 import type { UniverseItem, Candle, Quarter, FeedItem, InitialSymbolData } from "./types";
 
 type Step = "form" | "confirm";
@@ -200,6 +201,10 @@ function TradeWorkspace({ market, item, initial, initialAction, initialQty, onSt
   const [violations, setViolations] = useState<Violation[]>([]);
   const [execResult, setExecResult] = useState<ExecuteResult | null>(null);
 
+  // 유언장 조항 — 주문 패널 하단 실시간 체크리스트용(사용자 활성 조항, 종목과 무관).
+  const [clauseRules, setClauseRules] = useState<ClauseRule[]>([]);
+  const [clausesLoaded, setClausesLoaded] = useState(false);
+
   // 거래 후 정보 입력(확인 화면) — 의사결정 원인 + (위반 시) 강행 사유.
   const [reasonInput, setReasonInput] = useState("");
   const [forceReasonInput, setForceReasonInput] = useState("");
@@ -235,6 +240,20 @@ function TradeWorkspace({ market, item, initial, initialAction, initialQty, onSt
     onStepChange?.(step);
   }, [step, onStepChange]);
 
+  // 유언장 조항을 한 번 읽어와 실시간 체크리스트에 쓴다(사용자 단위 — 종목과 무관).
+  useEffect(() => {
+    let active = true;
+    fetch("/api/clauses")
+      .then((r) => (r.ok ? r.json() : []))
+      .then((rows: { id: string; ruleType: RuleType; params: Record<string, unknown> | null; displayText: string }[]) => {
+        if (!active) return;
+        setClauseRules(rows.map((r) => ({ id: r.id, ruleType: r.ruleType, params: r.params ?? {}, displayText: r.displayText })));
+        setClausesLoaded(true);
+      })
+      .catch(() => { if (active) setClausesLoaded(true); });
+    return () => { active = false; };
+  }, []);
+
   const chartData = useMemo(() => candles.map((c) => ({ t: c.date, p: c.close })), [candles]);
 
   const qtyNum = parseFloat(qty);
@@ -259,6 +278,20 @@ function TradeWorkspace({ market, item, initial, initialAction, initialQty, onSt
       stopPrice: side === "매수" ? parseMoney(stopLoss) : undefined,
     };
   }
+
+  // 실시간 유언장 체크리스트 — 폼 입력/시세에 따라 각 조항의 충족(초록)/위반(빨강)을 엔진으로 평가.
+  const checklist = useMemo(() => {
+    if (!quote || clauseRules.length === 0) return [];
+    const order = { ...buildDraft(), thesis: reason === REASON_OTHER ? reasonText : reason } as OrderDraft;
+    const md: MarketData = {
+      price: quote.price, prevClose: quote.prevClose, changePct: quote.changePct,
+      volume: quote.volume, isPremarket: quote.isPremarket,
+    };
+    const violated = new Set(checkOrder(order, md, clauseRules).violations.map((v) => v.clauseId));
+    return clauseRules.map((c) => ({ id: c.id, displayText: c.displayText, ok: !violated.has(c.id) }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [quote, clauseRules, side, priceType, qty, limitPrice, stopLoss, reason, reasonText]);
+  const passCount = checklist.filter((c) => c.ok).length;
 
   async function doExecute(draft: OrderDraft, forceReason?: string, vios?: Violation[]) {
     const { data } = await execute(draft, forceReason, vios);
@@ -643,10 +676,51 @@ function TradeWorkspace({ market, item, initial, initialAction, initialQty, onSt
               </div>
             )}
             <button onClick={handleCheck} disabled={checking || !quote}
-              className="w-full bg-foreground text-background py-3 text-sm font-black hover:opacity-90 transition-opacity flex items-center justify-center gap-2 tracking-wider disabled:opacity-50">
-              {checking ? <Loader2 size={13} className="animate-spin" /> : <Scroll size={13} />}
-              {checking ? "검사 중..." : "주문 전 유언장 검사"}
+              className={`w-full py-3 text-sm font-black text-white hover:opacity-90 transition-opacity flex items-center justify-center gap-2 tracking-wider disabled:opacity-50 ${side === "매수" ? "bg-[#3D9E72]" : "bg-[#B83535]"}`}>
+              {checking && <Loader2 size={13} className="animate-spin" />}
+              {checking ? "처리 중..." : `${side}하기`}
             </button>
+
+            {/* 유언장 체크리스트 — 폼 입력/시세에 따라 실시간으로 충족(초록)/위반(빨강) 표시 */}
+            <div className="mt-4 pt-4 border-t border-border">
+              <div className="flex items-center justify-between mb-2.5">
+                <p className="text-[10px] tracking-wider text-muted-foreground font-bold uppercase flex items-center gap-1.5">
+                  <Scroll size={11} /> 유언장 체크리스트
+                </p>
+                {clausesLoaded && clauseRules.length > 0 && (
+                  <span className="text-[10px] font-bold">
+                    <span className={passCount === clauseRules.length ? "text-[#3D9E72]" : "text-[#B83535]"}>{passCount}</span>
+                    <span className="text-muted-foreground">/{clauseRules.length} 충족</span>
+                  </span>
+                )}
+              </div>
+              {!clausesLoaded ? (
+                <div className="space-y-1.5">
+                  {[0, 1].map((i) => <div key={i} className="h-9 bg-muted/40 animate-pulse" />)}
+                </div>
+              ) : clauseRules.length === 0 ? (
+                <p className="text-[11px] text-muted-foreground leading-relaxed">
+                  등록된 유언장 조항이 없습니다.{" "}
+                  <a href="/will/setup" className="text-[#C9A227] font-semibold hover:underline">유언장 작성하기 →</a>
+                </p>
+              ) : (
+                <div className="space-y-1.5">
+                  {checklist.map((c) => (
+                    <div key={c.id}
+                      className={`flex items-start gap-2 px-2.5 py-2 border-l-2 transition-colors ${
+                        c.ok ? "border-[#3D9E72] bg-[#EBF7F3]/60" : "border-[#B83535] bg-[#FAEAEA]/60"
+                      }`}>
+                      {c.ok
+                        ? <CheckCircle size={13} className="text-[#3D9E72] shrink-0 mt-px" />
+                        : <XCircle size={13} className="text-[#B83535] shrink-0 mt-px" />}
+                      <span className={`text-[11px] leading-snug ${c.ok ? "text-foreground/80" : "text-[#B83535] font-semibold"}`}>
+                        {c.displayText}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
