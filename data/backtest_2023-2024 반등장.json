@@ -2,31 +2,31 @@
   "results": [
     {
       "rule": "CHASE_SURGE",
-      "total_signals": 285,
+      "total_signals": 519,
       "returns": {
         "20": {
-          "mean": 6.81,
-          "median": 2.88,
-          "win_rate": 63.2,
-          "worst": -18.83,
-          "best": 41.68,
-          "n": 285
+          "mean": 7.95,
+          "median": 3.46,
+          "win_rate": 62.8,
+          "worst": -18.84,
+          "best": 59.53,
+          "n": 519
         },
         "60": {
-          "mean": 13.34,
-          "median": 6.43,
-          "win_rate": 61.8,
-          "worst": -24.48,
-          "best": 81.0,
-          "n": 285
+          "mean": 17.11,
+          "median": 6.04,
+          "win_rate": 62.2,
+          "worst": -25.72,
+          "best": 99.87,
+          "n": 519
         },
         "120": {
-          "mean": 20.28,
-          "median": 9.58,
-          "win_rate": 63.9,
-          "worst": -29.98,
-          "best": 104.0,
-          "n": 285
+          "mean": 30.27,
+          "median": 12.63,
+          "win_rate": 66.7,
+          "worst": -30.08,
+          "best": 156.64,
+          "n": 519
         }
       },
       "recent_dates": [
@@ -46,31 +46,31 @@
     },
     {
       "rule": "PREMARKET_GAP",
-      "total_signals": 1557,
+      "total_signals": 2783,
       "returns": {
         "20": {
-          "mean": 3.55,
-          "median": 2.22,
-          "win_rate": 60.8,
-          "worst": -14.03,
-          "best": 26.43,
-          "n": 1557
+          "mean": 4.27,
+          "median": 2.56,
+          "win_rate": 61.5,
+          "worst": -13.53,
+          "best": 27.73,
+          "n": 2783
         },
         "60": {
-          "mean": 8.34,
-          "median": 5.02,
-          "win_rate": 61.2,
-          "worst": -24.14,
-          "best": 50.92,
-          "n": 1557
+          "mean": 9.33,
+          "median": 5.41,
+          "win_rate": 62.9,
+          "worst": -23.3,
+          "best": 51.62,
+          "n": 2783
         },
         "120": {
-          "mean": 15.17,
-          "median": 6.09,
-          "win_rate": 58.3,
-          "worst": -28.93,
-          "best": 89.22,
-          "n": 1557
+          "mean": 17.55,
+          "median": 8.06,
+          "win_rate": 63.5,
+          "worst": -26.86,
+          "best": 92.47,
+          "n": 2783
         }
       },
       "recent_dates": [
@@ -90,31 +90,31 @@
     },
     {
       "rule": "REVENGE_TRADE",
-      "total_signals": 796,
+      "total_signals": 1494,
       "returns": {
         "20": {
-          "mean": 6.39,
-          "median": 5.22,
-          "win_rate": 71.7,
-          "worst": -12.58,
-          "best": 27.21,
-          "n": 796
+          "mean": 4.95,
+          "median": 3.65,
+          "win_rate": 65.0,
+          "worst": -13.48,
+          "best": 25.73,
+          "n": 1494
         },
         "60": {
-          "mean": 15.57,
-          "median": 11.27,
-          "win_rate": 72.5,
-          "worst": -19.3,
-          "best": 64.56,
-          "n": 796
+          "mean": 13.59,
+          "median": 8.68,
+          "win_rate": 70.1,
+          "worst": -20.39,
+          "best": 63.56,
+          "n": 1494
         },
         "120": {
-          "mean": 26.97,
-          "median": 18.12,
-          "win_rate": 73.7,
-          "worst": -23.87,
-          "best": 114.28,
-          "n": 796
+          "mean": 27.0,
+          "median": 16.04,
+          "win_rate": 73.2,
+          "worst": -22.19,
+          "best": 114.02,
+          "n": 1494
         }
       },
       "recent_dates": [
@@ -134,31 +134,31 @@
     },
     {
       "rule": "MARKET_ORDER_IMPULSE",
-      "total_signals": 345,
+      "total_signals": 701,
       "returns": {
         "20": {
-          "mean": 4.45,
-          "median": 3.4,
-          "win_rate": 67.5,
-          "worst": -10.1,
-          "best": 21.26,
-          "n": 345
+          "mean": 3.57,
+          "median": 2.71,
+          "win_rate": 63.3,
+          "worst": -11.54,
+          "best": 21.3,
+          "n": 701
         },
         "60": {
-          "mean": 9.09,
-          "median": 4.88,
-          "win_rate": 63.2,
-          "worst": -19.05,
-          "best": 47.11,
-          "n": 345
+          "mean": 9.11,
+          "median": 4.82,
+          "win_rate": 62.6,
+          "worst": -19.96,
+          "best": 46.18,
+          "n": 701
         },
         "120": {
-          "mean": 12.25,
-          "median": 6.44,
-          "win_rate": 61.7,
+          "mean": 14.7,
+          "median": 7.34,
+          "win_rate": 64.2,
           "worst": -24.74,
-          "best": 73.41,
-          "n": 345
+          "best": 77.97,
+          "n": 701
         }
       },
       "recent_dates": [
@@ -178,31 +178,31 @@
     },
     {
       "rule": "AVERAGING_DOWN",
-      "total_signals": 11483,
+      "total_signals": 26908,
       "returns": {
         "20": {
-          "mean": 2.52,
-          "median": 1.94,
-          "win_rate": 60.4,
-          "worst": -10.22,
-          "best": 16.56,
-          "n": 11482
+          "mean": 1.78,
+          "median": 1.28,
+          "win_rate": 57.0,
+          "worst": -10.71,
+          "best": 15.34,
+          "n": 26908
         },
         "60": {
-          "mean": 5.8,
-          "median": 4.19,
-          "win_rate": 62.5,
-          "worst": -17.44,
-          "best": 32.9,
-          "n": 11481
+          "mean": 5.29,
+          "median": 3.86,
+          "win_rate": 61.8,
+          "worst": -17.28,
+          "best": 30.08,
+          "n": 26908
         },
         "120": {
-          "mean": 8.89,
-          "median": 5.6,
-          "win_rate": 61.4,
-          "worst": -23.96,
-          "best": 49.54,
-          "n": 11476
+          "mean": 10.02,
+          "median": 7.19,
+          "win_rate": 66.2,
+          "worst": -20.52,
+          "best": 45.78,
+          "n": 26908
         }
       },
       "recent_dates": [
@@ -222,14 +222,14 @@
     },
     {
       "rule": "NO_STOP_LOSS",
-      "total_signals": 496,
+      "total_signals": 910,
       "mdd": {
-        "mean": -6.18,
-        "median": -3.82,
-        "worst": -22.89,
-        "pct_over_5": 41.7,
-        "pct_over_10": 19.6,
-        "n": 496
+        "mean": -6.15,
+        "median": -3.73,
+        "worst": -21.18,
+        "pct_over_5": 42.4,
+        "pct_over_10": 20.3,
+        "n": 910
       },
       "returns": {
         "20": {
