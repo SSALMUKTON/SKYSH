@@ -23,16 +23,24 @@ const RULE_LABELS: Record<string, string> = {
   AVERAGING_DOWN: "물타기",
 };
 
+interface DraftClause {
+  tempId: string;
+  ruleType: string;
+  displayText: string;
+}
+
 export default function WillPage() {
   const [clauses, setClauses] = useState<Clause[]>([]);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editText, setEditText] = useState("");
   const [showAddForm, setShowAddForm] = useState(false);
-  const [inputText, setInputText] = useState("");
+  const [inputLines, setInputLines] = useState("");
   const [converting, setConverting] = useState(false);
   const [saving, setSaving] = useState(false);
-  const [preview, setPreview] = useState<{ ruleType: string; displayText: string } | null>(null);
+  const [draftClauses, setDraftClauses] = useState<DraftClause[]>([]);
   const [convertError, setConvertError] = useState<string | null>(null);
+  const [editingDraftId, setEditingDraftId] = useState<string | null>(null);
+  const [editingDraftText, setEditingDraftText] = useState("");
 
   useEffect(() => {
     fetch("/api/clauses")
@@ -40,39 +48,50 @@ export default function WillPage() {
       .then(setClauses);
   }, []);
 
-  async function convertClause() {
-    if (!inputText.trim()) return;
+  async function convertMultipleClauses() {
+    const lines = inputLines.trim().split("\n").filter((l) => l.trim());
+    if (lines.length === 0) return;
     setConverting(true);
     setConvertError(null);
-    setPreview(null);
-    const res = await fetch("/api/clauses/convert", {
+    const res = await fetch("/api/clauses/batch-convert", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text: inputText.trim() }),
+      body: JSON.stringify({ items: lines }),
     });
     const data = await res.json();
     setConverting(false);
     if (data.error) {
       setConvertError(data.error);
     } else {
-      setPreview({ ruleType: data.ruleType, displayText: data.displayText });
+      setDraftClauses(data.clauses || []);
     }
   }
 
-  async function addClause() {
-    if (!preview) return;
+  async function finalizeClauses() {
+    if (draftClauses.length === 0) return;
     setSaving(true);
-    const res = await fetch("/api/clauses", {
+    const res = await fetch("/api/clauses/batch-save", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ruleType: preview.ruleType, params: {}, displayText: preview.displayText }),
+      body: JSON.stringify({ clauses: draftClauses }),
     });
     const created = await res.json();
     setSaving(false);
-    setClauses((prev) => [...prev, created]);
-    setInputText("");
-    setPreview(null);
+    setClauses((prev) => [...prev, ...created]);
+    setInputLines("");
+    setDraftClauses([]);
     setShowAddForm(false);
+  }
+
+  function deleteDraftClause(tempId: string) {
+    setDraftClauses((prev) => prev.filter((c) => c.tempId !== tempId));
+  }
+
+  function updateDraftClause(tempId: string, newText: string) {
+    setDraftClauses((prev) =>
+      prev.map((c) => (c.tempId === tempId ? { ...c, displayText: newText } : c))
+    );
+    setEditingDraftId(null);
   }
 
   async function saveEdit(id: string) {
@@ -113,54 +132,109 @@ export default function WillPage() {
         {/* 조항 추가 폼 */}
         {showAddForm && (
           <div className="mb-4 border border-[#C9A227]/30 bg-[#FDF8EC] p-4 space-y-3">
-            <p className="text-[10px] font-bold text-[#7A5F0E] tracking-wider uppercase">나쁜 투자 습관을 자연어로 적어주세요</p>
-            <div className="flex gap-2">
-              <input
-                value={inputText}
-                onChange={(e) => { setInputText(e.target.value); setPreview(null); setConvertError(null); }}
-                onKeyDown={(e) => e.key === "Enter" && convertClause()}
-                placeholder="예: 급등 종목 보면 바로 시장가로 들어가는 습관이 있어"
-                className="flex-1 border border-border bg-card px-3 py-2 text-sm text-foreground focus:outline-none"
-              />
-              <button
-                onClick={convertClause}
-                disabled={converting || !inputText.trim()}
-                className="px-4 py-2 text-xs font-bold bg-foreground text-background hover:opacity-90 disabled:opacity-40 flex items-center gap-1.5"
-              >
-                {converting ? <Loader2 size={12} className="animate-spin" /> : null}
-                {converting ? "변환 중" : "변환"}
-              </button>
-            </div>
+            <p className="text-[10px] font-bold text-[#7A5F0E] tracking-wider uppercase">나쁜 투자 습관들을 자연어로 적어주세요 (한 줄씩)</p>
+            <textarea
+              value={inputLines}
+              onChange={(e) => { setInputLines(e.target.value); setConvertError(null); setDraftClauses([]); }}
+              placeholder="예:&#10;급등 종목 보면 바로 시장가로 들어가는 습관이 있어&#10;손절이 없어서 떨어지면 물탄다&#10;뉴스 보고 충동적으로 주문한다"
+              className="w-full border border-border bg-card px-3 py-2 text-sm text-foreground focus:outline-none resize-none"
+              rows={5}
+            />
 
             {convertError && (
               <p className="text-xs text-[#B83535]">{convertError}</p>
             )}
 
-            {preview && (
-              <div className="border border-[#C9A227]/50 bg-white px-4 py-3 space-y-1">
+            {draftClauses.length > 0 ? (
+              <div className="border border-[#C9A227]/50 bg-white px-4 py-3 space-y-3">
                 <p className="text-[9px] font-bold text-[#C9A227] tracking-wider uppercase">
-                  {RULE_LABELS[preview.ruleType] ?? preview.ruleType}
+                  최종 유언장 (총 {draftClauses.length}개 조항)
                 </p>
-                <p className="text-sm font-bold text-foreground">"{preview.displayText}"</p>
-                <p className="text-[10px] text-muted-foreground pt-1">이 조항으로 추가할까요?</p>
+                {draftClauses.map((clause, i) => (
+                  <div key={clause.tempId} className="border-t border-border/30 pt-3 first:border-0 first:pt-0">
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex-1">
+                        <p className="text-[9px] font-bold text-muted-foreground mb-1">
+                          {RULE_LABELS[clause.ruleType] ?? clause.ruleType}
+                        </p>
+                        {editingDraftId === clause.tempId ? (
+                          <input
+                            value={editingDraftText}
+                            onChange={(e) => setEditingDraftText(e.target.value)}
+                            className="w-full border border-border bg-card px-2 py-1 text-sm text-foreground focus:outline-none mb-2"
+                            autoFocus
+                          />
+                        ) : (
+                          <p className="text-sm text-foreground mb-2">"{clause.displayText}"</p>
+                        )}
+                      </div>
+                      <div className="flex gap-1 shrink-0">
+                        {editingDraftId === clause.tempId ? (
+                          <>
+                            <button
+                              onClick={() => updateDraftClause(clause.tempId, editingDraftText)}
+                              className="p-1.5 text-[#3D9E72] hover:bg-muted"
+                              title="저장"
+                            >
+                              <Check size={12} />
+                            </button>
+                            <button
+                              onClick={() => setEditingDraftId(null)}
+                              className="p-1.5 text-muted-foreground hover:bg-muted"
+                              title="취소"
+                            >
+                              <X size={12} />
+                            </button>
+                          </>
+                        ) : (
+                          <>
+                            <button
+                              onClick={() => { setEditingDraftId(clause.tempId); setEditingDraftText(clause.displayText); }}
+                              className="p-1.5 text-muted-foreground hover:text-foreground hover:bg-muted"
+                              title="수정"
+                            >
+                              <Edit2 size={12} />
+                            </button>
+                            <button
+                              onClick={() => deleteDraftClause(clause.tempId)}
+                              className="p-1.5 text-muted-foreground hover:text-[#B83535] hover:bg-muted"
+                              title="삭제"
+                            >
+                              <Trash2 size={12} />
+                            </button>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-            )}
+            ) : null}
 
             <div className="flex gap-2 justify-end">
               <button
-                onClick={() => { setShowAddForm(false); setInputText(""); setPreview(null); setConvertError(null); }}
+                onClick={() => { setShowAddForm(false); setInputLines(""); setDraftClauses([]); setConvertError(null); }}
                 className="px-3 py-1.5 text-xs text-muted-foreground border border-border hover:bg-muted"
               >
                 취소
               </button>
-              {preview && (
+              {draftClauses.length === 0 ? (
                 <button
-                  onClick={addClause}
+                  onClick={convertMultipleClauses}
+                  disabled={converting || !inputLines.trim()}
+                  className="flex items-center gap-1.5 px-4 py-2 text-xs font-bold bg-[#C9A227] text-white hover:opacity-90 disabled:opacity-40 transition-opacity"
+                >
+                  {converting ? <Loader2 size={12} className="animate-spin" /> : null}
+                  {converting ? "검토 중" : "임시 확정"}
+                </button>
+              ) : (
+                <button
+                  onClick={finalizeClauses}
                   disabled={saving}
                   className="flex items-center gap-1.5 px-4 py-2 text-xs font-bold bg-foreground text-background hover:opacity-90 disabled:opacity-40 transition-opacity"
                 >
                   {saving ? <Loader2 size={12} className="animate-spin" /> : null}
-                  {saving ? "저장 중" : "저장하기"}
+                  {saving ? "저장 중" : "최종 확정"}
                 </button>
               )}
             </div>
