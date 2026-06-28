@@ -177,6 +177,10 @@ export default function WillSetupPage() {
                     </button>
                   ))}
                 </div>
+                <button onClick={() => setStep("custom")}
+                  className="w-full text-center text-xs text-muted-foreground mt-4 hover:text-foreground transition-colors">
+                  건너뛰기
+                </button>
               </div>
             </div>
           )}
