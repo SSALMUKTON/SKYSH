@@ -57,6 +57,7 @@ function TradePage() {
   const [selected, setSelected] = useState<UniverseItem | null>(
     initialSymbol ? { symbol: initialSymbol, name: sp.get("name") || initialSymbol } : null,
   );
+  const [step, setStep] = useState<Step>("form");
 
   // 검색 (디바운스) — 결과는 검색창 아래 드롭다운으로만 노출.
   useEffect(() => {
@@ -92,12 +93,13 @@ function TradePage() {
   return (
     <div className="p-8">
       <div className="max-w-6xl mx-auto">
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold text-foreground mb-1">거래하기</h1>
-          <p className="text-sm text-muted-foreground mb-4">
-            종목을 검색해 시세·차트·재무·뉴스를 확인하고 바로 주문하세요.
-          </p>
-          <div className="flex items-center gap-3">
+        {step !== "confirm" && (
+          <div className="mb-6">
+            <h1 className="text-2xl font-bold text-foreground mb-1">거래하기</h1>
+            <p className="text-sm text-muted-foreground mb-4">
+              종목을 검색해 시세·차트·재무·뉴스를 확인하고 바로 주문하세요.
+            </p>
+            <div className="flex items-center gap-3">
             {/* 검색창 */}
             <div className="relative flex-1 max-w-xl">
               <div className="flex items-center gap-2 bg-card border border-border px-3 py-2.5">
@@ -138,10 +140,11 @@ function TradePage() {
               ))}
             </div>
           </div>
-        </div>
+            </div>
+        )}
 
         {selected ? (
-          <TradeWorkspace key={`${market}:${selected.symbol}`} market={market} item={selected} initialAction={initialAction} initialQty={initialQty} />
+          <TradeWorkspace key={`${market}:${selected.symbol}`} market={market} item={selected} initialAction={initialAction} initialQty={initialQty} onStepChange={setStep} />
         ) : (
           <div className="bg-card border border-border min-h-[420px] flex flex-col items-center justify-center text-center p-10">
             <TrendingUp size={28} className="text-muted-foreground/40 mb-3" />
@@ -154,7 +157,7 @@ function TradePage() {
 }
 
 // ─── 종목 상세(차트/재무/뉴스) + 주문 패널 ──────────────────────────────
-function TradeWorkspace({ market, item, initialAction, initialQty }: { market: Market; item: UniverseItem; initialAction?: string | null; initialQty?: string | null }) {
+function TradeWorkspace({ market, item, initialAction, initialQty, onStepChange }: { market: Market; item: UniverseItem; initialAction?: string | null; initialQty?: string | null; onStepChange?: (step: Step) => void }) {
   const { symbol, name } = item;
   const displayName = name || symbol;
 
@@ -216,6 +219,10 @@ function TradeWorkspace({ market, item, initialAction, initialQty }: { market: M
     })();
     return () => { active = false; };
   }, [market, symbol]);
+
+  useEffect(() => {
+    onStepChange?.(step);
+  }, [step, onStepChange]);
 
   const chartData = useMemo(() => candles.map((c) => ({ t: c.date, p: c.close })), [candles]);
 
