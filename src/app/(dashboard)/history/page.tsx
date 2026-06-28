@@ -85,11 +85,17 @@ export default function HistoryPage() {
               실시간 주문과 과거 거래가 함께 쌓입니다. 청산된 거래는 보고서를 발급할 수 있습니다.
             </p>
           </div>
-          <button onClick={() => setShowForm((v) => !v)}
-            className="inline-flex items-center gap-1.5 bg-foreground text-background px-4 py-2.5 text-sm font-bold hover:opacity-90 transition-opacity">
-            {showForm ? <X size={14} /> : <Plus size={14} />}
-            {showForm ? "닫기" : "과거 거래 추가"}
-          </button>
+          <div className="flex gap-2">
+            <button onClick={() => router.push("/trades")}
+              className="inline-flex items-center gap-1.5 bg-foreground text-background px-4 py-2.5 text-sm font-bold hover:opacity-90 transition-opacity">
+              거래하기
+            </button>
+            <button onClick={() => setShowForm((v) => !v)}
+              className="inline-flex items-center gap-1.5 bg-foreground text-background px-4 py-2.5 text-sm font-bold hover:opacity-90 transition-opacity">
+              {showForm ? <X size={14} /> : <Plus size={14} />}
+              {showForm ? "닫기" : "과거 거래 추가"}
+            </button>
+          </div>
         </div>
 
         {showForm && <ManualForm onDone={() => { setShowForm(false); refresh(); }} />}
@@ -102,7 +108,10 @@ export default function HistoryPage() {
           </div>
         ) : (
           <div className="space-y-2.5">
-            {trades.map((t) => (
+            {[...trades].sort((a, b) => {
+              if (a.status !== b.status) return a.status === "OPEN" ? -1 : 1;
+              return 0;
+            }).map((t) => (
               <TradeRow
                 key={t.id}
                 t={t}
@@ -119,11 +128,13 @@ export default function HistoryPage() {
 }
 
 function TradeRow({ t, onDelete, onReport, generating }: { t: Trade; onDelete: () => void; onReport: () => void; generating: boolean }) {
+  const router = useRouter();
   const closed = t.status === "CLOSED";
   const win = (t.pnlPct ?? 0) >= 0;
   const color = closed ? (win ? PROFIT : LOSS) : "#6E6A75";
   const displayName = t.company || t.symbol;
   const tileText = displayName.length > 4 ? displayName.slice(0, 4) : displayName;
+
   return (
     <div className="bg-card border border-border p-4">
       <div className="flex items-center justify-between">
@@ -154,6 +165,14 @@ function TradeRow({ t, onDelete, onReport, generating }: { t: Trade; onDelete: (
             </div>
           ) : (
             <span className="text-xs text-muted-foreground">미실현</span>
+          )}
+          {!closed && (
+            <button
+              onClick={() => router.push(`/order?symbol=${t.symbol}&market=${t.market}&name=${t.company || t.symbol}`)}
+              className="inline-flex items-center gap-1 text-xs font-bold text-foreground border border-border px-2.5 py-1.5 hover:bg-muted transition-colors"
+            >
+              판매하기
+            </button>
           )}
           {closed && (
             <button

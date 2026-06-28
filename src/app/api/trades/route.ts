@@ -136,6 +136,69 @@ export async function POST(req: NextRequest) {
   return NextResponse.json({ ok: true, trade }, { status: 201 });
 }
 
+const closeTradeSchema = z.object({
+  exitPrice: z.number().positive(),
+  exitQty: z.number().positive(),
+  exitAt: z.string().min(1),
+});
+
+export async function PATCH(req: NextRequest) {
+  const id = req.nextUrl.searchParams.get("id");
+  if (!id) return NextResponse.json({ error: "id 필요" }, { status: 400 });
+
+  const parsed = closeTradeSchema.safeParse(await req.json().catch(() => null));
+  if (!parsed.success) {
+    return NextResponse.json(
+      { error: "잘못된 형식", issues: parsed.error.issues },
+      { status: 400 },
+    );
+  }
+
+  const user = await getDemoUser();
+  const trade = await prisma.trade.findFirst({
+    where: { id, userId: user.id, status: "OPEN" },
+    include: { orders: true },
+  });
+  if (!trade) return NextResponse.json({ error: "거래 없음 또는 이미 청산됨" }, { status: 404 });
+
+  const d = parsed.data;
+  const exitAt = new Date(d.exitAt);
+  if (Number.isNaN(exitAt.getTime())) {
+    return NextResponse.json({ error: "exitAt 날짜 형식 오류" }, { status: 400 });
+  }
+
+  const pnlPct = computePnlPct(Number(trade.entryPrice), d.exitPrice);
+  const holdDurationMin = computeHoldMin(trade.entryAt, exitAt);
+
+  const updated = await prisma.trade.update({
+    where: { id },
+    data: {
+      status: "CLOSED",
+      exitPrice: d.exitPrice,
+      exitQty: d.exitQty,
+      exitAt,
+      pnlPct,
+      holdDurationMin,
+      orders: {
+        create: {
+          side: "SELL",
+          orderType: "MARKET",
+          price: null,
+          quantity: d.exitQty,
+          status: "FILLED",
+          executedAt: exitAt,
+          brokerOrderId: `manual-SELL-${trade.symbol}`,
+        },
+      },
+    },
+    include: { orders: true },
+  });
+
+  await triggerReport(req.nextUrl.origin, updated.id);
+
+  return NextResponse.json(updated, { status: 200 });
+}
+
 export async function DELETE(req: NextRequest) {
   const id = req.nextUrl.searchParams.get("id");
   if (!id) return NextResponse.json({ error: "id 필요" }, { status: 400 });
