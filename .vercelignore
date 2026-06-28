@@ -1,0 +1,17 @@
+# Vercel 업로드 제외 — 배포 크기/번들 한도(Hobby 100MB·함수 250MB) 회피.
+# data/ 는 런타임에 DATA_BASE_URL(버킷)에서 fetch 하므로 업로드 불필요.
+data/
+
+# Python 데이터 파이프라인 — 앱 빌드와 무관
+pipelines/
+venv/
+.venv/
+requirements.txt
+__pycache__/
+
+# 정적 목업/문서
+*.html
+docs/
+spec.md
+DESIGN.md
+design-system.html
