@@ -1,0 +1,16 @@
+{
+  "buildCommand": "npm run db:generate && next build",
+  "installCommand": "npm install",
+  "env": [
+    "DATABASE_URL",
+    "DIRECT_URL",
+    "GEMINI_API_KEY",
+    "BROKER_PROVIDER",
+    "NEXT_PUBLIC_APP_URL"
+  ],
+  "git": {
+    "deploymentEnabled": {
+      "main": true
+    }
+  }
+}
