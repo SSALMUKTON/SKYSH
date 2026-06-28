@@ -407,7 +407,7 @@ function TradeWorkspace({ market, item, initialAction, initialQty, onStepChange 
 
         <button
           onClick={handleSaveReason}
-          disabled={savingReason || !reasonInput.trim()}
+          disabled={savingReason || !reasonInput.trim() || (violations.length > 0 && !forceReasonInput.trim())}
           className="w-full bg-foreground text-background py-3.5 font-bold text-sm hover:opacity-90 transition-opacity disabled:opacity-50"
         >
           {savingReason ? "저장 중…" : "거래 기록하고 진행"}
